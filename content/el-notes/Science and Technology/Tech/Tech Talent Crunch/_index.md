@@ -1,4 +1,4 @@
 
 ---
-title:Tech Talent Crunch
+title: Tech Talent Crunch
 ---

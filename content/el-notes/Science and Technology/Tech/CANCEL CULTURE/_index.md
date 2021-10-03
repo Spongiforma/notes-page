@@ -1,4 +1,4 @@
 
 ---
-title:CANCEL CULTURE
+title: CANCEL CULTURE
 ---

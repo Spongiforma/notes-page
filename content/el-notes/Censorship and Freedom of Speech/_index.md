@@ -1,4 +1,4 @@
 
 ---
-title:Censorship and Freedom of Speech
+title: Censorship and Freedom of Speech
 ---

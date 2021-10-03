@@ -1,4 +1,4 @@
 
 ---
-title:Big Tech
+title: Big Tech
 ---

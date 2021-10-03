@@ -1,4 +1,4 @@
 
 ---
-title:Inequality
+title: Inequality
 ---

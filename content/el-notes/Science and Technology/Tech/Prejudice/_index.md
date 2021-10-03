@@ -1,4 +1,4 @@
 
 ---
-title:Prejudice
+title: Prejudice
 ---

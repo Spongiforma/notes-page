@@ -1,4 +1,4 @@
 
 ---
-title:Ethics
+title: Ethics
 ---

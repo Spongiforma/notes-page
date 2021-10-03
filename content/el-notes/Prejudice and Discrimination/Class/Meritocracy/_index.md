@@ -1,4 +1,4 @@
 
 ---
-title:Meritocracy
+title: Meritocracy
 ---

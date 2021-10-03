@@ -1,4 +1,4 @@
 
 ---
-title:Prejudice and Discrimination
+title: Prejudice and Discrimination
 ---
