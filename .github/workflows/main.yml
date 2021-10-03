@@ -34,6 +34,8 @@ jobs:
           node-version: '14'
       - name: Install dependencies
         run: npm install
+      - name: Add Hugo Theme
+        run: git submodule add https://github.com/spongiforma/hugo-theme-techdoc.git themes/hugo-theme-techdoc
       - name: Build Website
         run: npm run gen
       - name: Deploy
