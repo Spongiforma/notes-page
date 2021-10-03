@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on Notes</title>
+    <link>/el-notes/science-and-technology/tech/ai/</link>
+    <description>Recent content in AI on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/el-notes/science-and-technology/tech/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>To what extent is artificial intelligence replacing the role of humans</title>
+      <link>/el-notes/science-and-technology/tech/ai/to-what-extent-is-artificial-intelligence-replacing-the-role-of-humans/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/el-notes/science-and-technology/tech/ai/to-what-extent-is-artificial-intelligence-replacing-the-role-of-humans/</guid>
+      <description>To what extent is artificial intelligence replacing the role of humans? To a limited extent.
+Definitions    Word Definition     Role of Humans Tasks that require some form of intelligence and decision making / creative thinking rather than menial labour.    Points  AI today requires human intervention to be maintained  All advanced critical thinking of AI requires collaborating with an AI GitHub Copilot: requires humans to suggest what they wish to code, Copilot is simply a tool (Literally called copilot)   AI requires advanced computations that may not be easily executable in normal settings?</description>
+    </item>
+    
+  </channel>
+</rss>
