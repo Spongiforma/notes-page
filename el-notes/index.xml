@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>El-notes on Notes</title>
+    <link>/el-notes/</link>
+    <description>Recent content in El-notes on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/el-notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>/el-notes/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/el-notes/readme/</guid>
+      <description>EL Notes If you want, please compile all statistics and data you find in this repository. For EL4131. Additional articles are also appreciated.
+Directory Structure ├── Stats and Quotes Notes.m ├── tree.txt ├── Science and Technology │ ├── Science │ │ ├── People are placing too much faith in medical science. Do you agree.m │ │ ├── _index.m │ │ ├── As science advances, the human race regresses. Is this a fair comment.</description>
+    </item>
+    
+    <item>
+      <title>Stats and Quotes Notes</title>
+      <link>/el-notes/stats-and-quotes-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/el-notes/stats-and-quotes-notes/</guid>
+      <description>Table of Contents
+ Science  Definitions Quotes Examples Stats   Technology  Definitions  Cancel Culture Big Tech AI   Quotes  Cancel Culture Morals and Ethics   Examples  Big Tech Cancel Culture AI  Autonomous Vehicles     Stats  Big Tech and Big Data Morals and Ethics Youth Tech Talent Crunch     Prejudice and Discrimination  Definitions Quotes Examples Stats   Crime and Punishment  Definitions Quotes Examples Stats    Science Definitions Quotes Examples Stats COVID-19 Vaccination   high-income economies with around 16% of the world&amp;rsquo;s population have secured over 70% of 5 major vaccine doses for 2021 Source: Challenges in ensuring global access to COVID-19 vaccines: production, affordability, allocation, and deployment Notes: Research paper on theLancet, found on Fortune.</description>
+    </item>
+    
+  </channel>
+</rss>
