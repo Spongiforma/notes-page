@@ -37,7 +37,7 @@ jobs:
       
       - name: Add Hugo Theme
         run: |
-          rm -df themes/hugo-theme-techdoc
+          rm -rf themes
           git submodule add https://github.com/spongiforma/hugo-theme-techdoc.git themes/hugo-theme-techdoc
       - name: Build Website
         run: npm run gen
