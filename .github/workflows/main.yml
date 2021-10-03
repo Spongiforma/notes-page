@@ -23,6 +23,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+        with:
+          submodules: 'true'
       - name: Setup hugo
         uses: peaceiris/actions-hugo@v2
         with:
@@ -34,11 +36,6 @@ jobs:
           node-version: '14'
       - name: Install dependencies
         run: npm install
-      
-      - name: Add Hugo Theme
-        run: |
-          rm -rf themes
-          git submodule add https://github.com/spongiforma/hugo-theme-techdoc.git themes/hugo-theme-techdoc
       - name: Build Website
         run: npm run gen
       - name: Deploy
