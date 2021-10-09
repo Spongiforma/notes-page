@@ -52,7 +52,7 @@ It makes use of a variety of open source projects including:
       
       <guid>/el-notes/readme/</guid>
       <description>EL Notes If you want, please compile all statistics and data you find in this repository. For EL4131. Additional articles are also appreciated.
-Directory Structure ├── Stats and Quotes Notes.m ├── tree.txt ├── Science and Technology │ ├── Science │ │ ├── People are placing too much faith in medical science. Do you agree.m │ │ ├── _index.m │ │ ├── As science advances, the human race regresses. Is this a fair comment.</description>
+Directory Structure ├── Science and Technology │ ├── _index.m │ ├── Tech │ │ ├── Tech Talent Crunch │ │ │ ├── NTU traffic prediction technology bags prizes at Waymo autonomous driving competition - The Straits Times │ │ │ ├── 6,500 new financial sector jobs in 2021 amid shortage of S&#39;poreans to fill rising number of tech roles - TODAY │ │ │ ├── _index.</description>
     </item>
     
     <item>
@@ -84,6 +84,16 @@ Directory Structure ├── Stats and Quotes Notes.m ├── tree.txt ├─
     </item>
     
     <item>
+      <title>Courts and Artificial Intelligence</title>
+      <link>/el-notes/science-and-technology/tech/ai/courts-and-artifical-intelligence/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/el-notes/science-and-technology/tech/ai/courts-and-artifical-intelligence/</guid>
+      <description>Source: https://www.iacajournal.org/articles/10.36745/ijca.343/ Outline: https://outline.com/xPzKEw
+International Journal for Court Administration 1. Introduction Machines are taking over the work of people everywhere. In the not too distant past, spell-checking and search engines were regarded by many as ‘intelligent’ information technology. Today, facial recognition routinely checks travelers at our airports. Google Maps gives me unsolicited advice about my destination: “the restaurant may be closed”. My tablet and my mobile phone answer my spoken questions with friendly spoken replies.</description>
+    </item>
+    
+    <item>
       <title>Diversity brought about by globalization should be celebrated, not feared. Discuss</title>
       <link>/el-notes/prejudice-and-discrimination/diversity-brought-about-by-globalization-should-be-celebrated-not-feared.-discuss/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -111,6 +121,16 @@ Will Rogers once said, “All I know is just what I read in the papers, and that
       <guid>/el-notes/science-and-technology/science/ethics/ethics-in-science-is-more-beneficial-that-the-science-itself.-do-you-agree/</guid>
       <description>&amp;ldquo;Ethics in Science is more beneficial that the Science itself.&amp;rdquo; Do you agree? Question Analysis:
  &amp;ldquo;beneficial&amp;rdquo;:  Benefitted whom?: Humans.    &amp;ldquo;Ethics in Science&amp;rdquo;:  Points Against    </description>
+    </item>
+    
+    <item>
+      <title>How big tech manipulates academia to avoid regulation</title>
+      <link>/el-notes/science-and-technology/tech/ai/how-big-tech-manipulates-academia-to-avoid-regulation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/el-notes/science-and-technology/tech/ai/how-big-tech-manipulates-academia-to-avoid-regulation/</guid>
+      <description>How big tech manipulates academia to avoid regulation Source: https://theintercept.com/2019/12/20/mit-ethical-ai-artificial-intelligence/
+The irony of the ethical scandal enveloping Joichi Ito, the former director of the MIT Media Lab, is that he used to lead academic initiatives on ethics. After the revelation of his financial ties to Jeffrey Epstein, the financier charged with sex trafficking underage girls as young as 14, Ito resigned from multiple roles at MIT, a visiting professorship at Harvard Law School, and the boards of the John D.</description>
     </item>
     
     <item>
