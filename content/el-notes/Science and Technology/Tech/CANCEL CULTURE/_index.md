@@ -1,4 +1,0 @@
-
----
-title: CANCEL CULTURE
----

@@ -1,4 +1,0 @@
-
----
-title: Science and Technology
----

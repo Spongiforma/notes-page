@@ -1,4 +1,0 @@
-
----
-title: Foreign Workers
----
