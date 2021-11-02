@@ -28,7 +28,30 @@
 <meta name="twitter:title" content="Tags"/>
 <meta name="twitter:description" content=""/>
 <meta itemprop="name" content="Tags">
-<meta itemprop="description" content=""></head>
+<meta itemprop="description" content=""><script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+    document.querySelectorAll("mjx-container").forEach(function(x){
+      x.parentElement.classList += 'has-jax'})
+  });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
 <body><div class="container"><header>
 <h1>Notes</h1><a href="https://github.com/spongiforma/hugo-theme-techdoc" class="github"><i class="fab fa-github"></i></a>
 </header>
