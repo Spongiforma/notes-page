@@ -1,6 +1,6 @@
 # Class Notes
 
-Static generation of class notes
+Static generation of class notes. Notes are pulled from [Spongiforma/notes](https://github.com/Spongiforma/notes).
 
 ## Local Development Server
 Requires hugo
