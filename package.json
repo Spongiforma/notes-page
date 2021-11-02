@@ -105,7 +105,7 @@
     "build": "run-p build:*",
     "build:js": "npm-run-all -p webpack",
     "build:css": "run-p sass:**",
-    "dev": "run-p sass:style:minify && hugo server -t hugo-theme-techdoc",
+    "dev": "hugo server -t hugo-theme-techdoc",
     "gen": "hugo -t hugo-theme-techdoc -d dist",
     "webpack": "cross-env BABEL_ENV=default NODE_ENV=production webpack",
     "sass:style": "sass src/scss/theme.scss static/css/theme.css --style expanded --no-source-map && postcss --use autoprefixer --no-map -r static/css/theme.css",
