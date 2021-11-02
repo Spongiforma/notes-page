@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Progs on Notes</title>
+    <link>/prog/</link>
+    <description>Recent content in Progs on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/prog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linear optimisation</title>
+      <link>/prog/linear-optimisation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/prog/linear-optimisation/</guid>
+      <description>Definitions Standard form:
+minimise \(\bm{c^T x}\), subject to \(A\bm{x} = \bm{b}\) \(\bm{x} \geq \bm{0}\)
+A problems can be converted to another problem by applying the following operations:
+ Elimination of free variables:  Given an unrestricted variable \(x_j\) we replace it with \(x_j^+ - x_j^-\) which are both non-negative.
+ Elimination of inequality constraints:  Given \(\sum_{j=1}^n a_{ij}x_j \leq b_i\),
+we introduce a new slack variable \(s_i \geq 0\):
+\[ \sum_{j=1}^n a_{ij}x_j + s_i = b_i \]</description>
+    </item>
+    
+  </channel>
+</rss>

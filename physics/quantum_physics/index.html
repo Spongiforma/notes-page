@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Quantum mechanics - Notes</title>
+<meta name="description" content="">
+<meta name="generator" content="Hugo 0.85.0" />
+<link href="//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="../../physics/quantum_physics/">
+<link rel="stylesheet" href="../../css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="../../css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="../../js/bundle.js"></script><style>
+:root {--custom-font-color: #bcb7ae;--custom-background-color: #1a1c1d;}
+</style>
+<meta property="og:title" content="Quantum mechanics" />
+<meta property="og:description" content="this is in gaussian units
+Postulates  Associated to any isolated physical system is a hilbert space which is completely described by its state vector. The evolution of a closed quantum system is described by a unitary transformation. i.e. the shrodinger equation  Hamiltonian formalism EL equations L = T - V
+\[ \dv{t}\left(\pdv{L}{\dot x}\right) = \pdv{L}{x} \]
+ Generalised momentum  \[ \pdv{L}{\dot q} = p \]
+ Generalised force  \[ \pdv{L}{q} = \dot{p} \]" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/physics/quantum_physics/" /><meta property="og:image" content="/images/og-image.png"/><meta property="article:section" content="Physics" />
+
+<meta property="og:site_name" content="Hugo Techdoc Theme" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/images/og-image.png"/>
+
+<meta name="twitter:title" content="Quantum mechanics"/>
+<meta name="twitter:description" content="this is in gaussian units
+Postulates  Associated to any isolated physical system is a hilbert space which is completely described by its state vector. The evolution of a closed quantum system is described by a unitary transformation. i.e. the shrodinger equation  Hamiltonian formalism EL equations L = T - V
+\[ \dv{t}\left(\pdv{L}{\dot x}\right) = \pdv{L}{x} \]
+ Generalised momentum  \[ \pdv{L}{\dot q} = p \]
+ Generalised force  \[ \pdv{L}{q} = \dot{p} \]"/>
+<meta itemprop="name" content="Quantum mechanics">
+<meta itemprop="description" content="this is in gaussian units
+Postulates  Associated to any isolated physical system is a hilbert space which is completely described by its state vector. The evolution of a closed quantum system is described by a unitary transformation. i.e. the shrodinger equation  Hamiltonian formalism EL equations L = T - V
+\[ \dv{t}\left(\pdv{L}{\dot x}\right) = \pdv{L}{x} \]
+ Generalised momentum  \[ \pdv{L}{\dot q} = p \]
+ Generalised force  \[ \pdv{L}{q} = \dot{p} \]">
+
+<meta itemprop="wordCount" content="891"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>Notes</h1><a href="https://github.com/spongiforma/hugo-theme-techdoc" class="github"><i class="fab fa-github"></i></a>
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="../../">Home</a></li>
+<li><a href="../../about/">About Hugo</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main>
+<p>this is in gaussian units</p>
+<h2 id="postulates">Postulates</h2>
+<ol>
+<li>Associated to any isolated physical system is a hilbert space which is completely described by its state vector.</li>
+<li>The evolution of a closed quantum system is described by a unitary transformation. i.e. the shrodinger equation</li>
+</ol>
+<h2 id="hamiltonian-formalism">Hamiltonian formalism</h2>
+<h3 id="el-equations">EL equations</h3>
+<p>L = T - V</p>
+<p>\[
+\dv{t}\left(\pdv{L}{\dot x}\right) = \pdv{L}{x}
+\]</p>
+<ul>
+<li>Generalised momentum</li>
+</ul>
+<p>\[
+\pdv{L}{\dot q} = p
+\]</p>
+<ul>
+<li>Generalised force</li>
+</ul>
+<p>\[
+\pdv{L}{q} = \dot{p}
+\]</p>
+<h4 id="cyclic-coordinate">Cyclic coordinate</h4>
+<p>When the Lagrangian does not depend on a coordinate qk:</p>
+<p>\[
+\pdv{L}{\dot q_k} = C
+\]</p>
+<p>This is also generalised momentum.</p>
+<p>q_k is thus a cyclic coordinate.</p>
+<h4 id="energy-conservation">Energy conservation</h4>
+<p>\[
+\pdv{E}{t} = -\pdv{L}{t}
+\]</p>
+<p>\[
+E = \left(\sum_{i=1}^N \pdv{L}{\dot q_i}\dot{q_i}\right) - L
+\]</p>
+<p>If L has no time dependence, then E is conserved.</p>
+<p>E is indeed total energy when the new coordinate q is not related to the old coordinate x with a time dependence \(x = x(q,t)\) or qdot dependence \(x = x(q,\dot{q})\).</p>
+<h4 id="noether-s-theorem">Noether&rsquo;s theorem</h4>
+<p>For each symmetry of the Lagrangian, there is a conserved quantity.</p>
+<p>Let the Lagrangian be invariant to first order in the small number \(\epsilon\).</p>
+<p>\[
+q_i \to q_i + \epsilon K_i(q)
+\]</p>
+<p>each K_i(q) may be a function of all the q_i and need not be constant.</p>
+<p>The quantity:</p>
+<p>\[
+P(q,\dot{q}) = \sum_i \pdv{L}{\dot q_i}K_i(q)
+\]</p>
+<p>does not change with time and has the generic name of consered momentum.</p>
+<p>Example:</p>
+<p>For \(L = (m/2)(5\dot{x}^2 - 2\dot{x}\dot{y} + 2\dot{y}^2) + C(2x-y)\), K_x = 1 and K_y = 2:</p>
+<p>\[
+P = \pdv{L}{\dot{x}}K_x + \pdv{L}{\dot y}K_y = m(3\dot{x} + 3\dot{y})
+\]</p>
+<h3 id="hamiltonian">Hamiltonian</h3>
+<p>We may write E as:</p>
+<p>\[
+E(q,\dot{q}) \equiv \pdv{L(q,\dot{q})}{\dot{q}}\dot{q} - L(q,\dot{q})
+\]</p>
+<p>and we wish to exchange all  \(\dot{q}\) for \(p\) in E.</p>
+<p>\[
+p \equiv \pdv{L}{\dot{q}}
+\]</p>
+<p>When written in this way, we define it as the Hamiltonian.</p>
+<p>\[
+H(q,p) \equiv p_i\dot{q_i}(q,p) - L(q,\dot{q}(q,p))
+\]</p>
+<h4 id="hamiltonian-equations">Hamiltonian equations</h4>
+<p>\[
+\pdv{H}{p} = \dot{q}
+\]</p>
+<p>\[
+\pdv{H}{q} = -\dot{p}
+\]</p>
+<h4 id="cyclic-coordinates">Cyclic coordinates</h4>
+<p>Same as Lagrange.
+if q is cyclic, p is conserved.</p>
+<p>Let w(p,q) be some function of the state variables with no explicit dependence on t.</p>
+<p>\[
+\dot{\omega} = \{\omega,\mathcal{H}\}
+\]</p>
+<p>where the Poisson brackets (PB) between two variables is:</p>
+<p>\[
+\left\{\omega,\lambda\right\} = \sum_i \left(\pdv{\omega}{q_i}\pdv{\lambda}{p_i} - \pdv{\omega}{p_i}\pdv{\lambda}{q_i}\right)
+\]</p>
+<!--list-separator-->
+<ul>
+<li>
+<p>Poisson bracket Identities</p>
+<p>Any variable whose PB with \(\mathcal{H}\) vanishes is constant in time.</p>
+<p>{a,b} = -{b,a}
+{a,b+c} = {a,b} + {a,c}
+{a,bc} = {a,b}c + b{a,c}</p>
+<p>(similar to commutators)</p>
+<p>\[
+$\{q_i,q_j\} = \{p_i,p_j\} = 0
+\]</p>
+<p>\[
+\{q_i,p_j\}=\delta_{ij}
+\]</p>
+<p>as \(\partial{q_i}/\partial{q_j} = \delta_{ij}, \partial{q_i}/\partial{p_k}=0\)</p>
+<p>Hamiltonian equations may be written as:</p>
+<p>\begin{align*}
+\dot{q_i} = \{q_i,\mathcal{H}\} \\<br>
+\dot{p_i} = \{p_i,\mathcal{H}\}
+\end{align*}</p>
+</li>
+</ul>
+<h4 id="legendre-transform">Legendre transform</h4>
+<p>Say that we wish to &lsquo;invert&rsquo;:</p>
+<p>\[
+\dv{F(x)}{x} = s(x)
+\]</p>
+<p>by constructing a function G(s) which is the Legendre transform of F(x):</p>
+<p>\[
+\dv{G(s)}{s} = x(s).
+\]</p>
+<p>By noting \(d(F+G) = s \dd{x} + x \dd{s} = d(sx)\), we may write:</p>
+<p>\[
+G = sx-F = F&rsquo;x - F
+\].</p>
+<p>Or</p>
+<p>\[
+G(s) = sx(s) - F(x(s))
+\]</p>
+<h2 id="statevectors">Statevectors</h2>
+<p>Statevector expressed in certain basis.</p>
+<p>\[
+\ket{\psi} = \ket{ + z}\braket{+ z}{\psi} + \ket{-z}\braket{-z}{\psi} = c_+\ket{+ z} + c_- \ket{-z}
+\]</p>
+<p>Expectation value: \(\langle\Omega\rangle\)
+Square of uncertainty: \((\Delta \Omega)^2 = \langle\Omega^2\rangle - \langle\Omega\rangle^2\)</p>
+<p>Two states that differ by an overall phase are the same state.</p>
+<h3 id="rotation-operators">Rotation Operators</h3>
+<p>Rotate anticlockwise about z-axis can be defined as:</p>
+<p>\[
+\hat{R}(\dd{\phi} \bm{k}) = 1 - \frac{i}{\hbar}\hat{J_z}\dd{\phi}
+\]
+where \(\hat{J_z}\) is a hermitian operator and has |+- z&gt; as an eigenvector with +-hbar/2 as eigenvalues.</p>
+<p>\[
+\hat{R}(\phi \bm{k}) = \lim_{N\to\infty}\left[1-\frac{i}{\hbar}\hat{J}_z\left(\frac{\phi}{N}\right)\right]^N
+= \exp(-i\hat{J}_z\phi/\hbar)
+\]</p>
+<p>\[
+\hat{R}(\phi \bm{k})\ket{\pm z} = e^{\mp i \phi/2} \ket{\pm z}
+\]</p>
+<p>Notice that rotating by 360deg causes the state to pick up an overall minus sign.</p>
+<h3 id="matrix-representation">Matrix representation</h3>
+<p>The matrix representation of \(\hat{A}\) in basis x is \(A_{ij} = \bra{i}\hat{A}\ket{j}\) where i j are the bases of x.</p>
+<h3 id="passive-and-active-transform">Passive and active transform</h3>
+<p>passive: rotating the axes
+active: rotating the vector expressed in the same axes.</p>
+<h2 id="stern-gerlach">Stern-Gerlach</h2>
+<p>The intrinsic spin angular momentum of a particle, we write</p>
+<p>\[
+\bm{\mu} = \frac{gq}{2mc}\bm{S}
+\]</p>
+<p>The force by the magnet equals:</p>
+<p>\[
+F_z = \mu_B \pdv{B}{z}
+\]</p>
+<p>where u_b is the bohr magneton</p>
+<h2 id="angular-momentum">Angular momentum</h2>
+<p>In general:</p>
+<p>\[
+\hat{R}(\phi \bm{n}) = e^{-i \bm{\hat{J}\cdot n} \phi / \hbar}
+\]</p>
+<p>We can represent 2d rotation in the cartesian plane like this:</p>
+<p>\begin{bmatrix}
+\bra{x}\hat{R}(\phi \bm{k})\ket{x} &amp; \bra{x}\hat{R}(\phi \bm{k})\ket{y} \\<br>
+\bra{y}\hat{R}(\phi \bm{k})\ket{x} &amp; \bra{y}\hat{R}(\phi \bm{k})\ket{y} \\<br>
+\end{bmatrix}</p>
+<p>which just gives:</p>
+<p>\begin{bmatrix}
+\cos\phi &amp; -\sin\phi \\<br>
+\sin\phi &amp; \cos\phi \\<br>
+\end{bmatrix}</p>
+<p>Note that rotations and generators don&rsquo;t commute as:</p>
+<p>\[
+[\hat{J}_x,\hat{J}_y] = i\hbar \hat{J}_z
+\]</p>
+<p>which holds for cyclic permutations</p>
+<h3 id="commuting-operators">Commuting operators</h3>
+<p>Consider two linear Hermitian operators \(\Omega, \Lambda\) which commute.</p>
+<p>Suppose only a single state \(\ket{\omega}\) that is an eigenstate of \(\Omega\) with eigenvalue \(\omega\).</p>
+<p>Then from the commutativity relation: \(\Lambda\ket{\omega}\) is also an eigenstate of operator \(\Omega\).
+Since we presumed there is only one such state, this shows that \(\Lambda\ket{\omega} = \lambda\ket{\omega}\).</p>
+<p>We can then label the eigenvector as \(\ket{\omega,\lambda}\).</p>
+<h4 id="degeneracy">Degeneracy</h4>
+<p>If there is more than one eigenstate of the operator \(\Omega\) with eigenvalue \(\omega\), we say there is degeneracy.</p>
+<h3 id="eigenvalues-and-eigenstates-of-angular-momentum">Eigenvalues and eigenstates of angular momentum</h3>
+<p>Although the generators of rotations about different axes do not commute, the following operator commutes with each of the gneerators.</p>
+<p>\[
+\bm{\hat{J}}^2 = \hat{J}_x^2 + \hat{J}_y^2 + \hat{J}_z^2
+\]</p>
+<p>Since it commutes with each generator, these operators have simulataneous eigenstates in common.</p>
+<p>\[
+\bm{\hat{J}}^2\ket{\lambda,m} = \lambda \hbar^2 \ket{\lambda,m}
+\]</p>
+<p>\[
+\hat{J}_z\ket{\lambda,m} = m \hbar \ket{\lambda,m}
+\]</p>
+<div class="edit-meta">
+
+<br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Physics/quantum_physics.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../physics/optics/" title="Optics"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Optics</a>
+<a class="nav nav-next" href="../../physics/rotation/" title="Rotation">Next - Rotation <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="../../">Home</a></li>
+
+<li class=" has-sub-menu"><a href="../../math/">Maths<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../math/abstractalgebra/">Abstract Algebra</a></li>
+<li class=""><a href="../../math/integration/">Integration</a></li>
+<li class=""><a href="../../math/linear_algebra/">Linear Algebra</a></li>
+<li class=""><a href="../../math/mathematicalmethods/">Mathematical methods pt. 1</a></li>
+<li class=""><a href="../../math/2mm/">Mathematical methods pt. 2</a></li>
+<li class=""><a href="../../math/topology/">Topology</a></li>
+</ul>
+  
+</li>
+
+<li class="parent has-sub-menu"><a href="../../physics/">Physics<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../physics/circuits/">Circuits</a></li>
+<li class=""><a href="../../physics/oscillations/">Core EM</a></li>
+<li class=""><a href="../../physics/funnycircuits/">DC circuit tricks</a></li>
+<li class=""><a href="../../physics/em/">E&amp;M</a></li>
+<li class=""><a href="../../physics/electrodynamics/">Electrodynamics</a></li>
+<li class=""><a href="../../physics/fluids/">Fluid Dynamics</a></li>
+<li class=""><a href="../../physics/linear_momentum/">Linear Momentum</a></li>
+<li class=""><a href="../../physics/mechanics/">Mechanics</a></li>
+<li class=""><a href="../../physics/optics/">Optics</a></li>
+<li class="active"><a href="../../physics/quantum_physics/">Quantum mechanics</a></li>
+<li class=""><a href="../../physics/rotation/">Rotation</a></li>
+<li class=""><a href="../../physics/idealgas/">Thermodynamics</a></li>
+<li class=""><a href="../../physics/wavves/">Waves</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="../../prog/">Progs<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../prog/linear-optimisation/">Linear optimisation</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+
+<div class="outline">
+
+<nav class="outline-list">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#postulates">Postulates</a></li>
+    <li><a href="#hamiltonian-formalism">Hamiltonian formalism</a>
+      <ul>
+        <li><a href="#el-equations">EL equations</a>
+          <ul>
+            <li><a href="#cyclic-coordinate">Cyclic coordinate</a></li>
+            <li><a href="#energy-conservation">Energy conservation</a></li>
+            <li><a href="#noether-s-theorem">Noether&rsquo;s theorem</a></li>
+          </ul>
+        </li>
+        <li><a href="#hamiltonian">Hamiltonian</a>
+          <ul>
+            <li><a href="#hamiltonian-equations">Hamiltonian equations</a></li>
+            <li><a href="#cyclic-coordinates">Cyclic coordinates</a></li>
+            <li><a href="#legendre-transform">Legendre transform</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#statevectors">Statevectors</a>
+      <ul>
+        <li><a href="#rotation-operators">Rotation Operators</a></li>
+        <li><a href="#matrix-representation">Matrix representation</a></li>
+        <li><a href="#passive-and-active-transform">Passive and active transform</a></li>
+      </ul>
+    </li>
+    <li><a href="#stern-gerlach">Stern-Gerlach</a></li>
+    <li><a href="#angular-momentum">Angular momentum</a>
+      <ul>
+        <li><a href="#commuting-operators">Commuting operators</a>
+          <ul>
+            <li><a href="#degeneracy">Degeneracy</a></li>
+          </ul>
+        </li>
+        <li><a href="#eigenvalues-and-eigenstates-of-angular-momentum">Eigenvalues and eigenstates of angular momentum</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</nav>
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

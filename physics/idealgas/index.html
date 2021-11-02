@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Thermodynamics - Notes</title>
+<meta name="description" content="">
+<meta name="generator" content="Hugo 0.85.0" />
+<link href="//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="../../physics/idealgas/">
+<link rel="stylesheet" href="../../css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="../../css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="../../js/bundle.js"></script><style>
+:root {--custom-font-color: #bcb7ae;--custom-background-color: #1a1c1d;}
+</style>
+<meta property="og:title" content="Thermodynamics" />
+<meta property="og:description" content="Boring \[ T_F = \frac{9}{5}T_C &#43;32 \]
+Thermal expansion \[ \Delta L = L \alpha \Delta T \]
+\[ \Delta V = V \beta \Delta T \]
+First law of thermodynamics Work done by a gas
+\[ W = \int \dd W = \int_{v_i}^{v_f} p \dd{V} \]
+First law of thermodynamics
+\[ dE_{int} = dQ-dW \]
+where W is the work done by the system
+Special cases Adiabatic process \[ \Delta E_{int} = -W \]" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/physics/idealgas/" /><meta property="og:image" content="/images/og-image.png"/><meta property="article:section" content="Physics" />
+
+<meta property="og:site_name" content="Hugo Techdoc Theme" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/images/og-image.png"/>
+
+<meta name="twitter:title" content="Thermodynamics"/>
+<meta name="twitter:description" content="Boring \[ T_F = \frac{9}{5}T_C &#43;32 \]
+Thermal expansion \[ \Delta L = L \alpha \Delta T \]
+\[ \Delta V = V \beta \Delta T \]
+First law of thermodynamics Work done by a gas
+\[ W = \int \dd W = \int_{v_i}^{v_f} p \dd{V} \]
+First law of thermodynamics
+\[ dE_{int} = dQ-dW \]
+where W is the work done by the system
+Special cases Adiabatic process \[ \Delta E_{int} = -W \]"/>
+<meta itemprop="name" content="Thermodynamics">
+<meta itemprop="description" content="Boring \[ T_F = \frac{9}{5}T_C &#43;32 \]
+Thermal expansion \[ \Delta L = L \alpha \Delta T \]
+\[ \Delta V = V \beta \Delta T \]
+First law of thermodynamics Work done by a gas
+\[ W = \int \dd W = \int_{v_i}^{v_f} p \dd{V} \]
+First law of thermodynamics
+\[ dE_{int} = dQ-dW \]
+where W is the work done by the system
+Special cases Adiabatic process \[ \Delta E_{int} = -W \]">
+
+<meta itemprop="wordCount" content="285"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>Notes</h1><a href="https://github.com/spongiforma/hugo-theme-techdoc" class="github"><i class="fab fa-github"></i></a>
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="../../">Home</a></li>
+<li><a href="../../about/">About Hugo</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main>
+<h2 id="boring">Boring</h2>
+<p>\[
+T_F = \frac{9}{5}T_C +32
+\]</p>
+<h3 id="thermal-expansion">Thermal expansion</h3>
+<p>\[
+\Delta L = L \alpha \Delta T
+\]</p>
+<p>\[
+\Delta V = V \beta \Delta T
+\]</p>
+<h2 id="first-law-of-thermodynamics">First law of thermodynamics</h2>
+<p>Work done by a gas</p>
+<p>\[
+W = \int \dd W = \int_{v_i}^{v_f} p \dd{V}
+\]</p>
+<p>First law of thermodynamics</p>
+<p>\[
+dE_{int} = dQ-dW
+\]</p>
+<p>where W is the work done by the system</p>
+<h3 id="special-cases">Special cases</h3>
+<h4 id="adiabatic-process">Adiabatic process</h4>
+<p>\[
+\Delta E_{int} = -W
+\]</p>
+<p>when Q=0 (occurs rapidly or is very well insulated)</p>
+<h4 id="constant-volume-processes">Constant-volume processes</h4>
+<p>\[
+\Delta E_{int} = Q
+\]</p>
+<h4 id="cyclical-process">Cyclical process</h4>
+<p>\[
+Q=W
+\]</p>
+<p>No change in internal energy</p>
+<h4 id="free-expansions">Free expansions</h4>
+<p>\[
+\Delta E_{int} = 0
+\]</p>
+<p>Q=W=0</p>
+<p>Adiabatic processes</p>
+<h2 id="heat-transfer">Heat transfer</h2>
+<h3 id="conduction">Conduction</h3>
+<p>\[
+P_{cond} = \frac{Q}{t} = kA\frac{T_H-T_C}{L}
+\]</p>
+<p>where P is the conduction rate, k is the thermal conductivity, and T is temperature of the hot and cold reservoirs.
+A and L is the area surface area and length of the conducting slab</p>
+<p>R-value (Thermal Resistance) is defined as \(\frac{L}{k}\) for a material of specified thickness</p>
+<p>For a conduction slab made up of multiple slabs:</p>
+<p>\[
+P_{cond} = \frac{A(T_H-T_C)}{\sum (L/k)}
+\]</p>
+<p>assuming thermal conduction is in the steady state (all energy absorbed is conducted away)</p>
+<p>Greater the thermal conductivity, the smaller the temperature difference between reservoirs</p>
+<h3 id="convection">Convection</h3>
+<p>Trivial</p>
+<h3 id="radiation">Radiation</h3>
+<p>\[
+P_{rad} = \sigma \epsilon A T^4
+\]</p>
+<p>where \(\sigma = 5.6704 \times 10^{-8} W/m^2 \cdot K^4\) (Stefan-Boltzmann constant),
+\(\epsilon\) represents the emissivity of the object&rsquo;s surface, which is a value from 0-1.</p>
+<p>A surface with a maximum emissivity of 1.0 is a blackbody radiator.</p>
+<p>\[
+P_{abs} = \sigma \epsilon A T_{env}^4
+\]</p>
+<p>A blackbody would absorb all the radiated energy it intercepts</p>
+<p>Thus:</p>
+<p>\[
+P_{net} = P_{abs} - P_{rad}
+\]</p>
+<div class="edit-meta">
+
+<br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Physics/idealgas.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../physics/rotation/" title="Rotation"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Rotation</a>
+<a class="nav nav-next" href="../../physics/wavves/" title="Waves">Next - Waves <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="../../">Home</a></li>
+
+<li class=" has-sub-menu"><a href="../../math/">Maths<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../math/abstractalgebra/">Abstract Algebra</a></li>
+<li class=""><a href="../../math/integration/">Integration</a></li>
+<li class=""><a href="../../math/linear_algebra/">Linear Algebra</a></li>
+<li class=""><a href="../../math/mathematicalmethods/">Mathematical methods pt. 1</a></li>
+<li class=""><a href="../../math/2mm/">Mathematical methods pt. 2</a></li>
+<li class=""><a href="../../math/topology/">Topology</a></li>
+</ul>
+  
+</li>
+
+<li class="parent has-sub-menu"><a href="../../physics/">Physics<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../physics/circuits/">Circuits</a></li>
+<li class=""><a href="../../physics/oscillations/">Core EM</a></li>
+<li class=""><a href="../../physics/funnycircuits/">DC circuit tricks</a></li>
+<li class=""><a href="../../physics/em/">E&amp;M</a></li>
+<li class=""><a href="../../physics/electrodynamics/">Electrodynamics</a></li>
+<li class=""><a href="../../physics/fluids/">Fluid Dynamics</a></li>
+<li class=""><a href="../../physics/linear_momentum/">Linear Momentum</a></li>
+<li class=""><a href="../../physics/mechanics/">Mechanics</a></li>
+<li class=""><a href="../../physics/optics/">Optics</a></li>
+<li class=""><a href="../../physics/quantum_physics/">Quantum mechanics</a></li>
+<li class=""><a href="../../physics/rotation/">Rotation</a></li>
+<li class="active"><a href="../../physics/idealgas/">Thermodynamics</a></li>
+<li class=""><a href="../../physics/wavves/">Waves</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="../../prog/">Progs<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../prog/linear-optimisation/">Linear optimisation</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+
+<div class="outline">
+
+<nav class="outline-list">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#boring">Boring</a>
+      <ul>
+        <li><a href="#thermal-expansion">Thermal expansion</a></li>
+      </ul>
+    </li>
+    <li><a href="#first-law-of-thermodynamics">First law of thermodynamics</a>
+      <ul>
+        <li><a href="#special-cases">Special cases</a>
+          <ul>
+            <li><a href="#adiabatic-process">Adiabatic process</a></li>
+            <li><a href="#constant-volume-processes">Constant-volume processes</a></li>
+            <li><a href="#cyclical-process">Cyclical process</a></li>
+            <li><a href="#free-expansions">Free expansions</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#heat-transfer">Heat transfer</a>
+      <ul>
+        <li><a href="#conduction">Conduction</a></li>
+        <li><a href="#convection">Convection</a></li>
+        <li><a href="#radiation">Radiation</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</nav>
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

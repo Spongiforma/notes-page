@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Electrodynamics - Notes</title>
+<meta name="description" content="">
+<meta name="generator" content="Hugo 0.85.0" />
+<link href="//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="../../physics/electrodynamics/">
+<link rel="stylesheet" href="../../css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="../../css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="../../js/bundle.js"></script><style>
+:root {--custom-font-color: #bcb7ae;--custom-background-color: #1a1c1d;}
+</style>
+<meta property="og:title" content="Electrodynamics" />
+<meta property="og:description" content="Electrostatics Relations V -&gt; rho
+\[ \laplacian V = -\frac{\rho}{\epsilon_0} \] rho -&gt; V
+\[ V = \frac{1}{4\pi\epsilon_0}\int\frac{\rho}{r}\dd{\tau} \]
+E -&gt; rho
+\[ \div{E} = \frac{\rho}{\epsilon_0} \]
+rho -&gt; E
+\[ E = \frac{1}{4\pi\epsilon_0}\int\frac{\rho{\bf \hat{r}}}{r^2}\dd{\tau} \]
+V -&gt; E
+\[ E = -\grad{V} \]
+E -&gt; V \[ V = -\int{E \cdot \dd{l}} \]
+Potential energy For a configuration,
+\begin{align*} W &amp; = \frac{1}{8\pi\epsilon_0}\sum_{i=1}^n\sum_{j\neq i}^n \frac{q_iq_j}{r_{ij}} \\
+&amp; = \frac12 \sum_{i=1}^n q_i V(\bf r_i) \\" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/physics/electrodynamics/" /><meta property="og:image" content="/images/og-image.png"/><meta property="article:section" content="Physics" />
+
+<meta property="og:site_name" content="Hugo Techdoc Theme" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/images/og-image.png"/>
+
+<meta name="twitter:title" content="Electrodynamics"/>
+<meta name="twitter:description" content="Electrostatics Relations V -&gt; rho
+\[ \laplacian V = -\frac{\rho}{\epsilon_0} \] rho -&gt; V
+\[ V = \frac{1}{4\pi\epsilon_0}\int\frac{\rho}{r}\dd{\tau} \]
+E -&gt; rho
+\[ \div{E} = \frac{\rho}{\epsilon_0} \]
+rho -&gt; E
+\[ E = \frac{1}{4\pi\epsilon_0}\int\frac{\rho{\bf \hat{r}}}{r^2}\dd{\tau} \]
+V -&gt; E
+\[ E = -\grad{V} \]
+E -&gt; V \[ V = -\int{E \cdot \dd{l}} \]
+Potential energy For a configuration,
+\begin{align*} W &amp; = \frac{1}{8\pi\epsilon_0}\sum_{i=1}^n\sum_{j\neq i}^n \frac{q_iq_j}{r_{ij}} \\
+&amp; = \frac12 \sum_{i=1}^n q_i V(\bf r_i) \\"/>
+<meta itemprop="name" content="Electrodynamics">
+<meta itemprop="description" content="Electrostatics Relations V -&gt; rho
+\[ \laplacian V = -\frac{\rho}{\epsilon_0} \] rho -&gt; V
+\[ V = \frac{1}{4\pi\epsilon_0}\int\frac{\rho}{r}\dd{\tau} \]
+E -&gt; rho
+\[ \div{E} = \frac{\rho}{\epsilon_0} \]
+rho -&gt; E
+\[ E = \frac{1}{4\pi\epsilon_0}\int\frac{\rho{\bf \hat{r}}}{r^2}\dd{\tau} \]
+V -&gt; E
+\[ E = -\grad{V} \]
+E -&gt; V \[ V = -\int{E \cdot \dd{l}} \]
+Potential energy For a configuration,
+\begin{align*} W &amp; = \frac{1}{8\pi\epsilon_0}\sum_{i=1}^n\sum_{j\neq i}^n \frac{q_iq_j}{r_{ij}} \\
+&amp; = \frac12 \sum_{i=1}^n q_i V(\bf r_i) \\">
+
+<meta itemprop="wordCount" content="1149"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>Notes</h1><a href="https://github.com/spongiforma/hugo-theme-techdoc" class="github"><i class="fab fa-github"></i></a>
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="../../">Home</a></li>
+<li><a href="../../about/">About Hugo</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main>
+<h2 id="electrostatics">Electrostatics</h2>
+<h3 id="relations">Relations</h3>
+<p>V -&gt; rho</p>
+<p>\[
+\laplacian V = -\frac{\rho}{\epsilon_0}
+\]
+rho -&gt; V</p>
+<p>\[
+V = \frac{1}{4\pi\epsilon_0}\int\frac{\rho}{r}\dd{\tau}
+\]</p>
+<p>E -&gt; rho</p>
+<p>\[
+\div{E} = \frac{\rho}{\epsilon_0}
+\]</p>
+<p>rho -&gt; E</p>
+<p>\[
+E = \frac{1}{4\pi\epsilon_0}\int\frac{\rho{\bf \hat{r}}}{r^2}\dd{\tau}
+\]</p>
+<p>V -&gt; E</p>
+<p>\[
+E = -\grad{V}
+\]</p>
+<p>E -&gt; V
+\[
+V = -\int{E \cdot \dd{l}}
+\]</p>
+<h3 id="potential-energy">Potential energy</h3>
+<p>For a configuration,</p>
+<p>\begin{align*}
+W &amp; = \frac{1}{8\pi\epsilon_0}\sum_{i=1}^n\sum_{j\neq i}^n \frac{q_iq_j}{r_{ij}} \\<br>
+&amp; = \frac12 \sum_{i=1}^n q_i V(\bf r_i) \\<br>
+\end{align*}</p>
+<p>For a continuous charge distribution,</p>
+<p>\begin{align*}
+W &amp; = \frac12 \int \rho V \dd{\tau} \\<br>
+&amp; = \frac{\epsilon_0}{2}\left(\int_V E^2 \dd{\tau} + \oint_S VE\cdot\dd{\bf a}\right) \\<br>
+&amp; = \frac{\epsilon_0}{2}\int E^2 \dd{\tau} \text{(all space)}
+\end{align*}</p>
+<p>For compount systems:</p>
+<p>\[
+W = W_1 + W_2 + \epsilon_0 \int{E_1 \cdot E_2}\dd{\tau}
+\]</p>
+<h3 id="capacitors">Capacitors</h3>
+<h4 id="breakdown-voltage">Breakdown voltage</h4>
+<p>Series:</p>
+<p>\[
+V_{max} = \sum_j \frac{1}{C_j} \min_i C_iV_{bi}
+\]</p>
+<p>Parallel:</p>
+<p>\[
+V_{max} = \min_i(V_{bi})
+\]</p>
+<h2 id="potentials">Potentials</h2>
+<p>Laplace&rsquo;s equations tolerates no local maxima and minima and at a point it can often be expressed as the average of the surrounding potential.</p>
+<p>The potential at the center of a sphere is equal to the average potential at the surface due to an external charge located a distance from the center of the sphere. v_ave = V_center + kQ_enc/R</p>
+<h3 id="boundary-conditions-and-uniqueness-theorems">Boundary conditions and uniqueness theorems</h3>
+<h4 id="first-uniqueness-theorem">First uniqueness theorem</h4>
+<p>The solution to Laplace&rsquo;s equation in some volume is uniquely determined if potential is specified on the boundary surface S and the charge density throughout the region is specified.</p>
+<h4 id="2nd-uniqueness-theorem">2nd uniqueness theorem</h4>
+<p>In a volume surrounded by conductors and containing a specifed charge density, the electric field is uniquely determined if the total charge on each conductor is given.</p>
+<h3 id="method-of-images">Method of images</h3>
+<p>Suppose a point charge q is held a distance d above an infinite grounded conducting plane. What is the potential (which is affected by the accumulation of charge on the plane).</p>
+<p>Solution: Pretend there is a charge at -z. Many quantities end up being the same though, Energy is not the same. Note you cannot put image charges where yuo are calculating V as it would change charge density.</p>
+<h3 id="seperation-of-variables">Seperation of variables</h3>
+<p>set boundary conditions and you will get hyperbolic (suited for boundary conditions at infinity) and trig functions. then find fourier coeffs</p>
+<h4 id="spherical-coordinates">Spherical coordinates</h4>
+<p>\[
+V(r,\theta) = \sum^\infty_{l=0}\left(A_lr^l + \frac{B_l}{r^{l+1}}\right) P_l(\cos\theta)
+\]</p>
+<p>where P are the legendre polynomials:</p>
+<p>\[
+P_l(x) = \frac{1}{2^l l!} \left(\dv{x}\right)^l (x^2 - 1)^l
+\]</p>
+<h3 id="multipole-expansion">Multipole expansion</h3>
+<p>\[
+V(\bm{r}) = \frac{1}{4\pi\epsilon_0}\sum_{n=0}^\infty \frac{1}{r^{n+1}}\int(r')^n P_n(cos\alpha)\rho(\bm{r}')\dd{\tau'}
+\]</p>
+<p>where \(\alpha\) is the angle between r and r'</p>
+<h4 id="dipole">Dipole</h4>
+<p>Dipole moment:</p>
+<p>\[
+\bm{p} \equiv \int \bm{r}' \rho(\bm{r}') \dd{\tau}
+\]</p>
+<p>or \(\sum_i q_i\bm{r}'_i\). or \(\bm{p} - Q\bm{a}\) for a shift in coordiantes.</p>
+<p>\[
+V_{dip}( r) = \frac{1}{4\pi\epsilon_0}\frac{\bm{p}\cdot\hat{\bm{r}}}{r^2}
+\]</p>
+<p>for a pure dipole (as opposed to a physical one), qd = constant but d -&gt; 0.</p>
+<h2 id="electric-fields-in-matter">Electric fields in matter</h2>
+<h3 id="induced-dipole">Induced dipole</h3>
+<p>An atom which is placed in an electric field gets polarised and forms a dipole. the dipole moment is given by.</p>
+<p>\[
+\bm{p} = \alpha \bm{E}
+\]</p>
+<h3 id="alignment-of-polar-molecules">Alignment of polar molecules</h3>
+<p>A dipole in a uniform field \(E\) experiences a torque</p>
+<p>\[
+\bm{N} = \bm{p} \times \bm{E}
+\]</p>
+<p>If the field is nonuniform, such that the force on the positive part does not balance the force on the negative part, then</p>
+<p>\[
+\bm{F} = (\bm{p} \cdot \nabla)\bm{E}
+\]</p>
+<h3 id="polarisation">Polarisation</h3>
+<p>When an object gets polarised, we get a bunch of little dipoles pointing in the direction of the field, so we can call this:</p>
+<p>\[
+\bm{P} \equiv \text{dipole moment per unit volume}
+\]</p>
+<p>which is the polarisation.</p>
+<h3 id="field-of-polarised-object">Field of polarised object</h3>
+<p>Since the total potential of polarised object is:</p>
+<p>\[
+V(\bm{r}) = \frac{1}{4\pi\epsilon_0} \int_\mathcal{V} \frac{\bm{P}(\bm{r'})\cdot \bm{\hat\gamma} }{\gamma^2} \dd{\tau'}
+\]</p>
+<p>This can be shown to be equivalent to defining:</p>
+<p>\[
+\sigma_b \equiv \bm{P} \cdot \bm{\hat{n}}
+\]</p>
+<p>\[
+\rho_b \equiv - \div P
+\]</p>
+<p>and expressing above as:</p>
+<p>\[
+V(\bm{r}) = \frac{1}{4\pi\epsilon_0} \oint_\mathcal{S} \frac{\sigma_b}{\gamma} \dd{a'} + \frac{1}{4\pi\epsilon_0} \int_\mathcal{V} \frac{\rho}{\gamma} \dd{\tau'}
+\]</p>
+<h3 id="electric-displacement">Electric Displacement</h3>
+<p>Since we have found that the effect of polarization is to produce accumulations of bound charge within the dielectric and on the surface, we will now put it all together with the field attributable to bound charge plus the field due to everything else, which we will call <strong>free charge.</strong></p>
+<p>Gauss' law reads:</p>
+<p>\[
+\epsilon_0 \div \bm{E} = \rho_b + \rho_f = -\div \bm{P} + \rho_f
+\]</p>
+<p>It is convenient to combine the two divergence terms:</p>
+<p>\[
+\div (\epsilon_0 \bm{E} + \bm{P}) = \rho_f
+\]</p>
+<p>and call the expression in parentheses \(\bm D\), the <strong>electric displacement</strong>. Thus:</p>
+<p>\[
+\div \bm{D} = \rho_f
+\]</p>
+<p>\[
+\oint \bm{D} \cdot \dd{\bm{a}} = Q_{f_{enc}}
+\]</p>
+<p>One must be careful not to draw a direct parallel between E and D such as trying to prescribe a coulomb&rsquo;s law for D.</p>
+<p>By helmholtz' theorem, the divergence alone is insufficient to determine a vector field, as one would need to know the curl as well. However, the curl of D is not always zero as while curl E is zero, curl P isn&rsquo;t always.
+Thus, D is not determined exculsively by the free charge.</p>
+<h3 id="boundary-conditions">Boundary conditions</h3>
+<h4 id="perpendicular-component">Perpendicular component</h4>
+<p>D above - D below = \(\sigma_f\)</p>
+<h4 id="parallel-component">Parallel component</h4>
+<p>D above - D below = P above - P below ()</p>
+<h3 id="linear-dielectrics--starting-on-the-how">Linear dielectrics (starting on the how)</h3>
+<p>If the E field is not too strong, the polarisation is proportional to the field. They will be called <strong>Linear dielectrics</strong>.</p>
+<p>\[
+\bm{P} = \epsilon_0 \chi_e \bm{E}
+\]</p>
+<p>where \(\chi_e\) (dimensionless) is called the electric susceptibility of the medium.
+Note: E is the total field, so in order to calculate P, E must be found, and in order to find contribution from P (by finding P), one must find E. Thus, gauss' law in dielectrics should be used first to find D.</p>
+<p>From definition of electric displacement, we have:</p>
+<p>\[
+\bm{D} = \epsilon_0(1 + \chi_e)\bm{E} = \epsilon \bm{E}
+\]</p>
+<p>where \(\epsilon\) is the permittivity of the material. The relative permittivity, or dielectric constant is given by \(\epsilon_r\) or \(\kappa\).</p>
+<h2 id="magnetostatics">Magnetostatics</h2>
+<p>Lorentz' force law</p>
+<p>\[
+\bm{F} = q(\bm{E} + \bm{v} \times \bm{B})
+\]</p>
+<p>\[
+\bm{F} = I \int (\dd{\bm l}\times \bm{B})
+\]</p>
+<h3 id="current">Current</h3>
+<p>Current can also be written as a vector:</p>
+<p>\[
+\bm{I} = \lambda \bm{v}
+\].</p>
+<p>Surface Charge density is defined as:</p>
+<p>\[
+\bm{K} = \dv{\bm I}{l}
+\]</p>
+<p>Volume current density is defined as:</p>
+<p>\[
+\bm{J} = \dv{\bm I}{a}
+\]</p>
+<p>Continuity equation:</p>
+<p>\[
+\div \bm{J} = - \pdv{\rho}{t}
+\]</p>
+<h3 id="steady-currents">Steady Currents</h3>
+<p>Steady currents produce constant magnetic fields. Thus:</p>
+<p>\[
+\pdv{\rho}{t} = 0
+\]</p>
+<p>\[
+\pdv{\bm{J}}{t} = \bm{0}
+\]</p>
+<h4 id="biot-savart-law">Biot-Savart law</h4>
+<p>\[
+\bm{B}(\bm{r}) = \frac{\mu_0}{4 \pi} \int \frac{\bm{I} \times \bm{\hat\gamma}}{\gamma^2} \dd{l'}
+\]</p>
+<!--list-separator-->
+<ul>
+<li>
+<p>Magnetic field around wire</p>
+<p>\[
+\bm{B} = \frac{\mu_0 I}{2\pi s} \bm{\hat\phi}
+\]</p>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>force per unit length of two parallel wires</p>
+<p>\[
+f = \frac{\mu_0}{2\pi} \frac{I_1I_2}{d}
+\]</p>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>Magnetic field above a circular loop</p>
+<p>\[
+B(z) = \frac{\mu_0 I}{2} \frac{R^2}{(R^2 + z^2)^{3/2}}
+\]</p>
+</li>
+</ul>
+<h4 id="curl-and-div-of-b">Curl and div of B</h4>
+<p>\[
+\oint \bm{B} \cdot \dd{\bm{l}} = \mu_0 I_{enc}
+\]</p>
+<p>\[
+\curl \bm{B} = \mu_0 \bm{J}
+\]</p>
+<p>\[
+\div \bm{B} = 0
+\]</p>
+<div class="edit-meta">
+
+<br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Physics/electrodynamics.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../physics/em/" title="E&amp;M"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - E&amp;M</a>
+<a class="nav nav-next" href="../../physics/fluids/" title="Fluid Dynamics">Next - Fluid Dynamics <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="../../">Home</a></li>
+
+<li class=" has-sub-menu"><a href="../../math/">Maths<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../math/abstractalgebra/">Abstract Algebra</a></li>
+<li class=""><a href="../../math/integration/">Integration</a></li>
+<li class=""><a href="../../math/linear_algebra/">Linear Algebra</a></li>
+<li class=""><a href="../../math/mathematicalmethods/">Mathematical methods pt. 1</a></li>
+<li class=""><a href="../../math/2mm/">Mathematical methods pt. 2</a></li>
+<li class=""><a href="../../math/topology/">Topology</a></li>
+</ul>
+  
+</li>
+
+<li class="parent has-sub-menu"><a href="../../physics/">Physics<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../physics/circuits/">Circuits</a></li>
+<li class=""><a href="../../physics/oscillations/">Core EM</a></li>
+<li class=""><a href="../../physics/funnycircuits/">DC circuit tricks</a></li>
+<li class=""><a href="../../physics/em/">E&amp;M</a></li>
+<li class="active"><a href="../../physics/electrodynamics/">Electrodynamics</a></li>
+<li class=""><a href="../../physics/fluids/">Fluid Dynamics</a></li>
+<li class=""><a href="../../physics/linear_momentum/">Linear Momentum</a></li>
+<li class=""><a href="../../physics/mechanics/">Mechanics</a></li>
+<li class=""><a href="../../physics/optics/">Optics</a></li>
+<li class=""><a href="../../physics/quantum_physics/">Quantum mechanics</a></li>
+<li class=""><a href="../../physics/rotation/">Rotation</a></li>
+<li class=""><a href="../../physics/idealgas/">Thermodynamics</a></li>
+<li class=""><a href="../../physics/wavves/">Waves</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="../../prog/">Progs<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../prog/linear-optimisation/">Linear optimisation</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+
+<div class="outline">
+
+<nav class="outline-list">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#electrostatics">Electrostatics</a>
+      <ul>
+        <li><a href="#relations">Relations</a></li>
+        <li><a href="#potential-energy">Potential energy</a></li>
+        <li><a href="#capacitors">Capacitors</a>
+          <ul>
+            <li><a href="#breakdown-voltage">Breakdown voltage</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#potentials">Potentials</a>
+      <ul>
+        <li><a href="#boundary-conditions-and-uniqueness-theorems">Boundary conditions and uniqueness theorems</a>
+          <ul>
+            <li><a href="#first-uniqueness-theorem">First uniqueness theorem</a></li>
+            <li><a href="#2nd-uniqueness-theorem">2nd uniqueness theorem</a></li>
+          </ul>
+        </li>
+        <li><a href="#method-of-images">Method of images</a></li>
+        <li><a href="#seperation-of-variables">Seperation of variables</a>
+          <ul>
+            <li><a href="#spherical-coordinates">Spherical coordinates</a></li>
+          </ul>
+        </li>
+        <li><a href="#multipole-expansion">Multipole expansion</a>
+          <ul>
+            <li><a href="#dipole">Dipole</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#electric-fields-in-matter">Electric fields in matter</a>
+      <ul>
+        <li><a href="#induced-dipole">Induced dipole</a></li>
+        <li><a href="#alignment-of-polar-molecules">Alignment of polar molecules</a></li>
+        <li><a href="#polarisation">Polarisation</a></li>
+        <li><a href="#field-of-polarised-object">Field of polarised object</a></li>
+        <li><a href="#electric-displacement">Electric Displacement</a></li>
+        <li><a href="#boundary-conditions">Boundary conditions</a>
+          <ul>
+            <li><a href="#perpendicular-component">Perpendicular component</a></li>
+            <li><a href="#parallel-component">Parallel component</a></li>
+          </ul>
+        </li>
+        <li><a href="#linear-dielectrics--starting-on-the-how">Linear dielectrics (starting on the how)</a></li>
+      </ul>
+    </li>
+    <li><a href="#magnetostatics">Magnetostatics</a>
+      <ul>
+        <li><a href="#current">Current</a></li>
+        <li><a href="#steady-currents">Steady Currents</a>
+          <ul>
+            <li><a href="#biot-savart-law">Biot-Savart law</a></li>
+            <li><a href="#curl-and-div-of-b">Curl and div of B</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</nav>
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

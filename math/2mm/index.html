@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Mathematical methods pt. 2 - Notes</title>
+<meta name="description" content="">
+<meta name="generator" content="Hugo 0.85.0" />
+<link href="//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="../../math/2mm/">
+<link rel="stylesheet" href="../../css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="../../css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="../../js/bundle.js"></script><style>
+:root {--custom-font-color: #bcb7ae;--custom-background-color: #1a1c1d;}
+</style>
+<meta property="og:title" content="Mathematical methods pt. 2" />
+<meta property="og:description" content="Fourier series \[ f(x) = \frac{a_0}{2} &#43; \sum_{r=1}^\infty \left[a_r \cos\left(\frac{2\pi r x}{L}\right) &#43; b_r \sin\left(\frac{2\pi r x}{L}\right)\right] \]
+Dirichlet conditions The conditions a function must fulfil in order that it may be expanded as a fourier series.
+  The function must be periodic*
+  It must be single-valued and continuous, except at a finite number of finite discontinuties
+  It must have only have a finite number of maxima and minima within one period" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/math/2mm/" /><meta property="og:image" content="/images/og-image.png"/><meta property="article:section" content="Math" />
+
+<meta property="og:site_name" content="Hugo Techdoc Theme" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/images/og-image.png"/>
+
+<meta name="twitter:title" content="Mathematical methods pt. 2"/>
+<meta name="twitter:description" content="Fourier series \[ f(x) = \frac{a_0}{2} &#43; \sum_{r=1}^\infty \left[a_r \cos\left(\frac{2\pi r x}{L}\right) &#43; b_r \sin\left(\frac{2\pi r x}{L}\right)\right] \]
+Dirichlet conditions The conditions a function must fulfil in order that it may be expanded as a fourier series.
+  The function must be periodic*
+  It must be single-valued and continuous, except at a finite number of finite discontinuties
+  It must have only have a finite number of maxima and minima within one period"/>
+<meta itemprop="name" content="Mathematical methods pt. 2">
+<meta itemprop="description" content="Fourier series \[ f(x) = \frac{a_0}{2} &#43; \sum_{r=1}^\infty \left[a_r \cos\left(\frac{2\pi r x}{L}\right) &#43; b_r \sin\left(\frac{2\pi r x}{L}\right)\right] \]
+Dirichlet conditions The conditions a function must fulfil in order that it may be expanded as a fourier series.
+  The function must be periodic*
+  It must be single-valued and continuous, except at a finite number of finite discontinuties
+  It must have only have a finite number of maxima and minima within one period">
+
+<meta itemprop="wordCount" content="1892"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>Notes</h1><a href="https://github.com/spongiforma/hugo-theme-techdoc" class="github"><i class="fab fa-github"></i></a>
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="../../">Home</a></li>
+<li><a href="../../about/">About Hugo</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main>
+<h2 id="fourier-series">Fourier series</h2>
+<p>\[
+f(x) = \frac{a_0}{2} + \sum_{r=1}^\infty \left[a_r \cos\left(\frac{2\pi r x}{L}\right) + b_r \sin\left(\frac{2\pi r x}{L}\right)\right]
+\]</p>
+<h3 id="dirichlet-conditions">Dirichlet conditions</h3>
+<p>The conditions a function must fulfil in order that it may be expanded as a fourier series.</p>
+<ul>
+<li>
+<p>The function must be periodic*</p>
+</li>
+<li>
+<p>It must be single-valued and continuous, except at a finite number of finite discontinuties</p>
+</li>
+<li>
+<p>It must have only have a finite number of maxima and minima within one period</p>
+</li>
+<li>
+<p>The integral over one period of |f(x)| must converge</p>
+<p>Then the fourier series will converge to f(x) at all points where f(x) is continuous.</p>
+</li>
+</ul>
+<h3 id="properties-of-fourier-series">Properties of fourier series</h3>
+<ul>
+<li>
+<p>Completeness</p>
+</li>
+<li>
+<p>All terms are mutually orthogonal</p>
+<p>i.e.</p>
+</li>
+</ul>
+<p>\[
+\int_{x_0}^{x_0+L}\sin(2\pi r x / L)\cos(2 \pi p x/L)\dd{x} = 0
+\]</p>
+<p>for all r and p
+\[
+\int_{x_0}^{x_0+L}\cos(2\pi r x / L)\cos(2 \pi p x/L)\dd{x} =\begin{cases}
+L &amp; r = p = 0 \\<br>
+\frac12 L &amp; r = p &gt; 0 \\<br>
+0 &amp; r \neq p
+\end{cases}
+\]</p>
+<p>\[
+\int_{x_0}^{x_0+L}\sin(2\pi r x / L)\sin(2 \pi p x/L)\dd{x} =\begin{cases}
+0 &amp; r = p = 0 \\<br>
+\frac12 L &amp; r = p &gt; 0 \\<br>
+0 &amp; r \neq p
+\end{cases}
+\]</p>
+<p>where r and p are integers greater than or equal to zero.</p>
+<h3 id="fourier-coefficients">Fourier coefficients</h3>
+<p>\[
+a_r = \frac{2}{L} \int_{x_0}^{x_0+L}f(x)\cos(2\pi r x / L) \dd{x}
+\]
+\[
+b_r = \frac{2}{L} \int_{x_0}^{x_0+L}f(x)\sin(2\pi r x / L) \dd{x}
+\]</p>
+<h4 id="symmetry-about-quarter-period">Symmetry about quarter period</h4>
+<p>if f(x) is even about L/4 then a_odd = 0 and b_even = 0
+if f(x) is odd about L/4 then a_2r = 0 and b_odd = 0</p>
+<h3 id="discontinuous-functions">Discontinuous functions</h3>
+<p>At a discontinuity the value of the fourier series at that point is halfway between the upper and lower values. There is also an overshoot which does not disappear in the limit of an infinite number of terms. This is the <strong>Gibbs' phenomenon</strong></p>
+<h3 id="non-periodic-functions">Non-periodic functions</h3>
+<p>Can be extended to non-periodic functions by extending them (in numerous ways), usually to odd or even functions. Care must be taken that it converges properly at possible discontinuities at the ends.</p>
+<h3 id="integration-and-differentiation">Integration and differentiation</h3>
+<p>Try it out!</p>
+<h3 id="complex-fourier-series">Complex fourier series</h3>
+<p>\[
+f(x) = \sum_{r=-\infty}^\infty c_r \exp(2 \pi i r x / L)
+\]</p>
+<p>\[
+c_r = \frac{1}{L}\int_{x_0}^{x_0+L}f(x)\exp(-\frac{2 \pi i r x}{L})\dd{x}
+\]</p>
+<p>in relation to real fourier coefficients:</p>
+<p>\begin{align*}
+c_r &amp; = \frac12 (a_r - i b_r) \\<br>
+c_{-r} &amp; = \frac12 (a_r + i b_r) \\<br>
+\end{align*}</p>
+<p>if f(x) is real then \(c_{-r} = c_r^*\)</p>
+<h3 id="parseval-s-theorem">Parseval&rsquo;s theorem</h3>
+<p>\begin{align*}
+\frac{1}{L} \int_{x_0}^{x_0+L}|f(x)|^2 \dd{x} &amp; = \sum_{-\infty}^\infty |c_r|^2 \\<br>
+&amp; =(\frac12 a_0)^2 + \frac12 \sum_{r=1}^\infty (a_r^2 + b_r^2)
+\end{align*}</p>
+<h2 id="integral-transforms">Integral transforms</h2>
+<h3 id="fourier-transform">Fourier transform</h3>
+<p>Recall that a periodid function f can be expressed as:</p>
+<p>\[
+f(t) = \sum_{r=-\infty}^\infty c_r e^{2\pi i r t/ T} = \sum_{r=-\infty}^\infty c_r e^{i\omega_r t}
+\]</p>
+<p>where \(\omega_r = 2\pi r / T\)</p>
+<p>The fourier transform of f(t):</p>
+<p>\[
+\tilde{f}(\omega) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^\infty f(t) e^{-i\omega t} \dd{t}
+\]</p>
+<p>\[
+f(t) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^\infty \tilde{f}(\omega) e^{i\omega t} \dd{\omega}
+\]</p>
+<h4 id="dirac-delta-function">Dirac delta function</h4>
+<p>\[
+\delta(t-u) = \frac{1}{2\pi} \int_{-\infty}^\infty e^{i\omega (t-u)}\dd{\omega}
+\]</p>
+<p>\[
+\delta(t) = \lim_{\Omega \to \infty} \left(\frac{\sin\Omega t}{\pi t}\right)
+\]</p>
+<p>\[
+\tilde{\delta}(\omega) = \frac{1}{\sqrt{2\pi}}
+\]</p>
+<p>\[
+H'(t) = \delta(t)
+\]</p>
+<h4 id="properties">Properties</h4>
+<ul>
+<li>Differentiation</li>
+</ul>
+<p>\[
+\mathcal{F}[f'(t)] = i\omega \tilde{f}(\omega)
+\]</p>
+<p>and so on for higher derivatives</p>
+<ul>
+<li>Integration</li>
+</ul>
+<p>\[
+\mathcal{F}\left[\int^t f(s) \dd{s}\right] = \frac{1}{i\omega}\tilde{f}(\omega) + 2\pi c \delta(\omega)
+\]</p>
+<p>where c is a constant.</p>
+<ul>
+<li>Scaling</li>
+</ul>
+<p>\[
+\mathcal{F}[f(at)] = \frac{1}{a}\tilde{f}\left(\frac{\omega}{a}\right)
+\]</p>
+<ul>
+<li>Translation</li>
+</ul>
+<p>\[
+\mathcal{F}[f(t + a)] = e^{ia\omega}\tilde{f}(\omega)
+\]</p>
+<ul>
+<li>Exponential multiplication</li>
+</ul>
+<p>\[
+\mathcal{F}[e^{\alpha t}f(t)] = \tilde{f}(\omega + i\alpha)
+\]</p>
+<p>where \(\alpha \in \mathbb{C}\)</p>
+<h4 id="odd-and-even-functions">Odd and even functions</h4>
+<!--list-separator-->
+<ul>
+<li>
+<p>Odd</p>
+<p>\[
+\tilde{f}(\omega) = \sqrt{\frac{2}{\pi}} \int_0^\infty f(t) \sin\omega t \dd{t}
+\]</p>
+<p>\[
+f(t) = \sqrt{\frac{2}{\pi}} \int_0^\infty \tilde{f}(\omega) \sin\omega t \dd{\omega}
+\]</p>
+<p>For even functions, we can replace sin with cos.</p>
+</li>
+</ul>
+<h4 id="convolution-and-deconvolution">Convolution and Deconvolution</h4>
+<p>\[
+h(z) = \int_{-\infty}^\infty f(x)g(z-x) \dd{x}
+\]</p>
+<p>where f(x) is the &lsquo;true&rsquo; function and g(z-x) is the resolution function.</p>
+<h4 id="parseval-s-theorem">Parseval&rsquo;s theorem</h4>
+<p>\[
+\int_{-\infty}^\infty \vert f(t) \vert^2 \dd{t} = \int_{-\infty}^\infty \vert \tilde{f}(\omega) \vert^2 \dd{\omega}
+\]</p>
+<h3 id="laplace-transform">Laplace transform</h3>
+<p>When a function does not satisfy the dirichlet conditions as it may not converge at infinity or if it is only defined for t &gt; 0. we may want to use the Laplace transform.</p>
+<p>\[
+\bar{f}(s) = \int_0^\infty f(t)e^{-st}\dd{t}
+\]</p>
+<p>where we assume s is real. Usually, for a given f(t), there will be some real number \(s_0\) such that the integral exists for \(s &gt; s_0\) but diverges otherwise.</p>
+<h4 id="standard-lapalace-transforms">Standard Lapalace transforms</h4>
+<p>look up a table</p>
+<h4 id="laplace-transforms-of-derivatives-and-integrals">Laplace transforms of derivatives and integrals</h4>
+<p>\[
+\mathcal{L}\left[\dv[n]{f}{t}\right] = s^n\bar{f} - s^{n-1}f(0) - s^{n-2}f'(0) - \ldots - \dv[n-1]{f}{t}(0), \text{ for s &gt; 0}
+\]</p>
+<p>\[
+\mathcal{L}\left[\int_0^t f(u)\dv{u}\right] = \frac{1}{s}\mathcal{L}[f]
+\]</p>
+<h2 id="ordinary-differential-equations">Ordinary Differential equations</h2>
+<p><strong>Order</strong> is the order of the highest derivative it contains
+<strong>Degree</strong> is the power to which the highest order derivative is raised (after rationalisation)</p>
+<h3 id="1st-degree-1st-order">1st-degree, 1st-order</h3>
+<h4 id="seperable-variable-equations">Seperable-variable equations</h4>
+<p><strong>Form</strong>:</p>
+<p>\[
+\dv{y}{x} = f(x)g(y)
+\]</p>
+<p><strong>Solution method</strong>:</p>
+<p>Factorise when necessary.</p>
+<p>\[
+\int \frac{\dd{y}}{g(y)} = \int f(x) \dd{x}
+\]</p>
+<h4 id="exact-equations">Exact equations</h4>
+<p><strong>Form</strong>:</p>
+<p>\[
+A(x,y) \dd{x} + B(x,y) \dd{y} = 0
+\]</p>
+<p>where the expression is an exact differential.</p>
+<p>Since \(\pdv{A}{y} = \pdv{B}{x}\), we may equate the expression to dU and thus dU = 0, U = c.</p>
+<p><strong>Solution method</strong>:</p>
+<p>Make sure to check that its exact.
+\[
+U(x,y) = \int A(x,y) \dd{x} + F(y)
+\]</p>
+<p>F(y) can be found by differentiating U wrt y and equating the expression to B(x,y). Then sub back in.</p>
+<h4 id="inexact-equations-integrating-factors">Inexact equations: integrating factors</h4>
+<p><strong>Form</strong>:</p>
+<p>Above but inexact.</p>
+<p>The differential can be made exact by multiplying by an <strong>integrating factor</strong> \(\mu(x,y)\) which obeys:</p>
+<p>\[
+\pdv{(\mu A)}{y} = \pdv{(\mu B)}{x}
+\]</p>
+<p>If the integrating factor is a function of either x or y alone then the eq can be explicitly solved. Assuming \(\mu = \mu(x)\):</p>
+<p>\begin{align*}
+&amp;\mu\pdv{A}{y} =\mu \pdv{B}{x} + B\pdv{\mu}{x} \\<br>
+\implies &amp; \frac{\dd{\mu}}{\mu} = \frac{1}{B}\left(\pdv{A}{y}-\pdv{B}{x}\right)\dd{x} = f(x) \dd{x}
+\end{align*}</p>
+<p>where we require f(x) be a function of x only.</p>
+<p><strong>Solution method</strong>:</p>
+<p>In which case,</p>
+<p>\[
+\mu(x) = \exp\left\{\int f(x) \dd{x}\right\} \text{   where   } f(x) = \frac{1}{B}\left(\pdv{A}{y}-\pdv{B}{x}\right)
+\]</p>
+<p>\[
+\mu(y) = \exp\left\{\int f(y) \dd{y}\right\} \text{   where   } f(y) = \frac{1}{A}\left(\pdv{B}{x}-\pdv{A}{y}\right)
+\]</p>
+<h4 id="linear-equations">Linear equations</h4>
+<p>Special case of inexact ODEs</p>
+<p><strong>Form</strong>:</p>
+<p>\[
+\dv{y}{x} + P(x)y = Q(x)
+\]</p>
+<p><strong>Solution method</strong>:</p>
+<p>\[
+\mu(x) = \exp\left\{\int P(x) \dd{x}\right\}
+\]</p>
+<p>Multiply throughout and then integrate left and right hand sides.</p>
+<h4 id="homogenous-equations">Homogenous equations</h4>
+<p><strong>Form</strong>:</p>
+<p>\[
+\dv{y}{x} = \frac{A(x,y)}{B(x,y)} = F\left(\frac{y}{x}\right)
+\]</p>
+<p>where A(x,y) and B(x,y) are homogenous functions of the same degree. A function is homogenous of degree n if it obeys:</p>
+<p>\[
+f(\lambda x,\lambda y) = \lambda^n f(x,y)
+\]</p>
+<p>in general, the sum of the powers of x and y in each term of A and B should be the same.</p>
+<p><strong>Solution method</strong>:</p>
+<p>The equation may solved by making the substitution y = vx, so that:</p>
+<p>\[
+\dv{y}{x} = v + x\dv{v}{x} = F(v)
+\].</p>
+<p>This is now seperable and can be integrated directly to give:</p>
+<p>\[
+\int \frac{\dd{v}}{F(v) - v} = \int \frac{\dd{x}}{x}
+\]</p>
+<h4 id="isobaric">Isobaric</h4>
+<p><strong>Form</strong>:</p>
+<p>A generalisation of the homogeneous ODE.</p>
+<p>\[
+\dv{y}{x} = \frac{A(x,y)}{B(x,y)}
+\]</p>
+<p>where the equation is dimensionally consistent if y and dy are each given a weight m relative to x and dx. i.e. if the substitution y=vx^m makes it seperable</p>
+<p><strong>Solution method</strong>:
+Write the equation in the form Adx + Bdy = 0. Given y and dy weight m and x and dx each weight 1. then find an m which makes all the sums equal</p>
+<h4 id="bernoulli-s-equation">Bernoulli&rsquo;s equation</h4>
+<p><strong>Form</strong>:</p>
+<p>\[
+\dv{y}{x} + P(x)y = Q(x)y^n \text{ where $n\neq 0$ or $1$}
+\]</p>
+<p><strong>Solution method</strong>:</p>
+<p>The equation can be made linear by substituting \(v = y^{1-n}\) and correspondingly</p>
+<p>\[
+\dv{y}{x} = \left(\frac{y^n}{1-n}\right) \dv{v}{x}
+\]</p>
+<p>This can be substituted into the first equation and we find:</p>
+<p>\[
+\dv{v}{x} + (1-n)P(x)v = (1-n)Q(x)
+\]</p>
+<p>which is linear and can then be solved.</p>
+<h4 id="miscellaneous">Miscellaneous</h4>
+<!--list-separator-->
+<ul>
+<li>
+<p>ax + by + c</p>
+<p><strong>Form</strong>:</p>
+<p>\[\dv{y}{x} = F(ax + by + c)\]</p>
+<p><strong>Solution method</strong>:</p>
+<p>Letting v = ax + by + c,</p>
+<p>\[
+\dv{v}{x} = a + b\dv{y}{x} = a + bF(v)
+\]</p>
+<p>which can be solved.</p>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>y' = ax+by+c/ex+fy+g</p>
+<p><strong>Form</strong>:</p>
+<p>\[
+\dv{y}{x} = \frac{ax + by + c}{ex + fy + g}
+\]</p>
+<p>unless a/e = b/f where it reduces to the form above.</p>
+<p><strong>Solution method</strong>:</p>
+<p>By letting \(x = X + \alpha\) and \(y = Y + \beta\), where \(\alpha\) and \(\beta\) are found from:</p>
+<p>\[
+a\alpha + b\beta + c = 0
+\]</p>
+<p>\[
+e\alpha + f\beta + g = 0
+\]</p>
+<p>\[
+\dv{Y}{X} = \frac{aX + bY}{eX + fY}
+\]</p>
+</li>
+</ul>
+<h3 id="higher-degree-1st-order-equations">Higher-degree 1st-order equations</h3>
+<p>Can expressed as:</p>
+<p>\[
+p^n + a_{n-1}(x,y)p^{n-1} + \ldots + a_1(x,y)p + a_0(x,y) = 0
+\]</p>
+<p>where \(p = \dd{y}/\dd{x}\)</p>
+<p>Singular solutions are sometimes given which contain no arbitrary constants.</p>
+<h4 id="equations-soluble-for-p">Equations soluble for p</h4>
+<p>If the LHS can be factorised into the form:</p>
+<p>\[
+(p-F_1)(p-F_2)\ldots(p-F_2)=0
+\]</p>
+<p>then we are left with solving the n first-degree equations \(p = F_i\)</p>
+<h4 id="equations-soluble-for-x">Equations soluble for x</h4>
+<p>If the equation can be expressed as:</p>
+<p>\[
+x = F(y,p)
+\]</p>
+<p>then it can be reduced to:</p>
+<p>\[
+\dv{x}{y} = \frac{1}{p} = \pdv{F}{y} + \pdv{F}{p}\dv{p}{y}
+\]</p>
+<p>which can be factorized</p>
+<h4 id="equations-soluble-for-y">Equations soluble for y</h4>
+<p>If the equation can be expressed as:</p>
+<p>\[
+x = F(y,p)
+\]</p>
+<p>then it can be reduced to:</p>
+<p>\[
+\dv{y}{x} = p = \pdv{F}{x} + \pdv{F}{p}\dv{p}{x}
+\]</p>
+<p>which can be factorized.</p>
+<h4 id="clairaut-s-equation">Clairaut&rsquo;s equation</h4>
+<p>Special case of equations soluble for y.</p>
+<p><strong>Form:</strong></p>
+<p>\[
+y = px + F(p)
+\]</p>
+<p>The general solution is given by \(y = c_1 x + F(c_1)\), the singular solution can often be found from the relation:</p>
+<p>\[
+\dv{F}{p} + x = 0
+\]</p>
+<h3 id="higher-order-linear-equations">Higher-order linear equations</h3>
+<p>Linear ODE of general order:</p>
+<p>\[
+a_n(x)\dv[n]{y}{x} + a_{n-1}(x)\dv[n-1]{y}{x} + \ldots +a_1(x)\dv{y}{x} + a_0(x)y = f(x)
+\]</p>
+<p>An nth order linear ODE must have n linearly independent solutions for the complementary equation. Their linear independence can be confirmed by forming n simultaneous equations for the n constants by repeatedly differentiating them and noticing that RHS is always zero for the complementary solution. This can be constructed as a determinant or the <strong>Wronkskian</strong> of the set of functions. If it does not vanish then the n functions are linearly independent though the converse does not necessarily apply.</p>
+<h4 id="linear-equations-with-constant-coefficients">Linear equations with constant coefficients</h4>
+<p>The coefficients \(a_m\) are constants.</p>
+<p>To find the complementary solution try a solution of the form Ae^kx, and we are left with an auxillary equation in k. If all roots are distinct then the solutions are linearly independent and can be superposed. If some roots are complex and all coefficients are real, then it for every complex root its complex conjugate is also a root. If some roots are repeated, then we must try solutions of the form \(x^ne^{kx}\) are also solutions.</p>
+<p>for particular solutions, use method of undetermined coefficients.</p>
+<ul>
+<li>if f(x) = ae^rx, try be^rx</li>
+<li>if f(x) = a sin(rx) + b cos(rx) (a or b may be zero), then try c sin(rx) + d cos(rx)</li>
+<li>if f(x) = polynomial of degree N, where some coefficients may be zero, then try another polynomial of degree N.</li>
+</ul>
+<h3 id="linear-recurrence-relations">Linear recurrence relations</h3>
+<p>Form:</p>
+<p>\[
+u_{n+1} = \sum_{r=0}^{N-1}a_r u_{n-r} + k
+\]</p>
+<p>where k may be a simple function of n.</p>
+<p>Equations involving terms whose indices differ by up to N are called Nth-order recurrence relations. If k=0, then the relation is called homogenous.</p>
+<h4 id="first-order-recurrence-relations">First-order recurrence relations</h4>
+<p>For the equation:</p>
+<p>\[
+u_{n+1} = au_n + k
+\]</p>
+<p>the general solution is:</p>
+<p>when \(a \neq 1\):
+\[
+u_n = u_0 a^n + k \frac{1-a^n}{1-a}
+\]
+when a = 1:</p>
+<p>\[
+u_n = u_0 + nk
+\]</p>
+<div class="edit-meta">
+
+<br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Math/2mm.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../math/mathematicalmethods/" title="Mathematical methods pt. 1"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Mathematical methods pt. 1</a>
+<a class="nav nav-next" href="../../math/topology/" title="Topology">Next - Topology <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="../../">Home</a></li>
+
+<li class="parent has-sub-menu"><a href="../../math/">Maths<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../math/abstractalgebra/">Abstract Algebra</a></li>
+<li class=""><a href="../../math/integration/">Integration</a></li>
+<li class=""><a href="../../math/linear_algebra/">Linear Algebra</a></li>
+<li class=""><a href="../../math/mathematicalmethods/">Mathematical methods pt. 1</a></li>
+<li class="active"><a href="../../math/2mm/">Mathematical methods pt. 2</a></li>
+<li class=""><a href="../../math/topology/">Topology</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="../../physics/">Physics<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../physics/circuits/">Circuits</a></li>
+<li class=""><a href="../../physics/oscillations/">Core EM</a></li>
+<li class=""><a href="../../physics/funnycircuits/">DC circuit tricks</a></li>
+<li class=""><a href="../../physics/em/">E&amp;M</a></li>
+<li class=""><a href="../../physics/electrodynamics/">Electrodynamics</a></li>
+<li class=""><a href="../../physics/fluids/">Fluid Dynamics</a></li>
+<li class=""><a href="../../physics/linear_momentum/">Linear Momentum</a></li>
+<li class=""><a href="../../physics/mechanics/">Mechanics</a></li>
+<li class=""><a href="../../physics/optics/">Optics</a></li>
+<li class=""><a href="../../physics/quantum_physics/">Quantum mechanics</a></li>
+<li class=""><a href="../../physics/rotation/">Rotation</a></li>
+<li class=""><a href="../../physics/idealgas/">Thermodynamics</a></li>
+<li class=""><a href="../../physics/wavves/">Waves</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="../../prog/">Progs<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../prog/linear-optimisation/">Linear optimisation</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+
+<div class="outline">
+
+<nav class="outline-list">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#fourier-series">Fourier series</a>
+      <ul>
+        <li><a href="#dirichlet-conditions">Dirichlet conditions</a></li>
+        <li><a href="#properties-of-fourier-series">Properties of fourier series</a></li>
+        <li><a href="#fourier-coefficients">Fourier coefficients</a>
+          <ul>
+            <li><a href="#symmetry-about-quarter-period">Symmetry about quarter period</a></li>
+          </ul>
+        </li>
+        <li><a href="#discontinuous-functions">Discontinuous functions</a></li>
+        <li><a href="#non-periodic-functions">Non-periodic functions</a></li>
+        <li><a href="#integration-and-differentiation">Integration and differentiation</a></li>
+        <li><a href="#complex-fourier-series">Complex fourier series</a></li>
+        <li><a href="#parseval-s-theorem">Parseval&rsquo;s theorem</a></li>
+      </ul>
+    </li>
+    <li><a href="#integral-transforms">Integral transforms</a>
+      <ul>
+        <li><a href="#fourier-transform">Fourier transform</a>
+          <ul>
+            <li><a href="#dirac-delta-function">Dirac delta function</a></li>
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#odd-and-even-functions">Odd and even functions</a></li>
+            <li><a href="#convolution-and-deconvolution">Convolution and Deconvolution</a></li>
+            <li><a href="#parseval-s-theorem">Parseval&rsquo;s theorem</a></li>
+          </ul>
+        </li>
+        <li><a href="#laplace-transform">Laplace transform</a>
+          <ul>
+            <li><a href="#standard-lapalace-transforms">Standard Lapalace transforms</a></li>
+            <li><a href="#laplace-transforms-of-derivatives-and-integrals">Laplace transforms of derivatives and integrals</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#ordinary-differential-equations">Ordinary Differential equations</a>
+      <ul>
+        <li><a href="#1st-degree-1st-order">1st-degree, 1st-order</a>
+          <ul>
+            <li><a href="#seperable-variable-equations">Seperable-variable equations</a></li>
+            <li><a href="#exact-equations">Exact equations</a></li>
+            <li><a href="#inexact-equations-integrating-factors">Inexact equations: integrating factors</a></li>
+            <li><a href="#linear-equations">Linear equations</a></li>
+            <li><a href="#homogenous-equations">Homogenous equations</a></li>
+            <li><a href="#isobaric">Isobaric</a></li>
+            <li><a href="#bernoulli-s-equation">Bernoulli&rsquo;s equation</a></li>
+            <li><a href="#miscellaneous">Miscellaneous</a></li>
+          </ul>
+        </li>
+        <li><a href="#higher-degree-1st-order-equations">Higher-degree 1st-order equations</a>
+          <ul>
+            <li><a href="#equations-soluble-for-p">Equations soluble for p</a></li>
+            <li><a href="#equations-soluble-for-x">Equations soluble for x</a></li>
+            <li><a href="#equations-soluble-for-y">Equations soluble for y</a></li>
+            <li><a href="#clairaut-s-equation">Clairaut&rsquo;s equation</a></li>
+          </ul>
+        </li>
+        <li><a href="#higher-order-linear-equations">Higher-order linear equations</a>
+          <ul>
+            <li><a href="#linear-equations-with-constant-coefficients">Linear equations with constant coefficients</a></li>
+          </ul>
+        </li>
+        <li><a href="#linear-recurrence-relations">Linear recurrence relations</a>
+          <ul>
+            <li><a href="#first-order-recurrence-relations">First-order recurrence relations</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</nav>
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

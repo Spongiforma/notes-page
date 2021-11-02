@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Mathematical methods pt. 1 - Notes</title>
+<meta name="description" content="">
+<meta name="generator" content="Hugo 0.85.0" />
+<link href="//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="../../math/mathematicalmethods/">
+<link rel="stylesheet" href="../../css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="../../css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="../../js/bundle.js"></script><style>
+:root {--custom-font-color: #bcb7ae;--custom-background-color: #1a1c1d;}
+</style>
+<meta property="og:title" content="Mathematical methods pt. 1" />
+<meta property="og:description" content="Precalc Binomial expansion \begin{align*} (x&#43;y)^n = (x&#43;y)^{-m} = &amp; x^{-m} \left(1&#43;\frac{y}{x}\right)^{-m} \\
+= &amp; x^{-m} \sum_{k=0}^{\infty} {-m \choose k} \left(\frac{y}{x}\right)^k \end{align*}
+where m is positive and x &gt; y and:
+\[ {-m \choose k} = (-1)^k {m&#43;k-1 \choose k} \]
+.
+Whatever&rsquo;s n:
+\[ \binom{n}{k&#43;1} = \frac{n-k}{k&#43;1} \binom{n}{k} \]
+Complex &amp; hyperbolic Identities \[ e^{i\theta} = \cos{\theta} &#43; i\sin{\theta} \]
+\[ z_1z_2 = (x_1x_2 - y_1y_2) &#43; i(x_1y_2&#43;y_1x_2) \]
+\[ \abs{z_1z_2} = \abs{z_1}\abs{z_2} \]" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/math/mathematicalmethods/" /><meta property="og:image" content="/images/og-image.png"/><meta property="article:section" content="Math" />
+
+<meta property="og:site_name" content="Hugo Techdoc Theme" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/images/og-image.png"/>
+
+<meta name="twitter:title" content="Mathematical methods pt. 1"/>
+<meta name="twitter:description" content="Precalc Binomial expansion \begin{align*} (x&#43;y)^n = (x&#43;y)^{-m} = &amp; x^{-m} \left(1&#43;\frac{y}{x}\right)^{-m} \\
+= &amp; x^{-m} \sum_{k=0}^{\infty} {-m \choose k} \left(\frac{y}{x}\right)^k \end{align*}
+where m is positive and x &gt; y and:
+\[ {-m \choose k} = (-1)^k {m&#43;k-1 \choose k} \]
+.
+Whatever&rsquo;s n:
+\[ \binom{n}{k&#43;1} = \frac{n-k}{k&#43;1} \binom{n}{k} \]
+Complex &amp; hyperbolic Identities \[ e^{i\theta} = \cos{\theta} &#43; i\sin{\theta} \]
+\[ z_1z_2 = (x_1x_2 - y_1y_2) &#43; i(x_1y_2&#43;y_1x_2) \]
+\[ \abs{z_1z_2} = \abs{z_1}\abs{z_2} \]"/>
+<meta itemprop="name" content="Mathematical methods pt. 1">
+<meta itemprop="description" content="Precalc Binomial expansion \begin{align*} (x&#43;y)^n = (x&#43;y)^{-m} = &amp; x^{-m} \left(1&#43;\frac{y}{x}\right)^{-m} \\
+= &amp; x^{-m} \sum_{k=0}^{\infty} {-m \choose k} \left(\frac{y}{x}\right)^k \end{align*}
+where m is positive and x &gt; y and:
+\[ {-m \choose k} = (-1)^k {m&#43;k-1 \choose k} \]
+.
+Whatever&rsquo;s n:
+\[ \binom{n}{k&#43;1} = \frac{n-k}{k&#43;1} \binom{n}{k} \]
+Complex &amp; hyperbolic Identities \[ e^{i\theta} = \cos{\theta} &#43; i\sin{\theta} \]
+\[ z_1z_2 = (x_1x_2 - y_1y_2) &#43; i(x_1y_2&#43;y_1x_2) \]
+\[ \abs{z_1z_2} = \abs{z_1}\abs{z_2} \]">
+
+<meta itemprop="wordCount" content="2279"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>Notes</h1><a href="https://github.com/spongiforma/hugo-theme-techdoc" class="github"><i class="fab fa-github"></i></a>
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="../../">Home</a></li>
+<li><a href="../../about/">About Hugo</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main>
+<h2 id="precalc">Precalc</h2>
+<h3 id="binomial-expansion">Binomial expansion</h3>
+<p>\begin{align*}
+(x+y)^n = (x+y)^{-m} = &amp; x^{-m} \left(1+\frac{y}{x}\right)^{-m} \\<br>
+= &amp; x^{-m} \sum_{k=0}^{\infty} {-m \choose k} \left(\frac{y}{x}\right)^k
+\end{align*}</p>
+<p>where m is positive and x &gt; y and:</p>
+<p>\[
+{-m \choose k} = (-1)^k {m+k-1 \choose k}
+\]</p>
+<p>.</p>
+<p>Whatever&rsquo;s n:</p>
+<p>\[
+\binom{n}{k+1} = \frac{n-k}{k+1} \binom{n}{k}
+\]</p>
+<h2 id="complex-and-hyperbolic">Complex &amp; hyperbolic</h2>
+<h3 id="identities">Identities</h3>
+<p>\[
+e^{i\theta} = \cos{\theta} + i\sin{\theta}
+\]</p>
+<p>\[
+z_1z_2 = (x_1x_2 - y_1y_2) + i(x_1y_2+y_1x_2)
+\]</p>
+<p>\[
+\abs{z_1z_2} = \abs{z_1}\abs{z_2}
+\]</p>
+<p>\[
+\arg(x+iy) = \tan^{-1}{y\over x}
+\]</p>
+<p>\[
+\arg(z_1z_2) = \arg{z_1} + \arg{z_2}
+\]</p>
+<p>\[
+\frac{z_1}{z_2} = \frac{x_1x_2+y_1y_2}{x_2^2+y_2^2} + i\frac{x_2y_1-x_1y_2}{x_2^2+y_2^2}
+\]</p>
+<p>\[
+e^z = \exp z = 1 + z + \frac{z^2}{2!} + \frac{z^3}{3!}
+\]</p>
+<h3 id="de-moivre-s">De moivre&rsquo;s</h3>
+<p>\[
+(\cos\theta + i\sin\theta)^n = \cos{n\theta} + i\sin{n\theta}
+\]</p>
+<p>given \(z = e^{i\theta}\)</p>
+<p>\[
+z^n + \frac{1}{z^n} = 2\cos{n\theta}
+\]</p>
+<p>\[
+z^n - \frac{1}{z^n} = 2i\sin{n\theta}
+\]</p>
+<h4 id="application">Application</h4>
+<p>\[
+\cos^3\theta = \frac{1}{8} \left(z+\frac{1}{z}\right)^3
+\]</p>
+<h3 id="roots-of-unity">Roots of unity</h3>
+<p>Notice</p>
+<p>\[
+z^n = e^{2ik\pi} = 1
+\]</p>
+<p>where k is any integer</p>
+<p>So the solutions are:</p>
+<p>\[
+z = e^{2ik\pi/n}
+\]</p>
+<h3 id="integration">Integration</h3>
+<p>\[
+\int e^{ax} cos(bx) \dd x
+\]</p>
+<h3 id="hyperbolic-identities">Hyperbolic identities</h3>
+<p>\[
+\cosh x = \frac12(e^x + e^{-x})
+\]</p>
+<p>\[
+\sinh x = \frac12(e^x - e^{-x})
+\]</p>
+<p>Circular Trig identities hold for hyperbolic functions but replace sinh^2 by -sinh^2 and tanh^2 by -tanh^2</p>
+<h2 id="series">Series</h2>
+<h3 id="arithmetic-series">Arithmetic series</h3>
+<p>\[
+\sum_{n=0}^{N-1} (a + nd)
+\]</p>
+<p>Diverges</p>
+<p>\[
+S_N = \frac{N}{2}[2a + (N-1)d]
+\]</p>
+<h3 id="geometric-series">Geometric series</h3>
+<p>\[
+\sum_{n=0}^{N-1} ar^n
+\]</p>
+<p>\[
+S_N = \frac{a(1-r^N)}{1-r}
+\]</p>
+<p>\[
+S_\infty = \frac{a}{1-r}
+\]</p>
+<h3 id="arithmetico-geometric-series">Arithmetico-geometric series</h3>
+<p>\[
+\sum_{n=0}^{N-1} (a+nd)r^n
+\]</p>
+<p>\[
+S_N = \frac{a-[a+(N-1)d]r^N}{1-r} + \frac{rd(1-r^{N-1})}{(1-r)^2}
+\]</p>
+<p>\[
+S = \frac{a}{1-r} + \frac{rd}{(1-r)^2}
+\]</p>
+<h3 id="difference-method">Difference method</h3>
+<p>Consider the series \(\sum u_n\)</p>
+<p>If u_n can be expressed in the form:</p>
+<p>\[
+u_n = f(n) - f(n-1)
+\]term</p>
+<p>Notice sum of \(f\) telescopes (\(S_n = f(n)-f(0)\)).</p>
+<p>If</p>
+<p>\[
+u_n = f(n) - f(n-m)
+\]</p>
+<p>then
+\[
+S_N = \sum_{k=1}^m f(N-k+1) - \sum_{k=1}^m f(1-k)
+\]</p>
+<h3 id="convergence">Convergence</h3>
+<h4 id="real-and-positive--absolute-convergence">Real and positive (absolute convergence)</h4>
+<!--list-separator-->
+<ul>
+<li>
+<p>Prelim test (not sufficient)</p>
+<p>\[
+\lim_{n\to\infty} u_n = 0.
+\]</p>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>Comparison test</p>
+<p>if \(\sum v_n\) is convergent and</p>
+<p>\[
+u_n \leq v_n \text{ for } n &gt; N.
+\]</p>
+<p>converse is true</p>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>D&rsquo;Alembert&rsquo;s ratio test</p>
+<p>\[
+\rho = \lim_{n\to\infty} \left(\frac{u_{n+1}}{u_n}\right).
+\]</p>
+<p>if \(\rho &lt; 1\) the series is convergent; if \(\rho &gt; 1\) the series is divergent;
+if \(\rho = 1\), it&rsquo;s undetermined by this test</p>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>Ratio comparison test</p>
+<p>\(v_n\) is convergent and</p>
+<p>\[
+\frac{u_{n+1}}{u_n} \leq \frac{v_{n+1}}{v_n}
+\]</p>
+<p>for all n greater than a fixed value N</p>
+<p>converse is true</p>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>Quotient test</p>
+<p>\[
+\rho = \lim_{n\to\infty}\left(\frac{u_n}{v_n}\right)
+\].</p>
+<p>if \(\rho \neq 0\) and finite: both converge or both diverge;
+if \(\rho = 0\) and \(\sum v_n\) converges: then \(\sum u_n\) converges;
+if \(\rho = \infty\) and \(\sum v_n\) diverges: then \(\sum u_n\) diverges;</p>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>Integral test</p>
+<p>if the limit of the integral</p>
+<p>\[
+\lim_{N\to\infty} \int^N U(x) \dd{x}
+\]</p>
+<p>exists, the series \(\sum u_n\) is convergent.</p>
+<p>the lower limit is not stated to avoid silly cases like singularities</p>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>Cauchy&rsquo;s root test</p>
+<p>\[
+\rho = \lim_{n\to\infty} (u_n)^{1/n}.
+\]</p>
+<p>if \(\rho &lt; 1\) the series is convergent;
+if \(\rho &gt; 1\) the series is divergent;
+if \(\rho = 1\), it&rsquo;s undetermined by this test;</p>
+<p>good for when the nth term contains an nth power like \(\sum_{n=1}^{\infty} \left(\frac{1}{n}\right)^n\)</p>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>Grouping</p>
+<p>trivial</p>
+</li>
+</ul>
+<h4 id="otherwise--merely-convergent">Otherwise (merely convergent)</h4>
+<!--list-separator-->
+<ul>
+<li>
+<p>Alternating series test</p>
+<p>\[
+\sum_{n=1}^\infty (-1)^{n+1} u_n
+\]</p>
+<p>where \(u_n \geq 0\).</p>
+<p>It converges when:</p>
+<ol>
+<li>
+<p>\(u_n \to 0\) as \(n \to \infty\)</p>
+</li>
+<li>
+<p>\(u_n &lt; u_{n-1}\) for all \(n&gt;N\) for some finite \(N\).</p>
+<p>otherwise it oscillates</p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="operations">Operations</h3>
+<p>If the infinite series \(\sum u_n\) and \(\sum v_n\) are both absolutely convergent then
+the series \(\sum w_n\), where:</p>
+<p>\[
+w_n = u_1v_n + u_2v_{n-1} + \ldots + u_nv_1
+\]</p>
+<p>is also absolutely convergent.</p>
+<p>\(\sum w_n\) is the Cauchy product and it converges to ST is u converges to S and v converges to T;</p>
+<h3 id="power-series">Power series</h3>
+<p>Converges if:</p>
+<p>\[
+\rho = \abs{x} \lim_{n\to\infty} \abs{\frac{a_{n+1}}{a_n}} &lt; 1
+\]</p>
+<h3 id="taylor-series">Taylor series</h3>
+<p>\[
+f(a+h) = \frac{h^{n-1}}{(n-1)!}f^{(n-1)}(a) + R_n(h)
+\]</p>
+<p>\[
+R_n(h) = \frac{h^n}{n!}f^{(n)}(\zeta)
+\]</p>
+<p>for some \(\zeta \in [a,a+h]\)</p>
+<h2 id="partial-derivatives">Partial derivatives</h2>
+<h3 id="total-differential">Total differential</h3>
+<p>\[
+\dd f = \pdv{f}{x}\dd x + \pdv{f}{y}\dd y
+\]</p>
+<p>If \(x_i = x_i(x_1), i = 2,3,\ldots,n\), then the total derivative is:</p>
+<p>\[
+\dv{f}{x_1} = \pdv{f}{x_1} + \left(\pdv{f}{x_2}\right)\dv{x_2}{x_1} + \ldots + \left(\pdv{f}{x_n}\right) \dv{x_n}{x_1}
+\]</p>
+<p>Pretend that the other variables do not change with \(x_1\) when evaluating \(\pdv{f}{x_1}\)</p>
+<h3 id="exact-differentials">Exact differentials</h3>
+<p>A differential is exact if when given:</p>
+<p>\[
+\dd f = A(x,y)\dd x + B(x,y) \dd y
+\],</p>
+<p>\[
+\pdv{A}{y} = \pdv{B}{x},
+\]</p>
+<p>or</p>
+<p>\[
+\pdv{g_i}{x_j} = \pdv{g_j}{x_i} \text{ for all pairs $i,j$}.
+\]</p>
+<p>and there are \(\frac12 n(n-1)\) relationships to be satisfied</p>
+<h3 id="useful-theorems">Useful theorems</h3>
+<p>Reciprocity relation:</p>
+<p>\[
+\left(\pdv{x}{y}\right)_z = \left(\pdv{y}{x}\right)_z^{-1}
+\]</p>
+<p>given both exist and neither of zero</p>
+<p>Cyclic relation:</p>
+<p>\[
+\left(\pdv{y}{z}\right)_x \left(\pdv{z}{x}\right)_y \left(\pdv{x}{y}\right)_z = -1
+\]</p>
+<h3 id="chain-rule">Chain rule</h3>
+<p>\[
+\dv{f}{u} = \pdv{f}{x}\dv{x}{u} + \pdv{f}{y}\dv{y}{u}
+\]</p>
+<p>Good for parametric equations without having to express x(u) and y(u) in terms of u.</p>
+<p>Can be extended to problems requiring change of variable by replacing the total derivative with partial ones</p>
+<h3 id="taylor-s-theorem">Taylor&rsquo;s theorem</h3>
+<p>\begin{align*}
+f(x,y) = f(x_0,y_0) &amp; + \pdv{f}{x}\Delta x + \pdv{f}{y} \Delta y \\<br>
+&amp; + \frac{1}{2!}\left[\pdv[2]{f}{x}(\Delta x)^2 + 2\pdv[2]{f}{x}{y}\Delta x \Delta y + \pdv[2]{f}{y}(\Delta y)^2\right] + \ldots \\<br>
+\end{align*}</p>
+<p>\[
+= \sum_{n=0}^{\infty}\frac{1}{n!}\left[\left(\Delta x \pdv{x} + \Delta y \pdv{y}\right)^n f(x,y)\right]_{x_0,y_0}
+\]</p>
+<p>or more generally:</p>
+<p>\[
+f(\textbf x) = f(\textbf{x}_0) + \sum_i \pdv{f}{x_i}\Delta x_i + \frac{1}{2!}\sum_i\sum_j\pdv[2]{f}{x_i}{x_j}\Delta x_i \Delta x_j + \ldots
+\]
+\[
+= \sum_{n=0}^\infty \frac{1}{n!}\left[\left(\Delta \textbf{x} \cdot \nabla\right)^n f(\textbf x)\right]_{\textbf{x}=\textbf{x}_0}
+\]</p>
+<h3 id="stationary-values">Stationary values</h3>
+<p>all stationary points have \(f_x = f_y = 0\)
+minima if \(f_{xx}\) and \(f_{yy}\) are positive and \(f_{xy}^2 &lt; f_{xx}f_{yy}\)
+maxima if \(f_{xx}\) and \(f_{yy}\) are negative and \(f_{xy}^2 &lt; f_{xx}f_{yy}\)
+saddle points if \(f_{xx}\) and \(f_{yy}\) have opposite signs or \(f_{xy}^2 &gt; f_{xx}{yy}\)</p>
+<h3 id="stationary-values-under-constraints--lagrange-multipliers">Stationary values under constraints (lagrange multipliers)</h3>
+<p>Abridged problem statement:
+Find the maximum value of the differentiable function f(x,y) subject to the constraint g(x,y) = c, where c is a constant.</p>
+<p>We must choose a \(\lambda\) (<strong>Lagrange undetermined multiplier</strong>) such that:</p>
+<p>\[
+\pdv{f}{x} + \lambda\pdv{g}{x} = 0
+\]</p>
+<p>\[
+\pdv{f}{y} + \lambda\pdv{g}{y}=0
+\]</p>
+<p>this can be extended to multiple constraints given the no. of contraints is smaller than the number of variables</p>
+<h3 id="envelope">Envelope</h3>
+<p>A function where</p>
+<p>\[
+f(x,y,\alpha_1) = 0
+\]</p>
+<p>and</p>
+<p>\[
+\pdv{f(x,y,\alpha_1)}{\alpha}=0
+\]</p>
+<h3 id="differentiation-of-integrals">Differentiation of integrals</h3>
+<p>\[
+\dv{x}\left[\int_u^v f(x,t) \dd{t} \right] = \int_u^v \pdv{f(x,t)}{x}\dd{t}
+\]</p>
+<p>given v and u are constants</p>
+<p>\[
+\dv{x}\left[\int_{u(x)}^{v(x)} f(x,t) \dd{t}\right]
+= f(x,v(x))\dv{v}{x} - f(x,u(x))\dv{u}{x} + \int_{u(x)}^{v(x)}\pdv{f(x,t)}{x}\dd{t}
+\]</p>
+<h2 id="multiple-integrals">Multiple Integrals</h2>
+<h3 id="center-of-mass">Center of mass</h3>
+<p>\[
+\bar{x} \int \dd M = \int x \dd M
+\]</p>
+<h3 id="pappus-theorems">Pappus theorems</h3>
+<p>Volume generated by rotating the plane area about the x-axis</p>
+<p>\[
+V = \int 2\pi y \dd{A} = 2\pi\bar{y}A
+\]</p>
+<p>Area generated by rotating the plane curve about the x-axis (surface of revolution):
+\[
+S = \int 2\pi y \dd{s} = 2\pi\bar{y}L
+\]</p>
+<h3 id="change-of-variables--jacobian">Change of variables (Jacobian)</h3>
+<p>The Jacobian is defined by</p>
+<p>\[
+J = \frac{\partial(x,y)}{\partial(u,v)} =\begin{vmatrix}
+\pdv{x}{u} &amp; \pdv{y}{u} \\<br>
+&amp;\\<br>
+\pdv{x}{v} &amp; \pdv{y}{v} \\<br>
+\end{vmatrix}
+\]
+Thus:</p>
+<p>\[
+\dd{x} \dd{y} = \left|J\right| \dd{u} \dd{v}
+\]</p>
+<p>Note that:</p>
+<p>\[
+\dd{x}\dd{y} =  r \dd{r} \dd{\phi}
+\]</p>
+<p>Or that:
+\[
+\dd{V} = r^2\sin\theta \dd{r}\dd{\theta}\dd{\phi}
+\]</p>
+<p>Also:</p>
+<p>\[
+J_{xy}J_{yx} = 1
+\]</p>
+<p>or:</p>
+<p>\[
+\frac{\partial(x_1,\ldots,x_n)}{\partial(y_1,\ldots,y_n)} = \left[\frac{\partial(x_1,\ldots,x_n)}{\partial(y_1,\ldots,y_n)}\right]^{-1}
+\]</p>
+<h2 id="vector-algebra">Vector algebra</h2>
+<p>\[
+(a\times b)\cdot(c\times d) \equiv (a\cdot c)(b\cdot d)-(a\cdot d)(b\cdot c)
+\]</p>
+<p>\[
+a\times(b \times c) = (a \cdot c)b - (a \cdot b)c
+\]</p>
+<p>\[
+(a\times b)\times c = (a \cdot c)b - (b \cdot c)a
+\]</p>
+<h3 id="ratio-theorem">Ratio theorem</h3>
+<figure><img src="../../static/ratiotheorem.png"/>
+</figure>
+
+<p>\[
+\textbf{OP} = \frac{\mu}{\lambda+\mu}\textbf{a} + \frac{\lambda}{\lambda+\mu}\textbf{b}
+\]</p>
+<h3 id="geometry">Geometry</h3>
+<h4 id="line">Line</h4>
+<p>\[
+{\bf r} = {\bf a} + \lambda{\bf b}
+\]</p>
+<p>\[
+({\bf r - a}) \times {\bf b} = 0
+\]</p>
+<h4 id="plane">Plane</h4>
+<p>\[
+({\bf r - a}) \cdot {\bf \hat n} = 0
+\]</p>
+<p>\[
+{\bf r} \cdot {\bf \hat n} = d
+\]</p>
+<p>\[
+{\bf r} = \alpha {\bf a} + \beta{\bf b} +\gamma {\bf n}
+\]</p>
+<p>where a + b + c = 1</p>
+<p>lx + my + nz = d</p>
+<h4 id="sphere">Sphere</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r-c</td>
+<td>^2 = a^2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="normal-modes">Normal modes</h2>
+<p>The potential must not depend on the time derivatives of these of these coordinates. The potential must have a local minimum at the equillibrium point. The potential at this point is zero.</p>
+<p>T can be written as the quadratic form.</p>
+<p>\[
+T = \sum_i \sum_j a_{ij} \dot{q}_i \dot{q}_j = \dot{q}^TA\dot{q}
+\]</p>
+<p>and likewise for V with q instead of qdot.</p>
+<ol>
+<li>
+<p>A and B can be made symmetric.</p>
+</li>
+<li>
+<p>A and B are real and positive definite.</p>
+</li>
+</ol>
+<h3 id="process">Process</h3>
+<figure><img src="../../static/normalmode1.png"/>
+</figure>
+
+<p>We may use the above equation to write the equation E = T + V.</p>
+<p>In the above case:</p>
+<p>\begin{aligned}
+T &amp; \approx \frac12 M l^2 (\dot{\theta}_1^2 + \frac{1}{4} \dot{\theta}_2^2 + \dot{\theta}_1 \dot{\theta}_2) + \frac{1}{24}M l^2 \dot{\theta}_2^2 \\<br>
+&amp; = \frac{1}{12} M l^2 \dot{q}^T \begin{pmatrix} 6 &amp; 3 \\ 3 &amp; 2 \\end{pmatrix}\dot{q}
+\end{aligned}</p>
+<p>\begin{aligned}
+V &amp; \approx \frac{1}{4} M l g (2\dot{\theta}_1^2 + \dot{\theta}_2^2 \\<br>
+&amp; = \frac{1}{12} M l g q^T \begin{pmatrix} 6 &amp; 0 \\ 0 &amp; 3 \\end{pmatrix}q
+\end{aligned}</p>
+<p>We may then apply conservation of energy \(\dv{t} (T+V) = 0\).</p>
+<p>This simplifies* to \(A\ddot{q} + Bq = 0\). Solutions of this form satisfy \(q = x\cos\omega t\)</p>
+<p>There will be N values of \(\omega\) and these values are (normal || eigen)frequencies. This has non-trivial solutions only if:</p>
+<p>\[
+\vert B - \omega^2 A \vert = 0
+\]</p>
+<p>Note that the eigenvectors are mutually orthogonal (except when degeneracy) as A and B are real symmetric matrices.</p>
+<p>It is possible to get multiple normal modes by exploiting symmetries and then using the fact that the eigenvectors are orthogonal.</p>
+<h3 id="rayleigh-ritz-method">Rayleigh-Ritz method</h3>
+<h2 id="vector-calculus">Vector calculus</h2>
+<h3 id="differentiation-of-a-vector-function">Differentiation of a vector function</h3>
+<p>If magnitude \(|\textbf{a}|\) is constant wrt u</p>
+<p>\[
+\textbf{a} \cdot \dv{\textbf{a}}{u} = 0
+\]</p>
+<p>A function can be represented as:</p>
+<p>\[
+\textbf{r}(u) = x(u)\textbf{i} + y(u)\textbf{j} + z(u)\textbf{k}
+\]</p>
+<p>\[
+\textbf{r}(u) = u\textbf{i} + f(u)\textbf{j} + g(u)\textbf{k}
+\]</p>
+<h4 id="arc-length">Arc length</h4>
+<p>the arc length between two points on the curve \({\bf r }(u)\) is given by:</p>
+<p>\[
+s = \int_{u_i}^{u_2} \sqrt{\dv{\bf r}{u} \cdot \dv{\bf r}{u}} \dd{u}
+\]</p>
+<h4 id="tangent-binormal-and-normal">tangent, binormal and normal (???)</h4>
+<p>If the parameter u of r(u) is the arc length along the curve then dr/ds is the unit tangent vector \(\hat{t}\)</p>
+<p>The curvature (\(\kappa\)) or the radius of curvature (\(\rho\))is defined by:</p>
+<p>\[
+\kappa = \frac{1}{\rho} =\left|\dv{\hat{t}}{s}\right| = \left|\dv[2]{\hat{r}}{s}\right|
+\]</p>
+<p>The unit vector perpendicular to \(\hat{t}\) is denoted by \(\hat{n}\), and is the principal normal.</p>
+<p>Thus:</p>
+<p>\[
+\dv{\hat{\bf t}}{s} = \kappa\hat{\bf n}
+\]</p>
+<p>The unit vector \(\bf \hat{b} = \hat{t} \times \hat{n}\) is called the binormal to C, and t,n,b thus form a right handed</p>
+<p>rectangular coordinate system.</p>
+<p>The torsion (\(\tau\)) is given by \(\dv{\hat b}{s}\) and is related to the normal by \(\dv{b}{s} =-\tau \hat n\) or :</p>
+<p>\[
+\tau = -\hat{\bf n} \cdot \dv{\hat{\bf b}}{s}
+\]</p>
+<p>There is also the radius of torsion, \(\sigma = 1/\tau\)</p>
+<p>\[
+\dv{\hat{\bf n}}{s} = \tau \hat{\bf b} - \kappa \hat{\bf t}
+\]</p>
+<!--list-separator-->
+<ul>
+<li>
+<p>Frenet-Serret formulae</p>
+<p>\[
+\dv{\hat{\bf t}}{s} = \kappa \hat{\bf n}
+\]</p>
+<p>\[
+\dv{\hat{\bf n}}{s} = \tau \hat{\bf b} - \kappa \hat{\bf t}
+\]</p>
+<p>\[
+\dv{\hat{\bf b}}{s} =-\tau \hat{\bf n}
+\]</p>
+</li>
+</ul>
+<h3 id="surfaces">Surfaces</h3>
+<p>a surface can be given by:</p>
+<p>\[
+{\bf r}(u,v) = u{\bf i} + v{\bf j} + f(u,v){\bf k}
+\]</p>
+<p><em>Coordinate</em> curves are curves with u= constant or v = constant. Notice that the tangent vector of u=constant is in direction dr/du</p>
+<p>A normal to the surface at P is given by:</p>
+<p>\[
+{\bf n} = \pdv{\bf r}{u} \times \pdv{\bf r}{v}
+\]</p>
+<p>or</p>
+<p>\[
+\hat{\bf n}(x,y,z) = \frac{\pdv{r}{u}\times\pdv{r}{v}}{|\pdv{r}{u}\times\pdv{r}{v}|} = \frac{-\bf{i}\pdv{f}{x}-\bf{j}\pdv{f}{y}+\bf{k}}{\sqrt{1 + \left(\pdv{f}{x}\right)^2 + \left(\pdv{f}{y}\right)^2}}
+\]
+The <em>element of area</em> at P:</p>
+<p>\[
+\dd{S} = |{\bf n}| \dd{u} \dd{v}
+\]</p>
+<p>Thus:</p>
+<p>\[
+A = \iint_R |{\bf n}| \dd{u}\dd{v}
+\]</p>
+<h3 id="surface-integrals-of-normal-component-of-function-f">Surface integrals of normal component of function F</h3>
+<p>\[
+\iint_S \bf{F\cdot \hat{n}} \dd{S} = \lim_{N\to\infty, \Delta S \to 0} \sum_{l=1}^N \bf{F}(x_l,y_l,z_l) \bf{\cdot \hat{n}_l} \Delta S_l
+\]</p>
+<p>The surface area is given by:</p>
+<p>\[
+\iint_S \dd{S}
+\]</p>
+<h3 id="integrating-over-s-integrating-over-projection-of-s">Integrating over S -&gt; Integrating over projection of S</h3>
+<p>We find:</p>
+<p>\[
+\hat{\bf n} \cdot \bf{k}=\frac{1}{\sqrt{1+\left(\partial{f}/\partial{x}\right)^2 + \left(\partial{f}/\partial{y}\right)^2}}
+\]</p>
+<p>We can then write:</p>
+<p>\[
+\iint_S G(x,y,z) \dd{S} = \iint_R G[x,y,f(x,y)] \cdot \sqrt{1 + \left(\pdv{f}{x}\right)^2 + \left(\pdv{f}{y}\right)^2} \dd{x}\dd{y}
+\]</p>
+<p>which allows to integrate G over the projection on the x-y plane. This can be generalised to integration on the y-z plane and x-z plane.</p>
+<h4 id="flux-of-f">Flux of F</h4>
+<p>To integrate integrals of the form \(\bf F \cdot \hat{n}\)</p>
+<p>we can simplify the earlier result into:</p>
+<p>\begin{align*}
+\iint_S \bf{F\cdot \hat{n}} \dd{S} &amp; = \iint_R -F_x[x,y,f(x,y)]\pdv{f}{x} \\ - &amp; F_y[x,y,f(x,y)]\pdv{f}{y}+ F_z[x,y,f(x,y)] \dd{x} \dd{y}
+\end{align*}</p>
+<p>The above integral is often called the flux of \(\bf F\). The rate of flow through a surface S can be given by subsitiuting F for \(\rho(x,y,z){\bf v} (x,y,z)\)</p>
+<h3 id="vector-operators">Vector operators</h3>
+<h4 id="nabla">Nabla</h4>
+<p>Gives a vector field</p>
+<p>Cartesian:</p>
+<p>\[
+\nabla \equiv {\bf \hat i}\pdv{x} + {\bf \hat j}\pdv{y} + {\bf \hat k}\pdv{z}
+\]</p>
+<h4 id="divergence">Divergence</h4>
+<!--list-separator-->
+<ul>
+<li>
+<p>Definitions</p>
+<p>\[
+\div {\bf F} = \lim_{\Delta V \to 0} \frac{1}{\Delta V} \iint_S {\bf F \cdot \hat{n}} \dd{S}
+\]</p>
+<p>Where \(\Delta V\) is taken about (x,y,z)</p>
+<p>This allows us to express gauss' law as \(\div E = \rho/\epsilon_0\)</p>
+ <!--list-separator-->
+<ul>
+<li>
+<p>Cartesian</p>
+<p>\[
+\div F = \pdv{F_x}{x} + \pdv{F_y}{y}+ \pdv{F_z}{z}
+\]</p>
+</li>
+</ul>
+ <!--list-separator-->
+<ul>
+<li>
+<p>Cylindrical</p>
+<p>\[
+\div F = \frac{1}{r}\pdv{}{r}\left(rF_r\right) + \frac{1}{r}\pdv{F_\theta}{\theta}+ \pdv{F_z}{z}
+\]</p>
+</li>
+</ul>
+ <!--list-separator-->
+<ul>
+<li>
+<p>Spherical</p>
+<p>\[
+\div F = \frac{1}{r^2}\pdv{}{r}\left(r^2F_r\right) + \frac{1}{r \sin\phi}\pdv{}{\phi} \left( \sin\phi F_\phi \right) +  \frac{1}{r \sin\phi}\pdv{F_\theta}{\theta}
+\]</p>
+</li>
+</ul>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>Divergence theorem</p>
+<p>\[
+\iint_S {\bf F \cdot \hat{n}} \dd{S} = \iiint_V {\div {\bf F}} \dd{V}
+\]</p>
+</li>
+</ul>
+<h4 id="grad-of-a-scalar-field">Grad of a scalar field</h4>
+<p>Rate of change of \(\phi\) (a scalar field) wrt distance s in direction \(\bf a\) (i.e. the directional derivative)</p>
+<p>\[
+\dv{\phi}{s} = \nabla \phi \cdot {\bf \hat a}
+\]</p>
+<p>To find the rate of change of a vector field in a particular direction:
+\[
+\hat{\bf a} \cdot \nabla = a_x \pdv{x} + a_y \pdv{y} + a_z\pdv{z}
+\]</p>
+<p>e.g. \(\dd{\bf E} = (\dd{\bf r} \cdot \nabla){\bf E}\)</p>
+<p>A second interesting property is that: \(\nabla\phi\) is a vector normal to the surface \(\phi(x,y,z) = c\) at every point</p>
+<div class="edit-meta">
+
+<br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Math/mathematicalmethods.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../math/linear_algebra/" title="Linear Algebra"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Linear Algebra</a>
+<a class="nav nav-next" href="../../math/2mm/" title="Mathematical methods pt. 2">Next - Mathematical methods pt. 2 <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="../../">Home</a></li>
+
+<li class="parent has-sub-menu"><a href="../../math/">Maths<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../math/abstractalgebra/">Abstract Algebra</a></li>
+<li class=""><a href="../../math/integration/">Integration</a></li>
+<li class=""><a href="../../math/linear_algebra/">Linear Algebra</a></li>
+<li class="active"><a href="../../math/mathematicalmethods/">Mathematical methods pt. 1</a></li>
+<li class=""><a href="../../math/2mm/">Mathematical methods pt. 2</a></li>
+<li class=""><a href="../../math/topology/">Topology</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="../../physics/">Physics<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../physics/circuits/">Circuits</a></li>
+<li class=""><a href="../../physics/oscillations/">Core EM</a></li>
+<li class=""><a href="../../physics/funnycircuits/">DC circuit tricks</a></li>
+<li class=""><a href="../../physics/em/">E&amp;M</a></li>
+<li class=""><a href="../../physics/electrodynamics/">Electrodynamics</a></li>
+<li class=""><a href="../../physics/fluids/">Fluid Dynamics</a></li>
+<li class=""><a href="../../physics/linear_momentum/">Linear Momentum</a></li>
+<li class=""><a href="../../physics/mechanics/">Mechanics</a></li>
+<li class=""><a href="../../physics/optics/">Optics</a></li>
+<li class=""><a href="../../physics/quantum_physics/">Quantum mechanics</a></li>
+<li class=""><a href="../../physics/rotation/">Rotation</a></li>
+<li class=""><a href="../../physics/idealgas/">Thermodynamics</a></li>
+<li class=""><a href="../../physics/wavves/">Waves</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="../../prog/">Progs<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../prog/linear-optimisation/">Linear optimisation</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+
+<div class="outline">
+
+<nav class="outline-list">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#precalc">Precalc</a>
+      <ul>
+        <li><a href="#binomial-expansion">Binomial expansion</a></li>
+      </ul>
+    </li>
+    <li><a href="#complex-and-hyperbolic">Complex &amp; hyperbolic</a>
+      <ul>
+        <li><a href="#identities">Identities</a></li>
+        <li><a href="#de-moivre-s">De moivre&rsquo;s</a>
+          <ul>
+            <li><a href="#application">Application</a></li>
+          </ul>
+        </li>
+        <li><a href="#roots-of-unity">Roots of unity</a></li>
+        <li><a href="#integration">Integration</a></li>
+        <li><a href="#hyperbolic-identities">Hyperbolic identities</a></li>
+      </ul>
+    </li>
+    <li><a href="#series">Series</a>
+      <ul>
+        <li><a href="#arithmetic-series">Arithmetic series</a></li>
+        <li><a href="#geometric-series">Geometric series</a></li>
+        <li><a href="#arithmetico-geometric-series">Arithmetico-geometric series</a></li>
+        <li><a href="#difference-method">Difference method</a></li>
+        <li><a href="#convergence">Convergence</a>
+          <ul>
+            <li><a href="#real-and-positive--absolute-convergence">Real and positive (absolute convergence)</a></li>
+            <li><a href="#otherwise--merely-convergent">Otherwise (merely convergent)</a></li>
+          </ul>
+        </li>
+        <li><a href="#operations">Operations</a></li>
+        <li><a href="#power-series">Power series</a></li>
+        <li><a href="#taylor-series">Taylor series</a></li>
+      </ul>
+    </li>
+    <li><a href="#partial-derivatives">Partial derivatives</a>
+      <ul>
+        <li><a href="#total-differential">Total differential</a></li>
+        <li><a href="#exact-differentials">Exact differentials</a></li>
+        <li><a href="#useful-theorems">Useful theorems</a></li>
+        <li><a href="#chain-rule">Chain rule</a></li>
+        <li><a href="#taylor-s-theorem">Taylor&rsquo;s theorem</a></li>
+        <li><a href="#stationary-values">Stationary values</a></li>
+        <li><a href="#stationary-values-under-constraints--lagrange-multipliers">Stationary values under constraints (lagrange multipliers)</a></li>
+        <li><a href="#envelope">Envelope</a></li>
+        <li><a href="#differentiation-of-integrals">Differentiation of integrals</a></li>
+      </ul>
+    </li>
+    <li><a href="#multiple-integrals">Multiple Integrals</a>
+      <ul>
+        <li><a href="#center-of-mass">Center of mass</a></li>
+        <li><a href="#pappus-theorems">Pappus theorems</a></li>
+        <li><a href="#change-of-variables--jacobian">Change of variables (Jacobian)</a></li>
+      </ul>
+    </li>
+    <li><a href="#vector-algebra">Vector algebra</a>
+      <ul>
+        <li><a href="#ratio-theorem">Ratio theorem</a></li>
+        <li><a href="#geometry">Geometry</a>
+          <ul>
+            <li><a href="#line">Line</a></li>
+            <li><a href="#plane">Plane</a></li>
+            <li><a href="#sphere">Sphere</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#normal-modes">Normal modes</a>
+      <ul>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#rayleigh-ritz-method">Rayleigh-Ritz method</a></li>
+      </ul>
+    </li>
+    <li><a href="#vector-calculus">Vector calculus</a>
+      <ul>
+        <li><a href="#differentiation-of-a-vector-function">Differentiation of a vector function</a>
+          <ul>
+            <li><a href="#arc-length">Arc length</a></li>
+            <li><a href="#tangent-binormal-and-normal">tangent, binormal and normal (???)</a></li>
+          </ul>
+        </li>
+        <li><a href="#surfaces">Surfaces</a></li>
+        <li><a href="#surface-integrals-of-normal-component-of-function-f">Surface integrals of normal component of function F</a></li>
+        <li><a href="#integrating-over-s-integrating-over-projection-of-s">Integrating over S -&gt; Integrating over projection of S</a>
+          <ul>
+            <li><a href="#flux-of-f">Flux of F</a></li>
+          </ul>
+        </li>
+        <li><a href="#vector-operators">Vector operators</a>
+          <ul>
+            <li><a href="#nabla">Nabla</a></li>
+            <li><a href="#divergence">Divergence</a></li>
+            <li><a href="#grad-of-a-scalar-field">Grad of a scalar field</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</nav>
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

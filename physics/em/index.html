@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>E&amp;M - Notes</title>
+<meta name="description" content="">
+<meta name="generator" content="Hugo 0.85.0" />
+<link href="//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="../../physics/em/">
+<link rel="stylesheet" href="../../css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="../../css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="../../js/bundle.js"></script><style>
+:root {--custom-font-color: #bcb7ae;--custom-background-color: #1a1c1d;}
+</style>
+<meta property="og:title" content="E&amp;M" />
+<meta property="og:description" content="Lorentz&rsquo;s force
+\[ \overrightarrow{F}_B = q(\overrightarrow{E} &#43; \overrightarrow{v}\times\overrightarrow{B}) \]
+Charge density
+\[ nev_d = J = {i\over A} \]
+Permeability Constant \[ \mu_0 = 4\pi \times 10^{-7} \si{T\cdot m / A} \]
+Hall effect There is a potential difference when a magnetic field is present in a wire, causing the charges to seperate within the wire. This results in a Hall potential difference \(V = Ed\) where d = width of strip" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/physics/em/" /><meta property="og:image" content="/images/og-image.png"/><meta property="article:section" content="Physics" />
+
+<meta property="og:site_name" content="Hugo Techdoc Theme" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/images/og-image.png"/>
+
+<meta name="twitter:title" content="E&amp;M"/>
+<meta name="twitter:description" content="Lorentz&rsquo;s force
+\[ \overrightarrow{F}_B = q(\overrightarrow{E} &#43; \overrightarrow{v}\times\overrightarrow{B}) \]
+Charge density
+\[ nev_d = J = {i\over A} \]
+Permeability Constant \[ \mu_0 = 4\pi \times 10^{-7} \si{T\cdot m / A} \]
+Hall effect There is a potential difference when a magnetic field is present in a wire, causing the charges to seperate within the wire. This results in a Hall potential difference \(V = Ed\) where d = width of strip"/>
+<meta itemprop="name" content="E&amp;M">
+<meta itemprop="description" content="Lorentz&rsquo;s force
+\[ \overrightarrow{F}_B = q(\overrightarrow{E} &#43; \overrightarrow{v}\times\overrightarrow{B}) \]
+Charge density
+\[ nev_d = J = {i\over A} \]
+Permeability Constant \[ \mu_0 = 4\pi \times 10^{-7} \si{T\cdot m / A} \]
+Hall effect There is a potential difference when a magnetic field is present in a wire, causing the charges to seperate within the wire. This results in a Hall potential difference \(V = Ed\) where d = width of strip">
+
+<meta itemprop="wordCount" content="145"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>Notes</h1><a href="https://github.com/spongiforma/hugo-theme-techdoc" class="github"><i class="fab fa-github"></i></a>
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="../../">Home</a></li>
+<li><a href="../../about/">About Hugo</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main>
+<p>Lorentz&rsquo;s force</p>
+<p>\[
+\overrightarrow{F}_B = q(\overrightarrow{E} + \overrightarrow{v}\times\overrightarrow{B})
+\]</p>
+<p>Charge density</p>
+<p>\[
+nev_d = J = {i\over A}
+\]</p>
+<p>Permeability Constant
+\[
+\mu_0 = 4\pi \times 10^{-7} \si{T\cdot m / A}
+\]</p>
+<h2 id="hall-effect">Hall effect</h2>
+<p>There is a potential difference when a magnetic field is present in a wire, causing the charges to seperate within the wire. This results in a <strong>Hall potential difference</strong>
+\(V = Ed\) where d = width of strip</p>
+<h2 id="circulating-particle">Circulating particle</h2>
+<p>\[
+r = \frac{mv}{|q|B}
+\]</p>
+<p>\[
+f = \frac{|q|B}{2\pi m}
+\]</p>
+<h2 id="force-on-a-wire">Force on a wire</h2>
+<p>\[
+F_B = iL\times B
+\]</p>
+<h2 id="torque-on-a-coil">Torque on a coil</h2>
+<p>\[
+\tau = NiAB\sin\theta = \mu \times B
+\]
+where
+\[
+\mu = NiA
+\]</p>
+<h2 id="magnetic-field-due-to-current">Magnetic field due to current</h2>
+<p>\[
+\dd\overrightarrow{B} =\frac{\mu_0}{4\pi}\frac{i\dd\overrightarrow{s}\times \hat r}{r^2} \hspace{10}\text{(Biot-Savart law)}
+\]</p>
+<p>The magnetic field at distance R from a long straight wire is</p>
+<p>\[
+B = \frac{\mu_0i}{2\pi R}
+\]</p>
+<div class="edit-meta">
+
+<br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Physics/e&amp;m.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../physics/funnycircuits/" title="DC circuit tricks"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - DC circuit tricks</a>
+<a class="nav nav-next" href="../../physics/electrodynamics/" title="Electrodynamics">Next - Electrodynamics <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="../../">Home</a></li>
+
+<li class=" has-sub-menu"><a href="../../math/">Maths<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../math/abstractalgebra/">Abstract Algebra</a></li>
+<li class=""><a href="../../math/integration/">Integration</a></li>
+<li class=""><a href="../../math/linear_algebra/">Linear Algebra</a></li>
+<li class=""><a href="../../math/mathematicalmethods/">Mathematical methods pt. 1</a></li>
+<li class=""><a href="../../math/2mm/">Mathematical methods pt. 2</a></li>
+<li class=""><a href="../../math/topology/">Topology</a></li>
+</ul>
+  
+</li>
+
+<li class="parent has-sub-menu"><a href="../../physics/">Physics<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../physics/circuits/">Circuits</a></li>
+<li class=""><a href="../../physics/oscillations/">Core EM</a></li>
+<li class=""><a href="../../physics/funnycircuits/">DC circuit tricks</a></li>
+<li class="active"><a href="../../physics/em/">E&amp;M</a></li>
+<li class=""><a href="../../physics/electrodynamics/">Electrodynamics</a></li>
+<li class=""><a href="../../physics/fluids/">Fluid Dynamics</a></li>
+<li class=""><a href="../../physics/linear_momentum/">Linear Momentum</a></li>
+<li class=""><a href="../../physics/mechanics/">Mechanics</a></li>
+<li class=""><a href="../../physics/optics/">Optics</a></li>
+<li class=""><a href="../../physics/quantum_physics/">Quantum mechanics</a></li>
+<li class=""><a href="../../physics/rotation/">Rotation</a></li>
+<li class=""><a href="../../physics/idealgas/">Thermodynamics</a></li>
+<li class=""><a href="../../physics/wavves/">Waves</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="../../prog/">Progs<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../prog/linear-optimisation/">Linear optimisation</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+
+<div class="outline">
+
+<nav class="outline-list">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#hall-effect">Hall effect</a></li>
+    <li><a href="#circulating-particle">Circulating particle</a></li>
+    <li><a href="#force-on-a-wire">Force on a wire</a></li>
+    <li><a href="#torque-on-a-coil">Torque on a coil</a></li>
+    <li><a href="#magnetic-field-due-to-current">Magnetic field due to current</a></li>
+  </ul>
+</nav>
+</nav>
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

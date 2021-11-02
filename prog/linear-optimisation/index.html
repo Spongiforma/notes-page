@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Linear optimisation - Notes</title>
+<meta name="description" content="">
+<meta name="generator" content="Hugo 0.85.0" />
+<link href="//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="../../prog/linear-optimisation/">
+<link rel="stylesheet" href="../../css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="../../css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="../../js/bundle.js"></script><style>
+:root {--custom-font-color: #bcb7ae;--custom-background-color: #1a1c1d;}
+</style>
+<meta property="og:title" content="Linear optimisation" />
+<meta property="og:description" content="Definitions Standard form:
+minimise \(\bm{c^T x}\), subject to \(A\bm{x} = \bm{b}\) \(\bm{x} \geq \bm{0}\)
+A problems can be converted to another problem by applying the following operations:
+ Elimination of free variables:  Given an unrestricted variable \(x_j\) we replace it with \(x_j^&#43; - x_j^-\) which are both non-negative.
+ Elimination of inequality constraints:  Given \(\sum_{j=1}^n a_{ij}x_j \leq b_i\),
+we introduce a new slack variable \(s_i \geq 0\):
+\[ \sum_{j=1}^n a_{ij}x_j &#43; s_i = b_i \]" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/prog/linear-optimisation/" /><meta property="og:image" content="/images/og-image.png"/><meta property="article:section" content="Prog" />
+
+<meta property="og:site_name" content="Hugo Techdoc Theme" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/images/og-image.png"/>
+
+<meta name="twitter:title" content="Linear optimisation"/>
+<meta name="twitter:description" content="Definitions Standard form:
+minimise \(\bm{c^T x}\), subject to \(A\bm{x} = \bm{b}\) \(\bm{x} \geq \bm{0}\)
+A problems can be converted to another problem by applying the following operations:
+ Elimination of free variables:  Given an unrestricted variable \(x_j\) we replace it with \(x_j^&#43; - x_j^-\) which are both non-negative.
+ Elimination of inequality constraints:  Given \(\sum_{j=1}^n a_{ij}x_j \leq b_i\),
+we introduce a new slack variable \(s_i \geq 0\):
+\[ \sum_{j=1}^n a_{ij}x_j &#43; s_i = b_i \]"/>
+<meta itemprop="name" content="Linear optimisation">
+<meta itemprop="description" content="Definitions Standard form:
+minimise \(\bm{c^T x}\), subject to \(A\bm{x} = \bm{b}\) \(\bm{x} \geq \bm{0}\)
+A problems can be converted to another problem by applying the following operations:
+ Elimination of free variables:  Given an unrestricted variable \(x_j\) we replace it with \(x_j^&#43; - x_j^-\) which are both non-negative.
+ Elimination of inequality constraints:  Given \(\sum_{j=1}^n a_{ij}x_j \leq b_i\),
+we introduce a new slack variable \(s_i \geq 0\):
+\[ \sum_{j=1}^n a_{ij}x_j &#43; s_i = b_i \]">
+
+<meta itemprop="wordCount" content="623"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>Notes</h1><a href="https://github.com/spongiforma/hugo-theme-techdoc" class="github"><i class="fab fa-github"></i></a>
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="../../">Home</a></li>
+<li><a href="../../about/">About Hugo</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main>
+<h2 id="definitions">Definitions</h2>
+<p>Standard form:</p>
+<p>minimise \(\bm{c^T x}\),
+subject to \(A\bm{x} = \bm{b}\)
+\(\bm{x} \geq \bm{0}\)</p>
+<p>A problems can be converted to another problem by applying the following operations:</p>
+<ul>
+<li>Elimination of free variables:</li>
+</ul>
+<p>Given an unrestricted variable \(x_j\) we replace it with \(x_j^+ - x_j^-\) which are both non-negative.</p>
+<ul>
+<li>Elimination of inequality constraints:</li>
+</ul>
+<p>Given \(\sum_{j=1}^n a_{ij}x_j \leq b_i\),</p>
+<p>we introduce a new <strong>slack</strong> variable \(s_i \geq 0\):</p>
+<p>\[
+\sum_{j=1}^n a_{ij}x_j + s_i = b_i
+\]</p>
+<p>the opposite is treated with a <strong>surplus</strong> variable \(s_i \geq 0\) but replace &lsquo;+ s_i&rsquo; with &lsquo;- s_i&rsquo;</p>
+<h3 id="piecewise-linear-convex-objective-problems">Piecewise linear convex objective problems</h3>
+<p>A function \(f : \mathcal{R}^n \mapsto \mathcal{R}\), is called convex if for every \(\bm{x},\bm{y} \in \mathcal{R}^n\), and every \(\lambda \in [0,1]\), we have:</p>
+<p>\[
+f(\lambda\bm{x} + (1-\lambda)\bm{y}) \leq \lambda f(\bm{x}) + (1-\lambda)f(\bm{y})
+\]</p>
+<p>A concave function is defined similarly but inverse.</p>
+<p><code>Note relation between local and global minima/maxima due to this property.</code></p>
+<p><strong>Theorem</strong></p>
+<p>Let \(f_1,\cdots,f_m : \mathcal{R}^n \mapsto \mathcal{R}\) be convex functions. Then the function \(f\) defined by
+\(f(\bm{x}) = \max_{i=1,\ldots,m}f_i(\bm{x})\) is also convex.</p>
+<p><strong>Transformation</strong></p>
+<p>&ldquo;minimize \(\max_i (\bm{c}_i^T \bm{x} + d_i)\), subject to \(Ax \geq b\)&rdquo;</p>
+<p>can become:</p>
+<p>&ldquo;minimize z, subject to \(z\geq \bm{c}_i^T \bm{x} + d_i\) for all i, Ax &gt;= b&rdquo;</p>
+<p>When modulus appears:</p>
+<p>minimize \(\sum_{i=1}^n c_i |x_i|\)</p>
+<p>subject to \(Ax\geq b\)
+where the coefficients are nonnegative such that the function is convex.</p>
+<p>becomes:</p>
+<p>minimize \(\sum_{i=1}^n c_iz_i\)</p>
+<p>subject to \(Ax \geq b, x_i \leq z_i, -x_i\leq z_i\)</p>
+<p><strong>or</strong></p>
+<p>minimize \(\sum_{i=1}^n c_i(x^+_i + x^-_i)\)</p>
+<p>subject to \(Ax^+ - Ax^- \geq b, x^+,x^- \geq 0\).</p>
+<p>Notice that \(x^+_i = 0\) or \(x^-_i = 0\).</p>
+<h3 id="dynamical-systems">Dynamical systems</h3>
+<p>\[
+\bm{x}(t+1) = \bm{Ax}(t) + \bm{Bu}(t)
+\]</p>
+<p>where we are free to choose u(t) subject to Du(t) &lt;= d.</p>
+<p>\[
+y(t) = \bm{c}^T\bm{x}(t)
+\]</p>
+<p><strong>possible form</strong></p>
+<p>minimize z
+subject to -z &lt;= y(t) &lt;=  z
+x(t+1) = Ax(t) + Bu(t)
+y(t) = c&rsquo;x(t)
+Du(t) &lt;= d
+x(T) = 0,
+x(0) = given,</p>
+<h3 id="possible-outcomes">Possible outcomes</h3>
+<ul>
+<li>There exists a unique optimal solution</li>
+<li>There exist multiple optimal solutions; in this case, the set of optimal solutions can be either bounded or unbounded</li>
+<li>The optimal cost -infty, and no feasible solution is optimal</li>
+<li>The feasible set is empty</li>
+<li>there is also &ldquo;minimize 1/x subject to x&gt;0&rdquo; but it does not arise in linear programming</li>
+</ul>
+<h2 id="geometry">Geometry</h2>
+<h3 id="polyhedron">Polyhedron</h3>
+<p><strong>Definition</strong>
+A polyhedron is a set that can be described in the form \(\{\bm{x} \in \mathcal{R}^n \vert \bm{Ax}\geq \bm{b}\}\), where A is an m x n matrix and b is a vector in \(\mathcal{R}^m\)</p>
+<p><strong>Definition</strong></p>
+<p>Let \(\bm{a}\) be a nonzero vector in \(\mathcal{R}^n\), and let b be a scalar.</p>
+<ol>
+<li>The set \(\{\bm{x} \in \mathcal{R}^n \vert \bm{a}'\bm{x} = \bm{b}\}\) is called a hyperplane</li>
+<li>The set \(\{\bm{x} \in \mathcal{R}^n \vert \bm{a}'\bm{x} \geq \bm{b}\}\) is called a halfspace.</li>
+</ol>
+<p>Note that a hyperplane is the boundary of a corresponding halfspace. The vector \(\bm{a}\), is perpendicular to the hyperplane. (note that a is the normal of the hyperplane. In a way, b is the distance of the hyperplane from the origin)</p>
+<p><strong>Definition</strong></p>
+<p>A set \(S \subset \mathcal{R}^n\) is convex if for any \(\bm{x},\bm{y} \in S\), and any \(\lambda \in [0,1]\), we have \(\lambda \bm{x} + (1-\lambda)\bm{y} \in S\). Notice that the expression is a weighted average of x,y.</p>
+<p><strong>Definition</strong></p>
+<p>Let \(x^1,\ldots,x^k\) be vectors in \(\mathcal{R}^n\) and let \(\lambda_1,\ldots,\lambda_k\) be nonnegative scalars whose sum is unity.</p>
+<p>The vector \(\sum_{i=1}^k \lambda_i\bm{x}^i\), is said to be a <strong>convex combination</strong> of the vectors \(x^1,\ldots,x^k\)</p>
+<p>The <strong>convex hull</strong>, of the vectors \(x^1,\ldots,x^k\) is the set of all convex combinations of these vectors.</p>
+<p><strong>Theorem</strong></p>
+<ol>
+<li>The intersection of convex sets is convex.</li>
+<li>Every polyhedron is a convex set</li>
+<li>A convex combinations of a finite number of elements of a convex set also belongs to that set.</li>
+<li>The convex hull of a finite number of vectors is a convex set.</li>
+</ol>
+<h3 id="corners">Corners</h3>
+<p><strong>Definition</strong></p>
+<div class="edit-meta">
+
+<br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Prog/linear-optimisation.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../prog/" title="Progs"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Progs</a>
+<a class="nav nav-next" href="../../math/" title="Maths">Next - Maths <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="../../">Home</a></li>
+
+<li class=" has-sub-menu"><a href="../../math/">Maths<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../math/abstractalgebra/">Abstract Algebra</a></li>
+<li class=""><a href="../../math/integration/">Integration</a></li>
+<li class=""><a href="../../math/linear_algebra/">Linear Algebra</a></li>
+<li class=""><a href="../../math/mathematicalmethods/">Mathematical methods pt. 1</a></li>
+<li class=""><a href="../../math/2mm/">Mathematical methods pt. 2</a></li>
+<li class=""><a href="../../math/topology/">Topology</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="../../physics/">Physics<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../physics/circuits/">Circuits</a></li>
+<li class=""><a href="../../physics/oscillations/">Core EM</a></li>
+<li class=""><a href="../../physics/funnycircuits/">DC circuit tricks</a></li>
+<li class=""><a href="../../physics/em/">E&amp;M</a></li>
+<li class=""><a href="../../physics/electrodynamics/">Electrodynamics</a></li>
+<li class=""><a href="../../physics/fluids/">Fluid Dynamics</a></li>
+<li class=""><a href="../../physics/linear_momentum/">Linear Momentum</a></li>
+<li class=""><a href="../../physics/mechanics/">Mechanics</a></li>
+<li class=""><a href="../../physics/optics/">Optics</a></li>
+<li class=""><a href="../../physics/quantum_physics/">Quantum mechanics</a></li>
+<li class=""><a href="../../physics/rotation/">Rotation</a></li>
+<li class=""><a href="../../physics/idealgas/">Thermodynamics</a></li>
+<li class=""><a href="../../physics/wavves/">Waves</a></li>
+</ul>
+  
+</li>
+
+<li class="parent has-sub-menu"><a href="../../prog/">Progs<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class="active"><a href="../../prog/linear-optimisation/">Linear optimisation</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+
+<div class="outline">
+
+<nav class="outline-list">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#definitions">Definitions</a>
+      <ul>
+        <li><a href="#piecewise-linear-convex-objective-problems">Piecewise linear convex objective problems</a></li>
+        <li><a href="#dynamical-systems">Dynamical systems</a></li>
+        <li><a href="#possible-outcomes">Possible outcomes</a></li>
+      </ul>
+    </li>
+    <li><a href="#geometry">Geometry</a>
+      <ul>
+        <li><a href="#polyhedron">Polyhedron</a></li>
+        <li><a href="#corners">Corners</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</nav>
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

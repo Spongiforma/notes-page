@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maths on Notes</title>
+    <link>/math/</link>
+    <description>Recent content in Maths on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/math/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Abstract Algebra</title>
+      <link>/math/abstractalgebra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/math/abstractalgebra/</guid>
+      <description>Groups A group is an ordered pair (G,*), where G is a set (closed under *) and * is a binary operation satisfying the following axioms.
+  * is associative
+  There exists an identity element
+  For each a in G, there is a double-sided inverse element
+If the operation is commutative within the group, then the group is abelian.
+  The order of an element x is the smallest positive integer n such that \(x^n = 1\).</description>
+    </item>
+    
+    <item>
+      <title>Integration</title>
+      <link>/math/integration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/math/integration/</guid>
+      <description>\[ \int \sin^n x \dd{x} = -\frac{1}{n}\cos x \sin^{n-1}x+\frac{n-1}{n}\int \sin^{n-2}x \dd{x} \]</description>
+    </item>
+    
+    <item>
+      <title>Linear Algebra</title>
+      <link>/math/linear_algebra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/math/linear_algebra/</guid>
+      <description>Vector space Requirements for a set of entities to form a vector space
+ Closure under commutative and associative addition Closure under multiplication of a scalar The existance of a null vector Multiplication by unity leaves any vector unchanged Each vector has a corresponding negative vector  Linear equations Row-echelon form  All zero rows are at the bottom of the matrix If two sucessive rows are non-zero, the second row starts with strictly more zeros than the first  Reduced row-echelon form  It&amp;rsquo;s in row-echelon form The leading left most non-zero entry in each non-zero row is 1 All other elements of the column in which the leading entry 1 occurs are zeros  Row operations  Interchanging rows Multiplying row by non-zero scalar Adding a multiple of one row to another row  Preserves row-equivalence</description>
+    </item>
+    
+    <item>
+      <title>Mathematical methods pt. 1</title>
+      <link>/math/mathematicalmethods/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/math/mathematicalmethods/</guid>
+      <description>Precalc Binomial expansion \begin{align*} (x+y)^n = (x+y)^{-m} = &amp;amp; x^{-m} \left(1+\frac{y}{x}\right)^{-m} \\
+= &amp;amp; x^{-m} \sum_{k=0}^{\infty} {-m \choose k} \left(\frac{y}{x}\right)^k \end{align*}
+where m is positive and x &amp;gt; y and:
+\[ {-m \choose k} = (-1)^k {m+k-1 \choose k} \]
+.
+Whatever&amp;rsquo;s n:
+\[ \binom{n}{k+1} = \frac{n-k}{k+1} \binom{n}{k} \]
+Complex &amp;amp; hyperbolic Identities \[ e^{i\theta} = \cos{\theta} + i\sin{\theta} \]
+\[ z_1z_2 = (x_1x_2 - y_1y_2) + i(x_1y_2+y_1x_2) \]
+\[ \abs{z_1z_2} = \abs{z_1}\abs{z_2} \]</description>
+    </item>
+    
+    <item>
+      <title>Mathematical methods pt. 2</title>
+      <link>/math/2mm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/math/2mm/</guid>
+      <description>Fourier series \[ f(x) = \frac{a_0}{2} + \sum_{r=1}^\infty \left[a_r \cos\left(\frac{2\pi r x}{L}\right) + b_r \sin\left(\frac{2\pi r x}{L}\right)\right] \]
+Dirichlet conditions The conditions a function must fulfil in order that it may be expanded as a fourier series.
+  The function must be periodic*
+  It must be single-valued and continuous, except at a finite number of finite discontinuties
+  It must have only have a finite number of maxima and minima within one period</description>
+    </item>
+    
+    <item>
+      <title>Topology</title>
+      <link>/math/topology/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/math/topology/</guid>
+      <description>Set theory Inverse functions If f : A -&amp;gt; B,
+\[ f^{-1}(B_0) = \{a \vert f(a) \in B_0\} \]
+Relations Equivalence relations If there is a equivalence relation C on A it has the following properties,
+ Reflexivity: xCx for every x in A. Symmetry: if xCy, then yCx. Transitivity: if xCy and yCz, then xCz.  A equivalence class determined by x is given by:
+\[ E = \{y \vert y \sim x\} \]</description>
+    </item>
+    
+  </channel>
+</rss>

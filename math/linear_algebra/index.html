@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Linear Algebra - Notes</title>
+<meta name="description" content="">
+<meta name="generator" content="Hugo 0.85.0" />
+<link href="//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="../../math/linear_algebra/">
+<link rel="stylesheet" href="../../css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="../../css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="../../js/bundle.js"></script><style>
+:root {--custom-font-color: #bcb7ae;--custom-background-color: #1a1c1d;}
+</style>
+<meta property="og:title" content="Linear Algebra" />
+<meta property="og:description" content="Vector space Requirements for a set of entities to form a vector space
+ Closure under commutative and associative addition Closure under multiplication of a scalar The existance of a null vector Multiplication by unity leaves any vector unchanged Each vector has a corresponding negative vector  Linear equations Row-echelon form  All zero rows are at the bottom of the matrix If two sucessive rows are non-zero, the second row starts with strictly more zeros than the first  Reduced row-echelon form  It&rsquo;s in row-echelon form The leading left most non-zero entry in each non-zero row is 1 All other elements of the column in which the leading entry 1 occurs are zeros  Row operations  Interchanging rows Multiplying row by non-zero scalar Adding a multiple of one row to another row  Preserves row-equivalence" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/math/linear_algebra/" /><meta property="og:image" content="/images/og-image.png"/><meta property="article:section" content="Math" />
+
+<meta property="og:site_name" content="Hugo Techdoc Theme" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/images/og-image.png"/>
+
+<meta name="twitter:title" content="Linear Algebra"/>
+<meta name="twitter:description" content="Vector space Requirements for a set of entities to form a vector space
+ Closure under commutative and associative addition Closure under multiplication of a scalar The existance of a null vector Multiplication by unity leaves any vector unchanged Each vector has a corresponding negative vector  Linear equations Row-echelon form  All zero rows are at the bottom of the matrix If two sucessive rows are non-zero, the second row starts with strictly more zeros than the first  Reduced row-echelon form  It&rsquo;s in row-echelon form The leading left most non-zero entry in each non-zero row is 1 All other elements of the column in which the leading entry 1 occurs are zeros  Row operations  Interchanging rows Multiplying row by non-zero scalar Adding a multiple of one row to another row  Preserves row-equivalence"/>
+<meta itemprop="name" content="Linear Algebra">
+<meta itemprop="description" content="Vector space Requirements for a set of entities to form a vector space
+ Closure under commutative and associative addition Closure under multiplication of a scalar The existance of a null vector Multiplication by unity leaves any vector unchanged Each vector has a corresponding negative vector  Linear equations Row-echelon form  All zero rows are at the bottom of the matrix If two sucessive rows are non-zero, the second row starts with strictly more zeros than the first  Reduced row-echelon form  It&rsquo;s in row-echelon form The leading left most non-zero entry in each non-zero row is 1 All other elements of the column in which the leading entry 1 occurs are zeros  Row operations  Interchanging rows Multiplying row by non-zero scalar Adding a multiple of one row to another row  Preserves row-equivalence">
+
+<meta itemprop="wordCount" content="2128"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>Notes</h1><a href="https://github.com/spongiforma/hugo-theme-techdoc" class="github"><i class="fab fa-github"></i></a>
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="../../">Home</a></li>
+<li><a href="../../about/">About Hugo</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main>
+<h2 id="vector-space">Vector space</h2>
+<p>Requirements for a set of entities to form a vector space</p>
+<ol>
+<li>Closure under commutative and associative addition</li>
+<li>Closure under multiplication of a scalar</li>
+<li>The existance of a null vector</li>
+<li>Multiplication by unity leaves any vector unchanged</li>
+<li>Each vector has a corresponding negative vector</li>
+</ol>
+<h2 id="linear-equations">Linear equations</h2>
+<h3 id="row-echelon-form">Row-echelon form</h3>
+<ol>
+<li>All zero rows are at the bottom of the matrix</li>
+<li>If two sucessive rows are non-zero, the second row starts with strictly more zeros than the first</li>
+</ol>
+<h3 id="reduced-row-echelon-form">Reduced row-echelon form</h3>
+<ol>
+<li>It&rsquo;s in row-echelon form</li>
+<li>The leading left most non-zero entry in each non-zero row is 1</li>
+<li>All other elements of the column in which the leading entry 1 occurs are zeros</li>
+</ol>
+<h3 id="row-operations">Row operations</h3>
+<ol>
+<li>Interchanging rows</li>
+<li>Multiplying row by non-zero scalar</li>
+<li>Adding a multiple of one row to another row</li>
+</ol>
+<p>Preserves row-equivalence</p>
+<h3 id="gauss-jordan-algorithm-gaussian-elimination">Gauss-Jordan algorithm / Gaussian elimination</h3>
+<p>You should know this</p>
+<h3 id="homogenous-equations">Homogenous equations</h3>
+<p>&ldquo;Implicit equations with no non-zero constants&rdquo;</p>
+<p><code>A homogenous system of m linear equations in n unknowns always has a non-trivial solution if m &lt; n</code></p>
+<h2 id="matrices">Matrices</h2>
+<h3 id="inner-product">Inner product</h3>
+<p>Hilbert space is basically inner product space for finite dimensions</p>
+<p>Orthornormal: \(\braket{\hat{e}_i}{\hat{e}_j} = \delta_{ij}\) (i.e. orthogonal and normalised)</p>
+<p>\begin{aligned}
+\braket{a}{b} &amp; = \braket{b}{a}^\ast \\<br>
+&amp; = \sum_i a_i^\ast b_i \text{ (On orthonormal basis)} \\<br>
+&amp; = \sum_{ij} a_i^\ast b_j \braket{\hat{e}_i}{\hat{e}_j} \\<br>
+\end{aligned}</p>
+<h3 id="inequalities-and-equalities">Inequalities and equalities</h3>
+<h4 id="cauchy-schwarz-s-inequality">Cauchy-Schwarz&rsquo;s inequality</h4>
+<p>\[
+\vert\braket{a}{b}\vert \leq \Vert a\Vert \Vert b\Vert
+\]</p>
+<p>In 2d, abcosx &lt;= aba</p>
+<p>equality when a is a scalar multiple of b</p>
+<h4 id="triangle-inequality">Triangle Inequality</h4>
+<p>\[
+\Vert a+b \Vert \leq \Vert a \Vert + \Vert b \Vert
+\]</p>
+<h4 id="bessel-s-inequality">Bessel&rsquo;s inequality</h4>
+<p>\[
+\Vert a \Vert^2 \geq \sum_i \vert \braket{\hat{e}_i}{a} \vert^2
+\]
+or</p>
+<p>\[
+\braket{a}{a} \geq \sum_i \vert a_i \vert^2
+\]</p>
+<p>where \(\hat{e}_i\) is an orthonormal basis</p>
+<p>where the equality holds if the sum includes all N basis vectors or if remaining basis vectors have
+a_i = 0</p>
+<h4 id="parallelogram-equality">Parallelogram equality</h4>
+<p>\[
+\Vert a + b \Vert^2 + \Vert a - b \Vert^2 = 2(\Vert a \Vert^2 + \Vert b \Vert^2)
+\]</p>
+<h3 id="functions-of-matrices">Functions of matrices</h3>
+<p>\[
+\exp A = \sum_{n=0}^\infty \frac{A^n}{n!}
+\]</p>
+<p>Derivatives exist.</p>
+<h3 id="operations">Operations</h3>
+<h4 id="transpose">Transpose</h4>
+<p>\[
+(AB\ldots G)^T = G^T \ldots C^T B^T A^T
+\]</p>
+<h4 id="hermitian-conjugate--complex-transpose">Hermitian Conjugate (Complex Transpose)</h4>
+<p>\[
+A^\dagger = (A^\ast)^T = (A^T)^\ast
+\]</p>
+<h4 id="trace">Trace</h4>
+<p>\[
+\Tr A = \sum_i A_{ii}
+\]</p>
+<p>\[
+\Tr ABC = \Tr BCA = \Tr CAB
+\]</p>
+<p>(Invariant under cyclic permutations)</p>
+<p>\[
+\Tr \Omega = \Tr U^\dagger \Omega U
+\]</p>
+<h4 id="determinant">Determinant</h4>
+<p>Minor:</p>
+<p>\(M_{ij}\) = determinant of matrix obtained by removing row i and column j</p>
+<p>Cofactor:</p>
+<p>\(C_{ij} = (-1)^{i+j} M_{ij}\)</p>
+<p>Thus a determinant is the sum of the products of the elements along any row or column and their corresponding cofactors</p>
+<p>e.g.</p>
+<p>\[
+\sum_i A_{1i}C_{1i}
+\]</p>
+<!--list-separator-->
+<ul>
+<li>
+<p>Properties</p>
+<ol>
+<li>
+<p>\(\vert A^T \vert = \vert A \vert\)</p>
+</li>
+<li>
+<p>If rows of A are interchanged, its determinant changes sign but is unaltered in magnitude</p>
+</li>
+<li>
+<p>if all the elements of a row or column of A have a common factor, it can be factored out. Also, \(\vert \lambda A \vert = \lambda^N \vert A \vert\)</p>
+</li>
+<li>
+<p>If any two rows are identical or multiples of one another, det is 0</p>
+</li>
+<li>
+<p>Determinant is unchanged by adding to the elements of one row any fixed multiple of the elements of another row</p>
+</li>
+<li>
+<p>Determinant of the product of multiple matrices is invariant under permutations of the matrices</p>
+</li>
+</ol>
+<p>\[
+\vert A \vert = a \cdot (b \times c)
+\]</p>
+<p>\(\vert A^{-1} \vert = \vert A \vert^{-1}\)</p>
+<p>\[
+\det \Omega = \det U^\dagger \Omega U
+\]</p>
+</li>
+</ul>
+<h4 id="inverse">Inverse</h4>
+<p>Exists when determinant is not zero, i.e. the matrix is non-singular</p>
+<p>\[
+(A^{-1})_{ik} = \frac{C_{ki}}{\vert A \vert}
+\]</p>
+<p>\[
+(ABC)^{-1} = C^{-1}B^{-1}A^{-1}
+\]</p>
+<p>A diagonally dominant matrices are invertible/non-singular</p>
+<h4 id="rank">Rank</h4>
+<p>R(A) = R(A^T) = number of linearly independent vectors row-wise or column-wise</p>
+<p>or</p>
+<p>Size of the largest square submatrix of A whose determinant is non-zero</p>
+<h3 id="special-forms">Special forms</h3>
+<h4 id="diagonal-matrix">Diagonal matrix</h4>
+<p>Having non-zero elements only on the leading diagonal</p>
+<p>Also denoted by e.g. A = diag(1,2,-3)</p>
+<p>\[
+\vert A \vert = \prod_i A_{ii}
+\]</p>
+<p>\[
+A^{-1} = \text{diag} (\frac{1}{A_{11}},\frac{1}{A_{22}}, \ldots)
+\]</p>
+<p>if A and B are diagonal, their product is commutative</p>
+<h4 id="lower-or-upper-triangular-matrices">Lower or upper triangular matrices</h4>
+<p>\[
+\vert A \vert = \prod_i A_{ii}
+\]</p>
+<h4 id="symmetric-and-antisymmetric-matrices">Symmetric and antisymmetric matrices</h4>
+<p>Symmetric:</p>
+<p>\[
+A = A^T
+\]</p>
+<p>Anti/Skew-symmetric:</p>
+<p>\[
+A = -A^T
+\]</p>
+<p>Any matrix can be written as a sum of a symmetric and an antisymmetric matrix</p>
+<p>\[
+A = \frac12 (A + A^T) + \frac12 (A - A^T)
+\]</p>
+<p>Note that if A is an NxN antisymmetric matrix, |A| = 0 if N is odd</p>
+<h4 id="orthogonal-matrix">Orthogonal matrix</h4>
+<p>\[
+A^T = A^{-1}
+\]</p>
+<p>\[
+\vert A \vert = \pm 1
+\]</p>
+<h4 id="hermitian-matrices--complex-symmetric">Hermitian matrices (Complex Symmetric)</h4>
+<p>Hermitian</p>
+<p>\[
+A = A^\dagger
+\]</p>
+<p>Anti-Hermitian</p>
+<p>\[
+A = -A^\dagger
+\]</p>
+<p>\[
+A = \frac12 (A+A^\dagger) + \frac12(A-A^\dagger)
+\]</p>
+<h4 id="unitary-matrix--complex-orthogonal">Unitary matrix (complex orthogonal)</h4>
+<p>\[
+A^\dagger = A^{-1}
+\]</p>
+<p>The determinant and eigenvalues of a unitary matrix have unit modulus</p>
+<p>It also represents a linear operator which leaves the norms (inner products) of complex vectors unchanged (i.e. orthonormal-ness)</p>
+<p>An operator is unitary iff each of its matrix representations are unitary</p>
+<p>The rows may be interpreted as components of n orthonormal vectors similar to how columns are components of n vectors.</p>
+<h4 id="normal-matrices">Normal matrices</h4>
+<p>\[
+AA^\dagger = A^\dagger A
+\]</p>
+<p>Hermitian matrices and unitary matrices are normal</p>
+<p>A Normal matrix is hermitian iff it has real eigenvalues</p>
+<h2 id="vectors-and-spaces">Vectors and spaces</h2>
+<h3 id="completeness-relation-for-orthonormal-vectors">Completeness relation for orthonormal vectors</h3>
+<p>\[
+\sum_i \ket{i}\bra{i} = I
+\]</p>
+<p>where |i&gt; is any orthonormal basis for the vector space V</p>
+<p>Which allows us to represent any operator in the outer product notation.
+Given A : V \(\rightarrow\) W, and |v_i&gt; and |w_j&gt; are orthornormal bases for V and W</p>
+<p>\begin{aligned}
+A &amp; = I_W A I_V \\<br>
+&amp; = \sum_{ij} \bra{w_j}A\ket{v_i} \ket{w_j} \bra{v_i}
+\end{aligned}</p>
+<h4 id="outer-product-representation-of-unitary-u">Outer product representation of Unitary U</h4>
+<p>Define:</p>
+<p>\[
+\ket{w_i} \equiv U\ket{v_i}
+\]</p>
+<p>Note that that implies:</p>
+<p>\[
+U = \sum_i \ket{w_i} \bra{v_i}
+\]</p>
+<p>And that if |v_i&gt; and |w_i&gt; are any orthonormal bases, then U defined above is also unitary</p>
+<h3 id="projectors">Projectors</h3>
+<p>A class of Hermitian operators. Let W be a k-dimensional vector subspace of the d-dimensional vector space V. Using Gram-Schmidt procedure it is possible to construct an orthonormal basisc for V (|1&gt;,&hellip;,|d&gt;)such that |1&gt;,&hellip;,|k&gt; is an orthonormal basis for W. The projector by defintion:</p>
+<p>\[
+P \equiv \sum_{i=k}^k \ket{i} \bra{i}
+\]</p>
+<p>\[
+(P_i)_{kl} = \delta_{kl}\delta_{li}
+\]</p>
+<p>The orthogonal complement of P is Q = I - P, which is a projector onto the vector space spanned by |k+1&gt;&hellip;|d&gt;</p>
+<p>\[
+P_i P_j = \delta_{ij} P_j
+\]</p>
+<p>Note that P^2 = P</p>
+<h2 id="operators">Operators</h2>
+<h3 id="commutator">Commutator</h3>
+<p>Definition:</p>
+<p>\[
+\Omega \Lambda - \Lambda\Omega \equiv [\Omega,\Lambda]
+\]</p>
+<p>Identities:</p>
+<p>\[
+[\Omega,\Lambda] = \Lambda[\Omega,\theta] + [\Omega,\Lambda]\theta
+\]</p>
+<p>\[
+[\Lambda\Omega,\theta] = \Lambda[\Omega,\theta] + [\Lambda,\theta]\Omega
+\]</p>
+<h3 id="diagonalisable">Diagonalisable</h3>
+<p>A diagonal representation for an operator A on vector space V is a representation:</p>
+<p>\[
+A = \sum_i \lambda_i \ket{i}\bra{i}
+\]
+with corresponding eigenvalues \(\lambda_i\)</p>
+<p>An operator is diagonalisable is it has a diagonal representation.</p>
+<p>Any normal operator M on a vector space V is diagonal wrt some orthonormal basis for V. Also any diagonalisable operator is normal</p>
+<h3 id="active-and-passive-transformations">Active and passive transformations</h3>
+<p>If all vectors in a space are subject to a unitary transform (<strong>Active Transformation</strong>)</p>
+<p>\[
+\ket{V} \to U\ket{V}
+\]
+Then the same change would be effected if subjected operators to the change (<strong>Passive Transformation</strong>)
+\[
+\Omega \to U^\dagger\Omega U
+\]</p>
+<h2 id="eigenvectors-and-eigenvalues">Eigenvectors and eigenvalues</h2>
+<p>\[
+Ax = \lambda x
+\]</p>
+<p>\[
+A^{-1}x^i = \frac{1}{\lambda_i}x_i
+\]</p>
+<p>The eigenspace corresponding to a eigenvalue v is the set of vectors with eigenvalue v</p>
+<h3 id="normal-matrices">Normal matrices:</h3>
+<p>\[
+A^\dagger x^i = \lambda_i^\ast x^i
+\]</p>
+<p>If \(\lambda_i \neq \lambda_j\), the eigenvectors \(x^i\) and \(x^j\) must be orthogonal</p>
+<p>An eigenvalue corresponding to two or more different eigenvectors (i.e. they are not multiples) are <strong>degenerate</strong>. or in other words the <strong>eigenspace</strong> has more than 1 dimensions</p>
+<p>Suppose \(\lambda_1\) is k-fold degenerate (for x^1 to x^k), then any linear combination of those x^1 also has an eigenvalue of \(\lambda_1\)</p>
+<h3 id="gram-schmidt-orthogonalisation">Gram-Schmidt orthogonalisation</h3>
+<p>\begin{aligned}
+z^1 &amp; = x^1, \\<br>
+z^2 &amp; = x^2 - \braket{\hat{z}^1}{x^2} \hat{z}^1, \\<br>
+z^3 &amp; = x^3 - \braket{\hat{z}^2}{x^3} \hat{z}^2 - \braket{\hat{z}^1}{x^3} \hat{z}^1, \\<br>
+&amp; \ldots \\<br>
+z^k &amp; = x^k - \sum_{i=1}^{k-1} \braket{\hat{z}^i}{x^k}\hat{z}^k \\<br>
+\end{aligned}</p>
+<p>Where \(\hat{z}^i =  \frac{z^i}{\Vert z^i \Vert}\)</p>
+<h3 id="eigen-everything-of-hermitian-and-anti-hermitian-matrices">Eigen-everything of Hermitian and anti-hermitian matrices</h3>
+<p>Eigenvalues of hermitian matrices are real</p>
+<p>Eigenvalues of anti-hermitian matrices are pure imaginary (-\(\lambda\))</p>
+<p>To every hermitian operator, there exists at least a basis consisting of its orthonormal eigenvectors. It is diagonal in this eigenbasis and has its eigenvalues as its diagonal entries.</p>
+<h3 id="eigen-everything-of-unitary-matrix">Eigen-everything of unitary matrix</h3>
+<p>Eigenvalues of a unitary matrix have unit modulus and are complex.</p>
+<p>Assuming no degeneracy, the eigenvectors of a unitary operator are mutually orthogonal</p>
+<h3 id="eigen-everything-of-a-general-square-matrix">Eigen-everything of a general square matrix</h3>
+<p>Any N x N matrix with distinct eigenvalues has N linearly independent eigenvectors.</p>
+<p>If it has a degenerate eigenvalues, however, then it may or may not have N linearly independent eigenvectors.</p>
+<p>Not having linearly independent eigenvectors makes it <strong>defective</strong></p>
+<h3 id="simultaneous-eigenvectors">Simultaneous eigenvectors</h3>
+<p>Two different normal matrices have a common set of eigenvectors that diagonalises them both if and only if they commute</p>
+<p>If an eigenvalue of A is degenerate then not all of its possible sets of eigenvectors will also constitute a set of eigenvectors of B. i.e. If B is nondegenerate but A is degenerate, then all eigenvectors of B are eigenvectors of A.</p>
+<h3 id="determination">Determination</h3>
+<p>Chracteristic function:
+c(lambda) = det | A - lambda I |
+Characteristic equation:</p>
+<p>\[
+\vert A - \lambda I \vert = 0
+\]</p>
+<p>LHS is the characteristic/secular determinant of A</p>
+<p>When the determinant is written as a polynomial equation in \(\lambda\), the coefficient of \(-\lambda^{N-1}\) will be Tr A, i.e. the sum of the roots (recall p+q = -b/a, pq = c/a)</p>
+<h2 id="change-in-basis">Change in basis</h2>
+<p>Given S where:</p>
+<p>\[
+x_i = \sum_{j=1}^N S_{ij}x'_j
+\]</p>
+<p>\[
+x = Sx'
+\]</p>
+<p>where S is the transformation matrix associated with the change in basis</p>
+<p>and</p>
+<p>\[
+x' = S^{-1} x
+\]</p>
+<p>The components of x transform <strong>inversely</strong> to how the basis vectors transform, as the vector x itself much remain unchanged</p>
+<p>This applies to linear operators of x:</p>
+<p>\[
+y = Ax, y' = A&rsquo;x'
+\]</p>
+<p>=&gt;</p>
+<p>\[
+y' = S^{-1}ASx'
+\]</p>
+<p>or in other words:</p>
+<p>\[
+A' = S^{-1}AS
+\]</p>
+<p>which is an example of a similarity transformation</p>
+<p>So any property of A which represents some basis independent property of its linear operator will be shared by A'</p>
+<ol>
+<li>If A = I, A' = I</li>
+<li>|A| = |A'|</li>
+<li>Eigenvalues are the same</li>
+<li>Trace is unchanged</li>
+</ol>
+<h3 id="unitary-s">Unitary S</h3>
+<ol>
+<li>If the original basis is orthonormal and S is unitary then the new basis is also orthonormal</li>
+<li>If A is (anti) hermitian then A' is (anti) hermitian</li>
+<li>If A is unitary then A' is also unitary</li>
+</ol>
+<h2 id="diagonalisation-of-matrices">Diagonalisation of matrices</h2>
+<p>Define a basis \(x^j\) given by:
+\[
+x^j = \sum_{i=1}^N S_{ij}{\bf e_i},
+\]</p>
+<p>where \(x^j\) are chosen to be the eigenvectors of the linear operator \(\mathcal{A}\).
+i.e.</p>
+<p>\[
+\mathcal{A} x^j = \lambda_j x^j
+\].</p>
+<p>In our new basis, \(\mathcal{A}\) is represented by the matrix \(A' = S^{-1}AS\). The columns of S are the eigenvectors of the matrix A, i.e. \(S_{ij} = (x^j)_i\). Therefore, A' is diagonal with the eigenvalues of \(\mathcal{A}\) as the diagonal elements.</p>
+<p>Since we require S to be non-singular, the N eigenvectors of A must be linearly independent and form a basis for the N-dimensional vector space. Any matrix with distinct eigenvalues can be diagonalised by this procedure. If it doesn&rsquo;t have N linearly independent eigenvectors, then it cannot be diagaonlised.</p>
+<p>For normal matrices, the N eigenvectors are indeed linearly independent. For them, S is unitary.</p>
+<p>Note:</p>
+<p>\[
+\det \exp A = \exp(\Tr A)
+\]</p>
+<h2 id="infinite-dimensions">Infinite dimensions</h2>
+<p>Define a function</p>
+<p>Inner product in (countable) infinite dimensions:</p>
+<p>\[
+\braket{f}{g} = \int_0^L f(x)g(x) \dd{x}
+\]</p>
+<h3 id="dirac-delta">Dirac delta</h3>
+<p>In infinite dimensions,</p>
+<p>\[
+\braket{x}{x'} = \delta(x-x')
+\]</p>
+<p>if two basis vectors are the same.
+\[
+\delta &lsquo;(x-x&rsquo;) = \delta(x-x')\dv{x}
+\]</p>
+<p>Dirac delta with fourier transform</p>
+<p>\[
+\delta(x-x') = \frac{1}{2\pi}\int_{-\infty}^\infty e^{ik(x-x')}\dd{k}
+\]</p>
+<p>\[
+\delta(f(x)) = \sum_i \frac{\delta(x_i-x)}{|\dv{f}{x_i}|}
+\]
+where x_i are the zeros of f(x)</p>
+<h3 id="operators">Operators</h3>
+<h4 id="differential-operator">Differential operator</h4>
+<p>\[
+D\ket{f} = \ket{\dv{f}{x}}
+\]</p>
+<p>implies</p>
+<p>In the |x&gt; basis,
+\[
+\bra{x}D\ket{x'} = D_{x,x'}=\delta'(x-x')=\delta(x-x')\dv{x'}
+\]</p>
+<p>where it is integrated over the second index (x') and pulls out the derivative of f at the first index (x).</p>
+<p>We can turn it hermitian by turning it into the form:</p>
+<p>\[
+K = -iD
+\]</p>
+<p>but in infinite dimensions, K^t = K is not sufficient to be hermitian. It is only hermitian in the space of functions that obey:</p>
+<p>\[
+-ig^*(x)f(x) | \given_a^b = 0
+\]</p>
+<p>so that &lt;g|K|f&gt; = &lt;f|K|g&gt;*.</p>
+<!--list-separator-->
+<ul>
+<li>
+<p>eigeneverything</p>
+<p>X-basis</p>
+<p>\[
+K\ket{k} = k\ket{k}
+\]</p>
+<p>\[
+-i\dv{x}\psi_k(x) = k\psi_k(x)
+\]</p>
+<p>where \(\psi_k(x) = \braket{x}{k}\).</p>
+<p>the solution is:</p>
+<p>\[
+\psi_k(x) = Ae^{ikx}
+\]</p>
+<p>where we choose \(A = (1/2\pi)^{-1/2}\)</p>
+<p>and &lt;k|k&gt;</p>
+</li>
+</ul>
+<h4 id="x-basis">X basis</h4>
+<p>X|x&gt; = x|x&gt;</p>
+<p>\[
+\bra{x'}X\ket{x} = x\delta(x'-x)
+\]</p>
+<p>Action on functions:</p>
+<p>X|f&gt; = |F&gt;</p>
+<p>F(x) = xf(x)</p>
+<p>\[
+\bra{k}X\ket{k'} = i\delta'(k-k')
+\]</p>
+<p>[X,K] = iI</p>
+<div class="edit-meta">
+
+<br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Math/linear_algebra.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../math/integration/" title="Integration"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Integration</a>
+<a class="nav nav-next" href="../../math/mathematicalmethods/" title="Mathematical methods pt. 1">Next - Mathematical methods pt. 1 <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="../../">Home</a></li>
+
+<li class="parent has-sub-menu"><a href="../../math/">Maths<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../math/abstractalgebra/">Abstract Algebra</a></li>
+<li class=""><a href="../../math/integration/">Integration</a></li>
+<li class="active"><a href="../../math/linear_algebra/">Linear Algebra</a></li>
+<li class=""><a href="../../math/mathematicalmethods/">Mathematical methods pt. 1</a></li>
+<li class=""><a href="../../math/2mm/">Mathematical methods pt. 2</a></li>
+<li class=""><a href="../../math/topology/">Topology</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="../../physics/">Physics<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../physics/circuits/">Circuits</a></li>
+<li class=""><a href="../../physics/oscillations/">Core EM</a></li>
+<li class=""><a href="../../physics/funnycircuits/">DC circuit tricks</a></li>
+<li class=""><a href="../../physics/em/">E&amp;M</a></li>
+<li class=""><a href="../../physics/electrodynamics/">Electrodynamics</a></li>
+<li class=""><a href="../../physics/fluids/">Fluid Dynamics</a></li>
+<li class=""><a href="../../physics/linear_momentum/">Linear Momentum</a></li>
+<li class=""><a href="../../physics/mechanics/">Mechanics</a></li>
+<li class=""><a href="../../physics/optics/">Optics</a></li>
+<li class=""><a href="../../physics/quantum_physics/">Quantum mechanics</a></li>
+<li class=""><a href="../../physics/rotation/">Rotation</a></li>
+<li class=""><a href="../../physics/idealgas/">Thermodynamics</a></li>
+<li class=""><a href="../../physics/wavves/">Waves</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="../../prog/">Progs<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../prog/linear-optimisation/">Linear optimisation</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+
+<div class="outline">
+
+<nav class="outline-list">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#vector-space">Vector space</a></li>
+    <li><a href="#linear-equations">Linear equations</a>
+      <ul>
+        <li><a href="#row-echelon-form">Row-echelon form</a></li>
+        <li><a href="#reduced-row-echelon-form">Reduced row-echelon form</a></li>
+        <li><a href="#row-operations">Row operations</a></li>
+        <li><a href="#gauss-jordan-algorithm-gaussian-elimination">Gauss-Jordan algorithm / Gaussian elimination</a></li>
+        <li><a href="#homogenous-equations">Homogenous equations</a></li>
+      </ul>
+    </li>
+    <li><a href="#matrices">Matrices</a>
+      <ul>
+        <li><a href="#inner-product">Inner product</a></li>
+        <li><a href="#inequalities-and-equalities">Inequalities and equalities</a>
+          <ul>
+            <li><a href="#cauchy-schwarz-s-inequality">Cauchy-Schwarz&rsquo;s inequality</a></li>
+            <li><a href="#triangle-inequality">Triangle Inequality</a></li>
+            <li><a href="#bessel-s-inequality">Bessel&rsquo;s inequality</a></li>
+            <li><a href="#parallelogram-equality">Parallelogram equality</a></li>
+          </ul>
+        </li>
+        <li><a href="#functions-of-matrices">Functions of matrices</a></li>
+        <li><a href="#operations">Operations</a>
+          <ul>
+            <li><a href="#transpose">Transpose</a></li>
+            <li><a href="#hermitian-conjugate--complex-transpose">Hermitian Conjugate (Complex Transpose)</a></li>
+            <li><a href="#trace">Trace</a></li>
+            <li><a href="#determinant">Determinant</a></li>
+            <li><a href="#inverse">Inverse</a></li>
+            <li><a href="#rank">Rank</a></li>
+          </ul>
+        </li>
+        <li><a href="#special-forms">Special forms</a>
+          <ul>
+            <li><a href="#diagonal-matrix">Diagonal matrix</a></li>
+            <li><a href="#lower-or-upper-triangular-matrices">Lower or upper triangular matrices</a></li>
+            <li><a href="#symmetric-and-antisymmetric-matrices">Symmetric and antisymmetric matrices</a></li>
+            <li><a href="#orthogonal-matrix">Orthogonal matrix</a></li>
+            <li><a href="#hermitian-matrices--complex-symmetric">Hermitian matrices (Complex Symmetric)</a></li>
+            <li><a href="#unitary-matrix--complex-orthogonal">Unitary matrix (complex orthogonal)</a></li>
+            <li><a href="#normal-matrices">Normal matrices</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#vectors-and-spaces">Vectors and spaces</a>
+      <ul>
+        <li><a href="#completeness-relation-for-orthonormal-vectors">Completeness relation for orthonormal vectors</a>
+          <ul>
+            <li><a href="#outer-product-representation-of-unitary-u">Outer product representation of Unitary U</a></li>
+          </ul>
+        </li>
+        <li><a href="#projectors">Projectors</a></li>
+      </ul>
+    </li>
+    <li><a href="#operators">Operators</a>
+      <ul>
+        <li><a href="#commutator">Commutator</a></li>
+        <li><a href="#diagonalisable">Diagonalisable</a></li>
+        <li><a href="#active-and-passive-transformations">Active and passive transformations</a></li>
+      </ul>
+    </li>
+    <li><a href="#eigenvectors-and-eigenvalues">Eigenvectors and eigenvalues</a>
+      <ul>
+        <li><a href="#normal-matrices">Normal matrices:</a></li>
+        <li><a href="#gram-schmidt-orthogonalisation">Gram-Schmidt orthogonalisation</a></li>
+        <li><a href="#eigen-everything-of-hermitian-and-anti-hermitian-matrices">Eigen-everything of Hermitian and anti-hermitian matrices</a></li>
+        <li><a href="#eigen-everything-of-unitary-matrix">Eigen-everything of unitary matrix</a></li>
+        <li><a href="#eigen-everything-of-a-general-square-matrix">Eigen-everything of a general square matrix</a></li>
+        <li><a href="#simultaneous-eigenvectors">Simultaneous eigenvectors</a></li>
+        <li><a href="#determination">Determination</a></li>
+      </ul>
+    </li>
+    <li><a href="#change-in-basis">Change in basis</a>
+      <ul>
+        <li><a href="#unitary-s">Unitary S</a></li>
+      </ul>
+    </li>
+    <li><a href="#diagonalisation-of-matrices">Diagonalisation of matrices</a></li>
+    <li><a href="#infinite-dimensions">Infinite dimensions</a>
+      <ul>
+        <li><a href="#dirac-delta">Dirac delta</a></li>
+        <li><a href="#operators">Operators</a>
+          <ul>
+            <li><a href="#differential-operator">Differential operator</a></li>
+            <li><a href="#x-basis">X basis</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</nav>
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>
