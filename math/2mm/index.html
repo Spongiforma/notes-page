@@ -44,7 +44,7 @@ Dirichlet conditions The conditions a function must fulfil in order that it may 
   It must be single-valued and continuous, except at a finite number of finite discontinuties
   It must have only have a finite number of maxima and minima within one period">
 
-<meta itemprop="wordCount" content="1892"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="2480"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -453,7 +453,7 @@ a_n(x)\dv[n]{y}{x} + a_{n-1}(x)\dv[n-1]{y}{x} + \ldots +a_1(x)\dv{y}{x} + a_0(x)
 \]</p>
 <p>An nth order linear ODE must have n linearly independent solutions for the complementary equation. Their linear independence can be confirmed by forming n simultaneous equations for the n constants by repeatedly differentiating them and noticing that RHS is always zero for the complementary solution. This can be constructed as a determinant or the <strong>Wronkskian</strong> of the set of functions. If it does not vanish then the n functions are linearly independent though the converse does not necessarily apply.</p>
 <h4 id="linear-equations-with-constant-coefficients">Linear equations with constant coefficients</h4>
-<p>The coefficients \(a_m\) are constants.</p>
+<p>(The coefficients \(a_m\) are constants)</p>
 <p>To find the complementary solution try a solution of the form Ae^kx, and we are left with an auxillary equation in k. If all roots are distinct then the solutions are linearly independent and can be superposed. If some roots are complex and all coefficients are real, then it for every complex root its complex conjugate is also a root. If some roots are repeated, then we must try solutions of the form \(x^ne^{kx}\) are also solutions.</p>
 <p>for particular solutions, use method of undetermined coefficients.</p>
 <ul>
@@ -461,14 +461,17 @@ a_n(x)\dv[n]{y}{x} + a_{n-1}(x)\dv[n-1]{y}{x} + \ldots +a_1(x)\dv{y}{x} + a_0(x)
 <li>if f(x) = a sin(rx) + b cos(rx) (a or b may be zero), then try c sin(rx) + d cos(rx)</li>
 <li>if f(x) = polynomial of degree N, where some coefficients may be zero, then try another polynomial of degree N.</li>
 </ul>
-<h3 id="linear-recurrence-relations">Linear recurrence relations</h3>
+<h4 id="linear-recurrence-relations">Linear recurrence relations</h4>
 <p>Form:</p>
 <p>\[
 u_{n+1} = \sum_{r=0}^{N-1}a_r u_{n-r} + k
 \]</p>
 <p>where k may be a simple function of n.</p>
 <p>Equations involving terms whose indices differ by up to N are called Nth-order recurrence relations. If k=0, then the relation is called homogenous.</p>
-<h4 id="first-order-recurrence-relations">First-order recurrence relations</h4>
+<!--list-separator-->
+<ul>
+<li>
+<p>First-order recurrence relations</p>
 <p>For the equation:</p>
 <p>\[
 u_{n+1} = au_n + k
@@ -482,6 +485,92 @@ when a = 1:</p>
 <p>\[
 u_n = u_0 + nk
 \]</p>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>Second-order recurrence relations</p>
+<p>Similar to differential equations, Try a solution of the form \(A\lambda^n\) for the homogenous solution and solve the characteristic equation in lambda. If there are repeated roots, then try the general solution \((A + Bn)\lambda_1^n\).</p>
+</li>
+</ul>
+<h4 id="laplace-transform">Laplace transform</h4>
+<p>The laplace transform is defined as:</p>
+<p>\[
+\bar{f}(s) = \int_0^\infty e^{-sx}f(x)\dd{x}
+\]</p>
+<p>Recall that the Laplace transform of the nth derivative of \(f(x)\) is:</p>
+<p>\[
+\mathcal{L}\left[f^{(n)}(s)\right] = s^n\bar{f}(s) - s^{n-1}f(0) - s^{n-2}f'(0) - \ldots - sf^{(n-2)}(0) - f^{(n-1)}(0)
+\]</p>
+<p>After getting \(\bar{f}(s)\), we may apply the inverse Laplace transform.</p>
+<h3 id="linear-equations-with-variable-coefficients">Linear equations with variable coefficients</h3>
+<p>Although there is no generally applicable method, in certain cases a solution is possible.</p>
+<h4 id="legendre-and-euler-linear-equations">Legendre and Euler linear equations</h4>
+<p>Legendre&rsquo;s linear equation has the form</p>
+<p>\[
+a_n(\alpha x+ \beta)^n \dv[n]{y}{x} + \ldots + a_1(\alpha x + \beta)\dv{y}{x} + a_0 y = f(x)
+\]</p>
+<p>By making the substitution \(\alpha x + \beta = e^t\), we have:</p>
+<p>\[
+\dv{y}{x} = \dv{t}{x} \dv{y}{t} = \frac{\alpha}{\alpha x + \beta} \dv{y}{t}
+\]</p>
+<p>\[
+\dv[2]{y}{x} = \frac{\alpha^2}{(\alpha x + \beta)^2}\left(\dv[2]{y}{t} - \dv{y}{t})
+\]</p>
+<p>and so on.</p>
+<p>\[
+(\alpha x + \beta)^n \dv[n]{y}{x} = \alpha^n \dv{}{t}\left(\dv{}{t} - 1 \right)\ldots\left(\dv{}{t} -n + 1\right)y
+\]</p>
+<p>Legendre&rsquo;s linear equation thus becomes:</p>
+<p>\[
+a_n \alpha^n \dv{}{t}\left(\dv{}{t} - 1\right) \ldots \left(\dv{}{t} - n + 1\right)y + \ldots + a_1 \alpha \dv{y}{t} + a_0y = f\left(\frac{e^t - \beta}{\alpha}\right)
+\]</p>
+<p>which can be solved with previously discussed methods.</p>
+<!--list-separator-->
+<ul>
+<li>
+<p>Euler&rsquo;s equation</p>
+<p>Euler&rsquo;s equation is a special case where \(\alpha = 1\) and \(\beta = 0\).</p>
+<p>If \(f(x) = 0\), then substituting \(y = x^\lambda\) leads to a simple algebraic equation in \(\lambda\). If \(\lambda_1\) is a k-fold root, then \(x^\lambda_1, x^\lambda_1\ln x, \ldots, x^\lambda_1(\ln x)^{k-1}\) are k LI solutions corresponding to the root.</p>
+</li>
+</ul>
+<h4 id="exact-equations">Exact equations</h4>
+<p>Sometimes, an ODE is merely the derivative of another ODE of an order lower, in which case it is called exact. It can be shown the nth-order linear ODE:</p>
+<p>\[
+a_n(x)\dv[n]{y}{x} + \ldots + a_1(x)\dv{y}{x}  + a_0(x)y = f(x)
+\]</p>
+<p>is exact when \(a_0(x) - a_1'(x) + a_2''(x) - \ldots + (-1)^na_n^{(n)}(x) = 0\). The lower order ODE with coefficients to be determined can be solved for by differentiating, comparing coefficents and then be integrated directly.</p>
+<p>In some cases, an integrating factor is required to turn an ODE exact.</p>
+<h4 id="partially-known-complementary-function">Partially known complementary function</h4>
+<p>If we wish to solve an nth-order linear ODE and we already know one part of the complementary solution \(u(x)\), we can make the substitution \(y = uv\) to transform the ODE into one of order \(n-1\) in \(dv/dx\). The simpler equation may be soluble. The solution will contain both the full complementary function.</p>
+<h4 id="variation-of-parameters">Variation of parameters</h4>
+<p>If the whole complementary solution of a linear ODE is known, then assume a particular integral of the same form with constants replaced by functions of x, and impose a system of LI equations for the unknowns including the ODE itself.</p>
+<h4 id="canonical-form-for-second-order-equations">Canonical form for second order equations</h4>
+<p>For nth-order linear ODEs with variable coefficients to those of order 2, rearrange the equation till the coefficient of the second derivative is unity.</p>
+<p>\[
+\dv[2]{y}{x} + a_1(x)\dv{y}{x} + a_0(x)y = f(x)
+\]</p>
+<p>By making the substitution \(y = uv\), where</p>
+<p>\[
+u(x) = \exp\left\{-\frac12 \int a_1(z) \dd{z}\right\}
+\]
+we obtain an equation of the form:</p>
+<p>\[
+\dv[2]{v}{x} + g(x)v = h(x)
+\]</p>
+<p>where:
+\[
+g(x) = a_0(x) - \frac14[a_1(x)]^2 - \frac12 a_1'(x)
+\]</p>
+<p>\[
+h(x) = f(x)\exp\left\{\frac12 \int a_1(z) \dd{z}\right\}
+\]</p>
+<p>Which may be easier to solve.</p>
+<h3 id="general-ordinary-differential-equations">General ordinary differential equations</h3>
+<h4 id="dependent-variable-absent">Dependent variable absent</h4>
+<p>Substitute \(p = \dv{y}{x}\).</p>
+<p>Can be extended to absence of lower derivatives.</p>
 <div class="edit-meta">
 
 <br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Math/2mm.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../math/mathematicalmethods/" title="Mathematical methods pt. 1"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Mathematical methods pt. 1</a>
@@ -609,11 +698,22 @@ u_n = u_0 + nk
         <li><a href="#higher-order-linear-equations">Higher-order linear equations</a>
           <ul>
             <li><a href="#linear-equations-with-constant-coefficients">Linear equations with constant coefficients</a></li>
+            <li><a href="#linear-recurrence-relations">Linear recurrence relations</a></li>
+            <li><a href="#laplace-transform">Laplace transform</a></li>
           </ul>
         </li>
-        <li><a href="#linear-recurrence-relations">Linear recurrence relations</a>
+        <li><a href="#linear-equations-with-variable-coefficients">Linear equations with variable coefficients</a>
           <ul>
-            <li><a href="#first-order-recurrence-relations">First-order recurrence relations</a></li>
+            <li><a href="#legendre-and-euler-linear-equations">Legendre and Euler linear equations</a></li>
+            <li><a href="#exact-equations">Exact equations</a></li>
+            <li><a href="#partially-known-complementary-function">Partially known complementary function</a></li>
+            <li><a href="#variation-of-parameters">Variation of parameters</a></li>
+            <li><a href="#canonical-form-for-second-order-equations">Canonical form for second order equations</a></li>
+          </ul>
+        </li>
+        <li><a href="#general-ordinary-differential-equations">General ordinary differential equations</a>
+          <ul>
+            <li><a href="#dependent-variable-absent">Dependent variable absent</a></li>
           </ul>
         </li>
       </ul>

@@ -47,7 +47,7 @@ the first term on RHS is often called the L barrier. This does not hold if v(r) 
 \[ F_{eff} = \frac{L^2}{mr^3} - V&#39;( r) \]
 We may use it to find r(t) and theta(t) in terms of t:">
 
-<meta itemprop="wordCount" content="139"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="493"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -106,16 +106,133 @@ F_{eff} = \frac{L^2}{mr^3} - V'( r)
 <h3 id="gravitation">Gravitation</h3>
 <p>The motion of particles is like (earth-sun model):</p>
 <p>\[
-\frac{1}{r} = \frac{m\alpha}{L^2}(1+\epsilon\cos\theta)
+\frac{1}{r} = \frac{m\alpha}{L^2}(1+e\cos\theta)
 \]</p>
-<p>where epsilon is eccentricity.</p>
+<p>Or in terms of specific angular momentum, h.</p>
+<p>\[
+r = \frac{h^2 / \mu}{1+e\cos\theta}
+\]</p>
+<p>where the eccentricity \(e = \sqrt{1 + \frac{2EL^2}{m\alpha^2}} = \sqrt{1+\frac{2\epsilon h^2}{\mu^2}}\) , and \(\alpha = GMm\), \(\mu = GM\).</p>
 <h4 id="eccentricity-and-orbits">Eccentricity and orbits</h4>
+<!--list-separator-->
 <ul>
 <li>Circle (e = 0)</li>
-<li>Ellipse (0 &lt; e &lt; 1)</li>
-<li>Parabola (e = 1)</li>
-<li>Hyperbola (e &gt; 1)</li>
 </ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>Ellipse (0 &lt; e &lt; 1)</p>
+<p>WLOG, let a be the semi-major axis and b be the semi-minor axis. c is the distance of a focus to the centre.</p>
+<p>\[
+e = \sqrt{1 - \frac{b^2}{a^2}}
+\]</p>
+<p>From the geometrical definition of a ellipse and the above definition,</p>
+<p>\[
+c = ae
+\]</p>
+<p>\[
+r = \frac{a(1-e^2)}{1+e\cos\theta}
+\]</p>
+ <!--list-separator-->
+<ul>
+<li>
+<p>Orbits</p>
+<p>\[
+\epsilon = -\frac{\mu}{2a}
+\]</p>
+<p>Vis-viva equation:</p>
+<p>\[
+v^2 = \mu\left( \frac{2}{r} - \frac{1}{a} \right)
+\]</p>
+</li>
+</ul>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>Parabola (e = 1)</p>
+<p>In polar coordinates, \(r = \frac{p}{1+\cos\theta}\)</p>
+<p>For a left facing parabola, \(y^2 = -4ax\), where a is the distance between the vertex and the focus of the parabola.</p>
+<p>\[
+r = \frac{2a}{1+\cos\theta}
+\]</p>
+ <!--list-separator-->
+<ul>
+<li>
+<p>Orbits</p>
+<p>\[
+\epsilon = 0
+\]</p>
+<p>\[
+h = \sqrt{2a\mu}
+\]</p>
+</li>
+</ul>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>Hyperbola (e &gt; 1)</p>
+<p>\[
+\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1
+\]</p>
+<p>\[
+e = \sqrt{1+\frac{b^2}{a^2}}
+\]</p>
+<p>\[
+r = \frac{a(e^2-1)}{1+e\cos\theta}
+\]</p>
+ <!--list-separator-->
+<ul>
+<li>
+<p>Orbits</p>
+<p>\[
+\epsilon = \frac{\mu}{2a}
+\]
+\[
+h = \sqrt{\mu a (e^2 - 1)}
+\]</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="special-relativity">Special relativity</h2>
+<h3 id="loss-of-simultaneity">Loss of simultaneity</h3>
+<p>Last car first: The clock on the back of a moving train is ahead of the front clock.</p>
+<h3 id="time-dilation">Time dilation</h3>
+<p>Lorentz factor:</p>
+<p>\[
+\gamma = \frac{1}{\sqrt{1-v^2/c^2}} \geq 1
+\]</p>
+<p>\[
+t_B = \gamma t_A
+\]</p>
+<h3 id="length-contraction">Length contraction</h3>
+<p>For distances along the direction of relative velocity.</p>
+<p>\[
+l = \frac{l'}{\gamma}
+\]</p>
+<h3 id="lorentz-tranform">Lorentz tranform</h3>
+<p>If S' is a coordinate system moving at speed v wrt S.</p>
+<p>\[
+x = \gamma(x' + vt')
+\]</p>
+<p>\[
+t = \gamma(t' + vx'/c^2)
+\]</p>
+<p>The inverse Lorentz transforms are given by the tranformation v-&gt; v'.</p>
+<p>\[
+\mqty(x \\ ct) = \mqty(\gamma &amp; \gamma \beta \\ \gamma\beta &amp; \gamma ) \mqty(x' \\ ct')
+\]</p>
+<p>where \(\beta = v/c\).</p>
+<h3 id="velocity-addition">Velocity addition</h3>
+<p>S' moves \(v_2\) wrt to frame S. An object moves \(v_1\) wrt to frame S'. The velocity of the object wrt S is:</p>
+<p>\[
+u = \frac{v_1 + v_2}{1+v_1v_2/c^2}
+\]</p>
+<p>This scenario is equivalent to A moving \(v_1\) wrt C to the right and B moving \(v_2\) wrt C to the left, and we ask the velocity of A wrt to B.</p>
 <div class="edit-meta">
 
 <br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Physics/mechanics.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../physics/linear_momentum/" title="Linear Momentum"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Linear Momentum</a>
@@ -191,6 +308,15 @@ F_{eff} = \frac{L^2}{mr^3} - V'( r)
             <li><a href="#eccentricity-and-orbits">Eccentricity and orbits</a></li>
           </ul>
         </li>
+      </ul>
+    </li>
+    <li><a href="#special-relativity">Special relativity</a>
+      <ul>
+        <li><a href="#loss-of-simultaneity">Loss of simultaneity</a></li>
+        <li><a href="#time-dilation">Time dilation</a></li>
+        <li><a href="#length-contraction">Length contraction</a></li>
+        <li><a href="#lorentz-tranform">Lorentz tranform</a></li>
+        <li><a href="#velocity-addition">Velocity addition</a></li>
       </ul>
     </li>
   </ul>

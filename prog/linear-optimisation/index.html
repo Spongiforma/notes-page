@@ -50,7 +50,7 @@ A problems can be converted to another problem by applying the following operati
 we introduce a new slack variable \(s_i \geq 0\):
 \[ \sum_{j=1}^n a_{ij}x_j &#43; s_i = b_i \]">
 
-<meta itemprop="wordCount" content="623"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="699"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -181,6 +181,9 @@ A polyhedron is a set that can be described in the form \(\{\bm{x} \in \mathcal{
 </ol>
 <h3 id="corners">Corners</h3>
 <p><strong>Definition</strong></p>
+<p>Let P be a polyhedron. A vector \(x \in P\) is an <strong>extreme-point</strong> of P if we cannot find two vectors y,z in P both different from x and a scalar \(\lambda \in [0,1]\) such that \(x = \lambda y + (1-\lambda)z\).</p>
+<p><strong>Definition</strong></p>
+<p>Let P be a polyhedron. A vector \(x \in P\) is a <strong>vertex</strong> of P if there exists some \(c\) such that \(c&rsquo;x &lt; c&rsquo;y\) for all \(y \in P\), \(y \neq x\).</p>
 <div class="edit-meta">
 
 <br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Prog/linear-optimisation.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../prog/" title="Progs"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Progs</a>
