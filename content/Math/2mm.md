@@ -565,7 +565,7 @@ An nth order linear ODE must have n linearly independent solutions for the compl
 
 #### Linear equations with constant coefficients {#linear-equations-with-constant-coefficients}
 
-The coefficients \\(a\_m\\) are constants.
+(The coefficients \\(a\_m\\) are constants)
 
 To find the complementary solution try a solution of the form Ae^kx, and we are left with an auxillary equation in k. If all roots are distinct then the solutions are linearly independent and can be superposed. If some roots are complex and all coefficients are real, then it for every complex root its complex conjugate is also a root. If some roots are repeated, then we must try solutions of the form \\(x^ne^{kx}\\) are also solutions.
 
@@ -576,7 +576,7 @@ for particular solutions, use method of undetermined coefficients.
 -   if f(x) = polynomial of degree N, where some coefficients may be zero, then try another polynomial of degree N.
 
 
-### Linear recurrence relations {#linear-recurrence-relations}
+#### Linear recurrence relations {#linear-recurrence-relations}
 
 Form:
 
@@ -588,23 +588,157 @@ where k may be a simple function of n.
 
 Equations involving terms whose indices differ by up to N are called Nth-order recurrence relations. If k=0, then the relation is called homogenous.
 
+<!--list-separator-->
 
-#### First-order recurrence relations {#first-order-recurrence-relations}
+-  First-order recurrence relations
 
-For the equation:
+    For the equation:
+
+    \\[
+    u\_{n+1} = au\_n + k
+    \\]
+
+    the general solution is:
+
+    when \\(a \neq 1\\):
+    \\[
+    u\_n = u\_0 a^n + k \frac{1-a^n}{1-a}
+    \\]
+    when a = 1:
+
+    \\[
+    u\_n = u\_0 + nk
+    \\]
+
+<!--list-separator-->
+
+-  Second-order recurrence relations
+
+    Similar to differential equations, Try a solution of the form \\(A\lambda^n\\) for the homogenous solution and solve the characteristic equation in lambda. If there are repeated roots, then try the general solution \\((A + Bn)\lambda\_1^n\\).
+
+
+#### Laplace transform {#laplace-transform}
+
+The laplace transform is defined as:
 
 \\[
-u\_{n+1} = au\_n + k
+\bar{f}(s) = \int\_0^\infty e^{-sx}f(x)\dd{x}
 \\]
 
-the general solution is:
-
-when \\(a \neq 1\\):
-\\[
-u\_n = u\_0 a^n + k \frac{1-a^n}{1-a}
-\\]
-when a = 1:
+Recall that the Laplace transform of the nth derivative of \\(f(x)\\) is:
 
 \\[
-u\_n = u\_0 + nk
+\mathcal{L}\left[f^{(n)}(s)\right] = s^n\bar{f}(s) - s^{n-1}f(0) - s^{n-2}f'(0) - \ldots - sf^{(n-2)}(0) - f^{(n-1)}(0)
 \\]
+
+After getting \\(\bar{f}(s)\\), we may apply the inverse Laplace transform.
+
+
+### Linear equations with variable coefficients {#linear-equations-with-variable-coefficients}
+
+Although there is no generally applicable method, in certain cases a solution is possible.
+
+
+#### Legendre and Euler linear equations {#legendre-and-euler-linear-equations}
+
+Legendre's linear equation has the form
+
+\\[
+a\_n(\alpha x+ \beta)^n \dv[n]{y}{x} + \ldots + a\_1(\alpha x + \beta)\dv{y}{x} + a\_0 y = f(x)
+\\]
+
+By making the substitution \\(\alpha x + \beta = e^t\\), we have:
+
+\\[
+\dv{y}{x} = \dv{t}{x} \dv{y}{t} = \frac{\alpha}{\alpha x + \beta} \dv{y}{t}
+\\]
+
+\\[
+\dv[2]{y}{x} = \frac{\alpha^2}{(\alpha x + \beta)^2}\left(\dv[2]{y}{t} - \dv{y}{t})
+\\]
+
+and so on.
+
+\\[
+(\alpha x + \beta)^n \dv[n]{y}{x} = \alpha^n \dv{}{t}\left(\dv{}{t} - 1 \right)\ldots\left(\dv{}{t} -n + 1\right)y
+\\]
+
+Legendre's linear equation thus becomes:
+
+\\[
+a\_n \alpha^n \dv{}{t}\left(\dv{}{t} - 1\right) \ldots \left(\dv{}{t} - n + 1\right)y + \ldots + a\_1 \alpha \dv{y}{t} + a\_0y = f\left(\frac{e^t - \beta}{\alpha}\right)
+\\]
+
+which can be solved with previously discussed methods.
+
+<!--list-separator-->
+
+-  Euler's equation
+
+    Euler's equation is a special case where \\(\alpha = 1\\) and \\(\beta = 0\\).
+
+    If \\(f(x) = 0\\), then substituting \\(y = x^\lambda\\) leads to a simple algebraic equation in \\(\lambda\\). If \\(\lambda\_1\\) is a k-fold root, then \\(x^\lambda\_1, x^\lambda\_1\ln x, \ldots, x^\lambda\_1(\ln x)^{k-1}\\) are k LI solutions corresponding to the root.
+
+
+#### Exact equations {#exact-equations}
+
+Sometimes, an ODE is merely the derivative of another ODE of an order lower, in which case it is called exact. It can be shown the nth-order linear ODE:
+
+\\[
+a\_n(x)\dv[n]{y}{x} + \ldots + a\_1(x)\dv{y}{x}  + a\_0(x)y = f(x)
+\\]
+
+is exact when \\(a\_0(x) - a\_1'(x) + a\_2''(x) - \ldots + (-1)^na\_n^{(n)}(x) = 0\\). The lower order ODE with coefficients to be determined can be solved for by differentiating, comparing coefficents and then be integrated directly.
+
+In some cases, an integrating factor is required to turn an ODE exact.
+
+
+#### Partially known complementary function {#partially-known-complementary-function}
+
+If we wish to solve an nth-order linear ODE and we already know one part of the complementary solution \\(u(x)\\), we can make the substitution \\(y = uv\\) to transform the ODE into one of order \\(n-1\\) in \\(dv/dx\\). The simpler equation may be soluble. The solution will contain both the full complementary function.
+
+
+#### Variation of parameters {#variation-of-parameters}
+
+If the whole complementary solution of a linear ODE is known, then assume a particular integral of the same form with constants replaced by functions of x, and impose a system of LI equations for the unknowns including the ODE itself.
+
+
+#### Canonical form for second order equations {#canonical-form-for-second-order-equations}
+
+For nth-order linear ODEs with variable coefficients to those of order 2, rearrange the equation till the coefficient of the second derivative is unity.
+
+\\[
+\dv[2]{y}{x} + a\_1(x)\dv{y}{x} + a\_0(x)y = f(x)
+\\]
+
+By making the substitution \\(y = uv\\), where
+
+\\[
+u(x) = \exp\left\\{-\frac12 \int a\_1(z) \dd{z}\right\\}
+\\]
+we obtain an equation of the form:
+
+\\[
+\dv[2]{v}{x} + g(x)v = h(x)
+\\]
+
+where:
+\\[
+g(x) = a\_0(x) - \frac14[a\_1(x)]^2 - \frac12 a\_1'(x)
+\\]
+
+\\[
+h(x) = f(x)\exp\left\\{\frac12 \int a\_1(z) \dd{z}\right\\}
+\\]
+
+Which may be easier to solve.
+
+
+### General ordinary differential equations {#general-ordinary-differential-equations}
+
+
+#### Dependent variable absent {#dependent-variable-absent}
+
+Substitute \\(p = \dv{y}{x}\\).
+
+Can be extended to absence of lower derivatives.
