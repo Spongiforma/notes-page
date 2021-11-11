@@ -42,14 +42,21 @@ Mesh Current Analysis/Maxwell&rsquo;s Circulating Currents ">
       inlineMath: [['$', '$'], ['\\(', '\\)']],
       displayMath: [['$$','$$'], ['\\[', '\\]']],
       processEscapes: true,
-      processEnvironments: true
+      processEnvironments: true,
+      packages: {
+        '[+]': ['physics','derivative']
+      },
+      macros: {
+        bm: ["{\\boldsymbol #1}",1],
+      }
     },
+    loader: {load: ['[tex]/physics']},
     options: {
       skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
     }
   };
 
-  window.addEventListener('load', (event) => {
+  window.addEventListener('load', (_) => {
     document.querySelectorAll("mjx-container").forEach(function(x){
       x.parentElement.classList += 'has-jax'})
   });
@@ -138,7 +145,7 @@ Mesh Current Analysis/Maxwell&rsquo;s Circulating Currents ">
 
 <div class="outline">
 
-<nav class="outline-list">
+<nav class="outline">
 <nav id="TableOfContents">
   <ul>
     <li><a href="#mesh-current-analysis-maxwell-s-circulating-currents">Mesh Current Analysis/Maxwell&rsquo;s Circulating Currents</a></li>

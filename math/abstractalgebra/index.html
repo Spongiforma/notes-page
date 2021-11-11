@@ -54,14 +54,21 @@ If the operation is commutative within the group, then the group is abelian.
       inlineMath: [['$', '$'], ['\\(', '\\)']],
       displayMath: [['$$','$$'], ['\\[', '\\]']],
       processEscapes: true,
-      processEnvironments: true
+      processEnvironments: true,
+      packages: {
+        '[+]': ['physics','derivative']
+      },
+      macros: {
+        bm: ["{\\boldsymbol #1}",1],
+      }
     },
+    loader: {load: ['[tex]/physics']},
     options: {
       skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
     }
   };
 
-  window.addEventListener('load', (event) => {
+  window.addEventListener('load', (_) => {
     document.querySelectorAll("mjx-container").forEach(function(x){
       x.parentElement.classList += 'has-jax'})
   });
@@ -228,7 +235,7 @@ Q_8 = \{1,-1,i,-i,j,-j,k,-k\}
 
 <div class="outline">
 
-<nav class="outline-list">
+<nav class="outline">
 <nav id="TableOfContents">
   <ul>
     <li><a href="#groups">Groups</a>

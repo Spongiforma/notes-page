@@ -51,14 +51,21 @@ Dirichlet conditions The conditions a function must fulfil in order that it may 
       inlineMath: [['$', '$'], ['\\(', '\\)']],
       displayMath: [['$$','$$'], ['\\[', '\\]']],
       processEscapes: true,
-      processEnvironments: true
+      processEnvironments: true,
+      packages: {
+        '[+]': ['physics','derivative']
+      },
+      macros: {
+        bm: ["{\\boldsymbol #1}",1],
+      }
     },
+    loader: {load: ['[tex]/physics']},
     options: {
       skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
     }
   };
 
-  window.addEventListener('load', (event) => {
+  window.addEventListener('load', (_) => {
     document.querySelectorAll("mjx-container").forEach(function(x){
       x.parentElement.classList += 'has-jax'})
   });
@@ -635,7 +642,7 @@ h(x) = f(x)\exp\left\{\frac12 \int a_1(z) \dd{z}\right\}
 
 <div class="outline">
 
-<nav class="outline-list">
+<nav class="outline">
 <nav id="TableOfContents">
   <ul>
     <li><a href="#fourier-series">Fourier series</a>

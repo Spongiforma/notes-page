@@ -34,14 +34,21 @@
       inlineMath: [['$', '$'], ['\\(', '\\)']],
       displayMath: [['$$','$$'], ['\\[', '\\]']],
       processEscapes: true,
-      processEnvironments: true
+      processEnvironments: true,
+      packages: {
+        '[+]': ['physics','derivative']
+      },
+      macros: {
+        bm: ["{\\boldsymbol #1}",1],
+      }
     },
+    loader: {load: ['[tex]/physics']},
     options: {
       skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
     }
   };
 
-  window.addEventListener('load', (event) => {
+  window.addEventListener('load', (_) => {
     document.querySelectorAll("mjx-container").forEach(function(x){
       x.parentElement.classList += 'has-jax'})
   });
@@ -151,7 +158,7 @@ Published on 23 Nov 2018
 
 <div class="outline">
 
-<nav class="outline-list">
+<nav class="outline">
 <nav id="TableOfContents">
   <ul>
     <li><a href="#the-techdoc-is-a-hugo-theme-for-technical-documentation">The Techdoc is a Hugo Theme for technical documentation.</a></li>

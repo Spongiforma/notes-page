@@ -51,14 +51,21 @@ Postulates  Associated to any isolated physical system is a hilbert space which 
       inlineMath: [['$', '$'], ['\\(', '\\)']],
       displayMath: [['$$','$$'], ['\\[', '\\]']],
       processEscapes: true,
-      processEnvironments: true
+      processEnvironments: true,
+      packages: {
+        '[+]': ['physics','derivative']
+      },
+      macros: {
+        bm: ["{\\boldsymbol #1}",1],
+      }
     },
+    loader: {load: ['[tex]/physics']},
     options: {
       skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
     }
   };
 
-  window.addEventListener('load', (event) => {
+  window.addEventListener('load', (_) => {
     document.querySelectorAll("mjx-container").forEach(function(x){
       x.parentElement.classList += 'has-jax'})
   });
@@ -350,7 +357,7 @@ Since we presumed there is only one such state, this shows that \(\Lambda\ket{\o
 
 <div class="outline">
 
-<nav class="outline-list">
+<nav class="outline">
 <nav id="TableOfContents">
   <ul>
     <li><a href="#postulates">Postulates</a></li>
