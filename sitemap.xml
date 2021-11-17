@@ -11,9 +11,17 @@
     <loc>/about/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/posts/energetics/</loc>
+  </url><url>
+    <loc>/posts/linear_algebra/</loc>
+  </url><url>
     <loc>/math/abstractalgebra/</loc>
   </url><url>
+    <loc>/math/analysis/</loc>
+  </url><url>
     <loc>/categories/</loc>
+  </url><url>
+    <loc>/chemistry/</loc>
   </url><url>
     <loc>/physics/circuits/</loc>
   </url><url>
@@ -24,6 +32,8 @@
     <loc>/physics/em/</loc>
   </url><url>
     <loc>/physics/electrodynamics/</loc>
+  </url><url>
+    <loc>/chemistry/energetics/</loc>
   </url><url>
     <loc>/physics/fluids/</loc>
   </url><url>
@@ -47,6 +57,8 @@
   </url><url>
     <loc>/physics/</loc>
   </url><url>
+    <loc>/posts/</loc>
+  </url><url>
     <loc>/prog/</loc>
   </url><url>
     <loc>/physics/quantum_physics/</loc>
@@ -54,6 +66,8 @@
     <loc>/physics/rotation/</loc>
   </url><url>
     <loc>/tags/</loc>
+  </url><url>
+    <loc>/math/tensors/</loc>
   </url><url>
     <loc>/physics/idealgas/</loc>
   </url><url>

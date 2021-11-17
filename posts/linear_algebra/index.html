@@ -3,11 +3,11 @@
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>DC circuit tricks - Notes</title>
+<title>Notes</title>
 <meta name="description" content="">
 <meta name="generator" content="Hugo 0.85.0" />
 <link href="//index.xml" rel="alternate" type="application/rss+xml">
-<link rel="canonical" href="../../physics/funnycircuits/">
+<link rel="canonical" href="../../posts/linear_algebra/">
 <link rel="stylesheet" href="../../css/theme.min.css">
 <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 <link rel="stylesheet" href="../../css/chroma.min.css">
@@ -17,25 +17,22 @@
 <script src="../../js/bundle.js"></script><style>
 :root {--custom-font-color: #bcb7ae;--custom-background-color: #1a1c1d;}
 </style>
-<meta property="og:title" content="DC circuit tricks" />
-<meta property="og:description" content="KCL, KVL
-Mesh Current Analysis/Maxwell&rsquo;s Circulating Currents " />
+<meta property="og:title" content="" />
+<meta property="og:description" content="/home/spongiforma/documents/notes/math: total used in directory 616 available 3.9 GiB drwxr-xr-x 3 spongiforma spongiforma 4096 Oct 22 14:27 . drwxr-xr-x 13 spongiforma spongiforma 4096 Oct 22 13:40 .. -rw-r&ndash;r&ndash; 1 spongiforma spongiforma 12192 Jul 21 19:23 2mm.org -rw-r&ndash;r&ndash; 1 spongiforma spongiforma 3060 Sep 4 22:58 abstractalgebra.org -rw-r&ndash;r&ndash; 1 spongiforma spongiforma 163 Nov 18 2020 integration.org -rw-r&ndash;r&ndash; 1 spongiforma spongiforma 17927 Oct 22 13:31 linear_algebra.md -rw-r&ndash;r&ndash; 1 spongiforma spongiforma 13748 Oct 22 14:08 linear_algebra." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/physics/funnycircuits/" /><meta property="og:image" content="/images/og-image.png"/><meta property="article:section" content="Physics" />
+<meta property="og:url" content="/posts/linear_algebra/" /><meta property="og:image" content="/images/og-image.png"/><meta property="article:section" content="posts" />
 
 <meta property="og:site_name" content="Hugo Techdoc Theme" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/images/og-image.png"/>
 
-<meta name="twitter:title" content="DC circuit tricks"/>
-<meta name="twitter:description" content="KCL, KVL
-Mesh Current Analysis/Maxwell&rsquo;s Circulating Currents "/>
-<meta itemprop="name" content="DC circuit tricks">
-<meta itemprop="description" content="KCL, KVL
-Mesh Current Analysis/Maxwell&rsquo;s Circulating Currents ">
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="/home/spongiforma/documents/notes/math: total used in directory 616 available 3.9 GiB drwxr-xr-x 3 spongiforma spongiforma 4096 Oct 22 14:27 . drwxr-xr-x 13 spongiforma spongiforma 4096 Oct 22 13:40 .. -rw-r&ndash;r&ndash; 1 spongiforma spongiforma 12192 Jul 21 19:23 2mm.org -rw-r&ndash;r&ndash; 1 spongiforma spongiforma 3060 Sep 4 22:58 abstractalgebra.org -rw-r&ndash;r&ndash; 1 spongiforma spongiforma 163 Nov 18 2020 integration.org -rw-r&ndash;r&ndash; 1 spongiforma spongiforma 17927 Oct 22 13:31 linear_algebra.md -rw-r&ndash;r&ndash; 1 spongiforma spongiforma 13748 Oct 22 14:08 linear_algebra."/>
+<meta itemprop="name" content="">
+<meta itemprop="description" content="/home/spongiforma/documents/notes/math: total used in directory 616 available 3.9 GiB drwxr-xr-x 3 spongiforma spongiforma 4096 Oct 22 14:27 . drwxr-xr-x 13 spongiforma spongiforma 4096 Oct 22 13:40 .. -rw-r&ndash;r&ndash; 1 spongiforma spongiforma 12192 Jul 21 19:23 2mm.org -rw-r&ndash;r&ndash; 1 spongiforma spongiforma 3060 Sep 4 22:58 abstractalgebra.org -rw-r&ndash;r&ndash; 1 spongiforma spongiforma 163 Nov 18 2020 integration.org -rw-r&ndash;r&ndash; 1 spongiforma spongiforma 17927 Oct 22 13:31 linear_algebra.md -rw-r&ndash;r&ndash; 1 spongiforma spongiforma 13748 Oct 22 14:08 linear_algebra.">
 
-<meta itemprop="wordCount" content="7"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="153"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -78,13 +75,28 @@ Mesh Current Analysis/Maxwell&rsquo;s Circulating Currents ">
 </nav>
 </div>
 <div class="content-container">
-<main>
-<p>KCL, KVL</p>
-<h2 id="mesh-current-analysis-maxwell-s-circulating-currents">Mesh Current Analysis/Maxwell&rsquo;s Circulating Currents</h2>
+<main><h1></h1><p>/home/spongiforma/documents/notes/math:
+total used in directory 616 available 3.9 GiB
+drwxr-xr-x  3 spongiforma spongiforma   4096 Oct 22 14:27 .
+drwxr-xr-x 13 spongiforma spongiforma   4096 Oct 22 13:40 ..
+-rw-r&ndash;r&ndash;  1 spongiforma spongiforma  12192 Jul 21 19:23 2mm.org
+-rw-r&ndash;r&ndash;  1 spongiforma spongiforma   3060 Sep  4 22:58 abstractalgebra.org
+-rw-r&ndash;r&ndash;  1 spongiforma spongiforma    163 Nov 18  2020 integration.org
+-rw-r&ndash;r&ndash;  1 spongiforma spongiforma  17927 Oct 22 13:31 linear_algebra.md
+-rw-r&ndash;r&ndash;  1 spongiforma spongiforma  13748 Oct 22 14:08 linear_algebra.org
+-rw-r&ndash;r&ndash;  1 spongiforma spongiforma 297891 Oct 22 13:38 linear_algebra.pdf
+-rw-r&ndash;r&ndash;  1 spongiforma spongiforma  16970 Oct 22 13:38 linear_algebra.tex
+drwxr-xr-x  2 spongiforma spongiforma 110592 Oct 22 14:08 ltximg
+-rw-r&ndash;r&ndash;  1 spongiforma spongiforma  43121 Aug 15 23:22 mathematicalmethods.html
+-rw-r&ndash;r&ndash;  1 spongiforma spongiforma  43067 Aug 15 23:13 mathematicalmethods.html~
+-rw-r&ndash;r&ndash;  1 spongiforma spongiforma  15578 Jun 23 20:04 mathematicalmethods.org
+-rw-r&ndash;r&ndash;  1 spongiforma spongiforma   9307 Jun 16 00:30 normalmode1.png
+-rw-r&ndash;r&ndash;  1 spongiforma spongiforma   7394 Jan 11  2021 ratiotheorem.png
+-rw-r&ndash;r&ndash;  1 spongiforma spongiforma   2637 Sep 24 23:02 topology.org</p>
 <div class="edit-meta">
 
-<br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Physics/funnycircuits.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../physics/oscillations/" title="Core EM"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Core EM</a>
-<a class="nav nav-next" href="../../physics/em/" title="E&amp;M">Next - E&amp;M <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+<br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/posts/linear_algebra.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../posts/energetics/" title=""><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - </a>
+<a class="nav nav-next" href="../../prog/" title="Progs">Next - Progs <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
 </nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
 </footer>
 </main>
@@ -117,12 +129,12 @@ Mesh Current Analysis/Maxwell&rsquo;s Circulating Currents ">
   
 </li>
 
-<li class="parent has-sub-menu"><a href="../../physics/">Physics<span class="mark opened">-</span></a>
+<li class=" has-sub-menu"><a href="../../physics/">Physics<span class="mark closed">+</span></a>
   
 <ul class="sub-menu">
 <li class=""><a href="../../physics/circuits/">Circuits</a></li>
 <li class=""><a href="../../physics/oscillations/">Core EM</a></li>
-<li class="active"><a href="../../physics/funnycircuits/">DC circuit tricks</a></li>
+<li class=""><a href="../../physics/funnycircuits/">DC circuit tricks</a></li>
 <li class=""><a href="../../physics/em/">E&amp;M</a></li>
 <li class=""><a href="../../physics/electrodynamics/">Electrodynamics</a></li>
 <li class=""><a href="../../physics/fluids/">Fluid Dynamics</a></li>
@@ -158,11 +170,7 @@ Mesh Current Analysis/Maxwell&rsquo;s Circulating Currents ">
 <div class="outline">
 
 <nav class="outline">
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#mesh-current-analysis-maxwell-s-circulating-currents">Mesh Current Analysis/Maxwell&rsquo;s Circulating Currents</a></li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
 </nav>
 
 <div class="sidebar-footer"></div>

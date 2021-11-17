@@ -28,6 +28,24 @@ It makes use of a variety of open source projects including:
     </item>
     
     <item>
+      <title></title>
+      <link>/posts/energetics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/energetics/</guid>
+      <description>/home/spongiforma/documents/notes/chemistry: total used in directory 136 available 13.4 GiB drwxr-xr-x 7 spongiforma spongiforma 4096 Nov 2 14:30 . drwxr-xr-x 13 spongiforma spongiforma 4096 Oct 22 13:40 .. -rw-r&amp;ndash;r&amp;ndash; 1 spongiforma spongiforma 35978 Jul 10 2020 alcoholoxidation.gif drwxr-xr-x 3 spongiforma spongiforma 4096 Oct 24 2020 assessment -rw-r&amp;ndash;r&amp;ndash; 1 spongiforma spongiforma 13064 Oct 25 2020 bonding+imf.org -rw-r&amp;ndash;r&amp;ndash; 1 spongiforma spongiforma 1678 Nov 2 14:10 energetics.org drwxr-xr-x 2 spongiforma spongiforma 4096 Oct 29 2020 exports -rw-r&amp;ndash;r&amp;ndash; 1 spongiforma spongiforma 162 Apr 28 2021 greener-grass.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/linear_algebra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/linear_algebra/</guid>
+      <description>/home/spongiforma/documents/notes/math: total used in directory 616 available 3.9 GiB drwxr-xr-x 3 spongiforma spongiforma 4096 Oct 22 14:27 . drwxr-xr-x 13 spongiforma spongiforma 4096 Oct 22 13:40 .. -rw-r&amp;ndash;r&amp;ndash; 1 spongiforma spongiforma 12192 Jul 21 19:23 2mm.org -rw-r&amp;ndash;r&amp;ndash; 1 spongiforma spongiforma 3060 Sep 4 22:58 abstractalgebra.org -rw-r&amp;ndash;r&amp;ndash; 1 spongiforma spongiforma 163 Nov 18 2020 integration.org -rw-r&amp;ndash;r&amp;ndash; 1 spongiforma spongiforma 17927 Oct 22 13:31 linear_algebra.md -rw-r&amp;ndash;r&amp;ndash; 1 spongiforma spongiforma 13748 Oct 22 14:08 linear_algebra.</description>
+    </item>
+    
+    <item>
       <title>Abstract Algebra</title>
       <link>/math/abstractalgebra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -39,6 +57,19 @@ It makes use of a variety of open source projects including:
   For each a in G, there is a double-sided inverse element
 If the operation is commutative within the group, then the group is abelian.
   The order of an element x is the smallest positive integer n such that \(x^n = 1\).</description>
+    </item>
+    
+    <item>
+      <title>Analysis</title>
+      <link>/math/analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/math/analysis/</guid>
+      <description>Real numbers Theorem
+There exists an ordered field R which has the least-upper-bound property. R contains Q as a subfield
+Theorem If \(x \in R\), \(y \in R\), and \(x &amp;gt; 0\), then there&amp;rsquo;s a positive integer \(n\) such that \(nx &amp;gt; y\). If \(x &amp;lt; y\), then there exists a \(p \in Q\) such that \(x &amp;lt; p &amp;lt; y\)
+Theorem
+For every positive real x and every positive integer n, there is only one positive real y such that \(y^n = x\)</description>
     </item>
     
     <item>
@@ -117,6 +148,16 @@ E -&amp;gt; V \[ V = -\int{E \cdot \dd{l}} \]
 Potential energy For a configuration,
 \begin{align*} W &amp;amp; = \frac{1}{8\pi\epsilon_0}\sum_{i=1}^n\sum_{j\neq i}^n \frac{q_iq_j}{r_{ij}} \\
 &amp;amp; = \frac12 \sum_{i=1}^n q_i V(\bf r_i) \\</description>
+    </item>
+    
+    <item>
+      <title>energetics</title>
+      <link>/chemistry/energetics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/chemistry/energetics/</guid>
+      <description>Why add acid to water? A large amount of heat is released when acids dissolve in water. Addition of water to acid results in a thin layer of water on top of the acid. Heat generated in this thin layer of water can cause the water to heat up significantly and even boil, splattering acid everywhere
+Exothermic reaction Amount of energy released is greater than amount of energy absorbed. As a result, the temperatures of the surroundings will increase and the reaction mixture will feel warm.</description>
     </item>
     
     <item>
@@ -262,6 +303,20 @@ RI through central axis of an annular cylinder \[ I = \frac{1}{2}M(R_1^2+R_2^2) 
 Solid cylinder about central axis \[ I = \frac{1}{2}MR^2 \]
 Solid cylinder about central diameter \[ I = \frac{1}{2}MR^2 + \frac{1}{12}ML^2 \]
 Thin rod about central diameter \[ I = \frac{1}{12}ML^2 \]</description>
+    </item>
+    
+    <item>
+      <title>Tensors</title>
+      <link>/math/tensors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/math/tensors/</guid>
+      <description>Cartesian tensors Change of basis When basis vectors change by:
+\[ \bm{e}_j&#39; = S_{ij}\bm{e}_i \]
+\[ \bm{x}&#39; = S^{-1}x \]
+As components change inversely with the basis vectors. Thus a linear operator \(\mathcal{A}\) represented by \(A\) in a given coordinate system is represented by \(A&#39; = S^{-1}AS\) in a new coordinate system.
+For rigid body rotations, the transformation matrix \(L\) is orthogonal (since it must preserve inner products).
+The transformation matrix is given by \(L_{ij} = \bm{e}_i&#39;\cdot\bm{e}_j = \partial{x_j}/\partial{x_i&#39;}\).</description>
     </item>
     
     <item>

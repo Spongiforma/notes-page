@@ -21,6 +21,19 @@ If the operation is commutative within the group, then the group is abelian.
     </item>
     
     <item>
+      <title>Analysis</title>
+      <link>/math/analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/math/analysis/</guid>
+      <description>Real numbers Theorem
+There exists an ordered field R which has the least-upper-bound property. R contains Q as a subfield
+Theorem If \(x \in R\), \(y \in R\), and \(x &amp;gt; 0\), then there&amp;rsquo;s a positive integer \(n\) such that \(nx &amp;gt; y\). If \(x &amp;lt; y\), then there exists a \(p \in Q\) such that \(x &amp;lt; p &amp;lt; y\)
+Theorem
+For every positive real x and every positive integer n, there is only one positive real y such that \(y^n = x\)</description>
+    </item>
+    
+    <item>
       <title>Integration</title>
       <link>/math/integration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -68,6 +81,20 @@ Dirichlet conditions The conditions a function must fulfil in order that it may 
   The function must be periodic*
   It must be single-valued and continuous, except at a finite number of finite discontinuties
   It must have only have a finite number of maxima and minima within one period</description>
+    </item>
+    
+    <item>
+      <title>Tensors</title>
+      <link>/math/tensors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/math/tensors/</guid>
+      <description>Cartesian tensors Change of basis When basis vectors change by:
+\[ \bm{e}_j&#39; = S_{ij}\bm{e}_i \]
+\[ \bm{x}&#39; = S^{-1}x \]
+As components change inversely with the basis vectors. Thus a linear operator \(\mathcal{A}\) represented by \(A\) in a given coordinate system is represented by \(A&#39; = S^{-1}AS\) in a new coordinate system.
+For rigid body rotations, the transformation matrix \(L\) is orthogonal (since it must preserve inner products).
+The transformation matrix is given by \(L_{ij} = \bm{e}_i&#39;\cdot\bm{e}_j = \partial{x_j}/\partial{x_i&#39;}\).</description>
     </item>
     
     <item>

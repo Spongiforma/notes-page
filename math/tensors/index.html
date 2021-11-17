@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Tensors - Notes</title>
+<meta name="description" content="">
+<meta name="generator" content="Hugo 0.85.0" />
+<link href="//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="../../math/tensors/">
+<link rel="stylesheet" href="../../css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="../../css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="../../js/bundle.js"></script><style>
+:root {--custom-font-color: #bcb7ae;--custom-background-color: #1a1c1d;}
+</style>
+<meta property="og:title" content="Tensors" />
+<meta property="og:description" content="Cartesian tensors Change of basis When basis vectors change by:
+\[ \bm{e}_j&#39; = S_{ij}\bm{e}_i \]
+\[ \bm{x}&#39; = S^{-1}x \]
+As components change inversely with the basis vectors. Thus a linear operator \(\mathcal{A}\) represented by \(A\) in a given coordinate system is represented by \(A&#39; = S^{-1}AS\) in a new coordinate system.
+For rigid body rotations, the transformation matrix \(L\) is orthogonal (since it must preserve inner products).
+The transformation matrix is given by \(L_{ij} = \bm{e}_i&#39;\cdot\bm{e}_j = \partial{x_j}/\partial{x_i&#39;}\)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/math/tensors/" /><meta property="og:image" content="/images/og-image.png"/><meta property="article:section" content="Math" />
+
+<meta property="og:site_name" content="Hugo Techdoc Theme" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/images/og-image.png"/>
+
+<meta name="twitter:title" content="Tensors"/>
+<meta name="twitter:description" content="Cartesian tensors Change of basis When basis vectors change by:
+\[ \bm{e}_j&#39; = S_{ij}\bm{e}_i \]
+\[ \bm{x}&#39; = S^{-1}x \]
+As components change inversely with the basis vectors. Thus a linear operator \(\mathcal{A}\) represented by \(A\) in a given coordinate system is represented by \(A&#39; = S^{-1}AS\) in a new coordinate system.
+For rigid body rotations, the transformation matrix \(L\) is orthogonal (since it must preserve inner products).
+The transformation matrix is given by \(L_{ij} = \bm{e}_i&#39;\cdot\bm{e}_j = \partial{x_j}/\partial{x_i&#39;}\)."/>
+<meta itemprop="name" content="Tensors">
+<meta itemprop="description" content="Cartesian tensors Change of basis When basis vectors change by:
+\[ \bm{e}_j&#39; = S_{ij}\bm{e}_i \]
+\[ \bm{x}&#39; = S^{-1}x \]
+As components change inversely with the basis vectors. Thus a linear operator \(\mathcal{A}\) represented by \(A\) in a given coordinate system is represented by \(A&#39; = S^{-1}AS\) in a new coordinate system.
+For rigid body rotations, the transformation matrix \(L\) is orthogonal (since it must preserve inner products).
+The transformation matrix is given by \(L_{ij} = \bm{e}_i&#39;\cdot\bm{e}_j = \partial{x_j}/\partial{x_i&#39;}\).">
+
+<meta itemprop="wordCount" content="583"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="keywords" content="" /><script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {
+        '[+]': ['physics','derivative']
+      },
+      macros: {
+        bm: ["{\\boldsymbol #1}",1],
+      }
+    },
+    loader: {load: ['[tex]/physics']},
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (_) => {
+    document.querySelectorAll("mjx-container").forEach(function(x){
+      x.parentElement.classList += 'has-jax'})
+  });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body><div class="container"><header>
+<h1>Notes</h1><a href="https://github.com/spongiforma/hugo-theme-techdoc" class="github"><i class="fab fa-github"></i></a>
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="../../">Home</a></li>
+<li><a href="../../about/">About Hugo</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main>
+<h2 id="cartesian-tensors">Cartesian tensors</h2>
+<h3 id="change-of-basis">Change of basis</h3>
+<p>When basis vectors change by:</p>
+<p>\[
+\bm{e}_j' = S_{ij}\bm{e}_i
+\]</p>
+<p>\[
+\bm{x}' = S^{-1}x
+\]</p>
+<p>As components change inversely with the basis vectors. Thus a linear operator \(\mathcal{A}\) represented by \(A\) in a given coordinate system is represented by \(A' = S^{-1}AS\) in a new coordinate system.</p>
+<p>For rigid body rotations, the transformation matrix \(L\) is orthogonal (since it must preserve inner products).</p>
+<p>The transformation matrix is given by \(L_{ij} = \bm{e}_i'\cdot\bm{e}_j = \partial{x_j}/\partial{x_i'}\). The following orthogonality relations hold:</p>
+<p>\[
+L_{ik}L_{jk} = \delta_{ij}
+\]
+\[
+L_{ki}L_{kj} = \delta_{ij}
+\]</p>
+<h3 id="first-and-zero-order-cartesian-tensors">First and zero-order cartesian tensors</h3>
+<p>Consider any set of three quantities \(v_i\) which are functions of coordinates \(x_i\).</p>
+<p>If the form of \(v_i'\) in new variables can be obtained from old ones as follows,</p>
+<p>\[
+v_i' = L_{ij}v_j
+\]</p>
+<p>\(v_i\) are said to form the components of a <em>vector</em> or <em>first-order Cartesian tensor</em> \(\bm{v}\), such that \(\bm{v} = v_i\bm{e}_i = v_i'\bm{e}_i'\).</p>
+<h4 id="example-do-the-following-form-the-components-of-a-first-order-cartesian-tensor">Example: Do the following form the components of a first-order Cartesian tensor?</h4>
+<p>Denoting \(\sin\theta\) by \(s\) and \(\cos\theta\) by \(c\),</p>
+<ol>
+<li>\(v = (x_2,-x_1)\)</li>
+</ol>
+<p>\[
+v_1' = x_2' = -sx_1 + cx_2
+\]</p>
+<p>\[
+v_2' = -x_1' = -cx_1 - sx_2
+\]</p>
+<p>For a cartesian tensor,</p>
+<p>\[
+v_1' = L_{11}v_1 + L_{12}v_2 = cx_2 + s(-x_1)
+\]</p>
+<p>\[
+v_2' = L_{21}v_1 + L_{22}v_2 = -s(x_2) + c(-x_1)
+\]</p>
+<p>Since the expressions are the same regardless of \(\theta\), the pair \((x_2,-x_1)\) is a first-order cartesian tensor.</p>
+<h4 id="zero-order-tensors">Zero-order tensors</h4>
+<p>Scalars or tensors of zero-order contain only one element. An example is the square of the distance of a point from the origin. In fact, any scalar product of two first-order tensors is a zero-order tensor (can be shown using orthogonality of transformation matrix).</p>
+<h3 id="second-and-higher-order-cartesian-tensors">Second- and higher-order Cartesian tensors</h3>
+<p>\[
+T_{ij}' = L_{ik}L_{jl}T_{kl}
+\]
+\[
+T_{ij} = L_{kl}L_{lj}T_{kl}'
+\]</p>
+<p>For higher orders;</p>
+<p>\[
+T_{ij\ldots k}' = L_{ip}L_{jq}\ldots L_{kr}T_{pq\ldots r}
+\]
+\[
+T_{ij\ldots k} = L_{pi}L_{qj}\ldots L_{rk}T_{pq\ldots r}'
+\]</p>
+<p>In three dimensions, an Nth order Cartesian tensor has \(3^{N}\) components. Linear operators are not always tensors as the two subscripts in the 2nd order tensor must refer to the same coordinate system.</p>
+<h4 id="outer-product">Outer product</h4>
+<p>\[
+T_{ij} = u_iv_j
+\]</p>
+<p>Denoted as:</p>
+<p>\[
+\bm{T} = \bm{u}\otimes\bm{v}
+\]</p>
+<h4 id="gradient-of-vector">Gradient of vector</h4>
+<p>\[
+T_{ij} = \pdv{v_i}{x_j}
+\]</p>
+<p>Denoted as:</p>
+<p>\[
+\bm{T} = \nabla\bm{v}
+\]</p>
+<h4 id="levi-civita-symbol">Levi-Civita symbol</h4>
+<p>\(\epsilon_{ijk}\) is totally antisymmetric (swapping indices turns it negative), and is the only three-subscript quantity with the property.</p>
+<p>It can be turned into a Laplace (cofactor) expansion for finding the determinant of a 3x3 matrix by choosing l,m,n.</p>
+<p>\[
+\vert A \vert \epsilon_{lmn} = A_{li}A_{mj}A_{nk}\epsilon_{ijk}
+\]</p>
+<p>Note:</p>
+<p>\[
+\epsilon_{lmn}' = L_{li}L_{mj}L_{nk}\epsilon_{ijk} = |L|\epsilon_{lmn}
+\]</p>
+<p>Since \(|L|\) is unity as \(L\) is orthogonal, is a third order Cartesian tensor.</p>
+<p>Cross product \(\bm{a} = \bm{b}\times\bm{c}\), can be represented as:</p>
+<p>\[
+a_i = \epsilon_{ijk}b_jc_k
+\]</p>
+<!--list-separator-->
+<ul>
+<li>
+<p>Curl</p>
+<p>\[
+(\curl \bm{v})_i = \epsilon_{ijk}\pdv{v_k}{x_j}
+\]</p>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>Grad of div</p>
+<p>\[
+[\grad(\div \bm{v})]_i = \pdv{}{x_i}\left(\pdv{v_j}{x_j}\right) = \delta_{jk} \pdv{v_j}{x_i,x_k}
+\]</p>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>Curl of curl</p>
+<p>\[
+[\curl (\curl \bm{v})]_i = \epsilon_{ijk}\pdv{}{x_j}\left(\epsilon_{klm}\pdv{v_m}{x_l}\right) = \epsilon_{ijk}\epsilon_{klm}\pdv{v_m}{x_j,x_l}
+\]</p>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>Scalar triple product</p>
+<p>\[
+(\bm{a} \times \bm{b}) \cdot \bm{c} = \delta_{ij}c_i\epsilon_{jkl}a_kb_l = \epsilon_{ikl}c_ia_kb_l
+\]</p>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>Relationship with kronecker delta</p>
+<p>\[
+\epsilon_{ijk}\epsilon_{klm} = \delta_{il}\delta_{jm} - \delta_{im}\delta_{jl}
+\]</p>
+<p>\[
+\epsilon_{ijk}\epsilon_{pqr} = \mqty|\delta_{ip} &amp; \delta_{iq} &amp; \delta_{ir} \\ \delta_{jp} &amp; \delta_{jq} &amp; \delta_{jr} \\ \delta_{kp} &amp; \delta_{kq} &amp; \delta_{kr}|
+\]</p>
+<p>Variations:</p>
+<p>\[
+\epsilon_{ijk}\epsilon_{ilm} = \delta_{jl}\delta_{km} - \delta_{jm}\delta_{kl}
+\]</p>
+</li>
+</ul>
+<h3 id="isotropic-tensors">Isotropic tensors</h3>
+<p>Tensors whose component values are independent of coordinate frames are called isotropic (or invariant) tensors. Kronecker delta and Levi-civita (and scalar multiples) are the only second and third order isotropic tensors.</p>
+<div class="edit-meta">
+
+<br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Math/tensors.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../math/2mm/" title="Mathematical methods pt. 2"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Mathematical methods pt. 2</a>
+<a class="nav nav-next" href="../../math/topology/" title="Topology">Next - Topology <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="../../">Home</a></li>
+
+<li class=" has-sub-menu"><a href="../../chemistry/">Chemistries<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../chemistry/energetics/">energetics</a></li>
+</ul>
+  
+</li>
+
+<li class="parent has-sub-menu"><a href="../../math/">Maths<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../math/abstractalgebra/">Abstract Algebra</a></li>
+<li class=""><a href="../../math/analysis/">Analysis</a></li>
+<li class=""><a href="../../math/integration/">Integration</a></li>
+<li class=""><a href="../../math/linear_algebra/">Linear Algebra</a></li>
+<li class=""><a href="../../math/mathematicalmethods/">Mathematical methods pt. 1</a></li>
+<li class=""><a href="../../math/2mm/">Mathematical methods pt. 2</a></li>
+<li class="active"><a href="../../math/tensors/">Tensors</a></li>
+<li class=""><a href="../../math/topology/">Topology</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="../../physics/">Physics<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../physics/circuits/">Circuits</a></li>
+<li class=""><a href="../../physics/oscillations/">Core EM</a></li>
+<li class=""><a href="../../physics/funnycircuits/">DC circuit tricks</a></li>
+<li class=""><a href="../../physics/em/">E&amp;M</a></li>
+<li class=""><a href="../../physics/electrodynamics/">Electrodynamics</a></li>
+<li class=""><a href="../../physics/fluids/">Fluid Dynamics</a></li>
+<li class=""><a href="../../physics/linear_momentum/">Linear Momentum</a></li>
+<li class=""><a href="../../physics/mechanics/">Mechanics</a></li>
+<li class=""><a href="../../physics/optics/">Optics</a></li>
+<li class=""><a href="../../physics/quantum_physics/">Quantum mechanics</a></li>
+<li class=""><a href="../../physics/rotation/">Rotation</a></li>
+<li class=""><a href="../../physics/idealgas/">Thermodynamics</a></li>
+<li class=""><a href="../../physics/wavves/">Waves</a></li>
+</ul>
+  
+</li>
+
+
+
+<li class=" has-sub-menu"><a href="../../prog/">Progs<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="../../prog/linear-optimisation/">Linear optimisation</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+
+<div class="outline">
+
+<nav class="outline">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#cartesian-tensors">Cartesian tensors</a>
+      <ul>
+        <li><a href="#change-of-basis">Change of basis</a></li>
+        <li><a href="#first-and-zero-order-cartesian-tensors">First and zero-order cartesian tensors</a>
+          <ul>
+            <li><a href="#example-do-the-following-form-the-components-of-a-first-order-cartesian-tensor">Example: Do the following form the components of a first-order Cartesian tensor?</a></li>
+            <li><a href="#zero-order-tensors">Zero-order tensors</a></li>
+          </ul>
+        </li>
+        <li><a href="#second-and-higher-order-cartesian-tensors">Second- and higher-order Cartesian tensors</a>
+          <ul>
+            <li><a href="#outer-product">Outer product</a></li>
+            <li><a href="#gradient-of-vector">Gradient of vector</a></li>
+            <li><a href="#levi-civita-symbol">Levi-Civita symbol</a></li>
+          </ul>
+        </li>
+        <li><a href="#isotropic-tensors">Isotropic tensors</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</nav>
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>
