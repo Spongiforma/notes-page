@@ -742,3 +742,66 @@ Which may be easier to solve.
 Substitute \\(p = \dv{y}{x}\\).
 
 Can be extended to absence of lower derivatives.
+
+
+## Series solutions of ODEs {#series-solutions-of-odes}
+
+
+### Second-order linear ODE {#second-order-linear-ode}
+
+A homogenous 2nd order linear ODE can be written
+
+\\[
+y'' + p(x)y' + q(x) = 0
+\\]
+
+The general form of the solution is:
+
+\\[
+y\_h(x) = c\_1y\_1(x) + c\_2y\_2(x)
+\\]
+
+If the wronskian W(x) does not vanish in a given interval, then the two solutions are linearly independent.
+
+\\[
+W(x) = \mqty| y\_1 && y\_2 \\\ y'\_1 && y\_2' \\\| = C\exp\left\\{-\int^x p(u) \dd{u} \right\\}
+\\]
+
+If p and q can be expressed as a complex power series at a certain point, then they are **analytic** at that point. If they diverge at a point, then that is a **singular point** of the ODE.
+
+Even if an ODE is singular at a point, it may have a non-singular finite solution iff \\((z-z\_0)p(z)\\) and \\((z-z\_0)^2q(z)\\) are both analytic at \\(z=z\_0\\). These are called **regular singular points**. A point which does not satisfy both criteria is called an **irregular** or **essential singularity**.
+
+To test for singularity at infinity, sub \\(w = 1/z\\) and set \\(w = 0\\).
+
+
+### Solution about regular singular points {#solution-about-regular-singular-points}
+
+**Fuch's Theorem**
+
+For an equation of the above form, there exists at least one solution of the form:
+
+\\[
+y = z^\sigma \sum\_{n=0}^\infty a\_nz^n
+\\]
+
+where \\(\sigma\\) may be complex and where \\(a\_0 \neq 0\\). The series is called a **Frobenius series**.
+
+By subbing and obtaining a indical equation in \\(\sigma\\), if the two roots of \\(\sigma\\) don't differ by a real integer, then two independent solutions are expected. If they do, then only the larger root is expected to give a solution.
+
+
+### Finding a second solution {#finding-a-second-solution}
+
+
+#### Wronskian method {#wronskian-method}
+
+\\[
+y\_2(z) = y\_1(z) \int^z \frac{1}{y\_1^2(u)} \exp\left\\{ -\int^u p(v)\dd{v} \right\\} \dd{u}
+\\]
+
+
+#### Derivative method {#derivative-method}
+
+Who cares
+
+
+## Eigenfunction methods for differential equations {#eigenfunction-methods-for-differential-equations}
