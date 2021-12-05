@@ -44,7 +44,7 @@ Relations Equivalence relations If there is a equivalence relation C on A it has
  Reflexivity: xCx for every x in A. Symmetry: if xCy, then yCx. Transitivity: if xCy and yCz, then xCz.  A equivalence class determined by x is given by:
 \[ E = \{y \vert y \sim x\} \]">
 
-<meta itemprop="wordCount" content="464"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="1231"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -144,6 +144,81 @@ E = \{y \vert y \sim x\}
 <p>If \(A\) is a countable set, and \(B_n\) is the set of all n-tuples \((a_1,\ldots,a_n)\), where \(a_k \in A (k = 1,\ldots,n)\) and the elements \(a_1, \ldots, a_n\) need not be distinct. Then \(B_n\) is countable</p>
 </li>
 </ul>
+<p><strong>Theorem</strong></p>
+<p>The set of all sequences whose elements are the digits 0 and 1 is uncountable.</p>
+<h3 id="metric-spaces">Metric Spaces</h3>
+<p>A set X, whose elements we shall call points, is said to be a metric space if any two points p,q of X there is associated a real number d(p,q), such that</p>
+<ol>
+<li>\(d(p,q) &gt; 0\), if \(p \neq q\); $d(p,p) = 0;</li>
+<li>\(d(p,q) = d(q,p)\)</li>
+<li>\(d(p,q) \leq d(p,r) + d(r,q)\) for any \(r \in X\)</li>
+</ol>
+<p>Any function with these properties is called a <strong>distance function</strong> or <strong>metric</strong>.</p>
+<p><strong>Definition</strong></p>
+<p>If  \(a_i &lt; b_i\) for all i, then the set of points in euclidean space that satisfies the inequality \(a_i \leq x_i \leq b_i\) for all i is called a <strong>k-cell</strong>.</p>
+<p>If \(x \in R^k\) and \(r &gt; 0\), the <strong>open</strong> or <strong>closed ball</strong> B, with center at x and radius r is defined to be the set of all \(y \in R^k\) such that \(\vert y - x \vert &lt; r\) or likewise for closed balls.</p>
+<p>A set \(E \subset R^k\) is <strong>convex</strong> if \(\lambda \bm{x} + (1-\lambda)\bm{y} \in E\), where \(\bm{x},\bm{y} \in E\) and \(0 &lt; \lambda &lt; 1\).</p>
+<p><strong>Definition</strong></p>
+<ol>
+<li>A <strong>neighbourhood</strong> of p is a set \(N_r(p)\) consisting of all q such that \(d(p,q) &lt; r\), for some \(r &gt; 0\). r is the <strong>radius</strong> of \(N_r(p)\).</li>
+<li>A point p is a <strong>limit point</strong> of the set E if <em>every</em> neighbourhood of p contains a point \(q \neq p\) such that \(q \in E\).</li>
+<li>If \(p \in E\) and p is not a limit point of E, then p is called an <strong>isolated point</strong> of E.</li>
+<li>E is <strong>closed</strong> if every limit point of E is a point of E.</li>
+<li>A point p is an <strong>interior</strong> point of E if there is a neighbourhood N of p such that \(N \subset E\).</li>
+<li>E is <strong>open</strong> if every point of E is an interior point of E.</li>
+<li>The <strong>complement</strong> of E (denoted by \(E^c\)) is the set of all points \(p \in X\) such that \(p \notin E\)</li>
+<li>E is <strong>perfect</strong> if E is closed and every point of E is a limit point of E. i.e. a point is a limit point of E iff \(p \in E\).</li>
+<li>E is <strong>bounded</strong> if there is a real number M and a point \(q \in X\) such that \(d(p,q) &lt; M \forall p \in E\).</li>
+<li>E is <strong>dense</strong> in X if every point of X is a limit point of E, or a point of E or both.</li>
+</ol>
+<p><strong>Theorem</strong></p>
+<p>Every neighbourhood is an open set.</p>
+<p><strong>Theorem</strong></p>
+<p>If p is a limit point of a set E, then every neighbourhood of p contains infinitely many point of E.</p>
+<p><strong>Corollary</strong></p>
+<p>A finite point set has no limit points.</p>
+<figure><img src="../../static/flopen.png"/>
+</figure>
+
+<p><strong>Theorem</strong></p>
+<p>Let \(\left{E_\alpha \right}\) be a collection of sets. Then</p>
+<p>\[
+\left(\bigcup_\alpha E_\alpha \right)^c = \bigcap_\alpha (E_\alpha^c)
+\]</p>
+<p><strong>Theorem</strong></p>
+<p>A set is open iff its complement is closed</p>
+<p>A set F is closed iff its complement is open.</p>
+<p><strong>Theorem</strong></p>
+<ol>
+<li>For any collection of open sets, \(\{G_\alpha\}\), \(\cup_\alpha G_\alpha\) is open.</li>
+<li>For any collection of closed sets, \(\{F_\alpha\}\), \(\cap_\alpha G_\alpha\) is closed.</li>
+<li>For any finite collection of open sets, \(\cap_i G_i\) is open.</li>
+<li>For any finite collection of closed sets, \(\cup_i F_i\) is closed.</li>
+</ol>
+<p><strong>Definition</strong></p>
+<p>If X is a metric space, E is a subset of X and if E' is the set of limit points of E in X, then the <strong>closure</strong> of E is the set \(\bar{E} = E \cup E'\).
+in
+<strong>Theorem</strong></p>
+<ol>
+<li>\(\bar{E}\) is closed.</li>
+<li>\(E = \bar{E}\) iff E is closed.</li>
+<li>\(\bar{E} \subset F\) for every closed set \(F \subset X\) such that \(E \subset F\).</li>
+</ol>
+<p><strong>Theorem</strong>
+Let E be a nonempty set of real numbers which is bounded above. Let \(y = \sup E\), then \(y \in \bar{E}\). Hence, \(y \in E\) if E is closed.</p>
+<p><strong>Theorem</strong></p>
+<p>Suppose \(Y \subset X\). A subset E of Y is open relative to Y iff \(E = Y \cap G\) for some open subset G of X.</p>
+<p>(???)</p>
+<h3 id="compact-sets">Compact sets</h3>
+<p><strong>Definition</strong></p>
+<p>An <strong>open cover</strong> of a set E in a metric space X, we mean a collection of open subsets of X such that \(E \subset \cup_\alpha G_\alpha\).</p>
+<p><strong>Definition</strong></p>
+<p>A subset K of of a metric space X is said to be <strong>compact</strong> if every open cover of K contains a subcover. i.e. if \(\left\{G_\alpha \right\}\) is an open cover of K, then there are finitely many indices \(\alpha_1, \ldots, \alpha_n\), such that:</p>
+<p>\[
+K \subset G_{\alpha_1} \cup \ldots \cup G_{\alpha_n}
+\]</p>
+<p><strong>Theorem</strong></p>
+<p>Suppose \(K \subset Y \subset X\). Then K is compact relative to X iff K is compact relative to Y.</p>
 <div class="edit-meta">
 
 <br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Math/topology.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../math/tensors/" title="Tensors"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Tensors</a>
@@ -168,7 +243,7 @@ E = \{y \vert y \sim x\}
 <li class="parent has-sub-menu"><a href="../../math/">Maths<span class="mark opened">-</span></a>
   
 <ul class="sub-menu">
-<li class=""><a href="../../math/abstractalgebra/">Abstract Algebra</a></li>
+<li class=""><a href="../../math/abstractalgebra/">Algebra</a></li>
 <li class=""><a href="../../math/analysis/">Analysis</a></li>
 <li class=""><a href="../../math/integration/">Integration</a></li>
 <li class=""><a href="../../math/linear_algebra/">Linear Algebra</a></li>
@@ -184,7 +259,6 @@ E = \{y \vert y \sim x\}
   
 <ul class="sub-menu">
 <li class=""><a href="../../physics/circuits/">Circuits</a></li>
-<li class=""><a href="../../physics/oscillations/">Core EM</a></li>
 <li class=""><a href="../../physics/funnycircuits/">DC circuit tricks</a></li>
 <li class=""><a href="../../physics/em/">E&amp;M</a></li>
 <li class=""><a href="../../physics/electrodynamics/">Electrodynamics</a></li>
@@ -192,6 +266,7 @@ E = \{y \vert y \sim x\}
 <li class=""><a href="../../physics/linear_momentum/">Linear Momentum</a></li>
 <li class=""><a href="../../physics/mechanics/">Mechanics</a></li>
 <li class=""><a href="../../physics/optics/">Optics</a></li>
+<li class=""><a href="../../physics/oscillations/">Oscillations</a></li>
 <li class=""><a href="../../physics/quantum_physics/">Quantum mechanics</a></li>
 <li class=""><a href="../../physics/rotation/">Rotation</a></li>
 <li class=""><a href="../../physics/idealgas/">Thermodynamics</a></li>
@@ -233,6 +308,8 @@ E = \{y \vert y \sim x\}
             <li><a href="#size-of-set">Size of set</a></li>
           </ul>
         </li>
+        <li><a href="#metric-spaces">Metric Spaces</a></li>
+        <li><a href="#compact-sets">Compact sets</a></li>
       </ul>
     </li>
   </ul>

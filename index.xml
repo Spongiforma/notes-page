@@ -46,17 +46,14 @@ It makes use of a variety of open source projects including:
     </item>
     
     <item>
-      <title>Abstract Algebra</title>
+      <title>Algebra</title>
       <link>/math/abstractalgebra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/math/abstractalgebra/</guid>
-      <description>Groups A group is an ordered pair (G,*), where G is a set (closed under *) and * is a binary operation satisfying the following axioms.
-  * is associative
-  There exists an identity element
-  For each a in G, there is a double-sided inverse element
-If the operation is commutative within the group, then the group is abelian.
-  The order of an element x is the smallest positive integer n such that \(x^n = 1\).</description>
+      <description>Monoids A monoid is a triple (M,p,1), in which M is a non-vacuous set, p is an associative binary composition in M, and 1 is an element of M such that p(1,a) = a = p(a,1) for all \(a \in M\).
+A monad without an associative p is sometimes called a monad. If there is no requirement on 1, then its a semigroup (M,p).
+A submonoid of a set M, contains 1 and N is closed under the product in M.</description>
     </item>
     
     <item>
@@ -87,22 +84,6 @@ Finding C based on geometrical factors
 Capacitors in circuits In series:
 \[ \frac{1}{C_{eq}} = \sum_i \frac{1}{C_i} \]
 Same Q, all V_i add to total p.d.</description>
-    </item>
-    
-    <item>
-      <title>Core EM</title>
-      <link>/physics/oscillations/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/physics/oscillations/</guid>
-      <description>Linear differential equations For a relationship such as \(\ddot{x} = ax\), one can write down:
-(note) \(a = -\omega^2\)
-If a is negative
-\[ x(t) = Ae^{i\omega t} + Be^{-i\omega t} \]
-SHM Hooke&amp;rsquo;s law
-\[ \ddot{x} + \omega^2 x = 0 \]
-Note:
-If you are given initial position and velocity, \(x_0\) and \(v_0\), then \(x(t) = C\cos{\omega t} + D\sin{\omega t}\) works best as \(C = x_0\) and \(D = v_0/\omega\)</description>
     </item>
     
     <item>
@@ -275,6 +256,22 @@ We may use it to find r(t) and theta(t) in terms of t:</description>
       <description>Propogation of light. Incident rays produce both a reflected and refracted ray, the latter of which follows snell&amp;rsquo;s law. The index of refraction of an optical material is defined by c/v or equivalently \(\lambda_0 / \lambda\), as since boundary surfaces can&amp;rsquo;t create or destroy waves, the frequency of a wave does not change when passing from one material to another.
 Total internal reflection occurs when \(\sin\theta_{crit} = \frac{n_b}{n_a}\)
 Dispersion Dispersion occurs due to certain optical materials having varying indices of refractions for each color (wavelength) of light.</description>
+    </item>
+    
+    <item>
+      <title>Oscillations</title>
+      <link>/physics/oscillations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/physics/oscillations/</guid>
+      <description>Linear differential equations For a relationship such as \(\ddot{x} = ax\), one can write down:
+(note) \(a = -\omega^2\)
+If a is negative
+\[ x(t) = Ae^{i\omega t} + Be^{-i\omega t} \]
+SHM Hooke&amp;rsquo;s law
+\[ \ddot{x} + \omega^2 x = 0 \]
+Note:
+If you are given initial position and velocity, \(x_0\) and \(v_0\), then \(x(t) = C\cos{\omega t} + D\sin{\omega t}\) works best as \(C = x_0\) and \(D = v_0/\omega\)</description>
     </item>
     
     <item>

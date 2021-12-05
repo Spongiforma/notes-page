@@ -25,8 +25,6 @@
   </url><url>
     <loc>/physics/circuits/</loc>
   </url><url>
-    <loc>/physics/oscillations/</loc>
-  </url><url>
     <loc>/physics/funnycircuits/</loc>
   </url><url>
     <loc>/physics/em/</loc>
@@ -54,6 +52,8 @@
     <loc>/physics/mechanics/</loc>
   </url><url>
     <loc>/physics/optics/</loc>
+  </url><url>
+    <loc>/physics/oscillations/</loc>
   </url><url>
     <loc>/physics/</loc>
   </url><url>

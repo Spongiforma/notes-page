@@ -7,17 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="/math/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Abstract Algebra</title>
+      <title>Algebra</title>
       <link>/math/abstractalgebra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/math/abstractalgebra/</guid>
-      <description>Groups A group is an ordered pair (G,*), where G is a set (closed under *) and * is a binary operation satisfying the following axioms.
-  * is associative
-  There exists an identity element
-  For each a in G, there is a double-sided inverse element
-If the operation is commutative within the group, then the group is abelian.
-  The order of an element x is the smallest positive integer n such that \(x^n = 1\).</description>
+      <description>Monoids A monoid is a triple (M,p,1), in which M is a non-vacuous set, p is an associative binary composition in M, and 1 is an element of M such that p(1,a) = a = p(a,1) for all \(a \in M\).
+A monad without an associative p is sometimes called a monad. If there is no requirement on 1, then its a semigroup (M,p).
+A submonoid of a set M, contains 1 and N is closed under the product in M.</description>
     </item>
     
     <item>

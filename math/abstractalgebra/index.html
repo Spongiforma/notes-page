@@ -3,7 +3,7 @@
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>Abstract Algebra - Notes</title>
+<title>Algebra - Notes</title>
 <meta name="description" content="">
 <meta name="generator" content="Hugo 0.85.0" />
 <link href="//index.xml" rel="alternate" type="application/rss+xml">
@@ -17,13 +17,10 @@
 <script src="../../js/bundle.js"></script><style>
 :root {--custom-font-color: #bcb7ae;--custom-background-color: #1a1c1d;}
 </style>
-<meta property="og:title" content="Abstract Algebra" />
-<meta property="og:description" content="Groups A group is an ordered pair (G,*), where G is a set (closed under *) and * is a binary operation satisfying the following axioms.
-  * is associative
-  There exists an identity element
-  For each a in G, there is a double-sided inverse element
-If the operation is commutative within the group, then the group is abelian.
-  The order of an element x is the smallest positive integer n such that \(x^n = 1\)." />
+<meta property="og:title" content="Algebra" />
+<meta property="og:description" content="Monoids A monoid is a triple (M,p,1), in which M is a non-vacuous set, p is an associative binary composition in M, and 1 is an element of M such that p(1,a) = a = p(a,1) for all \(a \in M\).
+A monad without an associative p is sometimes called a monad. If there is no requirement on 1, then its a semigroup (M,p).
+A submonoid of a set M, contains 1 and N is closed under the product in M." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/math/abstractalgebra/" /><meta property="og:image" content="/images/og-image.png"/><meta property="article:section" content="Math" />
 
@@ -32,22 +29,16 @@ If the operation is commutative within the group, then the group is abelian.
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/images/og-image.png"/>
 
-<meta name="twitter:title" content="Abstract Algebra"/>
-<meta name="twitter:description" content="Groups A group is an ordered pair (G,*), where G is a set (closed under *) and * is a binary operation satisfying the following axioms.
-  * is associative
-  There exists an identity element
-  For each a in G, there is a double-sided inverse element
-If the operation is commutative within the group, then the group is abelian.
-  The order of an element x is the smallest positive integer n such that \(x^n = 1\)."/>
-<meta itemprop="name" content="Abstract Algebra">
-<meta itemprop="description" content="Groups A group is an ordered pair (G,*), where G is a set (closed under *) and * is a binary operation satisfying the following axioms.
-  * is associative
-  There exists an identity element
-  For each a in G, there is a double-sided inverse element
-If the operation is commutative within the group, then the group is abelian.
-  The order of an element x is the smallest positive integer n such that \(x^n = 1\).">
+<meta name="twitter:title" content="Algebra"/>
+<meta name="twitter:description" content="Monoids A monoid is a triple (M,p,1), in which M is a non-vacuous set, p is an associative binary composition in M, and 1 is an element of M such that p(1,a) = a = p(a,1) for all \(a \in M\).
+A monad without an associative p is sometimes called a monad. If there is no requirement on 1, then its a semigroup (M,p).
+A submonoid of a set M, contains 1 and N is closed under the product in M."/>
+<meta itemprop="name" content="Algebra">
+<meta itemprop="description" content="Monoids A monoid is a triple (M,p,1), in which M is a non-vacuous set, p is an associative binary composition in M, and 1 is an element of M such that p(1,a) = a = p(a,1) for all \(a \in M\).
+A monad without an associative p is sometimes called a monad. If there is no requirement on 1, then its a semigroup (M,p).
+A submonoid of a set M, contains 1 and N is closed under the product in M.">
 
-<meta itemprop="wordCount" content="564"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="1026"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -91,21 +82,28 @@ If the operation is commutative within the group, then the group is abelian.
 </div>
 <div class="content-container">
 <main>
+<h2 id="monoids">Monoids</h2>
+<p>A <strong>monoid</strong> is a triple (M,p,1), in which M is a non-vacuous set, p is an associative binary composition in M, and 1 is an element of M such that p(1,a) = a = p(a,1) for all \(a \in M\).</p>
+<p>A monad without an associative p is sometimes called a <strong>monad</strong>. If there is no requirement on 1, then its a <strong>semigroup</strong> (M,p).</p>
+<p>A <strong>submonoid</strong> of a set M, contains 1 and N is closed under the product in M.</p>
+<p>A submonoid of the monoid M(S) of all transformations of the set S is a <strong>monoid of transformations</strong> of S.</p>
+<h3 id="cayley-s-theorem">Cayley&rsquo;s theorem</h3>
+<ol>
+<li>Any monoid is isomorphic to a monoid of transformations.</li>
+<li>Any group is isomorphic to a transformation group.</li>
+</ol>
+<h3 id="centralizer">Centralizer</h3>
+<p>If \(a \in M\), the <strong>centralizer</strong> \(C_M(a)\) is the subset of M of elements of b which commute with a. It can be shown to be a submonoid (or subgroup). The centralizer of a subset of M is defined similarly but take the intersection. C(M) is the <strong>center</strong> of M.</p>
 <h2 id="groups">Groups</h2>
 <p>A group is an ordered pair (G,*), where G is a set (closed under *) and * is a binary operation satisfying the following axioms.</p>
 <ol>
-<li>
-<p>* is associative</p>
-</li>
-<li>
-<p>There exists an identity element</p>
-</li>
-<li>
-<p>For each a in G, there is a double-sided inverse element</p>
-<p>If the operation is commutative within the group, then the group is abelian.</p>
-</li>
+<li>* is associative</li>
+<li>There exists an identity element</li>
+<li>For each a in G, there is an (double-sided) inverse element</li>
 </ol>
+<p>If the operation is commutative within the group, then the group is abelian.</p>
 <p>The order of an element x is the smallest positive integer n such that \(x^n = 1\).</p>
+<p>A group is also a monoid all of whose elements has an inverse element.</p>
 <h3 id="dihedral-groups">Dihedral groups</h3>
 <p>D_2n is the set of symmetries of a regular n-gon via moving it in rigid motion. |D_2n| = 2n.</p>
 <p>The elements are r^i and s, where s is a reflection and r is a rotation</p>
@@ -126,6 +124,8 @@ If the operation is commutative within the group, then the group is abelian.
 <h3 id="symmetric-groups">Symmetric groups</h3>
 <p>Let \(\Omega\) be any nonempty set and \(S_\Omega\) to be the set of all bijections from \(\Omega\) to itself. Then \(S_\Omega\) is a group under function composition.</p>
 <p>Elements of a symmetric group S can be written in terms of its cycle decomposition.</p>
+<p>A <strong>group of transformations</strong> is a subgroup of the symmetric group of S.</p>
+<p>The order is the lcm of the size of the group&rsquo;s disjoint cycles.</p>
 <h3 id="fields">Fields</h3>
 <p>A Field is a set F together with two binary operations \(+\) and \(\cdot\) on F such that \((F,+)\) is an abelian group and \((F - \{0\},\cdot)\) is also an abelian group, and the distributive law holds.</p>
 <p>\[
@@ -165,12 +165,24 @@ Q_8 = \{1,-1,i,-i,j,-j,k,-k\}
 <li>G is abelian iff H is abelian</li>
 <li>for all \(x \in G\), \(|x| = |\psi(x)|\)</li>
 </ol>
+<p>Any two cyclic groups of the same order are isomorphic</p>
+<h3 id="group-properties">Group properties</h3>
+<ol>
+<li>Any subgroup of a cyclic group is cyclic. If <a> is infinite, the subgroups not equal to 1 are infinite and \(s \to \langle a^s\rangle\) is a bijective map of \(\mathbb{N}\) with the set of subgroups of \(\langle a \rangle\). If \(\langle a \rangle\) is finite of order \(r\), then the order of every subgroup is a divisor of r and for every positive divisor q of r, there is exactly one subgroup of order q.</li>
+<li>Let g and h be elements of an abelian group G having finite relatively prime orders m and n respectively. Then o(gh) = mn.</li>
+<li>Let g be an element of a finite abelian group of maximal order. Then \(\exp G = o(g)\)</li>
+<li>Let \(\exp G\) be the smallest integer \(e\) such that \(x^e = 1\) for all \(x \in G\). A finite abelian group is cyclic iff \(\exp G = |G|\).</li>
+</ol>
 <h3 id="group-actions">Group actions</h3>
 <p>A group action of a group G acting on a set A is a map from \(G \times A\) to A (written \(g \cdot a\) for all \(g \in G\) and \(a \in A\)) satisfying the following properties:</p>
 <ol>
 <li>\(g_1 \cdot (g_2 \cdot a) = (g_1g_2)\cdot a\), for all g1,g2 in G, a in A</li>
 <li>\(1 \cdot a  = a\), for all a in A.</li>
 </ol>
+<h3 id="orbits-and-cosets">Orbits &amp; cosets</h3>
+<p>Let G be a group of transformations of a set S. Then G defines an equivalence relation on S of \(x \sim_G y\) if \(y = \alpha(x)\) for some \(\alpha \in G\). The G-orbit of \(x \in S\) is the set \(Gx = \{\alpha(x) \vert \alpha \in G\}\). When there is just one orbit, that is, \(S = Gx\) for some x, G is a <strong>transitive</strong> group of transformations of the set S. e.g. \(S_n\) is transitive on \(\{1,2,\ldots,n\}\).</p>
+<h3 id="congruences">Congruences</h3>
+<p>A congruence is an equivalence relation which can be multiplied.</p>
 <div class="edit-meta">
 
 <br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Math/abstractalgebra.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../math/" title="Maths"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Maths</a>
@@ -195,7 +207,7 @@ Q_8 = \{1,-1,i,-i,j,-j,k,-k\}
 <li class="parent has-sub-menu"><a href="../../math/">Maths<span class="mark opened">-</span></a>
   
 <ul class="sub-menu">
-<li class="active"><a href="../../math/abstractalgebra/">Abstract Algebra</a></li>
+<li class="active"><a href="../../math/abstractalgebra/">Algebra</a></li>
 <li class=""><a href="../../math/analysis/">Analysis</a></li>
 <li class=""><a href="../../math/integration/">Integration</a></li>
 <li class=""><a href="../../math/linear_algebra/">Linear Algebra</a></li>
@@ -211,7 +223,6 @@ Q_8 = \{1,-1,i,-i,j,-j,k,-k\}
   
 <ul class="sub-menu">
 <li class=""><a href="../../physics/circuits/">Circuits</a></li>
-<li class=""><a href="../../physics/oscillations/">Core EM</a></li>
 <li class=""><a href="../../physics/funnycircuits/">DC circuit tricks</a></li>
 <li class=""><a href="../../physics/em/">E&amp;M</a></li>
 <li class=""><a href="../../physics/electrodynamics/">Electrodynamics</a></li>
@@ -219,6 +230,7 @@ Q_8 = \{1,-1,i,-i,j,-j,k,-k\}
 <li class=""><a href="../../physics/linear_momentum/">Linear Momentum</a></li>
 <li class=""><a href="../../physics/mechanics/">Mechanics</a></li>
 <li class=""><a href="../../physics/optics/">Optics</a></li>
+<li class=""><a href="../../physics/oscillations/">Oscillations</a></li>
 <li class=""><a href="../../physics/quantum_physics/">Quantum mechanics</a></li>
 <li class=""><a href="../../physics/rotation/">Rotation</a></li>
 <li class=""><a href="../../physics/idealgas/">Thermodynamics</a></li>
@@ -250,6 +262,12 @@ Q_8 = \{1,-1,i,-i,j,-j,k,-k\}
 <nav class="outline">
 <nav id="TableOfContents">
   <ul>
+    <li><a href="#monoids">Monoids</a>
+      <ul>
+        <li><a href="#cayley-s-theorem">Cayley&rsquo;s theorem</a></li>
+        <li><a href="#centralizer">Centralizer</a></li>
+      </ul>
+    </li>
     <li><a href="#groups">Groups</a>
       <ul>
         <li><a href="#dihedral-groups">Dihedral groups</a></li>
@@ -262,7 +280,10 @@ Q_8 = \{1,-1,i,-i,j,-j,k,-k\}
         </li>
         <li><a href="#quaternion-group">Quaternion group</a></li>
         <li><a href="#homomorphisms-and-isomorphisms">Homomorphisms and Isomorphisms</a></li>
+        <li><a href="#group-properties">Group properties</a></li>
         <li><a href="#group-actions">Group actions</a></li>
+        <li><a href="#orbits-and-cosets">Orbits &amp; cosets</a></li>
+        <li><a href="#congruences">Congruences</a></li>
       </ul>
     </li>
   </ul>
