@@ -1,5 +1,5 @@
 +++
-title = "Core EM"
+title = "Oscillations"
 author = ["root"]
 draft = false
 +++

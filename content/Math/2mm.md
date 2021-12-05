@@ -805,3 +805,7 @@ Who cares
 
 
 ## Eigenfunction methods for differential equations {#eigenfunction-methods-for-differential-equations}
+
+\\[
+\mathcal{L} y(x) = f(x)
+\\]

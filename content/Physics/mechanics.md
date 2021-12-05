@@ -35,6 +35,16 @@ or r(theta):
 \left(\frac{1}{r^2}\dv{r}{\theta}\right)^2 = \frac{2mE}{L^2} - \frac{1}{r^2} - \frac{2mV( r)}{L^2}
 \\]
 
+or Binet's equation:
+
+\\[
+\left(1+\dv[2]{}{\theta}\right)u = -\frac{m}{L^2u^2}F(u)
+\\]
+
+\\[
+\dv[2]{u}{\theta} = -\frac{m}{L^2}U\_{eff}'(u)
+\\]
+
 
 ### Gravitation {#gravitation}
 
@@ -131,6 +141,10 @@ where the eccentricity \\(e = \sqrt{1 + \frac{2EL^2}{m\alpha^2}} = \sqrt{1+\frac
 
     \\[
     r = \frac{a(e^2-1)}{1+e\cos\theta}
+    \\]
+
+    \\[
+    r\_{min} = \sqrt{\frac{\mu^2}{v\_0^4} + b^2} - \frac{\mu}{v\_0^2}
     \\]
 
     <!--list-separator-->

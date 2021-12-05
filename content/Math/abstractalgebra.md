@@ -1,8 +1,30 @@
 +++
-title = "Abstract Algebra"
+title = "Algebra"
 author = ["root"]
 draft = false
 +++
+
+## Monoids {#monoids}
+
+A **monoid** is a triple (M,p,1), in which M is a non-vacuous set, p is an associative binary composition in M, and 1 is an element of M such that p(1,a) = a = p(a,1) for all \\(a \in M\\).
+
+A monad without an associative p is sometimes called a **monad**. If there is no requirement on 1, then its a **semigroup** (M,p).
+
+A **submonoid** of a set M, contains 1 and N is closed under the product in M.
+
+A submonoid of the monoid M(S) of all transformations of the set S is a **monoid of transformations** of S.
+
+
+### Cayley's theorem {#cayley-s-theorem}
+
+1.  Any monoid is isomorphic to a monoid of transformations.
+2.  Any group is isomorphic to a transformation group.
+
+
+### Centralizer {#centralizer}
+
+If \\(a \in M\\), the **centralizer** \\(C\_M(a)\\) is the subset of M of elements of b which commute with a. It can be shown to be a submonoid (or subgroup). The centralizer of a subset of M is defined similarly but take the intersection. C(M) is the **center** of M.
+
 
 ## Groups {#groups}
 
@@ -10,11 +32,13 @@ A group is an ordered pair (G,\*), where G is a set (closed under \*) and \* is 
 
 1.  \* is associative
 2.  There exists an identity element
-3.  For each a in G, there is a double-sided inverse element
+3.  For each a in G, there is an (double-sided) inverse element
 
-    If the operation is commutative within the group, then the group is abelian.
+If the operation is commutative within the group, then the group is abelian.
 
 The order of an element x is the smallest positive integer n such that \\(x^n = 1\\).
+
+A group is also a monoid all of whose elements has an inverse element.
 
 
 ### Dihedral groups {#dihedral-groups}
@@ -49,6 +73,10 @@ D\_2n = < \\(r,s | r^n = s^2 = 1, rs = sr^{-1}\\)>
 Let \\(\Omega\\) be any nonempty set and \\(S\_\Omega\\) to be the set of all bijections from \\(\Omega\\) to itself. Then \\(S\_\Omega\\) is a group under function composition.
 
 Elements of a symmetric group S can be written in terms of its cycle decomposition.
+
+A **group of transformations** is a subgroup of the symmetric group of S.
+
+The order is the lcm of the size of the group's disjoint cycles.
 
 
 ### Fields {#fields}
@@ -106,6 +134,16 @@ If \\(\psi : G \mapsto H\\), then
 2.  G is abelian iff H is abelian
 3.  for all \\(x \in G\\), \\(|x| = |\psi(x)|\\)
 
+Any two cyclic groups of the same order are isomorphic
+
+
+### Group properties {#group-properties}
+
+1.  Any subgroup of a cyclic group is cyclic. If <a> is infinite, the subgroups not equal to 1 are infinite and \\(s \to \langle a^s\rangle\\) is a bijective map of \\(\mathbb{N}\\) with the set of subgroups of \\(\langle a \rangle\\). If \\(\langle a \rangle\\) is finite of order \\(r\\), then the order of every subgroup is a divisor of r and for every positive divisor q of r, there is exactly one subgroup of order q.
+2.  Let g and h be elements of an abelian group G having finite relatively prime orders m and n respectively. Then o(gh) = mn.
+3.  Let g be an element of a finite abelian group of maximal order. Then \\(\exp G = o(g)\\)
+4.  Let \\(\exp G\\) be the smallest integer \\(e\\) such that \\(x^e = 1\\) for all \\(x \in G\\). A finite abelian group is cyclic iff \\(\exp G = |G|\\).
+
 
 ### Group actions {#group-actions}
 
@@ -113,3 +151,13 @@ A group action of a group G acting on a set A is a map from \\(G \times A\\) to 
 
 1.  \\(g\_1 \cdot (g\_2 \cdot a) = (g\_1g\_2)\cdot a\\), for all g1,g2 in G, a in A
 2.  \\(1 \cdot a  = a\\), for all a in A.
+
+
+### Orbits & cosets {#orbits-and-cosets}
+
+Let G be a group of transformations of a set S. Then G defines an equivalence relation on S of \\(x \sim\_G y\\) if \\(y = \alpha(x)\\) for some \\(\alpha \in G\\). The G-orbit of \\(x \in S\\) is the set \\(Gx = \\{\alpha(x) \vert \alpha \in G\\}\\). When there is just one orbit, that is, \\(S = Gx\\) for some x, G is a **transitive** group of transformations of the set S. e.g. \\(S\_n\\) is transitive on \\(\\{1,2,\ldots,n\\}\\).
+
+
+### Congruences {#congruences}
+
+A congruence is an equivalence relation which can be multiplied.
