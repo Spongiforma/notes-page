@@ -86,7 +86,7 @@ The set of all sequences whose elements are the digits 0 and 1 is uncountable.
 
 A set X, whose elements we shall call points, is said to be a metric space if any two points p,q of X there is associated a real number d(p,q), such that
 
-1.  \\(d(p,q) > 0\\), if \\(p \neq q\\); $d(p,p) = 0;
+1.  \\(d(p,q) > 0\\), if \\(p \neq q\\); \\(d(p,p) = 0\\);
 2.  \\(d(p,q) = d(q,p)\\)
 3.  \\(d(p,q) \leq d(p,r) + d(r,q)\\) for any \\(r \in X\\)
 
@@ -185,3 +185,58 @@ K \subset G\_{\alpha\_1} \cup \ldots \cup G\_{\alpha\_n}
 **Theorem**
 
 Suppose \\(K \subset Y \subset X\\). Then K is compact relative to X iff K is compact relative to Y.
+
+**Theorem**
+
+Compact subsets of metric spaces are closed.
+
+**Theorem**
+
+Closed subsets of compact sets are compact.
+**Corollary**: If F is closed and K is compact, then \\(F \cap K\\) is compact.
+
+**Theorem**
+
+If \\(\\{K\_\alpha\\}\\) is a collection of compact subsets of a metric space X such that the intersection of every finite subcollection of \\(\\{\K\_alpha\\}\\) is non-empty, then \\(\cap K\_\alpha\\) is nonempty.
+**Corollary**: If \\(\\{K\_n\\}\\) is a sequence of nonempty compact sets such that \\(K\_n \supset K\_{n+1}\\) then \\(\cap\_1^\infty K\_n\\) is not empty.
+
+**Theorem**
+If E is an infinite subset of a compact set K, then E has a limit point in K.
+
+**Theorem**
+If \\(\\{I\_n\\}\\) is a sequence of intervals in \\(R^1\\), such that \\(I\_n \supset I\_{n+1}\\) then \\(\cap^\infty\_1 I\_n\\) is not empty.
+
+**Theorem**
+If \\(\\{I\_n\\}\\) is sequence of k-cells such that \\(I\_n \superset I\_{n+1}\\), then \\(\cap^\infty\_1 I\_n\\) is not empty.
+
+**Theorem**
+Every k-cell is compact.
+
+**Theorem**
+If a set in \\(R^k\\) has one of the following three properties, it has the other two.
+
+1.  E is closed and bounded
+2.  E is compact
+3.  Every infinite subset of E has a limit point in E.
+
+    (b) and (c) are equivalent in any metric space but (a) does not in general imply (b) and (c).
+
+**Theorem (Weierstrass)**
+
+Every bounded infinite subset of \\(R^k\\) has a limit point in \\(R^k\\).
+
+
+### Perfect sets {#perfect-sets}
+
+**Theorem**
+
+A nonempty perfect set in \\(R^k\\) is uncountable.
+
+
+### Connected sets {#connected-sets}
+
+Two subsets A,B of a metric space X are _seperated_ if \\(A \cap \bar{B}\\) and \\(\bar{A}\cap B\\) are empty. A subset of X is connected if it is not a union of two nonempty seperated sets.
+
+**Theorem**
+
+A subset E of the real line \\(R^1\\) is connected iff it has the following property: If \\(x,y \in E\\), \\(x < z < y\\), then \\(z \in E\\).

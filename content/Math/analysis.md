@@ -25,4 +25,7 @@ An ordered field is a field which is an ordered set, such that:
 1.  \\(x + y < x + z\\) and  \\(y < z\\)
 2.  \\(xy > 0\\) and \\(x > 0, y > 0\\)
 
-\*
+
+## Sequences {#sequences}
+
+A sequence converges if it fulfills epsilon-delta.
