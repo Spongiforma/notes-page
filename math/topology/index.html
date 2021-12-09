@@ -44,7 +44,7 @@ Relations Equivalence relations If there is a equivalence relation C on A it has
  Reflexivity: xCx for every x in A. Symmetry: if xCy, then yCx. Transitivity: if xCy and yCz, then xCz.  A equivalence class determined by x is given by:
 \[ E = \{y \vert y \sim x\} \]">
 
-<meta itemprop="wordCount" content="1231"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="1527"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -149,7 +149,7 @@ E = \{y \vert y \sim x\}
 <h3 id="metric-spaces">Metric Spaces</h3>
 <p>A set X, whose elements we shall call points, is said to be a metric space if any two points p,q of X there is associated a real number d(p,q), such that</p>
 <ol>
-<li>\(d(p,q) &gt; 0\), if \(p \neq q\); $d(p,p) = 0;</li>
+<li>\(d(p,q) &gt; 0\), if \(p \neq q\); \(d(p,p) = 0\);</li>
 <li>\(d(p,q) = d(q,p)\)</li>
 <li>\(d(p,q) \leq d(p,r) + d(r,q)\) for any \(r \in X\)</li>
 </ol>
@@ -219,6 +219,45 @@ K \subset G_{\alpha_1} \cup \ldots \cup G_{\alpha_n}
 \]</p>
 <p><strong>Theorem</strong></p>
 <p>Suppose \(K \subset Y \subset X\). Then K is compact relative to X iff K is compact relative to Y.</p>
+<p><strong>Theorem</strong></p>
+<p>Compact subsets of metric spaces are closed.</p>
+<p><strong>Theorem</strong></p>
+<p>Closed subsets of compact sets are compact.
+<strong>Corollary</strong>: If F is closed and K is compact, then \(F \cap K\) is compact.</p>
+<p><strong>Theorem</strong></p>
+<p>If \(\{K_\alpha\}\) is a collection of compact subsets of a metric space X such that the intersection of every finite subcollection of \(\{\K_alpha\}\) is non-empty, then \(\cap K_\alpha\) is nonempty.
+<strong>Corollary</strong>: If \(\{K_n\}\) is a sequence of nonempty compact sets such that \(K_n \supset K_{n+1}\) then \(\cap_1^\infty K_n\) is not empty.</p>
+<p><strong>Theorem</strong>
+If E is an infinite subset of a compact set K, then E has a limit point in K.</p>
+<p><strong>Theorem</strong>
+If \(\{I_n\}\) is a sequence of intervals in \(R^1\), such that \(I_n \supset I_{n+1}\) then \(\cap^\infty_1 I_n\) is not empty.</p>
+<p><strong>Theorem</strong>
+If \(\{I_n\}\) is sequence of k-cells such that \(I_n \superset I_{n+1}\), then \(\cap^\infty_1 I_n\) is not empty.</p>
+<p><strong>Theorem</strong>
+Every k-cell is compact.</p>
+<p><strong>Theorem</strong>
+If a set in \(R^k\) has one of the following three properties, it has the other two.</p>
+<ol>
+<li>
+<p>E is closed and bounded</p>
+</li>
+<li>
+<p>E is compact</p>
+</li>
+<li>
+<p>Every infinite subset of E has a limit point in E.</p>
+<p>(b) and (c) are equivalent in any metric space but (a) does not in general imply (b) and (c).</p>
+</li>
+</ol>
+<p><strong>Theorem (Weierstrass)</strong></p>
+<p>Every bounded infinite subset of \(R^k\) has a limit point in \(R^k\).</p>
+<h3 id="perfect-sets">Perfect sets</h3>
+<p><strong>Theorem</strong></p>
+<p>A nonempty perfect set in \(R^k\) is uncountable.</p>
+<h3 id="connected-sets">Connected sets</h3>
+<p>Two subsets A,B of a metric space X are <em>seperated</em> if \(A \cap \bar{B}\) and \(\bar{A}\cap B\) are empty. A subset of X is connected if it is not a union of two nonempty seperated sets.</p>
+<p><strong>Theorem</strong></p>
+<p>A subset E of the real line \(R^1\) is connected iff it has the following property: If \(x,y \in E\), \(x &lt; z &lt; y\), then \(z \in E\).</p>
 <div class="edit-meta">
 
 <br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Math/topology.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../math/tensors/" title="Tensors"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Tensors</a>
@@ -310,6 +349,8 @@ K \subset G_{\alpha_1} \cup \ldots \cup G_{\alpha_n}
         </li>
         <li><a href="#metric-spaces">Metric Spaces</a></li>
         <li><a href="#compact-sets">Compact sets</a></li>
+        <li><a href="#perfect-sets">Perfect sets</a></li>
+        <li><a href="#connected-sets">Connected sets</a></li>
       </ul>
     </li>
   </ul>
