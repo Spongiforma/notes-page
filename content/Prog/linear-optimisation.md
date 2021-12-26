@@ -54,7 +54,7 @@ Let \\(f\_1,\cdots,f\_m : \mathcal{R}^n \mapsto \mathcal{R}\\) be convex functio
 
 can become:
 
-"minimize z, subject to \\(z\geq \bm{c}\_i^T \bm{x} + d\_i\\) for all i, Ax >= b"
+"minimize z, subject to \\(z\geq \bm{c}\_i^T \bm{x} + d\_i\\) for all i, Ax &gt;= b"
 
 When modulus appears:
 
@@ -84,7 +84,7 @@ Notice that \\(x^+\_i = 0\\) or \\(x^-\_i = 0\\).
 \bm{x}(t+1) = \bm{Ax}(t) + \bm{Bu}(t)
 \\]
 
-where we are free to choose u(t) subject to Du(t) <= d.
+where we are free to choose u(t) subject to Du(t) &lt;= d.
 
 \\[
 y(t) = \bm{c}^T\bm{x}(t)
@@ -93,10 +93,10 @@ y(t) = \bm{c}^T\bm{x}(t)
 **possible form**
 
 minimize z
-subject to -z <= y(t) <=  z
+subject to -z &lt;= y(t) &lt;=  z
 x(t+1) = Ax(t) + Bu(t)
 y(t) = c'x(t)
-Du(t) <= d
+Du(t) &lt;= d
 x(T) = 0,
 x(0) = given,
 
@@ -107,7 +107,7 @@ x(0) = given,
 -   There exist multiple optimal solutions; in this case, the set of optimal solutions can be either bounded or unbounded
 -   The optimal cost -infty, and no feasible solution is optimal
 -   The feasible set is empty
--   there is also "minimize 1/x subject to x>0" but it does not arise in linear programming
+-   there is also "minimize 1/x subject to x&gt;0" but it does not arise in linear programming
 
 
 ## Geometry {#geometry}

@@ -52,20 +52,20 @@ Properties:
 1.  1, r, \\(r^2\\) ..., \\(r^{n-1}\\) are all distinct and \\(r^n\\) = 1, so \\(|r| = n\\).
 2.  |s| = 2
 3.  s != r^i for any i
-4.  \\(sr^i \neq sr^j\\) for all i!=j, 0 <= i,j <= n-1.
+4.  \\(sr^i \neq sr^j\\) for all i!=j, 0 &lt;= i,j &lt;= n-1.
 5.  rs = sr^-1
 6.  \\(r^i s = s r^{-i}\\)
 
 
 ### Generators and relations {#generators-and-relations}
 
-Groups can be described with generators which is a subset of G such that every element of G can be written as a finite product of elements of S. G = <S>.
+Groups can be described with generators which is a subset of G such that every element of G can be written as a finite product of elements of S. G = &lt;S&gt;.
 
-D\_2n = <r,s>
+D\_2n = &lt;r,s&gt;
 
 Relations are any equations satisfied by the generators. Groups can be represented by a presentation of G.
 
-D\_2n = < \\(r,s | r^n = s^2 = 1, rs = sr^{-1}\\)>
+D\_2n = &lt; \\(r,s | r^n = s^2 = 1, rs = sr^{-1}\\)&gt;
 
 
 ### Symmetric groups {#symmetric-groups}
@@ -139,7 +139,7 @@ Any two cyclic groups of the same order are isomorphic
 
 ### Group properties {#group-properties}
 
-1.  Any subgroup of a cyclic group is cyclic. If <a> is infinite, the subgroups not equal to 1 are infinite and \\(s \to \langle a^s\rangle\\) is a bijective map of \\(\mathbb{N}\\) with the set of subgroups of \\(\langle a \rangle\\). If \\(\langle a \rangle\\) is finite of order \\(r\\), then the order of every subgroup is a divisor of r and for every positive divisor q of r, there is exactly one subgroup of order q.
+1.  Any subgroup of a cyclic group is cyclic. If &lt;a&gt; is infinite, the subgroups not equal to 1 are infinite and \\(s \to \langle a^s\rangle\\) is a bijective map of \\(\mathbb{N}\\) with the set of subgroups of \\(\langle a \rangle\\). If \\(\langle a \rangle\\) is finite of order \\(r\\), then the order of every subgroup is a divisor of r and for every positive divisor q of r, there is exactly one subgroup of order q.
 2.  Let g and h be elements of an abelian group G having finite relatively prime orders m and n respectively. Then o(gh) = mn.
 3.  Let g be an element of a finite abelian group of maximal order. Then \\(\exp G = o(g)\\)
 4.  Let \\(\exp G\\) be the smallest integer \\(e\\) such that \\(x^e = 1\\) for all \\(x \in G\\). A finite abelian group is cyclic iff \\(\exp G = |G|\\).
@@ -153,7 +153,7 @@ A group action of a group G acting on a set A is a map from \\(G \times A\\) to 
 2.  \\(1 \cdot a  = a\\), for all a in A.
 
 
-### Orbits & cosets {#orbits-and-cosets}
+### Orbits &amp; cosets {#orbits-and-cosets}
 
 Let G be a group of transformations of a set S. Then G defines an equivalence relation on S of \\(x \sim\_G y\\) if \\(y = \alpha(x)\\) for some \\(\alpha \in G\\). The G-orbit of \\(x \in S\\) is the set \\(Gx = \\{\alpha(x) \vert \alpha \in G\\}\\). When there is just one orbit, that is, \\(S = Gx\\) for some x, G is a **transitive** group of transformations of the set S. e.g. \\(S\_n\\) is transitive on \\(\\{1,2,\ldots,n\\}\\).
 

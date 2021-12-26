@@ -75,7 +75,7 @@ The jacobian of the Lagrangian map (\\(S\_t = M\_tS\_0\\) where S is an open set
 J\_{ij} = \pdv{x\_i}{a\_j}\Big\vert\_t
 \\]
 
-Thus \\(\dd{l\_i}  = J\_{ij}\dd{a\_j}\\) is a differential vector which can be visualized as connecting two nearby fluid particles whose labels differ by \\(\dd{a\_j}\\). If \\(\dd{a\_1}\ldots\dd{a\_N}\\) is the volume of a small fluid parcel, \\(\det(\bm{J})\dd{a\_1}\ldots\dd{a\_N}\\) is the volume of the parcel under the map \\(\mathcal{M}\_t\\). For incompressible liquids, Det(J) = constant = 1 when \\(\bm{a}\\) denotes initial position, independently of \\(\bm{a}\\),\\(t\\). It is usually assumed that Det(J) > 0, such that we can invert to express a as a function of x,t.
+Thus \\(\dd{l\_i}  = J\_{ij}\dd{a\_j}\\) is a differential vector which can be visualized as connecting two nearby fluid particles whose labels differ by \\(\dd{a\_j}\\). If \\(\dd{a\_1}\ldots\dd{a\_N}\\) is the volume of a small fluid parcel, \\(\det(\bm{J})\dd{a\_1}\ldots\dd{a\_N}\\) is the volume of the parcel under the map \\(\mathcal{M}\_t\\). For incompressible liquids, Det(J) = constant = 1 when \\(\bm{a}\\) denotes initial position, independently of \\(\bm{a}\\),\\(t\\). It is usually assumed that Det(J) &gt; 0, such that we can invert to express a as a function of x,t.
 
 
 ### Material Derivative {#material-derivative}

@@ -71,7 +71,7 @@ where the eccentricity \\(e = \sqrt{1 + \frac{2EL^2}{m\alpha^2}} = \sqrt{1+\frac
 
 <!--list-separator-->
 
--  Ellipse (0 < e < 1)
+-  Ellipse (0 &lt; e &lt; 1)
 
     WLOG, let a be the semi-major axis and b be the semi-minor axis. c is the distance of a focus to the centre.
 
@@ -129,7 +129,7 @@ where the eccentricity \\(e = \sqrt{1 + \frac{2EL^2}{m\alpha^2}} = \sqrt{1+\frac
 
 <!--list-separator-->
 
--  Hyperbola (e > 1)
+-  Hyperbola (e &gt; 1)
 
     \\[
     \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1
@@ -201,7 +201,7 @@ x = \gamma(x' + vt')
 t = \gamma(t' + vx'/c^2)
 \\]
 
-The inverse Lorentz transforms are given by the tranformation v-> v'.
+The inverse Lorentz transforms are given by the tranformation v-&gt; v'.
 
 \\[
 \mqty(x \\\ ct) = \mqty(\gamma & \gamma \beta \\\ \gamma\beta & \gamma ) \mqty(x' \\\ ct')

@@ -77,7 +77,7 @@ Orthornormal: \\(\braket{\hat{e}\_i}{\hat{e}\_j} = \delta\_{ij}\\) (i.e. orthogo
 \vert\braket{a}{b}\vert \leq \Vert a\Vert \Vert b\Vert
 \\]
 
-In 2d, abcosx <= aba
+In 2d, abcosx &lt;= aba
 
 equality when a is a scalar multiple of b
 
@@ -340,10 +340,10 @@ A Normal matrix is hermitian iff it has real eigenvalues
 \sum\_i \ket{i}\bra{i} = I
 \\]
 
-where |i> is any orthonormal basis for the vector space V
+where |i&gt; is any orthonormal basis for the vector space V
 
 Which allows us to represent any operator in the outer product notation.
-Given A : V \\(\rightarrow\\) W, and |v\_i> and |w\_j> are orthornormal bases for V and W
+Given A : V \\(\rightarrow\\) W, and |v\_i&gt; and |w\_j&gt; are orthornormal bases for V and W
 
 \begin{aligned}
 A & = I\_W A I\_V \\\\
@@ -365,12 +365,12 @@ Note that that implies:
 U = \sum\_i \ket{w\_i} \bra{v\_i}
 \\]
 
-And that if |v\_i> and |w\_i> are any orthonormal bases, then U defined above is also unitary
+And that if |v\_i&gt; and |w\_i&gt; are any orthonormal bases, then U defined above is also unitary
 
 
 ### Projectors {#projectors}
 
-A class of Hermitian operators. Let W be a k-dimensional vector subspace of the d-dimensional vector space V. Using Gram-Schmidt procedure it is possible to construct an orthonormal basisc for V (|1>,...,|d>)such that |1>,...,|k> is an orthonormal basis for W. The projector by defintion:
+A class of Hermitian operators. Let W be a k-dimensional vector subspace of the d-dimensional vector space V. Using Gram-Schmidt procedure it is possible to construct an orthonormal basisc for V (|1&gt;,...,|d&gt;)such that |1&gt;,...,|k&gt; is an orthonormal basis for W. The projector by defintion:
 
 \\[
 P \equiv \sum\_{i=k}^k \ket{i} \bra{i}
@@ -380,7 +380,7 @@ P \equiv \sum\_{i=k}^k \ket{i} \bra{i}
 (P\_i)\_{kl} = \delta\_{kl}\delta\_{li}
 \\]
 
-The orthogonal complement of P is Q = I - P, which is a projector onto the vector space spanned by |k+1>...|d>
+The orthogonal complement of P is Q = I - P, which is a projector onto the vector space spanned by |k+1&gt;...|d&gt;
 
 \\[
 P\_i P\_j = \delta\_{ij} P\_j
@@ -552,7 +552,7 @@ This applies to linear operators of x:
 y = Ax, y' = A'x'
 \\]
 
-=>
+=&gt;
 
 \\[
 y' = S^{-1}ASx'
@@ -655,7 +655,7 @@ D\ket{f} = \ket{\dv{f}{x}}
 
 implies
 
-In the |x> basis,
+In the |x&gt; basis,
 \\[
 \bra{x}D\ket{x'} = D\_{x,x'}=\delta'(x-x')=\delta(x-x')\dv{x'}
 \\]
@@ -674,7 +674,7 @@ but in infinite dimensions, K^t = K is not sufficient to be hermitian. It is onl
 -ig^\*(x)f(x) | \given\_a^b = 0
 \\]
 
-so that <g|K|f> = <f|K|g>\*.
+so that &lt;g|K|f&gt; = &lt;f|K|g&gt;\*.
 
 <!--list-separator-->
 
@@ -700,12 +700,12 @@ so that <g|K|f> = <f|K|g>\*.
 
     where we choose \\(A = (1/2\pi)^{-1/2}\\)
 
-    and <k|k>
+    and &lt;k|k&gt;
 
 
 #### X basis {#x-basis}
 
-X|x> = x|x>
+X|x&gt; = x|x&gt;
 
 \\[
 \bra{x'}X\ket{x} = x\delta(x'-x)
@@ -713,7 +713,7 @@ X|x> = x|x>
 
 Action on functions:
 
-X|f> = |F>
+X|f&gt; = |F&gt;
 
 F(x) = xf(x)
 

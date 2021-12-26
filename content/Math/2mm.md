@@ -230,7 +230,7 @@ where f(x) is the 'true' function and g(z-x) is the resolution function.
 
 ### Laplace transform {#laplace-transform}
 
-When a function does not satisfy the dirichlet conditions as it may not converge at infinity or if it is only defined for t > 0. we may want to use the Laplace transform.
+When a function does not satisfy the dirichlet conditions as it may not converge at infinity or if it is only defined for t &gt; 0. we may want to use the Laplace transform.
 
 \\[
 \bar{f}(s) = \int\_0^\infty f(t)e^{-st}\dd{t}

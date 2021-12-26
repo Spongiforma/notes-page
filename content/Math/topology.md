@@ -9,7 +9,7 @@ draft = false
 
 ### Inverse functions {#inverse-functions}
 
-If f : A -> B,
+If f : A -&gt; B,
 
 \\[
 f^{-1}(B\_0) = \\{a \vert f(a) \in B\_0\\}
@@ -48,7 +48,7 @@ Note that given any partition of A, there is exactly one equivalence relation fr
 2.  (Nonreflexivity) For no x in A does the relation xCx hold.
 3.  (Transitivity) If xCy and yCz, then xCz.
 
-(a,b) is then the set {x | a < x < b}, which is an open interval. If the set is empty, a (b) is the immediate predecessor (sucessor) of b (a).
+(a,b) is then the set {x | a &lt; x &lt; b}, which is an open interval. If the set is empty, a (b) is the immediate predecessor (sucessor) of b (a).
 
 **Order type**: A and B have the same order type if there is a bijective correspondence between them that preserves order.
 

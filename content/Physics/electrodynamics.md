@@ -9,36 +9,36 @@ draft = false
 
 ### Relations {#relations}
 
-V -> rho
+V -&gt; rho
 
 \\[
 \laplacian V = -\frac{\rho}{\epsilon\_0}
 \\]
-rho -> V
+rho -&gt; V
 
 \\[
 V = \frac{1}{4\pi\epsilon\_0}\int\frac{\rho}{r}\dd{\tau}
 \\]
 
-E -> rho
+E -&gt; rho
 
 \\[
 \div{E} = \frac{\rho}{\epsilon\_0}
 \\]
 
-rho -> E
+rho -&gt; E
 
 \\[
 E = \frac{1}{4\pi\epsilon\_0}\int\frac{\rho{\bf \hat{r}}}{r^2}\dd{\tau}
 \\]
 
-V -> E
+V -&gt; E
 
 \\[
 E = -\grad{V}
 \\]
 
-E -> V
+E -&gt; V
 \\[
 V = -\int{E \cdot \dd{l}}
 \\]
@@ -154,7 +154,7 @@ or \\(\sum\_i q\_i\bm{r}'\_i\\). or \\(\bm{p} - Q\bm{a}\\) for a shift in coordi
 V\_{dip}( r) = \frac{1}{4\pi\epsilon\_0}\frac{\bm{p}\cdot\hat{\bm{r}}}{r^2}
 \\]
 
-for a pure dipole (as opposed to a physical one), qd = constant but d -> 0.
+for a pure dipole (as opposed to a physical one), qd = constant but d -&gt; 0.
 
 
 ## Electric fields in matter {#electric-fields-in-matter}

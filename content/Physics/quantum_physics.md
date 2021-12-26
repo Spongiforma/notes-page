@@ -221,7 +221,7 @@ Rotate anticlockwise about z-axis can be defined as:
 \\[
 \hat{R}(\dd{\phi} \bm{k}) = 1 - \frac{i}{\hbar}\hat{J\_z}\dd{\phi}
 \\]
-where \\(\hat{J\_z}\\) is a hermitian operator and has |+- z> as an eigenvector with +-hbar/2 as eigenvalues.
+where \\(\hat{J\_z}\\) is a hermitian operator and has |+- z&gt; as an eigenvector with +-hbar/2 as eigenvalues.
 
 \\[
 \hat{R}(\phi \bm{k}) = \lim\_{N\to\infty}\left[1-\frac{i}{\hbar}\hat{J}\_z\left(\frac{\phi}{N}\right)\right]^N

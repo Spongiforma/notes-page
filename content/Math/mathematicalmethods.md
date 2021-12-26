@@ -14,7 +14,7 @@ draft = false
                      = & x^{-m} \sum\_{k=0}^{\infty} {-m \choose k} \left(\frac{y}{x}\right)^k
 \end{align\*}
 
-where m is positive and x > y and:
+where m is positive and x &gt; y and:
 
 \\[
 {-m \choose k} = (-1)^k {m+k-1 \choose k}
@@ -29,7 +29,7 @@ Whatever's n:
 \\]
 
 
-## Complex & hyperbolic {#complex-and-hyperbolic}
+## Complex &amp; hyperbolic {#complex-and-hyperbolic}
 
 
 ### Identities {#identities}
@@ -802,7 +802,7 @@ The surface area is given by:
 \\]
 
 
-### Integrating over S -> Integrating over projection of S {#integrating-over-s-integrating-over-projection-of-s}
+### Integrating over S -&gt; Integrating over projection of S {#integrating-over-s-integrating-over-projection-of-s}
 
 We find:
 
