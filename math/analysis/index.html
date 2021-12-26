@@ -44,7 +44,7 @@ Theorem If \(x \in R\), \(y \in R\), and \(x &gt; 0\), then there&rsquo;s a posi
 Theorem
 For every positive real x and every positive integer n, there is only one positive real y such that \(y^n = x\)">
 
-<meta itemprop="wordCount" content="127"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="933"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -103,7 +103,137 @@ If \(x &lt; y\), then there exists a \(p \in Q\) such that \(x &lt; p &lt; y\)</
 <li>\(xy &gt; 0\) and \(x &gt; 0, y &gt; 0\)</li>
 </ol>
 <h2 id="sequences">Sequences</h2>
-<p>A sequence converges if it fulfills epsilon-delta.</p>
+<p>A sequence converges if it fulfills epsilon-delta, i.e. for every \(\epsilon &gt; 0\), there is an integer N, such that \(n \geq N\) implies \(d(p_n,p) &lt; \epsilon\).</p>
+<p><strong>Other properties</strong></p>
+<ol>
+<li>Every neighbourhood of p contains \(p_n\) for all but finitely many \(n\).</li>
+<li>If \(E \subset X\), and \(p\) is a limit point of E, then there is a sequence \(\{p_n\}\) in \(E\) such that \(p = \lim_{n\to\infty} p_n\).</li>
+</ol>
+<p><strong>Definition</strong></p>
+<p>If a subsequence of a sequence converges, its limit is called a subsequential limit of the sequence. A sequence only converges iff every subsequence of \(\left{p_n\right}\) converges to p.</p>
+<p><strong>Theorem</strong></p>
+<ol>
+<li>If \(\{p_n\}\) is sequence in a compact space X, the nsome subsequence of \(\{p_n\}\) converges to a point of X.</li>
+<li>Every bounded sequence in \(R^k\) contains a convergent subsequence.</li>
+</ol>
+<p><strong>Theorem</strong></p>
+<p>The subsequential limits of a sequence \(\{p_n\}\) in a metric space X form a closed subset of X.</p>
+<h3 id="cauchy-sequences">Cauchy sequences</h3>
+<p>A sequence \(\{p_n\}\) is a Cauchy sequence iff for every \(\epsilon &gt; 0\) there is an integer N such that \(d(p_n,p_m) &lt; \epsilon\) if \(n,m \geq N\).</p>
+<p>Let E be a nonempty subset of a metric space X, and let S be the set of all real numbers of the form \(d(p,q)\), with \(p\in E\) and \(q\in E\). THe sup of S is called the diameter of E.</p>
+<p>If \(E_N\) is the set of all points \(p_{N+i}\), then \(\{p_n\}\) is a Cauchy sequence iff \(\lim_{N\to\infty} \text{diam} E_N = 0\).</p>
+<p><strong>Theorem</strong></p>
+<ol>
+<li>If \(\bar{E}\) is the closure of a set \(E\) in a metric space X, then \(\text{diam } \bar{E} = \text{diam } E\).</li>
+<li>If \(K_n\) is a sequence of compact sets in X such that \(K_{n+1} \subset K_n\), and its diameter tends to 0 with n, then the intersection consists of exactly one point.</li>
+</ol>
+<p><strong>Theorem</strong></p>
+<ol>
+<li>In any metric space X, every convergent sequence is a Cauchy sequence.</li>
+<li>If X is a compact metric space and if \(\{p_n\}\) is a Cauchy sequence in X, then \(\{p_n\}\) converges to some point of X.</li>
+<li>In \(R^k\), every Cauchy sequence converges.</li>
+</ol>
+<p><strong>Definition</strong></p>
+<p>A metric space in which every Cauchy sequence converges is complete.</p>
+<p><strong>Theorem</strong></p>
+<p>A monotonic sequence converges iff it is bounded.</p>
+<h3 id="upper-and-lower-limits">Upper and lower limits</h3>
+<p><strong>Definition</strong>
+Let E be the set of all subsequential limits of a sequence \(s_n\).</p>
+<p>\[
+s^* = \sup E = \lim_{n\to\infty} \sup s_n
+\]</p>
+<p>\[
+s_* = \inf E = \lim_{n\to\infty} \inf s_n
+\]</p>
+<p><strong>Theorem</strong></p>
+<ol>
+<li>
+<p>\(s^* \in E\)</p>
+</li>
+<li>
+<p>If \(x &gt; s^*\), there is an integer, there is an integer \(N\) such that \(n \geq N\) implies \(s_n &lt; x\).</p>
+<p>Moreover, \(s^*\) is the only number with the two properties.</p>
+</li>
+</ol>
+<h3 id="convergence">Convergence</h3>
+<p><strong>Definition</strong></p>
+<p>Cauchy criterion:</p>
+<p>\(\sum a_n\) converges iff for every \(\epsilon &gt; 0\), there is an integer \(N\) such that:</p>
+<p>\[
+\left\vert \sum_{k=n}^m a_k \right\vert \leq \epsilon
+\]</p>
+<p>if \(m \geq n \geq N\).</p>
+<p>or when m equals n,</p>
+<p>\[
+\vert a_n \vert \leq \epsilon
+\]</p>
+<p><strong>Theorem</strong></p>
+<p>Suppose \(a_n\) is non-negative monotonically decreasing sequence. Then its series converges iff the following series converges:</p>
+<p>\[
+\sum_{k=0}^\infty 2^ka_{2^k} = a_1 + 2a_2 + 4a_4 + 8a_8 + \ldots
+\]</p>
+<p><strong>Theorem</strong></p>
+<p>\[
+\sum_{n=2}^\infty  \frac{1}{n (\log n)^p}
+\]</p>
+<p>converges when p is greater than one, and diverges otherwise.</p>
+<h3 id="root-and-ratio-test">Root and ratio test</h3>
+<p><strong>Theorem (Root test)</strong>
+Given \(\sum a_n\), put \(\alpha = \lim_{n\to\infty}\sup\sqrt[n]{|a_n|}\)</p>
+<p>If \(\alpha &lt; 1\), it converges, if \(\alpha &gt; 1\), it diverges.</p>
+<p><strong>Theorem (Ratio test)</strong></p>
+<p>A series converges if \(\lim_{n\to\infty} \vert\frac{a_{n+1}}{a_n}\vert &lt; 1\), and diverges if the sequence is monotonically increasing at some finite point.</p>
+<p><strong>Theorem</strong></p>
+<p>\[
+\lim_{n\to\infty} \frac{c_{n+1}}{c_n} \leq \lim_{n\to\infty} \inf \sqrt[n]{c_n}
+\]</p>
+<p>\[
+\lim_{n\to\infty} \sup \sqrt[n]{c_n} \leq \lim_{n\to\infty} \sup \frac{c_{n+1}}{c_n}
+\]</p>
+<p><strong>Theorem</strong></p>
+<p>Given a power series \(\sum c_n z^n\), put \(\alpha = \lim_{n\to\infty}\sup \sqrt[n]{|c_n|}\), and \(R = \alpha^{-1}\). Then the series converges if \(|z| &lt; R\), and diverges if \(|z| &gt; R\).</p>
+<h4 id="summation-by-parts">Summation by parts</h4>
+<p>\[
+\sum_{n=p}^q a_n b_n = \sum_{n=p}^{q-1} A_n (b_n - b_{n+1}) + A_q b_q - A_{p-1}b_p
+\]</p>
+<p><strong>Theorem</strong></p>
+<p>If:</p>
+<ol>
+<li>The partial sums of \(A_n\) of \(a_n\) form a bounded sequence.</li>
+<li>\(\{b_n\}\) is monotonoically decreasing</li>
+<li>\(\lim_{n\to\infty}b_n = 0\)</li>
+</ol>
+<p>Then \(\sum a_n b_n\).</p>
+<p><strong>Theorem</strong>
+If:</p>
+<ol>
+<li>
+<p>\(\{|c_n|\}\) is a monotonically decreasing sequence.</p>
+</li>
+<li>
+<p>\(\{c_n\}\) is an alternating series.</p>
+</li>
+<li>
+<p>\(\lim_{n\to\infty}c_n = 0\).</p>
+<p>Then \(\sum c_n\) converges.</p>
+</li>
+</ol>
+<h4 id="absolute-convergence">Absolute convergence</h4>
+<p>If a series converges absolutely, then it converges regularly. But a convergent series may not converge absolutely. Consider \((-1)^n / n\).</p>
+<p><strong>Theorem</strong></p>
+<p>If \(\sum a_n\) converges absolutely, and \(c_n = \sum_{k=0}^n a_k b_{n-k}\), then \(\sum_{n=0}^\infty c_n = AB\)</p>
+<p>This theorem also holds if no assumption is made iwth absolute convergence.</p>
+<h4 id="rearrangements">Rearrangements</h4>
+<p><strong>Theorem (Riemann)</strong></p>
+<p>Let \(\sum a_n\) be a series of real numbers which converges but not absolutely. Suppose \(-\infty \leq \alpha \leq \beta \leq \infty\). Then there exists a rearrangement \(\sum a'_n\) with partial sums \(s'_n\) such that:</p>
+<p>\[
+\lim_{n\to\infty}\inf s'_n = \alpha
+\]</p>
+<p>\[
+\lim_{n\to\infty}\sup s'_n = \beta
+\]</p>
+<p>If \(\sum a_n\) is a series of complex numbers which converges absolutely, then every rearrangement of \(\sum a_n\) converges, and they all converge to the same sum.</p>
 <div class="edit-meta">
 
 <br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Math/analysis.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../math/abstractalgebra/" title="Algebra"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Algebra</a>
@@ -184,7 +314,20 @@ If \(x &lt; y\), then there exists a \(p \in Q\) such that \(x &lt; p &lt; y\)</
 <nav id="TableOfContents">
   <ul>
     <li><a href="#real-numbers">Real numbers</a></li>
-    <li><a href="#sequences">Sequences</a></li>
+    <li><a href="#sequences">Sequences</a>
+      <ul>
+        <li><a href="#cauchy-sequences">Cauchy sequences</a></li>
+        <li><a href="#upper-and-lower-limits">Upper and lower limits</a></li>
+        <li><a href="#convergence">Convergence</a></li>
+        <li><a href="#root-and-ratio-test">Root and ratio test</a>
+          <ul>
+            <li><a href="#summation-by-parts">Summation by parts</a></li>
+            <li><a href="#absolute-convergence">Absolute convergence</a></li>
+            <li><a href="#rearrangements">Rearrangements</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </nav>
