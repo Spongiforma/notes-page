@@ -43,7 +43,7 @@ A group is also a monoid all of whose elements has an inverse element.
 
 ### Dihedral groups {#dihedral-groups}
 
-D\_2n is the set of symmetries of a regular n-gon via moving it in rigid motion. |D\_2n| = 2n.
+D_2n is the set of symmetries of a regular n-gon via moving it in rigid motion. |D_2n| = 2n.
 
 The elements are r^i and s, where s is a reflection and r is a rotation
 
@@ -61,11 +61,11 @@ Properties:
 
 Groups can be described with generators which is a subset of G such that every element of G can be written as a finite product of elements of S. G = &lt;S&gt;.
 
-D\_2n = &lt;r,s&gt;
+D_2n = &lt;r,s&gt;
 
 Relations are any equations satisfied by the generators. Groups can be represented by a presentation of G.
 
-D\_2n = &lt; \\(r,s | r^n = s^2 = 1, rs = sr^{-1}\\)&gt;
+D_2n = &lt; \\(r,s | r^n = s^2 = 1, rs = sr^{-1}\\)&gt;
 
 
 ### Symmetric groups {#symmetric-groups}

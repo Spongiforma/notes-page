@@ -90,7 +90,7 @@ V\_{max} = \min\_i(V\_{bi})
 
 Laplace's equations tolerates no local maxima and minima and at a point it can often be expressed as the average of the surrounding potential.
 
-The potential at the center of a sphere is equal to the average potential at the surface due to an external charge located a distance from the center of the sphere. v\_ave = V\_center + kQ\_enc/R
+The potential at the center of a sphere is equal to the average potential at the surface due to an external charge located a distance from the center of the sphere. v_ave = V_center + kQ_enc/R
 
 
 ### Boundary conditions and uniqueness theorems {#boundary-conditions-and-uniqueness-theorems}

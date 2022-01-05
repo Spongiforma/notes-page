@@ -174,7 +174,7 @@ S = \frac{a}{1-r} + \frac{rd}{(1-r)^2}
 
 Consider the series \\(\sum u\_n\\)
 
-If u\_n can be expressed in the form:
+If u_n can be expressed in the form:
 
 \\[
 u\_n = f(n) - f(n-1)

@@ -47,7 +47,7 @@ When the Lagrangian does not depend on a coordinate qk:
 
 This is also generalised momentum.
 
-q\_k is thus a cyclic coordinate.
+q_k is thus a cyclic coordinate.
 
 
 #### Energy conservation {#energy-conservation}
@@ -75,7 +75,7 @@ Let the Lagrangian be invariant to first order in the small number \\(\epsilon\\
 q\_i \to q\_i + \epsilon K\_i(q)
 \\]
 
-each K\_i(q) may be a function of all the q\_i and need not be constant.
+each K_i(q) may be a function of all the q_i and need not be constant.
 
 The quantity:
 
@@ -87,7 +87,7 @@ does not change with time and has the generic name of consered momentum.
 
 Example:
 
-For \\(L = (m/2)(5\dot{x}^2 - 2\dot{x}\dot{y} + 2\dot{y}^2) + C(2x-y)\\), K\_x = 1 and K\_y = 2:
+For \\(L = (m/2)(5\dot{x}^2 - 2\dot{x}\dot{y} + 2\dot{y}^2) + C(2x-y)\\), K_x = 1 and K_y = 2:
 
 \\[
 P = \pdv{L}{\dot{x}}K\_x + \pdv{L}{\dot y}K\_y = m(3\dot{x} + 3\dot{y})
@@ -260,7 +260,7 @@ The force by the magnet equals:
 F\_z = \mu\_B \pdv{B}{z}
 \\]
 
-where u\_b is the bohr magneton
+where u_b is the bohr magneton
 
 
 ## Angular momentum {#angular-momentum}

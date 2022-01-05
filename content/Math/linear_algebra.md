@@ -103,7 +103,7 @@ or
 where \\(\hat{e}\_i\\) is an orthonormal basis
 
 where the equality holds if the sum includes all N basis vectors or if remaining basis vectors have
-a\_i = 0
+a_i = 0
 
 
 #### Parallelogram equality {#parallelogram-equality}
@@ -343,7 +343,7 @@ A Normal matrix is hermitian iff it has real eigenvalues
 where |i&gt; is any orthonormal basis for the vector space V
 
 Which allows us to represent any operator in the outer product notation.
-Given A : V \\(\rightarrow\\) W, and |v\_i&gt; and |w\_j&gt; are orthornormal bases for V and W
+Given A : V \\(\rightarrow\\) W, and |v_i&gt; and |w_j&gt; are orthornormal bases for V and W
 
 \begin{aligned}
 A & = I\_W A I\_V \\\\
@@ -365,7 +365,7 @@ Note that that implies:
 U = \sum\_i \ket{w\_i} \bra{v\_i}
 \\]
 
-And that if |v\_i&gt; and |w\_i&gt; are any orthonormal bases, then U defined above is also unitary
+And that if |v_i&gt; and |w_i&gt; are any orthonormal bases, then U defined above is also unitary
 
 
 ### Projectors {#projectors}
@@ -641,7 +641,7 @@ Dirac delta with fourier transform
 \\[
 \delta(f(x)) = \sum\_i \frac{\delta(x\_i-x)}{|\dv{f}{x\_i}|}
 \\]
-where x\_i are the zeros of f(x)
+where x_i are the zeros of f(x)
 
 
 ### Operators {#operators}

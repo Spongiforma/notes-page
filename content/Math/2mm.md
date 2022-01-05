@@ -66,8 +66,8 @@ b\_r = \frac{2}{L} \int\_{x\_0}^{x\_0+L}f(x)\sin(2\pi r x / L) \dd{x}
 
 #### Symmetry about quarter period {#symmetry-about-quarter-period}
 
-if f(x) is even about L/4 then a\_odd = 0 and b\_even = 0
-if f(x) is odd about L/4 then a\_2r = 0 and b\_odd = 0
+if f(x) is even about L/4 then a_odd = 0 and b_even = 0
+if f(x) is odd about L/4 then a_2r = 0 and b_odd = 0
 
 
 ### Discontinuous functions {#discontinuous-functions}

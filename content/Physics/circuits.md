@@ -35,11 +35,11 @@ In series:
 \frac{1}{C\_{eq}} = \sum\_i \frac{1}{C\_i}
 \\]
 
-Same Q, all V\_i add to total p.d.
+Same Q, all V_i add to total p.d.
 
 In parallel:
 
 \\[
 C\_{eq} = \sum\_i \frac{1}{C\_i}
 \\]
-Same V, all Q\_i add to Q
+Same V, all Q_i add to Q

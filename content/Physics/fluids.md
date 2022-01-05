@@ -191,7 +191,7 @@ where \\(\epsilon\_{ijk}\omega\_k\dd{x\_j}\\) is the ith component of the cross 
 
 #### Strain rate tensor {#strain-rate-tensor}
 
-The diagonal terms of \\(S\_{ij}\\) represent elongation and contraction per unit length in various coordinate directions and are called linear strain rates. \\(S\_{11}\\) represents the rate of change of fluid element length in the $x\_1$-direction per unit length. The off diagonal terms represent shear deformations that change the relative orientations of material line segments initially parallel to the i- and j-directions of the flow. Thus, \\(S\_{ij}\\) represents the average rate at which material line segments parallel to the i- and j-directions rotate toward each other.
+The diagonal terms of \\(S\_{ij}\\) represent elongation and contraction per unit length in various coordinate directions and are called linear strain rates. \\(S\_{11}\\) represents the rate of change of fluid element length in the $x_1$-direction per unit length. The off diagonal terms represent shear deformations that change the relative orientations of material line segments initially parallel to the i- and j-directions of the flow. Thus, \\(S\_{ij}\\) represents the average rate at which material line segments parallel to the i- and j-directions rotate toward each other.
 
 The average rate at which the initially perpendicular segments rotate toward each other is \\(S\_{12} = S\_{21}\\)
 

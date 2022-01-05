@@ -28,7 +28,7 @@ we introduce a new **slack** variable \\(s\_i \geq 0\\):
 \sum\_{j=1}^n a\_{ij}x\_j + s\_i = b\_i
 \\]
 
-the opposite is treated with a **surplus** variable \\(s\_i \geq 0\\) but replace '+ s\_i' with '- s\_i'
+the opposite is treated with a **surplus** variable \\(s\_i \geq 0\\) but replace '+ s_i' with '- s_i'
 
 
 ### Piecewise linear convex objective problems {#piecewise-linear-convex-objective-problems}
