@@ -97,6 +97,10 @@ where the eccentricity \\(e = \sqrt{1 + \frac{2EL^2}{m\alpha^2}} = \sqrt{1+\frac
         \epsilon = -\frac{\mu}{2a}
         \\]
 
+        \\[
+        h = \sqrt{\mu a (1-e^2)}
+        \\]
+
         Vis-viva equation:
 
         \\[
