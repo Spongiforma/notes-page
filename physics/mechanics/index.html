@@ -47,7 +47,7 @@ the first term on RHS is often called the L barrier. This does not hold if v(r) 
 \[ F_{eff} = \frac{L^2}{mr^3} - V&#39;( r) \]
 We may use it to find r(t) and theta(t) in terms of t:">
 
-<meta itemprop="wordCount" content="522"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="1184"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -218,6 +218,143 @@ h = \sqrt{\mu a (e^2 - 1)}
 </ul>
 </li>
 </ul>
+<h2 id="waves">Waves</h2>
+<h3 id="energy-density">Energy density</h3>
+<p>In general.</p>
+<p>\[
+\epsilon \propto A^2
+\]</p>
+<p>For string waves:</p>
+<p>KE:
+\[
+\epsilon_{KE} = \frac12 \mu \left(\pdv{\psi}{t}\right)^2
+\]\<br>
+PE:</p>
+<p>\[
+\dd{W} = T\Delta = T \frac12 \left(\pdv{\psi}{x}\right)^2 \dd{x} = \dd{U}
+\]</p>
+<p>The total energy per unit length is thus:</p>
+<p>\[
+\epsilon(x,t) = \frac{\mu}{2} \left(\left(\pdv{\psi}{t}\right)^2 + v^2\left(\pdv{\psi}{x}\right)^2 \right)
+\]</p>
+<p>Further more, for a travelling wave, we can use the relationship \(\psi_t = \mp v \psi_x\) to get:</p>
+<p>\[
+\epsilon(x,t) = \mu \psi_t^2
+\]</p>
+<p>Note that this implies that segments of string the possess the greatest KE also have the greatest PE.</p>
+<h3 id="power">Power</h3>
+<p>Power is similarly proportional to the square of the amplitude.</p>
+<p>For string waves, note that the transverse (vertical) force on a point Q on the string on the left of Q is \(-T\sin\theta = -T\psi_x\). Power is thus:</p>
+<p>\[
+P = -T\psi_x\psi_t
+\]</p>
+<p>Again using \(\psi_t = \mp v \psi_x\) for a rightwards/leftwards travelling wave,</p>
+<p>\[
+P = \pm \epsilon(x,t) v
+\]</p>
+<h3 id="sound-waves">Sound waves</h3>
+<p>\[
+\psi^p = \dd{P} = -B\frac{\dd{V}}{V}
+\]</p>
+<p>Taking a control small control volume that gets compressed,</p>
+<p>\[
+\dd{V} = A[\psi(x+\dd{x}) - \psi(x)]
+\]</p>
+<p>It can then be seen that:</p>
+<p>\[
+-B\psi_x = \psi^p
+\]</p>
+<p>Using N2L:</p>
+<p>\[
+-[\psi^p(x+\dd{x}) - \psi^p(x)] A = \rho A \dd{x} \psi_{tt}
+\]</p>
+<p>It can then be shown that both \(\psi\) and \(\psi^p\) obey the wave equation, though for sinusoidal equation for instance \(\psi^p\) leads \(psi\) by \(\pi/2\) in the direction of propogation (From the second last equation).</p>
+<p>Due to collisions, heat flow is much slower than oscillation so the process is usually adiabatic and \(B =\gamma p_0\).</p>
+<h4 id="energy-density">Energy density</h4>
+<p>\[
+\epsilon_{KE} = \frac12 \rho (\psi_t)^2
+\]</p>
+<p>Since the potential energy is given by \(-\int p \dd{V}\) from \(\p_0\) to \(\p_0 +\psi^p\), using our \(B\) we can show:</p>
+<p>\[
+\epsilon_{PE} = \frac{B}{2} \psi_x^2
+\]</p>
+<p>Again for travelling waves:</p>
+<p>\[
+\epsilon = \rho \psi_t^2
+\]</p>
+<h4 id="power">Power</h4>
+<p>Same as strings but \(Av\) instead of \(v\).</p>
+<h3 id="plane-waves">Plane waves</h3>
+<p>\(\psi = \Re\left\{ e^{\bm{k}\cdot\bm{r}-\omega t}\right\}\)</p>
+<p>where \(\norm{\bm{k}}^2 = { \omega^2 \over v^2 }\)</p>
+<p>For spherically symmetric waves, the general solution is:</p>
+<p>\[
+\psi( r) = \frac{A}{r} \cos(kr-\omega t + \phi)
+\]</p>
+<h3 id="wave-at-boundary">Wave at boundary</h3>
+<p>A wave is traveling towards a boundary from the left, which results in a reflected and transmitted wave. We impose a continuity constraint:</p>
+<p>\[
+\psi^i(0,t) + \psi^r(0,t) = \psi^t(0,t)
+\]</p>
+<p>Furthermore, transverse tension must cancel.</p>
+<p>\[
+T_1[ \psi^i_x(0,t) + \psi^r_x(0,t) ] = T_2 \psi_x^t(0,t)
+\]</p>
+<p>Then defining the impedence \(Z = \frac{T}{v} = \sqrt{T\mu}\), we get:</p>
+<p>\[
+Z_1 \psi^i(0,t) - Z_1 \psi^r(0,t) = Z_2 \psi^t(0,t)
+\]</p>
+<p>We obtain the transmission and reflection relations:</p>
+<p>\[
+\psi^r(0,t) = \frac{Z_1 - Z_2}{Z_1 + Z_2}\psi^i(0,t)
+\]</p>
+<p>\[
+\psi^t(0,t) = \frac{2Z_1}{Z_1 + Z_2} \psi^i(0,t)
+\]</p>
+<p>(Notice the analogy with elastic collisions, with impedence being analagous to mass)</p>
+<p>We call each coefficient the reflection and transmission coefficients (\(R\) and \(T\)) respectively, where \(T = 1 + R\).</p>
+<p>To find the resultant waves after collision, we makes use of the fact that the waves are travelling (like in <em>method of characteristics</em>).</p>
+<p>\[
+\psi^t(x,t) = T\psi^i\left(\frac{v_1}{v_2}x,t\right)
+\]</p>
+<p>(the wavelength is broadened by \(v_2/v_1\))</p>
+<p>\[
+\psi^r(x,t) = R\psi^i(-x,t)
+\]</p>
+<h3 id="limiting-cases-of-impedences">Limiting cases of impedences</h3>
+<p>For non-negative impedences,</p>
+<p>\[
+\abs{R} \leq 1
+\]</p>
+<p>\[
+0 \leq T \leq 2
+\]</p>
+<h4 id="z2-z1">z2 &gt; z1</h4>
+<p>The large force at the ring wrests the incoming wave down.</p>
+<p>\[
+-1 \leq R &lt; 0
+\]</p>
+<p>\[
+0 \leq T &lt; 1
+\]</p>
+<p>Since R is negative, it goes through a $π$-radian phase shift.</p>
+<p>At the extreme, the entire incident wave is reflected</p>
+<h4 id="z2-z1">z2 &lt; z1</h4>
+<p>\[
+0 &lt; R \leq 1
+\]</p>
+<p>\[
+1 &lt; T \leq 2
+\]</p>
+<p>There is no longer a phase shift. At the extreme, the displacement at the origin is twice the displacement than what would have been produced by incident wave alone.</p>
+<h4 id="z2-z1">z2=z1</h4>
+<p>\[
+T = 1, R=0
+\]</p>
+<p>Fully transmitted. Can occur even when the string is inhomogenous by scaling tension and mass density equally.</p>
+<h4 id="sound-waves">Sound waves</h4>
+<p>For sound waves</p>
+<p>\(Z = \frac{p_0}{v} = \sqrt{\frac{\rho p_0}{\gamma}} = \frac{\rho v}{\gamma}\)</p>
 <h2 id="special-relativity">Special relativity</h2>
 <h3 id="loss-of-simultaneity">Loss of simultaneity</h3>
 <p>Last car first: The clock on the back of a moving train is ahead of the front clock.</p>
@@ -338,6 +475,28 @@ u = \frac{v_1 + v_2}{1+v_1v_2/c^2}
         <li><a href="#gravitation">Gravitation</a>
           <ul>
             <li><a href="#eccentricity-and-orbits">Eccentricity and orbits</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#waves">Waves</a>
+      <ul>
+        <li><a href="#energy-density">Energy density</a></li>
+        <li><a href="#power">Power</a></li>
+        <li><a href="#sound-waves">Sound waves</a>
+          <ul>
+            <li><a href="#energy-density">Energy density</a></li>
+            <li><a href="#power">Power</a></li>
+          </ul>
+        </li>
+        <li><a href="#plane-waves">Plane waves</a></li>
+        <li><a href="#wave-at-boundary">Wave at boundary</a></li>
+        <li><a href="#limiting-cases-of-impedences">Limiting cases of impedences</a>
+          <ul>
+            <li><a href="#z2-z1">z2 &gt; z1</a></li>
+            <li><a href="#z2-z1">z2 &lt; z1</a></li>
+            <li><a href="#z2-z1">z2=z1</a></li>
+            <li><a href="#sound-waves">Sound waves</a></li>
           </ul>
         </li>
       </ul>
