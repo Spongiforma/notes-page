@@ -44,7 +44,7 @@ Theorem If \(x \in R\), \(y \in R\), and \(x &gt; 0\), then there&rsquo;s a posi
 Theorem
 For every positive real x and every positive integer n, there is only one positive real y such that \(y^n = x\)">
 
-<meta itemprop="wordCount" content="2360"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="3491"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -78,6 +78,7 @@ For every positive real x and every positive integer n, there is only one positi
 </head>
 <body><div class="container"><header>
 <h1>Notes</h1><a href="https://github.com/spongiforma/hugo-theme-techdoc" class="github"><i class="fab fa-github"></i></a>
+<iframe src="http://165.22.62.166/public/delargement/embed?theme=dark" frameborder="0" allowtransparency="true" style="width: 100%; min-height: 150px; border: 0;"></iframe>
 </header>
 <div class="global-menu">
 <nav>
@@ -421,6 +422,127 @@ M_n = \sup_{x\in E}\vert f_n(x) - f(x) \vert
 <p>Then \(f_n \to f\) uniformly on K.</p>
 <p><strong>Definition</strong></p>
 <p>If X is a metric space, \(\mathcal{C}(X)\) denotes the set of all complex-valued, continuous, bounded functions with domain X.</p>
+<p>A supremum norm metric makes it into a metric space.</p>
+<h3 id="integration">Integration</h3>
+<p><strong>Theorem</strong></p>
+<p>If \(f_n \to f\) uniformly.</p>
+<p>\[
+\int_a^b f \dd{\alpha} = \lim_{n\to\infty}\int_a^b f_n \dd{\alpha}
+\]</p>
+<p>if f is a series, then this implies we can integrate term by term if it converges uniformly on the closed integration interval.</p>
+<h3 id="differentiation">Differentiation</h3>
+<p><strong>Theorem</strong></p>
+<p>On a closed interval, if \(\{f'_n\}\) converges uniformly, then \(\{f_n\}\) converges uniformly and:</p>
+<p>\[
+f'(x) = \lim_{n\to\infty}f'_n(x)
+\].</p>
+<h3 id="equicontinuity">Equicontinuity</h3>
+<h4 id="motivating-examples">Motivating examples</h4>
+<ol>
+<li>If a sequence of functions are pointwise bounded on \(E\) and \(E_1\) is a countable subset of \(E\), it is always possible to find a subsequence such that the sequence converges for all \(x\inE_1\).</li>
+<li>But even if a sequence of continuous functions are uniformly bounded on a compact set \(E\), there need not exist a subsequence that converges pointwise on \(E\).</li>
+<li>Every convergent sequence need not contain a uniformly convergent subsequence.</li>
+</ol>
+<h4 id="equicontinuity">Equicontinuity</h4>
+<p><strong>Definition</strong></p>
+<p>A familly of complex functions is said to be <strong>equicontinuous</strong> on E if for every \(\epsilon &gt; 0, \exists \delta &gt; 0\) such that:</p>
+<p>\[
+\vert f(x) - f(y) \vert &lt; \epsilon
+\]</p>
+<p>whenevery \(d(x,y) &lt; \delta, \forall x,y\).</p>
+<p><strong>Theorem</strong></p>
+<p>If \(\{f_n\}\) is a pointwise bounded sequence of complex functions on a countable set \(E\), then \(\{f_n\}\) has a subsequence that converges for every \(x \in E\).</p>
+<p><strong>Theorem</strong></p>
+<p>If \(K\) is a compact metric space, \(f_n \in \mathcal{C}(K)\) and \(\{f_n\}\) converges uniformly on \(K\), then \(\{f_n\}\) is equicontinuous on K.</p>
+<p><strong>Theorem</strong></p>
+<p>If \(K\) is compact, \(f_n \in \mathcal{C}(K)\) and \(\{f_n\}\) is pointwise bounded and equicontinuous,</p>
+<ol>
+<li>\(\{f_n\}\) is uniformly bounded on \(K\). (all \(f_i\) are bounded by a single \(M\))</li>
+<li>\(\{f_n\}\) contains a uniformly convergent subsequence.</li>
+</ol>
+<h3 id="stone-weierstrass-theorem">Stone-Weierstrass theorem</h3>
+<p><strong>Theorem (Weierstrass theorem)</strong></p>
+<p>If \(f\) is a continuous complex function on \([a,b]\), there exists a sequence of polynomials \(P_n\) such that \(\lim_{n\to\infty} P_n(x) = f(x)\) uniformly on [a,b].</p>
+<p><strong>Corollary</strong></p>
+<p>For every interval \([-a,a]\) there is a sequence of real polynomials \(P_n\) such that \(P_n(0) = 0\) and such that \(\lim_{n\to\infty}P_n(x) = |x|\) uniformly on \([-a,a]\).</p>
+<h4 id="algebras">Algebras</h4>
+<p><strong>Definition</strong></p>
+<p>A family of complex functions defined on a set is said to be an <strong>algebra</strong> if it is clsoed under addition, muilitplication and scalar multiplication. Its <strong>uniform closure</strong> is the set of all functions which are the limits of uniformly convergent sequences of members of that algebra. An algebra is <strong>uniformly closed</strong> if \(f \in \mathcal{A}\) whenever \(f_n \in \mathcal{A}\) and they converge uniformly.</p>
+<p>For example, the set of all polynomials is an algebra, and the Weierstrass theorem says that the set of all continuous functions is the uniform closure of the set of polynomials on [a,b].</p>
+<p><strong>Theorem</strong></p>
+<p>A uniform closure of an algebra of bounded functions is a uniformly closed algebra.</p>
+<p><strong>Definition</strong></p>
+<p>A family of functions \(\mathcal{A}\) on a set \(E\) is said to <strong>seperate points</strong> on \(E\) if to every pair of distinct points \(x_1,x2 \in E\), there corresponds a function \(f \in \mathcal{A}\) such that \(f(x_1) \neq f(x_2)\). If to each \(x \in E\) there corresponds a function in \(\mathcal{A}\) which does not vanish at \(x\), we say <strong>\(\mathcal{A}\) vanishes at no point of \(E\)</strong>.</p>
+<p><strong>Theorem</strong></p>
+<p>If an algebra of functions seperates points on and vanishes at no point of a set, then it contains a function such that \(f(x_1) = c_1\) and \(f(x_2) = c_2\).</p>
+<p><strong>Theorem (Stone&rsquo;s extension)</strong></p>
+<p>Let \(\mathcal{A}\) be an algebra of real continuous functions on a compact set \(K\). If \(\mathcal{A}\) seperates points on \(K\) and if \(\mathcal{A}\) vanishes at no point of \(K\), then the uniform closure of \(\mathcal{A}\) consists of all real continous functions on \(K\).</p>
+<p>Note: The conclusion of this theorem holds for complex algebra only if the algebra is self-adjoint (it contains its complex conjugates).</p>
+<p><strong>Theorem</strong></p>
+<p>Let \(\mathcal{A}\) be a self-adjoint algebra of complex continuous functions on a compact set \(K\). If \(\mathcal{A}\) seperates points on \(K\) and if \(\mathcal{A}\) vanishes at no point of \(K\), then the uniform closure of \(\mathcal{A}\) consists of all complex continous functions on \(K\), i.e. \(\mathcal{A}\) is dense \(\mathcal{C}(K)\).</p>
+<h2 id="special-functions">Special functions</h2>
+<h3 id="power-series">Power series</h3>
+<p>Power series converge uniformly on a closed interval within the radius of convergence.</p>
+<p><strong>Theorem (Abel&rsquo;s theorem)</strong></p>
+<p>\[
+\lim_{x\to 1} \sum_{n=0}^\infty c_n x^n = \sum_{n=0}^\infty c_n
+\]</p>
+<p><strong>Theorem</strong></p>
+<p>Given a double sequence \(\{a_{ij}\}\), suppose \(\sum_{j=1}^\infty |a_{ij}| = b_i\) and \(\sum b_i\) converges. Then double summations of \(a_{ij}\) can be reversed.</p>
+<p><strong>Theorem</strong></p>
+<p>Let \(E\) be the set of all \(x \in S\) at which:</p>
+<p>\[
+\sum^\infty_{n=0} a_n x^n = \sum_{n=0}^\infty b_n x^n
+\]</p>
+<p>if \(E\) has a limit point in S, then \(a_n = b_n\).</p>
+<h2 id="multivariate-functions">Multivariate functions</h2>
+<p><strong>Theorem</strong></p>
+<p>Let \(\Omega\) be the set of all invertible linear operators on \(R^n\).</p>
+<ol>
+<li>If \(A \in \Omega, B \in L(R^n)\) and:</li>
+</ol>
+<p>\[
+\norm{B - A}\cdot \norm{A^{-1}} &lt; 1
+\]</p>
+<p>then \(B \in \Omega\).</p>
+<p>2.\(\Omega\) is an open subset of \(L(R^n)\) and the mapping \(A \to A^{-1}\) is continuous on \(\Omega\).</p>
+<h3 id="differentiation">Differentiation</h3>
+<p><strong>Theorem</strong></p>
+<p>Suppose \(\bm{f}\) maps a convex open set \(E \subset R^n\) into \(R^m\), \(\bm{f}\) is differentiable in \(E\), and there is a real number \(M\) such that:</p>
+<p>\[
+\norm{\bm{f}'(\bm{x})} \leq M
+\]</p>
+<p>for every \(\bm{X} \in E\). Then:</p>
+<p>\[
+\vert \bm{f(b) - f(a)} \vert \leq  M \vert \bm{b - a} \vert
+\]</p>
+<p>for all \(a,b \in E\).</p>
+<p><strong>Corollary</strong></p>
+<p>If \(\bm{f'(x) = 0}\) for all \(x \in E\), then \(\bm{f}\) is constant.</p>
+<p><strong>Definition</strong></p>
+<p>A differentiable mapping \(\bm{f}\) of an open set \(E \subset R^n\) into \(R^m\) is said to be <strong>continuously differentiable</strong> in \(E\) if \(\bm{f'}\) is a continuous mapping of \(E\) into \(L(R^n,R^m)\).</p>
+<p>We also say that \(\bm{f} \in \mathcal{C}'(E)\) or it is a $\mathcal{C}'$-mapping.</p>
+<p><strong>Theorem</strong></p>
+<p>Suppose \(\bm{f}\) maps an open set \(E \subset R^n\) into \(R^m\). Then \(\bm{f}\in\mathcal{C}'(E)\) iff all the partial derivatives of \(f\) exist and are continuous on \(E\).</p>
+<h3 id="contraction">Contraction</h3>
+<p><strong>Definition</strong></p>
+<p>Let \(X\) be a metric space. If \(\phi\) maps \(X \to X\), and if there is a number \(c &lt; 1\), such that:</p>
+<p>\[
+d(\phi(x),\phi(y)) \leq c d(x,y)
+\]</p>
+<p>for all \(x,y\in X\), then \(\phi\) is a a contraction of \(X\) into \(X\).</p>
+<p><strong>Theorem</strong></p>
+<p>If \(X\) is a complete metric space, then there exists only one \(x \in X\) such that \(\phi(x) = x\)</p>
+<h3 id="inverse-function-theorem">Inverse function theorem</h3>
+<p><strong>Theorem</strong></p>
+<p>Suppose \(\bm{f}\) is a \(\mathcal{C}'\) -mapping of an open set \(E \subset R^n \to R^n\), \(\bm{f'(a)}\) is invertible for some \(\bm{a} \in E\) and \(\bm{b = f(a)}\). Then:</p>
+<ol>
+<li>There exists open sets \(U,V \subset R^n\) such that \(\bm{a} \in U, \bm{b} \in V\), \(\bm{f}\) is one-to-one on \(U\), and \(f(U) = V\).</li>
+<li>If \(\bm{g}\) is the inverse of \(\bm{f}\) (which exists by (1)), defined in \(V\), then \(\bm{g} \in \mathcal{C}'(V)\)</li>
+</ol>
+<p>As a consequence of (1),</p>
+<p><strong>Theorem</strong></p>
+<p>IF \(\bm{f}\) is a \(\mathcal{C}'\) -mapping of an open set \(E \subset R^n \to R^n\), \(\bm{f'(a)}\) is invertible for some \(\bm{a} \in E\), then \(\bm{f}(W)\) is an open subset of \(R^n\) for every open set \(W \subset E\). i.e. \(\bm{f}\) is an open mapping of \(E\) into \(R^n\).</p>
 <div class="edit-meta">
 
 <br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Math/analysis.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../math/abstractalgebra/" title="Algebra"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Algebra</a>
@@ -536,6 +658,31 @@ M_n = \sup_{x\in E}\vert f_n(x) - f(x) \vert
     <li><a href="#sequences-and-series-of-functions">Sequences and series of functions</a>
       <ul>
         <li><a href="#uniform-convergence">Uniform convergence</a></li>
+        <li><a href="#integration">Integration</a></li>
+        <li><a href="#differentiation">Differentiation</a></li>
+        <li><a href="#equicontinuity">Equicontinuity</a>
+          <ul>
+            <li><a href="#motivating-examples">Motivating examples</a></li>
+            <li><a href="#equicontinuity">Equicontinuity</a></li>
+          </ul>
+        </li>
+        <li><a href="#stone-weierstrass-theorem">Stone-Weierstrass theorem</a>
+          <ul>
+            <li><a href="#algebras">Algebras</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#special-functions">Special functions</a>
+      <ul>
+        <li><a href="#power-series">Power series</a></li>
+      </ul>
+    </li>
+    <li><a href="#multivariate-functions">Multivariate functions</a>
+      <ul>
+        <li><a href="#differentiation">Differentiation</a></li>
+        <li><a href="#contraction">Contraction</a></li>
+        <li><a href="#inverse-function-theorem">Inverse function theorem</a></li>
       </ul>
     </li>
   </ul>

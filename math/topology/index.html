@@ -44,7 +44,7 @@ Relations Equivalence relations If there is a equivalence relation C on A it has
  Reflexivity: xCx for every x in A. Symmetry: if xCy, then yCx. Transitivity: if xCy and yCz, then xCz.  A equivalence class determined by x is given by:
 \[ E = \{y \vert y \sim x\} \]">
 
-<meta itemprop="wordCount" content="2382"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="2844"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -78,6 +78,7 @@ Relations Equivalence relations If there is a equivalence relation C on A it has
 </head>
 <body><div class="container"><header>
 <h1>Notes</h1><a href="https://github.com/spongiforma/hugo-theme-techdoc" class="github"><i class="fab fa-github"></i></a>
+<iframe src="http://165.22.62.166/public/delargement/embed?theme=dark" frameborder="0" allowtransparency="true" style="width: 100%; min-height: 150px; border: 0;"></iframe>
 </header>
 <div class="global-menu">
 <nav>
@@ -357,6 +358,55 @@ Topologies of \(\mathbb{R}_l\) and \(\mathbb{R}_K\) are strictly finer than the 
 <p>A basis can be derived in a similar form. (replace Y with B).</p>
 <p><strong>Lemma</strong></p>
 <p>If \(U\) is open in \(Y\) and \(Y\) is open in \(X\), then \(U\) is open in \(X\).</p>
+<h3 id="closed-sets">Closed sets</h3>
+<p>Defining topological space with closed sets.</p>
+<p><strong>Theorem</strong></p>
+<p>In a topological space,</p>
+<ol>
+<li>the empty set and the whole set are closed</li>
+<li>Arbitrary intersections of closed sets are closed</li>
+<li>Finite unions of closed sets are closed</li>
+</ol>
+<h4 id="closures">Closures</h4>
+<p><strong>Theorem</strong></p>
+<p>Let A be a subset of the topological space X.</p>
+<ol>
+<li>Then \(x \in \bar{A}\) iff every neighbourhood of x intersects A.</li>
+<li>If X is given by a basis, \(x \in \bar{A}\) iff every basis element containing x intersects A.</li>
+</ol>
+<h3 id="hausdorff-spaces">Hausdorff spaces</h3>
+<p>Usually it is nicer to have one-point sets closed like in euclidean space, as this means that sequences don&rsquo;t converge to multiple values for instance.</p>
+<p><strong>Definition</strong></p>
+<p>A topological space X is a <strong>Hausdorff space</strong>, if for each pair of distinct points in X, there exist neighborhoods of each point that are disjoint.</p>
+<p><strong>Theorem</strong></p>
+<p>Every finite point set in a hausdorff space is closed.</p>
+<p>The Hausdorff space condition is stronger than the condition that finite point sets be closed (\(T_1\) axiom) but that&rsquo;s fine. But for fun:</p>
+<p><strong>Theorem</strong></p>
+<p>Let X be a space satisfying the \(T_1\) axiom. Let A be a subset of X, then the point x is a limit point of A iff every neighbourhood of x contains infinitely many points of A.</p>
+<p>Back to hausdorff spaces:</p>
+<p><strong>Theorem</strong></p>
+<p>Every simply ordered set is a Hausdorff space in the order topology. Product and subspaces of hausdorff spaces are hausdorff spaces.</p>
+<h3 id="continuous-functions">Continuous functions</h3>
+<p><strong>Definition</strong></p>
+<p>A function \(f : X \to Y\) is continuous if for each open subset V of Y, the set \(f^{-1}(V)\) is an open subset of X.</p>
+<p>It also suffices to show that the inverse image of each basis/subbasis element is open.</p>
+<p>Other definitions:</p>
+<p><strong>Theorem</strong></p>
+<ol>
+<li>For every subset of X, one has \(f(\bar{A}) \subset \bar{f}(A)\).</li>
+<li>For every closed set of B of Y, the set \(f^{-1}(B)\) is closed in X.</li>
+<li>For every \(x \in X\) and each neighbourhood \(V\) of f(x), there is a neighbourhood \(U\) of x such that \(f(U) \subset V\).</li>
+</ol>
+<h4 id="homeomorphisms">Homeomorphisms</h4>
+<p>Let \(f : X \to Y\) be a bijection. If both \(f\) and its inverse function are continuous, \(f\) is called a homeomorphism.</p>
+<p>Another way to define it is to say it is a bijective correspondence such that \(f(U)\) is open iff U is open.</p>
+<h3 id="metric-topology">Metric topology</h3>
+<p><strong>Definition</strong></p>
+<p>The collection of all $ε$-balls \(B_d(x,\epsilon)\) is a basis for a topology on X, called the <strong>metric topology</strong>, induced by d.</p>
+<p><strong>Definition (alt)</strong></p>
+<p>A set U is open in the metric topology induced by d iff for each \(y \in U\), there is a \(\delta &gt; 0\) s.t. \(B_d(y,\delta) \subset U\).</p>
+<p><strong>Definition</strong></p>
+<p>A topological space X is <strong>metrizable</strong> if there exists a metric on X that induces the topology of X. A <strong>metric space</strong> is a metrizable space together with a specific metric that gives the topology of X.</p>
 <div class="edit-meta">
 
 <br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Math/topology.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../math/tensors/" title="Tensors"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Tensors</a>
@@ -463,6 +513,18 @@ Topologies of \(\mathbb{R}_l\) and \(\mathbb{R}_K\) are strictly finer than the 
         <li><a href="#order-topology">Order topology</a></li>
         <li><a href="#product-topology">Product topology</a></li>
         <li><a href="#subspace-topology">Subspace topology</a></li>
+        <li><a href="#closed-sets">Closed sets</a>
+          <ul>
+            <li><a href="#closures">Closures</a></li>
+          </ul>
+        </li>
+        <li><a href="#hausdorff-spaces">Hausdorff spaces</a></li>
+        <li><a href="#continuous-functions">Continuous functions</a>
+          <ul>
+            <li><a href="#homeomorphisms">Homeomorphisms</a></li>
+          </ul>
+        </li>
+        <li><a href="#metric-topology">Metric topology</a></li>
       </ul>
     </li>
   </ul>
