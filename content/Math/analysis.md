@@ -527,3 +527,220 @@ Then \\(f\_n \to f\\) uniformly on K.
 **Definition**
 
 If X is a metric space, \\(\mathcal{C}(X)\\) denotes the set of all complex-valued, continuous, bounded functions with domain X.
+
+A supremum norm metric makes it into a metric space.
+
+
+### Integration {#integration}
+
+**Theorem**
+
+If \\(f\_n \to f\\) uniformly.
+
+\\[
+\int\_a^b f \dd{\alpha} = \lim\_{n\to\infty}\int\_a^b f\_n \dd{\alpha}
+\\]
+
+if f is a series, then this implies we can integrate term by term if it converges uniformly on the closed integration interval.
+
+
+### Differentiation {#differentiation}
+
+**Theorem**
+
+On a closed interval, if \\(\\{f'\_n\\}\\) converges uniformly, then \\(\\{f\_n\\}\\) converges uniformly and:
+
+\\[
+f'(x) = \lim\_{n\to\infty}f'\_n(x)
+\\].
+
+
+### Equicontinuity {#equicontinuity}
+
+
+#### Motivating examples {#motivating-examples}
+
+1.  If a sequence of functions are pointwise bounded on \\(E\\) and \\(E\_1\\) is a countable subset of \\(E\\), it is always possible to find a subsequence such that the sequence converges for all \\(x\inE\_1\\).
+2.  But even if a sequence of continuous functions are uniformly bounded on a compact set \\(E\\), there need not exist a subsequence that converges pointwise on \\(E\\).
+3.  Every convergent sequence need not contain a uniformly convergent subsequence.
+
+
+#### Equicontinuity {#equicontinuity}
+
+**Definition**
+
+A familly of complex functions is said to be **equicontinuous** on E if for every \\(\epsilon > 0, \exists \delta > 0\\) such that:
+
+\\[
+\vert f(x) - f(y) \vert < \epsilon
+\\]
+
+whenevery \\(d(x,y) < \delta, \forall x,y\\).
+
+**Theorem**
+
+If \\(\\{f\_n\\}\\) is a pointwise bounded sequence of complex functions on a countable set \\(E\\), then \\(\\{f\_n\\}\\) has a subsequence that converges for every \\(x \in E\\).
+
+**Theorem**
+
+If \\(K\\) is a compact metric space, \\(f\_n \in \mathcal{C}(K)\\) and \\(\\{f\_n\\}\\) converges uniformly on \\(K\\), then \\(\\{f\_n\\}\\) is equicontinuous on K.
+
+**Theorem**
+
+If \\(K\\) is compact, \\(f\_n \in \mathcal{C}(K)\\) and \\(\\{f\_n\\}\\) is pointwise bounded and equicontinuous,
+
+1.  \\(\\{f\_n\\}\\) is uniformly bounded on \\(K\\). (all \\(f\_i\\) are bounded by a single \\(M\\))
+2.  \\(\\{f\_n\\}\\) contains a uniformly convergent subsequence.
+
+
+### Stone-Weierstrass theorem {#stone-weierstrass-theorem}
+
+**Theorem (Weierstrass theorem)**
+
+If \\(f\\) is a continuous complex function on \\([a,b]\\), there exists a sequence of polynomials \\(P\_n\\) such that \\(\lim\_{n\to\infty} P\_n(x) = f(x)\\) uniformly on [a,b].
+
+**Corollary**
+
+For every interval \\([-a,a]\\) there is a sequence of real polynomials \\(P\_n\\) such that \\(P\_n(0) = 0\\) and such that \\(\lim\_{n\to\infty}P\_n(x) = |x|\\) uniformly on \\([-a,a]\\).
+
+
+#### Algebras {#algebras}
+
+**Definition**
+
+A family of complex functions defined on a set is said to be an **algebra** if it is clsoed under addition, muilitplication and scalar multiplication. Its **uniform closure** is the set of all functions which are the limits of uniformly convergent sequences of members of that algebra. An algebra is **uniformly closed** if \\(f \in \mathcal{A}\\) whenever \\(f\_n \in \mathcal{A}\\) and they converge uniformly.
+
+For example, the set of all polynomials is an algebra, and the Weierstrass theorem says that the set of all continuous functions is the uniform closure of the set of polynomials on [a,b].
+
+**Theorem**
+
+A uniform closure of an algebra of bounded functions is a uniformly closed algebra.
+
+**Definition**
+
+A family of functions \\(\mathcal{A}\\) on a set \\(E\\) is said to **seperate points** on \\(E\\) if to every pair of distinct points \\(x\_1,x2 \in E\\), there corresponds a function \\(f \in \mathcal{A}\\) such that \\(f(x\_1) \neq f(x\_2)\\). If to each \\(x \in E\\) there corresponds a function in \\(\mathcal{A}\\) which does not vanish at \\(x\\), we say **\\(\mathcal{A}\\) vanishes at no point of \\(E\\)**.
+
+**Theorem**
+
+If an algebra of functions seperates points on and vanishes at no point of a set, then it contains a function such that \\(f(x\_1) = c\_1\\) and \\(f(x\_2) = c\_2\\).
+
+**Theorem (Stone's extension)**
+
+Let \\(\mathcal{A}\\) be an algebra of real continuous functions on a compact set \\(K\\). If \\(\mathcal{A}\\) seperates points on \\(K\\) and if \\(\mathcal{A}\\) vanishes at no point of \\(K\\), then the uniform closure of \\(\mathcal{A}\\) consists of all real continous functions on \\(K\\).
+
+Note: The conclusion of this theorem holds for complex algebra only if the algebra is self-adjoint (it contains its complex conjugates).
+
+**Theorem**
+
+Let \\(\mathcal{A}\\) be a self-adjoint algebra of complex continuous functions on a compact set \\(K\\). If \\(\mathcal{A}\\) seperates points on \\(K\\) and if \\(\mathcal{A}\\) vanishes at no point of \\(K\\), then the uniform closure of \\(\mathcal{A}\\) consists of all complex continous functions on \\(K\\), i.e. \\(\mathcal{A}\\) is dense \\(\mathcal{C}(K)\\).
+
+
+## Special functions {#special-functions}
+
+
+### Power series {#power-series}
+
+Power series converge uniformly on a closed interval within the radius of convergence.
+
+**Theorem (Abel's theorem)**
+
+\\[
+\lim\_{x\to 1} \sum\_{n=0}^\infty c\_n x^n = \sum\_{n=0}^\infty c\_n
+\\]
+
+**Theorem**
+
+Given a double sequence \\(\\{a\_{ij}\\}\\), suppose \\(\sum\_{j=1}^\infty |a\_{ij}| = b\_i\\) and \\(\sum b\_i\\) converges. Then double summations of \\(a\_{ij}\\) can be reversed.
+
+**Theorem**
+
+Let \\(E\\) be the set of all \\(x \in S\\) at which:
+
+\\[
+\sum^\infty\_{n=0} a\_n x^n = \sum\_{n=0}^\infty b\_n x^n
+\\]
+
+if \\(E\\) has a limit point in S, then \\(a\_n = b\_n\\).
+
+
+## Multivariate functions {#multivariate-functions}
+
+**Theorem**
+
+Let \\(\Omega\\) be the set of all invertible linear operators on \\(R^n\\).
+
+1.  If \\(A \in \Omega, B \in L(R^n)\\) and:
+
+\\[
+\norm{B - A}\cdot \norm{A^{-1}} < 1
+\\]
+
+then \\(B \in \Omega\\).
+
+2.\\(\Omega\\) is an open subset of \\(L(R^n)\\) and the mapping \\(A \to A^{-1}\\) is continuous on \\(\Omega\\).
+
+
+### Differentiation {#differentiation}
+
+**Theorem**
+
+Suppose \\(\bm{f}\\) maps a convex open set \\(E \subset R^n\\) into \\(R^m\\), \\(\bm{f}\\) is differentiable in \\(E\\), and there is a real number \\(M\\) such that:
+
+\\[
+\norm{\bm{f}'(\bm{x})} \leq M
+\\]
+
+for every \\(\bm{X} \in E\\). Then:
+
+\\[
+\vert \bm{f(b) - f(a)} \vert \leq  M \vert \bm{b - a} \vert
+\\]
+
+for all \\(a,b \in E\\).
+
+**Corollary**
+
+If \\(\bm{f'(x) = 0}\\) for all \\(x \in E\\), then \\(\bm{f}\\) is constant.
+
+**Definition**
+
+A differentiable mapping \\(\bm{f}\\) of an open set \\(E \subset R^n\\) into \\(R^m\\) is said to be **continuously differentiable** in \\(E\\) if \\(\bm{f'}\\) is a continuous mapping of \\(E\\) into \\(L(R^n,R^m)\\).
+
+We also say that \\(\bm{f} \in \mathcal{C}'(E)\\) or it is a $\mathcal{C}'$-mapping.
+
+**Theorem**
+
+Suppose \\(\bm{f}\\) maps an open set \\(E \subset R^n\\) into \\(R^m\\). Then \\(\bm{f}\in\mathcal{C}'(E)\\) iff all the partial derivatives of \\(f\\) exist and are continuous on \\(E\\).
+
+
+### Contraction {#contraction}
+
+**Definition**
+
+Let \\(X\\) be a metric space. If \\(\phi\\) maps \\(X \to X\\), and if there is a number \\(c < 1\\), such that:
+
+\\[
+d(\phi(x),\phi(y)) \leq c d(x,y)
+\\]
+
+for all \\(x,y\in X\\), then \\(\phi\\) is a a contraction of \\(X\\) into \\(X\\).
+
+**Theorem**
+
+If \\(X\\) is a complete metric space, then there exists only one \\(x \in X\\) such that \\(\phi(x) = x\\)
+
+
+### Inverse function theorem {#inverse-function-theorem}
+
+**Theorem**
+
+Suppose \\(\bm{f}\\) is a \\(\mathcal{C}'\\) -mapping of an open set \\(E \subset R^n \to R^n\\), \\(\bm{f'(a)}\\) is invertible for some \\(\bm{a} \in E\\) and \\(\bm{b = f(a)}\\). Then:
+
+1.  There exists open sets \\(U,V \subset R^n\\) such that \\(\bm{a} \in U, \bm{b} \in V\\), \\(\bm{f}\\) is one-to-one on \\(U\\), and \\(f(U) = V\\).
+2.  If \\(\bm{g}\\) is the inverse of \\(\bm{f}\\) (which exists by (1)), defined in \\(V\\), then \\(\bm{g} \in \mathcal{C}'(V)\\)
+
+As a consequence of (1),
+
+**Theorem**
+
+IF \\(\bm{f}\\) is a \\(\mathcal{C}'\\) -mapping of an open set \\(E \subset R^n \to R^n\\), \\(\bm{f'(a)}\\) is invertible for some \\(\bm{a} \in E\\), then \\(\bm{f}(W)\\) is an open subset of \\(R^n\\) for every open set \\(W \subset E\\). i.e. \\(\bm{f}\\) is an open mapping of \\(E\\) into \\(R^n\\).
