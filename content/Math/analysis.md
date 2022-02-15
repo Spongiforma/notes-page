@@ -769,3 +769,133 @@ Then there are open sets \\(U,V \in R^n\\), with \\(\bm{a} \in U \subset E\\) an
 \\]
 
 for all \\(x\in V\\), where \\(\phi\\) is a \\(\mathcal{C}'\\) - mapping of the open set \\(A(V) \subset Y\_1\\) into \\(Y\_2\\).
+
+**Theorem**
+
+When \\(f \in \mathcal{C}''(E)\\)
+
+\\[
+D\_{21} f = D\_{12} f
+\\]
+
+
+### Differentiation of Integrals {#differentiation-of-integrals}
+
+**Theorem**
+
+To insert an derivative into an integral, note that the integrand has to continuous wrt the differentiation variable.
+
+
+## Integration of differential forms {#integration-of-differential-forms}
+
+**Theorem**
+
+For every \\(f\in\mathcal{C}(I\_k)\\), \\(L(f) = L'(f)\\).
+
+**Definition**
+
+The support of a complex function on \\(R^k\\) is the closure of the set of all points \\(\bm{x} \in R^k\\) at which \\(f(\bm{x})\neq 0\\).
+
+
+### Primitive mappings {#primitive-mappings}
+
+**Definition**
+
+If \\(\bm{G}\\) maps on a open set \\(E \subset R^n \to R^n\\), and if there is an integer \\(m\\) and a real function \\(g\\) with domain \\(E\\) such that \\(G(x) = \sum\_{i\neq m} x\_i \bm{e}\_i + g(\bm{x})\bm{e}\_m\\), then \\(\bm{G}\\) is primitive. (i.e. it changes at most one coordinate)
+
+The jacobian of \\(\bm{G}\\) at \\(\bm{a}\\) is given by \\(J\_{\bm{G}} (\bm{a}) = \det \bm{G}'(\bm{a}) = (D\_m g)(\bm{a})\\).
+
+**Definition**
+
+A linear operator that interchanges some members of the standard basis is called a **flip**.
+
+**Theorem**
+
+Suppose \\(\bm{F}\\) is a \\(\mathcal{C}'\\) mapping of an open set \\(\E \subset R^n \to R^n\\), \\(\bm{0} \in E\\), \\(\bm{F(0)=0}\\), and \\(\bm{F'(0)}\\) is invertible. Then there is a neighbourhood of \\(\bm{0}\\) in \\(R^n\\) in which a representation:
+
+\\[
+\bm{F(x)} = B\_1\ldots B\_{n-1} G\_n \circ\ldots\circ G\_1 (x)
+\\]
+
+is valid.
+
+Each \\(\bm{G}\_i\\) is a primitive \\(\mathcal{C}'\\) is a primitive \\(\mathcal{C}'\\) -mapping in some neighborhood of \\(\bm{0}\\) ; \\(\bm{G\_i(0)=0}\\), \\(\bm{G\_i'(0)}\\) is invertible and each \\(B\_i\\) is either a flip or identity operator.
+
+
+### Partitions of unity {#partitions-of-unity}
+
+**Theorem**
+
+Suppose \\(K\\) is a compact subset of \\(R^n\\) and \\(\\{V\_\alpha\\}\\) is an open cover of \\(K\\). Then there exists functions \\(\psi\_1,\ldots,\psi\_s \in \mathcal{C}'(R^n)\\) such that:
+
+1.  \\(0 \leq \psi\_i \leq 1\\)
+2.  each \\(\psi\_i\\) has its support in some \\(V\_\alpha\\), and
+3.  \\(\sum\_i \psi\_i(\bm{x}) = 1\\) for every \\(\bm{x} \in K\\)
+
+Thus, \\(\\{\psi\_i\\}\\) is called a **parition of unity** and (b) is expressed by saying that \\(\\{\psi\_i\\}\\) is **subordinate** to the cover \\(\\{V\_\alpha\\}\\).
+
+
+### Differential forms {#differential-forms}
+
+**Definition**
+
+To say that \\(\bm{f}\\) is a \\(\mathcal{C}'\\) -mapping of a compact set \\(D \subset R^k\\) into \\(R^n\\) means that there is a \\(\mathcal{C}'\\) mapping \\(g\\) of an open set \\(W \subset R^k, D\subset W\\) into \\(R^n\\) such that \\(\bm{g(x)= f(x)}\\) for all \\(\bm{x} \in D\\).
+
+**Definition**
+
+Suppose \\(E\\) is an open set in \\(R^n\\). A **k-surface** in \\(E\\) is a \\(\mathcal{C}'\\) mapping \\(\Phi\\) from a compact set \\(D \subset R^k\\) into \\(E\\).  \\(D\\) is called the **parameter domain** of \\(\Phi\\). (Points of \\(D\\) will be denoted by \\(\bm{u}\\)).
+
+For example, 1-surfaces are the same as continuously differentiable curves.
+
+**Definition**
+
+Suppose \\(E\\) is an open set in \\(R^n\\). A differential form of order \\(k \geq 1\\) in \\(E\\) (a k-form in E) is a function \\(\omega\\):
+
+\\[
+\omega = \sum a\_{i\_1 \ldots i\_k}(\bm{x}) \dd{x\_{i\_1}} \wedge \ldots \wedge \dd{x\_{i\_k}}
+\\]
+
+which assigns to each k-surface \\(\phi\\) in E a number \\(\omega(\Phi) = \int\_\Phi \omega\\), according to the rule:
+
+\\[
+\int\_\Phi \omega = \int\_D \sum a\_{i\_1 \ldots i\_k}(\Phi(\bm{u})) \frac{\partial(x\_i\_1,\ldots,x\_i\_k)}{\partial(u\_1,\ldots,u\_k)}  \dd{\bm{u}}
+\\]
+
+
+#### Examples {#examples}
+
+A k-form is said to be of class \\(\mathcal{C}'\\) or \\(\mathcal{C}''\\) if the functions \\(a\_{i\_k\ldots i\_k}\\) are all of class \\(\mathcal{C}'\\) or \\(\mathcal{C}''\\).
+
+A 0-form in \\(E\\) is defined to be continuous function in \\(E\\).
+
+Integrals of 1-forms are called line integrals.
+
+
+#### Standard presentation {#standard-presentation}
+
+\\[
+\omega = \sum\_j b\_{I}(\bm{x}) \dd{x\_I}
+\\]
+
+where the \\(I\\) is a set of increasing k-indices.
+
+**Theorem**
+
+If \\(\omega = 0\\) in \\(E\\), then \\(b\_{I}(\bm{x}) = 0\\) for every increasing k-inex \\(I\\) for every \\(\bm{x} \in E\\)
+
+
+#### Product of forms {#product-of-forms}
+
+\\[
+\dd{x\_I} \wedge \dd{X\_J} = (-1)^\alpha \dd{x\_{[I,J]}}
+\\]
+
+where \\(\alpha\\) is the number of differences \\(j\_t - i\_s\\) that are _negative_.
+
+**Theorem**
+
+1.  If \\(\omega\\) and \\(\lambda\\) are k- and m- forms respectively, of class \\(\mathcal{C}'\\) in E, then:
+
+\\[
+d(\omega \wedge \lambda) = \dd{\omega} \wedge \lambda + (-1)^k \omega \wedge \dd{\lambda}
+\\]
