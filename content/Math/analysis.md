@@ -899,3 +899,88 @@ where \\(\alpha\\) is the number of differences \\(j\_t - i\_s\\) that are _nega
 \\[
 d(\omega \wedge \lambda) = \dd{\omega} \wedge \lambda + (-1)^k \omega \wedge \dd{\lambda}
 \\]
+
+
+#### Change of variables {#change-of-variables}
+
+Suppose \\(E\\) is an open set in \\(R^n\\), T is an \\(\mathcal{C}'\\) mapping of E into an open set \\(V \subset R^m\\), and \\(\omega\\) is a k-form in \\(V\\), whose standard presentation is:
+
+\\[
+\omega = \sum\_I b\_I(y) \dd{y}\_I
+\\]
+Let \\(t\_1,\ldots,t\_m\\) be the components of \\(T\\); If:
+
+\\[
+\bm{y} = (y\_1,\ldots,y\_m) = T(\bm{x})
+\\]
+
+then \\(y\_i = t\_i(\bm{x})\\).
+
+\\[
+\dd{t\_i} = \sum\_{j=1}^n (D\_j t\_i)(\bm{x})\dd{x\_j}
+\\]
+
+Thus each \\(\dd{t\_i}\\) is a 1-form in \\(E\\).
+
+The mapping \\(T\\) transforms \\(\omega\\) into a k-form \\(\omega\_T\\) in \\(E\\), whose definition is:
+
+\\[
+\omega\_T = \sum\_I b\_I(T(\bm{x})) \dd{t\_{i\_1}} \wedge \ldots\wedge \dd{t\_{i\_k}}
+\\]
+
+**Theorem**
+
+Let \\(\omega,\lambda\\) be k- and m-forms respectively.
+
+1.  \\((\omega + \lambda)\_T = \omega\_T + \lambda\_T\\) if \\(k=m\\)
+2.  \\((\omega \wedge \lambda)\_T = \omega\_T \wedge \lambda\_T\\)
+3.  \\(\dd{\omega\_T} = (\dd{\omega})\_T\\) if \\(\omega\\) is of class \\(\mathcal{C}'\\) and \\(T\\) is of class \\(\mathcal{C}''\\).
+
+**Theorem**
+
+Suppose \\(\omega\\) is a k-form in an open set \\(E \subset R^n\\), \\(\Phi\\) is a k-surface in \\(E\\), with parameter domain \\(D \subset R^k\\), and \\(\Delta\\) is the k-surface in \\(R^k\\), with paramter domain \\(D\\), definde by \\(\Delta(\bm{u}) = \bm{u}(u\in D)\\). Then:
+
+\\[
+\int\_\Phi \omega = \int\_\Delta \omega\_\Phi
+\\]
+
+Proof by using jacobian.
+
+**Theorem**
+
+Suppose \\(T\\) is a \\(\mathcal{C}'\\) mapping of an open set \\(E \subset R^n\\) into an open set \\(V \subset R^m\\), \\(\Phi\\) is a k-surface in \\(E\\), and \\(\omega\\) is a k-form in \\(V\\). Then:
+
+\\[
+\int\_{T\Phi} \omega = \int\_\Phi \omega\_T
+\\]
+
+Proof by using the previous theorems
+
+
+#### Simplex and chains {#simplex-and-chains}
+
+**Definition (Affine simplexes)**
+
+A mapping \\(\bm{f}\\) that carries a vector space \\(X\\) into a vector space \\(Y\\) is said to be **affine** if \\(\bm{f} - \bm{f(0)}\\) is linear. i.e.
+
+\\[
+\bm{f(x) = f(0)} + A \bm{x}
+\\]
+
+for some \\(A \in L(X,Y)\\).
+
+We define the **standard simplex** \\(Q^k\\) to be the set of all \\(\bm{u} \in R^k\\) of the form:
+
+\\[
+\bm{u} = \sum\_{i=1}^k \alpha\_i \bm{e}\_i
+\\]
+
+such that \\(\alpha\_i \geq 0\\) and \\(\sum\alpha\_i \leq 1\\).
+
+The **oriented affine k-simplex**:
+
+\\[
+\sigma = [\bm{p\_0,p\_1,\ldots,p\_k}]
+\\]
+
+is defined to be the k-surface in \\(R^n\\) with parameter domain \\(Q^k\\) which is given by t
