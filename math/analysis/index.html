@@ -44,7 +44,7 @@ Theorem If \(x \in R\), \(y \in R\), and \(x &gt; 0\), then there&rsquo;s a posi
 Theorem
 For every positive real x and every positive integer n, there is only one positive real y such that \(y^n = x\)">
 
-<meta itemprop="wordCount" content="4330"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="4677"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -628,6 +628,60 @@ D_{21} f = D_{12} f
 <p>\[
 d(\omega \wedge \lambda) = \dd{\omega} \wedge \lambda + (-1)^k \omega \wedge \dd{\lambda}
 \]</p>
+<h4 id="change-of-variables">Change of variables</h4>
+<p>Suppose \(E\) is an open set in \(R^n\), T is an \(\mathcal{C}'\) mapping of E into an open set \(V \subset R^m\), and \(\omega\) is a k-form in \(V\), whose standard presentation is:</p>
+<p>\[
+\omega = \sum_I b_I(y) \dd{y}_I
+\]
+Let \(t_1,\ldots,t_m\) be the components of \(T\); If:</p>
+<p>\[
+\bm{y} = (y_1,\ldots,y_m) = T(\bm{x})
+\]</p>
+<p>then \(y_i = t_i(\bm{x})\).</p>
+<p>\[
+\dd{t_i} = \sum_{j=1}^n (D_j t_i)(\bm{x})\dd{x_j}
+\]</p>
+<p>Thus each \(\dd{t_i}\) is a 1-form in \(E\).</p>
+<p>The mapping \(T\) transforms \(\omega\) into a k-form \(\omega_T\) in \(E\), whose definition is:</p>
+<p>\[
+\omega_T = \sum_I b_I(T(\bm{x})) \dd{t_{i_1}} \wedge \ldots\wedge \dd{t_{i_k}}
+\]</p>
+<p><strong>Theorem</strong></p>
+<p>Let \(\omega,\lambda\) be k- and m-forms respectively.</p>
+<ol>
+<li>\((\omega + \lambda)_T = \omega_T + \lambda_T\) if \(k=m\)</li>
+<li>\((\omega \wedge \lambda)_T = \omega_T \wedge \lambda_T\)</li>
+<li>\(\dd{\omega_T} = (\dd{\omega})_T\) if \(\omega\) is of class \(\mathcal{C}'\) and \(T\) is of class \(\mathcal{C}''\).</li>
+</ol>
+<p><strong>Theorem</strong></p>
+<p>Suppose \(\omega\) is a k-form in an open set \(E \subset R^n\), \(\Phi\) is a k-surface in \(E\), with parameter domain \(D \subset R^k\), and \(\Delta\) is the k-surface in \(R^k\), with paramter domain \(D\), definde by \(\Delta(\bm{u}) = \bm{u}(u\in D)\). Then:</p>
+<p>\[
+\int_\Phi \omega = \int_\Delta \omega_\Phi
+\]</p>
+<p>Proof by using jacobian.</p>
+<p><strong>Theorem</strong></p>
+<p>Suppose \(T\) is a \(\mathcal{C}'\) mapping of an open set \(E \subset R^n\) into an open set \(V \subset R^m\), \(\Phi\) is a k-surface in \(E\), and \(\omega\) is a k-form in \(V\). Then:</p>
+<p>\[
+\int_{T\Phi} \omega = \int_\Phi \omega_T
+\]</p>
+<p>Proof by using the previous theorems</p>
+<h4 id="simplex-and-chains">Simplex and chains</h4>
+<p><strong>Definition (Affine simplexes)</strong></p>
+<p>A mapping \(\bm{f}\) that carries a vector space \(X\) into a vector space \(Y\) is said to be <strong>affine</strong> if \(\bm{f} - \bm{f(0)}\) is linear. i.e.</p>
+<p>\[
+\bm{f(x) = f(0)} + A \bm{x}
+\]</p>
+<p>for some \(A \in L(X,Y)\).</p>
+<p>We define the <strong>standard simplex</strong> \(Q^k\) to be the set of all \(\bm{u} \in R^k\) of the form:</p>
+<p>\[
+\bm{u} = \sum_{i=1}^k \alpha_i \bm{e}_i
+\]</p>
+<p>such that \(\alpha_i \geq 0\) and \(\sum\alpha_i \leq 1\).</p>
+<p>The <strong>oriented affine k-simplex</strong>:</p>
+<p>\[
+\sigma = [\bm{p_0,p_1,\ldots,p_k}]
+\]</p>
+<p>is defined to be the k-surface in \(R^n\) with parameter domain \(Q^k\) which is given by t</p>
 <div class="edit-meta">
 
 <br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Math/analysis.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../math/abstractalgebra/" title="Algebra"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Algebra</a>
@@ -782,6 +836,8 @@ d(\omega \wedge \lambda) = \dd{\omega} \wedge \lambda + (-1)^k \omega \wedge \dd
             <li><a href="#examples">Examples</a></li>
             <li><a href="#standard-presentation">Standard presentation</a></li>
             <li><a href="#product-of-forms">Product of forms</a></li>
+            <li><a href="#change-of-variables">Change of variables</a></li>
+            <li><a href="#simplex-and-chains">Simplex and chains</a></li>
           </ul>
         </li>
       </ul>
