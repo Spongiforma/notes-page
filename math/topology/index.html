@@ -44,7 +44,7 @@ Relations Equivalence relations If there is a equivalence relation C on A it has
  Reflexivity: xCx for every x in A. Symmetry: if xCy, then yCx. Transitivity: if xCy and yCz, then xCz.  A equivalence class determined by x is given by:
 \[ E = \{y \vert y \sim x\} \]">
 
-<meta itemprop="wordCount" content="4607"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="5990"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -530,6 +530,117 @@ X^* = \{g^{-1}(\{z\}) \vert z \in Z\}
 <p>The product of finitely many compact spaces is compact.</p>
 <p><strong>Lemma (The tube lemma)</strong></p>
 <p>Consider the product space \(X \times Y\), where Y is compact. If N is an open set of \(X \times Y\) containing the slice \(x_0 \times Y\) of \(X \times Y\), then N contains some tube \(W \times Y\) about \(x_0 \times Y\), where \(W\) is a neighbourhood of \(x_0\) in X.</p>
+<p>For infinite products, we require the Tychanoff theorem.</p>
+<h4 id="finite-intersection">Finite intersection</h4>
+<p>Following is another formulation of compactness.</p>
+<p><strong>Definition</strong></p>
+<p>A collection \(\mathcal{C}\) of subsets of X is said to have the <strong>finite intersection property</strong> if for every finite subcollection, its intersection is nonempty.</p>
+<p><strong>Theorem</strong></p>
+<p>Let X be a topological space. Then X is compact iff for every collection of closed sets in X having the finite intersection property, the intersection of all its elements is nonempty.</p>
+<h3 id="compact-subspaces-of-the-real-line">Compact subspaces of the real line</h3>
+<p><strong>Theorem</strong></p>
+<p>Let X be a simply ordered set having the least upper bound property. In the order topology, each closed interval in X is compact.</p>
+<p><strong>Corollary</strong></p>
+<p>Every closed interval in \(\mathbb{R}\) is compact</p>
+<p><strong>Theorem</strong></p>
+<p>A subspace A of \(R^n\) is compact iff it is closed and bounded in the euclidean or square metric.</p>
+<p><strong>Theorem (EVT)</strong></p>
+<p>Let \(f : X \to Y\) be continuous, where Y is an ordered set in the order topology. If X is compact, then there exist points c and d in X such that \(f( c) \leq f(x) \leq f(d)\) for every \(x \in X\).</p>
+<h4 id="uniform-continuity-theorem">Uniform continuity theorem</h4>
+<p><strong>Definition</strong></p>
+<p>Let (X,d) be a metric space. let A be a nonempty subst of X. For each \(x \in X\), we define the distance from x to A by the equation:</p>
+<p>\[
+d(x,A) = \inf \{d(x,a) \vert a \in A\}
+\]</p>
+<p><strong>Lemma (The Lebesgue number lemma)</strong></p>
+<p>Let \(\mathcal{A}\) be an open covering of the metric space (X,d). If X is compact, there is a \(\delta &gt; 0\) such that for each subset of X having diameter less that \(\delta\), there exists an element of \(\mathcal{A}\) containing it.</p>
+<p>\(\delta\) is known as the <strong>Lebesgue number</strong>.</p>
+<p><strong>Definition</strong></p>
+<p>A function f fomr the metric space \((X,d_X)\) to the metric space \((Y,d_Y)\) is said to be <strong>uniformly continuous</strong> if given \(\epsilon &gt; 0\), there is a \(\delta &gt; 0\) such that for every pair of points \(x_0,x_1\) of X.</p>
+<p><strong>Theorem (Uniform continuity theorem)</strong></p>
+<p>Let \(f : X \to Y\) be a continuous map of the compact metric space (X,dx) to the metric space (Y,dy). Then f is uniformly continuous.</p>
+<h4 id="uncountability-of-real-numbers">Uncountability of real numbers</h4>
+<p><strong>Definition</strong></p>
+<p>A point x of a space X is said to be an <strong>isolated point</strong> of X if the one-point set \(\{x\}\) is open in X.</p>
+<p><strong>Theorem</strong></p>
+<p>Let X be a nonempty compact Hausdorff space. If X has no isolated points, then X is uncountable.</p>
+<p><strong>Corollary</strong></p>
+<p>Every closed interval in \(\mathbb{R}\) is uncountable.</p>
+<h3 id="limit-point-compactness">Limit point compactness</h3>
+<p>Also known as <strong>Frechet compactness</strong>, or <strong>Bolzano-Weierstrass property</strong>, and was the former definition of compactness whereas the covering formulation was called &ldquo;bicompactness&rdquo;.</p>
+<p><strong>Theorem</strong></p>
+<p>Compactness implies limit point compactness, but not conversely.</p>
+<p><strong>Definition</strong></p>
+<p>Let X be a topological space. It is <strong>sequentially compact</strong> if every sequence of points of X has a convergent subsequence.</p>
+<p>But metrizable spaces are very nice so:</p>
+<p><strong>Theorem</strong></p>
+<p>Let \(X\) be a metrizable space. Then the three defintions of compactness are equivalent.</p>
+<h3 id="local-compactness">Local compactness</h3>
+<p>We wish to prove the basic theorem that any locally compact Hausdorff space can be imbedded in a certain compact Hausdorff space that is called its <strong>one-point compactification.</strong></p>
+<p><strong>Definition</strong></p>
+<p>A space X is said to be <strong>locally compact at x</strong> if there is some compact subspace C of X that contains a neighbourhood of x.</p>
+<p>Metrizable spaces and compact Hausdorff spaces are very well behaved. A subspace of a metrizable space is also metrizable but the subspace of a compact Hausdorff space need not be compact.</p>
+<p><strong>Theorem</strong></p>
+<p>Let X be a space. Then X is locally compact hausdorff iff there exists a space Y satisfying the following conditions:</p>
+<ol>
+<li>X is a subspace of Y.</li>
+<li>The set Y - X consists of a single point.</li>
+<li>Y is a compact Hausdorff space.</li>
+</ol>
+<p>If there are two spaces satisfying these conditions, then there is a homeomorphism between them that equals the identity map on X.</p>
+<p><strong>Definition</strong></p>
+<p>If Y is a compact Hausdorff space and X is a proper subspace of Y whose closure equals Y, then Y is said to be a <strong>compactification</strong> of X. If Y-X equals a single point, then Y is called the <strong>one-point compactification</strong> of X.</p>
+<p>But our definition of local compactness does not involve arbitrarily small neighbourhoods like the other definitions. Thus, here is a definition which is equivalent when X is Hausdorff.</p>
+<p><strong>Theorem</strong></p>
+<p>Let X be a Hausdorff space. Then X is locally compact iff given x in X, and given a neighborhood U of x, there is a neighbourhood V of x such that \(\bar{V}\) is compact and \(\bar{V}\subset U\).</p>
+<p><strong>Corollary</strong></p>
+<p>Let X be locally compact Hausdorff; Let A be a subspace of X. If A is closed/open in X, then A is locally compact.</p>
+<p>If A is closed, we don&rsquo;t need the Hausdorff condition.</p>
+<p><strong>Corollary</strong></p>
+<p>A space X is homeomorphic to an open subspace of a compact Hausdorff space iff X is locally compact Hausdorff.</p>
+<p>This follows from the previous corollary and the second last theorem.</p>
+<h2 id="countability-and-seperation-axioms">Countability and Seperation axioms</h2>
+<p>We wish to prove the Urysohn metrization theorem, which says that if a topological space satisfies a certain countability axiom (the second) and a certain seperation axiom (the regularity axiom), then X can be imbedded in a metric space and is thus metrizable.</p>
+<p>Another imbedding theorem useful in geometry is that given a space that is a compact manifold, we show that it can be imbedded in some finite dimensional euclidean space.</p>
+<h3 id="countability-axioms">Countability Axioms</h3>
+<p><strong>Definition</strong></p>
+<p>A space X is said to have a <strong>countable basis at x</strong> if there is a countable collection \(\mathcal{B}\) of neighbourhoods of x such that each neighbourhood of x contains at least one of the elements of \(\mathcal{B}\). A space that has a countable basis at each of its points is said to satisfy the <strong>first countability axiom</strong>, or be <strong>first-countable</strong>.</p>
+<p><strong>Theorem</strong></p>
+<p>Let X be a topological space.</p>
+<ol>
+<li>Let A be a subset of X. If there is a sequence of points A converging to x, then \(x\in \bar{A}\). The converse holds if X is first-countable.</li>
+<li>Let \(f: X \to Y\). If f is continuous, then for every convergent sequence \(x_n \to x\) in X, the sequence \(\{x_n\}\) converges to \(f(x)\). The converse holds if X is first-countable.</li>
+</ol>
+<p><strong>Definition</strong></p>
+<p>If a space X has a countable basis for its topology, then X is said to satisfy the <strong>second countability axiom</strong>, or to be <strong>second-countable</strong>.</p>
+<p>This axiom implies the first, and is usually satisfied by familiar spaces.</p>
+<p><strong>Theorem</strong></p>
+<p>A subspace of a first-countable space is first-countable, and a countable product of first-countable spaces if first-countable. A subspace of a second-countable space is second-countable, and a countable product of second-countable spaces is second-countable.</p>
+<p><strong>Definition</strong></p>
+<p>A subset A of X is said to be <strong>dense</strong> in X if \(\bar{A} = X\).</p>
+<p><strong>Theorem</strong></p>
+<p>Suppose X has a countable basis. Then:</p>
+<ol>
+<li>Every open covering of X contains a countable subcollection covering X. (<strong>Lindelof space</strong>)</li>
+<li>There exists a countable subset of X that is dense in X. (<strong>seperable</strong>)</li>
+</ol>
+<h3 id="seperation-axioms">Seperation axioms</h3>
+<p>We will introduce seperation axioms stronger than Hausdorff.</p>
+<p><strong>Definition</strong></p>
+<p>Suppose that one-point sets are closed in X. Then X is said to be <strong>regular</strong> if for each pair consisting of a point x and a closed set B disjoint from X, there exist disjoint open sets containing x and B, respectively. The space X is said to be <strong>normal</strong> if for each pair A,B of disjoint closed sets of X, there exist disjoint open sets containing A and B, respectively.</p>
+<p>A regualar space is Hausdorff and a normal space is regular (Though we need to include the condition that one-point sets be closed. See the two-point space in the indiscrete topology satisfies the other parts of the definitions of regularity and normality without being Hausdorff).</p>
+<p><strong>Lemma</strong></p>
+<p>Let X be a topological space. Let one-point sets in X be closed.</p>
+<ol>
+<li>X is regular iff given a point x of X and a neighbourhood U of x, there is a neighbourhood V of x such that \(\bar{V}\subset U\).</li>
+<li>X is normal iff given a closed se A and an open set U containing A, there is an open set V containing A such that \(\bar{V} \subset U\).</li>
+</ol>
+<p><strong>Theorem</strong></p>
+<ol>
+<li>A subspace of a Hausdorff space is Hausdorff; a product of Hausdorff spaces is Hausdorff.</li>
+<li>A subspace of a regular space is regular; a product of regular spaces is regular</li>
+</ol>
+<p>But there is no analagous theorem for normal spaces</p>
 <div class="edit-meta">
 
 <br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Math/topology.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../math/tensors/" title="Tensors"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Tensors</a>
@@ -670,7 +781,25 @@ X^* = \{g^{-1}(\{z\}) \vert z \in Z\}
         <li><a href="#connected-subspaces-of-the-real-line">Connected subspaces of the real line</a></li>
         <li><a href="#path-connectedness">Path connectedness</a></li>
         <li><a href="#components-and-local-connectedness">Components and local connectedness</a></li>
-        <li><a href="#compact-spaces">Compact spaces</a></li>
+        <li><a href="#compact-spaces">Compact spaces</a>
+          <ul>
+            <li><a href="#finite-intersection">Finite intersection</a></li>
+          </ul>
+        </li>
+        <li><a href="#compact-subspaces-of-the-real-line">Compact subspaces of the real line</a>
+          <ul>
+            <li><a href="#uniform-continuity-theorem">Uniform continuity theorem</a></li>
+            <li><a href="#uncountability-of-real-numbers">Uncountability of real numbers</a></li>
+          </ul>
+        </li>
+        <li><a href="#limit-point-compactness">Limit point compactness</a></li>
+        <li><a href="#local-compactness">Local compactness</a></li>
+      </ul>
+    </li>
+    <li><a href="#countability-and-seperation-axioms">Countability and Seperation axioms</a>
+      <ul>
+        <li><a href="#countability-axioms">Countability Axioms</a></li>
+        <li><a href="#seperation-axioms">Seperation axioms</a></li>
       </ul>
     </li>
   </ul>
