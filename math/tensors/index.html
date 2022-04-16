@@ -47,7 +47,7 @@ As components change inversely with the basis vectors. Thus a linear operator \(
 For rigid body rotations, the transformation matrix \(L\) is orthogonal (since it must preserve inner products).
 The transformation matrix is given by \(L_{ij} = \bm{e}_i&#39;\cdot\bm{e}_j = \partial{x_j}/\partial{x_i&#39;}\).">
 
-<meta itemprop="wordCount" content="583"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="1554"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -170,7 +170,7 @@ T_{ij} = \pdv{v_i}{x_j}
 \]</p>
 <h4 id="levi-civita-symbol">Levi-Civita symbol</h4>
 <p>\(\epsilon_{ijk}\) is totally antisymmetric (swapping indices turns it negative), and is the only three-subscript quantity with the property.</p>
-<p>It can be turned into a Laplace (cofactor) expansion for finding the determinant of a 3x3 matrix by choosing l,m,n.</p>
+<p>It can be turned into a Laplace (cofactor) expansion for finding the determinant of a 3x3 matrix by choosing l,m,n. (Sarrus' law)</p>
 <p>\[
 \vert A \vert \epsilon_{lmn} = A_{li}A_{mj}A_{nk}\epsilon_{ijk}
 \]</p>
@@ -178,7 +178,11 @@ T_{ij} = \pdv{v_i}{x_j}
 <p>\[
 \epsilon_{lmn}' = L_{li}L_{mj}L_{nk}\epsilon_{ijk} = |L|\epsilon_{lmn}
 \]</p>
-<p>Since \(|L|\) is unity as \(L\) is orthogonal, is a third order Cartesian tensor.</p>
+<p>Since \(|L|\) is unity as \(L\) is orthogonal,it is a third order Cartesian tensor.</p>
+<p>Upon contraction:</p>
+<p>\[
+\epsilon_{ijk}\epsilon_{ijk} = 6
+\]</p>
 <p>Cross product \(\bm{a} = \bm{b}\times\bm{c}\), can be represented as:</p>
 <p>\[
 a_i = \epsilon_{ijk}b_jc_k
@@ -237,9 +241,167 @@ a_i = \epsilon_{ijk}b_jc_k
 </ul>
 <h3 id="isotropic-tensors">Isotropic tensors</h3>
 <p>Tensors whose component values are independent of coordinate frames are called isotropic (or invariant) tensors. Kronecker delta and Levi-civita (and scalar multiples) are the only second and third order isotropic tensors.</p>
+<h3 id="operations">Operations</h3>
+<h4 id="contraction">Contraction</h4>
+<p>You set two indices to be the same.</p>
+<h4 id="quotient-law">Quotient law</h4>
+<p>It can be shown that if:</p>
+<p>\[
+A_{ij..k..m}B_{np..k..t} = C_{ij..mnp..t}
+\]</p>
+<p>and B and C are tensors, then A is also a tensor.</p>
+<h3 id="parity">Parity</h3>
+<p>If we include improper rotations, \(|L| = -1\), which is equivalent to shifting from a right-handed to left-handed coordinate system under a passive transformation, we must distinguish pseudotensors, which change parity under improper rotations, and tensors which always maintain parity under all rotations.</p>
+<p>When looking at active transforms, then you have axial (maintain direction under inversion of coordinate system) and polar vectors (which don&rsquo;t).</p>
+<p>No physical quantity can be described with pseudotensors.</p>
+<p>The levi-civita tensor is an example of a pseudotensor.</p>
+<h3 id="dual-tensors">Dual tensors</h3>
+<p>Pseudotensors have their uses.</p>
+<p>We may associate every <em>antisymmetric</em> second-order tensor \(A_{ij}\) with a pseudovector \(p_i\) given by:</p>
+<p>\[
+p_i = \frac12 \epsilon_{ijk}A_{jk}
+\]</p>
+<p>For example,</p>
+<p>The dual of the antisymmetric tensor \(A\):</p>
+<p>\[
+\text{A} = [A_{ij}] = \mqty( 0 &amp; A_{12} &amp; -A_{31} \\ -A_{12} &amp; 0 &amp; A_{23} \\ A_{31} &amp; -A_{23} &amp; 0)
+\]</p>
+<p>is \((A_{23},A_{31},A_{12})\).</p>
+<p>Notice that the following identity holds:</p>
+<p>\[
+A_{ij} = \epsilon_{ijk}p_k
+\]</p>
+<h4 id="third-rank">Third rank</h4>
+<p>We may extend this to associate a dual pseudoscalar \(s\) with every totally antisymmetric third-rank tensor \(A_{ijk}\). \(s\) is given by:</p>
+<p>\[
+s = \frac{1}{3!}\epsilon_{ijk}A_{ijk}
+\]</p>
+<p>Similarly,</p>
+<p>\[
+A_{ijk} = s \epsilon_{ijk}
+\]</p>
+<h3 id="integral-theorems">Integral theorems</h3>
+<p>The usual integral theorems can be extended trivially to tensor fields</p>
+<h2 id="non-cartesian-coordinates">Non-Cartesian coordinates</h2>
+<p>A position of a point in space may be expressed in terms of three curvilinear coordinates \(u_1,u_2,u_3\). if \(\bm{r}(u_1,u_2,u_3)\) is the position vector of the point P then at P there exist two sets of basis vectors.</p>
+<p>\[
+\bm{e}_i = \pdv{\bm{r}}{u_i}
+\]</p>
+<p>and</p>
+<p>\[
+\bm{\epsilon}_i = \grad u_i
+\]</p>
+<p>these sets are reciprocal systems of vectors so:</p>
+<p>\[
+\bm{e}_i \cdot \bm{\epsilon}_j = \delta_{ij}
+\]</p>
+<p>Introducing superscripts, this can be written:</p>
+<p>\[
+\bm{e}_i \cdot \bm{e}^j = \delta_i^j
+\]</p>
+<p>When we write a general vector \(\bm{a}\) in terms of either basis:</p>
+<p>\[
+\bm{a} =  a^i\bm{e}_i = a_i\bm{e}^i
+\]</p>
+<p>\(a^i\) are called the <strong>contravariant</strong> components and \(a_i\) the <strong>covariant</strong> components.</p>
+<p>For Cartesian coordinates, two two sets are identical.</p>
+<h3 id="metric-tensor">Metric tensor</h3>
+<p>Any particularly curvilinear coordinate system is completely characterized by the nine quantities:</p>
+<p>\[
+g_{ij} = \bm{e}_i \cdot \bm{e}_j
+\]</p>
+<p>which are the covariant components of a symmetric second-order tensor called the metric tensor.</p>
+<p>\[
+(\dd{s})^2 = g_{ij}\dd{u}^i\dd{u}^j
+\]</p>
+<p>\[
+\dd{V} = \sqrt{g}\dd{u}^1\dd{u}^2\dd{u}^3
+\]</p>
+<p>where g is the determinant of the tensor \([g_{ij}]\).</p>
+<p>The metric tensor is diagonal for orthogonal coordinate systems, with the diagonal elements being equal to the squares of the scale factors of the coordinate system.</p>
+<p>The metric tensor can be used to lower or raise an index:</p>
+<p>\[
+g_{ij}b^j = b_i
+\]</p>
+<p>\[
+g^{ij}b_j = b^i
+\]</p>
+<p>It may also be shown that:</p>
+<p>\[
+\vert\bm{e}_1 \cdot (\bm{e}_2 \times \bm{e}_3)\vert = \sqrt{g}
+\]</p>
+<p>\[
+g^{ij}g_{jk} = \delta_k^i
+\]</p>
+<h3 id="coordinate-transforms">Coordinate transforms</h3>
+<p>The defining property for a set of quantities \(a^i\) to form the contravariant components of a vector is:</p>
+<p>\[
+a'^i = \pdv{u'^i}{u^j}a^j
+\]</p>
+<p>The relation for basis vectors is this relation&rsquo;s inverse.</p>
+<p>Analagously for covariant components of a vector, the relation is the inverse of that of contravariant components. (the prime is on the denominator of the partial derivative)</p>
+<h3 id="relative-tensors">Relative tensors</h3>
+<p>Similar to the discussion on pseudotensors, we are led to the notion of relative tensors for arbitrary coordinate transformations.</p>
+<p>We may define the Jacobian of the transformation as the determinant of the transformation matrix \([\partial u'^i / \partial u^j]\). Interchanging the primed and unprimed coordinates gives \(1/J\).</p>
+<p>We define a relative tensor of weight \(w\) as one whose components transform as:</p>
+<p>\[
+T'^i_j = \pdv{u'^i}{u^a}\pdv{u^j}{u'^b}T^a_b \left\vert \pdv{u}{u'} \right\vert^w
+\]</p>
+<p>and so on for higher rank tensors.</p>
+<ul>
+<li>A <strong>true</strong> (or <strong>absolute</strong>) general tensor is a relative tensor of weight 0.</li>
+<li>If \(w = -1\), the relative tensor is a general *pseudotensor</li>
+<li>If \(w = 1\), it&rsquo;s a <strong>tensor density</strong>.</li>
+</ul>
+<h4 id="properties">Properties</h4>
+<p>The levi cevita tensor is a relative tensor of weight -1. If you define a contravariant version, it is numerically equal to its covariant counterpart but it has weight +1.</p>
+<p>If two relative tensors have weights \(w_1\) and \(w_2\), the outer product or any contraction of them is a relative tensor of weight \(w_1 + w_2\).</p>
+<h3 id="derivatives-of-basis-vectors-and-christoffel-symbols">Derivatives of basis vectors &amp; Christoffel symbols</h3>
+<p>In general curvilinear coordinates, the basis vectors can change and are a functions of the coordiantes. In general, derivatives can be written as so.</p>
+<p>\[
+\pdv{\bm{e}_i}{u^j} = \Gamma^k_{ij}\bm{e}_k
+\]</p>
+<p>Using the reciprocity relation:</p>
+<p>\[
+\Gamma^k_{ij} = \bm{e}^k \cdot \pdv{\bm{e}_i}{u^j}
+\]</p>
+<p>Similarly for contravariant basis vectors:</p>
+<p>\[
+\pdv{\bm{e}^i}{u^j} = -\Gamma^i_{kj}\bm{e}^k
+\]</p>
+<p>The symbol \(\Gamma^k_{ij}\) is a <strong>Christoffel symbol</strong> (of the second kind). Note that these quantities do not form the components of a third-order tensor.</p>
+<p>Note that the Christoffel symbol is symmetric with respect to interchange of its two subscripts.</p>
+<p>The quickest way to find the Christoffel symbol is by using the metric tensor.</p>
+<p>\[
+\Gamma^m_{ij} = \frac12 g^{mk}\left(\pdv{g_{jk}}{u^i} + \pdv{g_ki}{u^j} - \pdv{g_ij}{u^k}\right)
+\]</p>
+<h3 id="covariant-differentiation">Covariant differentiation</h3>
+<p>In general, the derivative of a scalar is a covariant vector.</p>
+<p>\[
+\dd{\phi} = \pdv{\phi}{u^i}\dd{u^i}
+\]</p>
+<p>By quotient law, the quantities \(\partial \phi / \partial u^i\) must form the components of a covariant vector.</p>
+<p>However, the derivative of the components of a general tensor does not in general result in the components of another tensor, e.g. \(\partial v^i / \partial u^j\).</p>
+<p>However, we may define a new <em>covariant</em> derivative that does result in the components of another tensor.</p>
+<p>We find in general:</p>
+<p>\[
+\pdv{\bm{v}}{u^j} = \pdv{v^i}{u^j}\bm{e}_i + v^i \pdv{\bm{e}_i}{u^j}
+\]</p>
+<p>This can be rewritten:</p>
+<p>\[
+\pdv{\bm{v}}{u^j} = \left(\pdv{v^i}{u^j} + v^k \Gamma^i_{kj}\right) \bm{e}_i.
+\]</p>
+<p>The quantity in parentheses is the <strong>covariant derivative</strong>:</p>
+<p>\[
+v^i_{;j} \equiv \pdv{v^i}{u^j} + v^k \Gamma^i_{kj}
+\]</p>
+<p>For covariant components of a vector, the corresponding result is:</p>
+<p>\[
+v_{i;j} = \pdv{v_i}{u^j} -  \Gamma^k_{ij}v_k
+\]</p>
 <div class="edit-meta">
 
-<br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Math/tensors.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../math/2mm/" title="Mathematical methods pt. 2"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Mathematical methods pt. 2</a>
+<br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Math/tensors.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../math/3mm/" title="Mathematical methods pt. 3"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Mathematical methods pt. 3</a>
 <a class="nav nav-next" href="../../math/topology/" title="Topology">Next - Topology <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
 </nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
 </footer>
@@ -267,6 +429,7 @@ a_i = \epsilon_{ijk}b_jc_k
 <li class=""><a href="../../math/linear_algebra/">Linear Algebra</a></li>
 <li class=""><a href="../../math/mathematicalmethods/">Mathematical methods pt. 1</a></li>
 <li class=""><a href="../../math/2mm/">Mathematical methods pt. 2</a></li>
+<li class=""><a href="../../math/3mm/">Mathematical methods pt. 3</a></li>
 <li class="active"><a href="../../math/tensors/">Tensors</a></li>
 <li class=""><a href="../../math/topology/">Topology</a></li>
 </ul>
@@ -333,6 +496,32 @@ a_i = \epsilon_{ijk}b_jc_k
           </ul>
         </li>
         <li><a href="#isotropic-tensors">Isotropic tensors</a></li>
+        <li><a href="#operations">Operations</a>
+          <ul>
+            <li><a href="#contraction">Contraction</a></li>
+            <li><a href="#quotient-law">Quotient law</a></li>
+          </ul>
+        </li>
+        <li><a href="#parity">Parity</a></li>
+        <li><a href="#dual-tensors">Dual tensors</a>
+          <ul>
+            <li><a href="#third-rank">Third rank</a></li>
+          </ul>
+        </li>
+        <li><a href="#integral-theorems">Integral theorems</a></li>
+      </ul>
+    </li>
+    <li><a href="#non-cartesian-coordinates">Non-Cartesian coordinates</a>
+      <ul>
+        <li><a href="#metric-tensor">Metric tensor</a></li>
+        <li><a href="#coordinate-transforms">Coordinate transforms</a></li>
+        <li><a href="#relative-tensors">Relative tensors</a>
+          <ul>
+            <li><a href="#properties">Properties</a></li>
+          </ul>
+        </li>
+        <li><a href="#derivatives-of-basis-vectors-and-christoffel-symbols">Derivatives of basis vectors &amp; Christoffel symbols</a></li>
+        <li><a href="#covariant-differentiation">Covariant differentiation</a></li>
       </ul>
     </li>
   </ul>
