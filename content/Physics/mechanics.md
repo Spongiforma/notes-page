@@ -411,6 +411,21 @@ t\_B = \gamma t\_A
 \\]
 
 
+#### Identities {#identities}
+
+\\[
+\gamma^2 - 1 = \gamma^2\beta^2
+\\]
+
+\\[
+\gamma(1-\beta) = \sqrt{\frac{1-\beta}{1+\beta}}
+\\]
+
+\\[
+\gamma(1 + \beta) = \sqrt{\frac{1+\beta}{1-\beta}}
+\\]
+
+
 ### Length contraction {#length-contraction}
 
 For distances along the direction of relative velocity.

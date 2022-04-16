@@ -328,3 +328,10 @@ Since it commutes with each generator, these operators have simulataneous eigens
 \\[
 \hat{J}\_z\ket{\lambda,m} = m \hbar \ket{\lambda,m}
 \\]
+
+
+## 1D problems {#1d-problems}
+
+\\[
+i \hbar\ket{\dot{\psi}} = H\ket{\psi}
+\\]
