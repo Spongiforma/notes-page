@@ -110,12 +110,17 @@ In a volume surrounded by conductors and containing a specifed charge density, t
 
 Suppose a point charge q is held a distance d above an infinite grounded conducting plane. What is the potential (which is affected by the accumulation of charge on the plane).
 
-Solution: Pretend there is a charge at -z. Many quantities end up being the same though, Energy is not the same. Note you cannot put image charges where yuo are calculating V as it would change charge density.
+Solution: Pretend there is a charge at -z. Many quantities end up being the same though energy isn't. Note you cannot put image charges where yuo are calculating V as it would change charge density.
+
+
+#### Circle of apollonius {#circle-of-apollonius}
+
+{{< figure src="pics/apollocircle.png" >}}
 
 
 ### Seperation of variables {#seperation-of-variables}
 
-set boundary conditions and you will get hyperbolic (suited for boundary conditions at infinity) and trig functions. then find fourier coeffs
+Set boundary conditions and you will get hyperbolic (suited for boundary conditions at infinity) and trig functions. then find fourier coeffs
 
 
 #### Spherical coordinates {#spherical-coordinates}
@@ -130,14 +135,27 @@ where P are the legendre polynomials:
 P\_l(x) = \frac{1}{2^l l!} \left(\dv{x}\right)^l (x^2 - 1)^l
 \\]
 
+~~---~~-------------------------+
+
+| l | Polynomial              |
+|---|-------------------------|
+| 0 | 1                       |
+| 1 | x                       |
+| 2 | (3x^2 - 1)/2            |
+| 3 | (5x^3-3x)/2             |
+| 4 | (35x^4-30x^2+3)/8       |
+| 5 | (63x^5 - 70x^3 + 15x)/8 |
+
 
 ### Multipole expansion {#multipole-expansion}
 
 \\[
-V(\bm{r}) = \frac{1}{4\pi\epsilon\_0}\sum\_{n=0}^\infty \frac{1}{r^{n+1}}\int(r')^n P\_n(cos\alpha)\rho(\bm{r}')\dd{\tau'}
+V(\bm{r}) = \frac{1}{4\pi\epsilon\_0}\sum\_{n=0}^\infty \frac{1}{r^{n+1}}\int(r')^n P\_n(\cos\alpha)\rho(\bm{r}')\dd{\tau'}
 \\]
 
 where \\(\alpha\\) is the angle between r and r'
+
+The first non-zero dipole is independent of translation of coordinates.
 
 
 #### Dipole {#dipole}
@@ -181,6 +199,10 @@ If the field is nonuniform, such that the force on the positive part does not ba
 
 \\[
 \bm{F} = (\bm{p} \cdot \nabla)\bm{E}
+\\]
+
+\\[
+U = - \bm{p} \cdot \bm{E}
 \\]
 
 
@@ -262,10 +284,10 @@ D above - D below = \\(\sigma\_f\\)
 
 #### Parallel component {#parallel-component}
 
-D above - D below = P above - P below ()
+D above - D below = P above - P below
 
 
-### Linear dielectrics (starting on the how) {#linear-dielectrics--starting-on-the-how}
+### Linear dielectrics {#linear-dielectrics}
 
 If the E field is not too strong, the polarisation is proportional to the field. They will be called **Linear dielectrics**.
 
@@ -283,6 +305,19 @@ From definition of electric displacement, we have:
 \\]
 
 where \\(\epsilon\\) is the permittivity of the material. The relative permittivity, or dielectric constant is given by \\(\epsilon\_r\\) or \\(\kappa\\).
+
+It is also possible to derive an expression for bound charge from \\(D\\).
+
+\\[
+\rho\_b = -\div P = - \frac{\chi\_e}{1 + \chi\_e} \rho\_f
+\\]
+
+
+#### Energy {#energy}
+
+\\[
+W = \frac{\epsilon\_0}{2} \int \epsilon\_r E^2\dd{\tau} = \frac12 \int \bm{D}\cdot\bm{E} \dd{\tau}
+\\]
 
 
 ## Magnetostatics {#magnetostatics}
@@ -381,4 +416,181 @@ Steady currents produce constant magnetic fields. Thus:
 
 \\[
 \div \bm{B} = 0
+\\]
+
+
+### Vector potential {#vector-potential}
+
+\\[
+\bm{B} = \curl \bm{A}
+\\]
+
+We can limit forms of the vector potential by making it divergenceless.
+
+Thus, ampere's law becomes
+
+\\[
+\laplacian \bm{A} =-\mu\_0 \bm{J}
+\\]
+
+which is Poisson's equations in three coordinates.
+
+The solution is:
+
+\\[
+\bm{A}(\bm{r}) = \int \frac{\bm{J}(\bm{r}')}{\mathpcz{|\bm{r - r'}|}} \dd{\tau'}
+\\]
+
+
+## Electrodynamics {#electrodynamics}
+
+Ohm's law
+
+\\[
+\bm{J} = \sigma \bm{f}
+\\]
+
+where \\(\bm{f}\\) is the force per unit charge. since this is equal to the lorentz force, and the velocity of the charge is usually small,
+
+\\[
+\bm{J} = \sigma \bm{E}
+\\]
+
+Faraday's law
+
+\\[
+\curl \bm{E} = - \pdv{B}{t}
+\\]
+
+Parallels between faraday's law and ampere's law can be used to solve problems with analogy, in finding electric fields induced by changing magnetic fields.
+
+For instance, biot-savart law for electric fields:
+
+\\[
+\bm{E} = -\frac{1}{4\pi} \pdv{}{t} \int \frac{\bm{B} \times \hat{w}}{w^2} \dd{\tau'}
+\\]
+
+
+### Inductance {#inductance}
+
+Since flux is proportional to current, we can call this proportionality constant **inductance.**
+
+
+#### Neumann's formula for mutual inductance {#neumann-s-formula-for-mutual-inductance}
+
+\\[
+M = \frac{\mu\_0}{4\pi}\oint \oint \frac{\dd{\bm{I\_1}}\cdot \bm{I\_2}}{|\bm{r - r'}|}
+\\]
+
+
+### Energy in magnetic fields {#energy-in-magnetic-fields}
+
+\\[
+W = \frac12 L I^2 = \frac12 \int\_V (\bm{A} \cdot \bm{J})\dd{\tau} = \frac{1}{2\mu\_0}\int B^2 \dd{\tau}
+\\]
+
+The second term is sometimes a better way to find self-inductance.
+
+
+### Maxwell's equations {#maxwell-s-equations}
+
+A changing electric field also produces a changing magnetic field.
+
+\\[
+\curl \bm{B} = \mu\_0 \bm{J} + \mu\_0 \epsilon\_0 \pdv{\bm{E}}{t}
+\\]
+
+\\(\epsilon\_0 \pdv{\bm{E}}{t}\\) is often called **displacement current**.
+
+
+## Conservation laws {#conservation-laws}
+
+Recall
+
+\\[
+\pdv{\rho}{t} = - \div \bm{J}
+\\]
+
+\\[
+u = \frac12 (\epsilon\_0 E^2 + \frac{1}{\mu\_0} B^2)
+\\]
+
+
+### Poynting's theorem {#poynting-s-theorem}
+
+Based on lorentz' force, the work done on a charge \\(q\\) is:
+
+\\[
+\bm{F\cdot }\dd{\bm{l}} = q\bm{E} \cdot \bm{v}\dd{t}
+\\]
+
+The rate at which work is done on all charges in a volume by the electromagnetic forces is thus:
+
+\\[
+\dv{W}{t} = \int\_V \bm{E}\cdot \bm{J} \dd{\tau}
+\\]
+
+Using Maxwell's equations, this can be written in terms of just the fields as such:
+
+\\[
+\dv{W}{t} = - \dv{}{t} \int\_V u \dd{\tau} - \oint\_S \bm{S} \cdot \dd{\bm{a}}
+\\]
+
+where \\(\bm{S}\\) is the poynting vector (energy per unit time, per unit area or energy flux density ) given by
+
+\\[
+\bm{S} \equiv \frac{1}{\mu\_0} \bm{E}\times\bm{B}
+\\]
+
+When no work is done on the charges, we get the 'continuity equation' for energy
+
+\\[
+\pdv{u}{t} = - \div \bm{S}
+\\]
+
+
+### Maxwell's stress tensor {#maxwell-s-stress-tensor}
+
+The net force per unit volume is
+
+\\[
+\bm{f} = \rho (\bm{E} + \bm{v}\times\bm{B})
+\\]
+
+Expressing it in terms of the fields using maxwell's equations,
+
+\begin{align\*}
+\bm{f} =  & \epsilon\_0[(\div \bm{E})\bm{E} + (\bm{E} \cdot \grad)E] \\\\
+  & + \frac{1}{\mu\_0}[(\div \bm{B})\bm{B} + (\bm{B} \cdot \grad)B] \\\\
+  & - \grad u - \epsilon\_0\mu\_0\pdv{S}{t}
+\end{align\*}
+
+We may condense the first three terms by introducing maxwell's stress tensor
+
+\\[
+T\_{ij} = \epsilon\_0(E\_i E\_j - \frac12 \delta\_{ij} E^2) + \frac{1}{\mu\_0} (B\_i B\_j - \frac12 \delta\_{ij} B^2)
+\\]
+
+Thus,
+
+\\[
+\bm{f} = \div T - \epsilon\_0\mu\_0 \pdv{\bm{S}}{t}
+\\]
+
+\\[
+\bm{F} = \dv{\bm{p}}{t} = - \epsilon\_0\mu\_0 \pdv{}{t}\int\_V \bm{S} \dd{\tau} + \oint\_S T \cdot \dd{\bm{a}}
+\\]
+
+The momentum stored in the fields is thus
+
+\\[
+\bm{p} = \frac{1}{c^2} \int\_V \bm{S} \dd{\tau}
+\\]
+
+while the second term is the momentum per unit time flowing in through the surface.
+
+When mechanical momentum is not changing,
+
+\\[
+\pdv{\bm{g}}{t} = \div T
 \\]

@@ -4,6 +4,140 @@ author = ["root"]
 draft = false
 +++
 
+## Analytical mechanics {#analytical-mechanics}
+
+
+### EL equations {#el-equations}
+
+L = T - V
+
+\\[
+\dv{t}\left(\pdv{L}{\dot x}\right) = \pdv{L}{x}
+\\]
+
+-   Generalised momentum
+
+\\[
+\pdv{L}{\dot q} = p
+\\]
+
+-   Generalised force
+
+\\[
+\pdv{L}{q} = \dot{p}
+\\]
+
+
+#### Cyclic coordinate {#cyclic-coordinate}
+
+When the Lagrangian does not depend on a coordinate qk:
+
+\\[
+\pdv{L}{\dot q\_k} = C
+\\]
+
+This is also generalised momentum.
+
+q_k is thus a cyclic coordinate.
+
+
+#### Energy conservation {#energy-conservation}
+
+\\[
+\pdv{E}{t} = -\pdv{L}{t}
+\\]
+
+\\[
+E = \left(\sum\_{i=1}^N \pdv{L}{\dot q\_i}\dot{q\_i}\right) - L
+\\]
+
+If L has no time dependence, then E is conserved.
+
+E is indeed total energy when the new coordinate q is not related to the old coordinate x with a time dependence \\(x = x(q,t)\\) or qdot dependence \\(x = x(q,\dot{q})\\).
+
+
+#### Noether's theorem {#noether-s-theorem}
+
+For each symmetry of the Lagrangian, there is a conserved quantity.
+
+Let the Lagrangian be invariant to first order in the small number \\(\epsilon\\).
+
+\\[
+q\_i \to q\_i + \epsilon K\_i(q)
+\\]
+
+each K_i(q) may be a function of all the q_i and need not be constant.
+
+The quantity:
+
+\\[
+P(q,\dot{q}) = \sum\_i \pdv{L}{\dot q\_i}K\_i(q)
+\\]
+
+does not change with time and has the generic name of consered momentum.
+
+Example:
+
+For \\(L = (m/2)(5\dot{x}^2 - 2\dot{x}\dot{y} + 2\dot{y}^2) + C(2x-y)\\), K_x = 1 and K_y = 2:
+
+\\[
+P = \pdv{L}{\dot{x}}K\_x + \pdv{L}{\dot y}K\_y = m(3\dot{x} + 3\dot{y})
+\\]
+
+
+### Constraints {#constraints}
+
+When the constraint has the form,
+
+\\[
+f(\bm{r\_1},\bm{r\_2},\ldots,t) = 0
+\\]
+
+then it is said to be **holonomic**. Otherwise they are nonholonomic.
+
+Equations of constraints which explicitly contain time as a variable are called **rheonomous** while those which don't are called **scleronomous**.
+
+
+### Velocity-dependent potentials {#velocity-dependent-potentials}
+
+\\[
+Q\_j = -\pdv{U}{q\_j} + \dv{}{t} \pdv{U}{\dot{q}\_j}
+\\]
+
+
+### Dissipation forces {#dissipation-forces}
+
+If not all the forces can be derivable from a potential, then EL equations can be written in the form,
+
+\\[
+\dv{}{t} \pdv{L}{\dot{q}\_j} - \pdv{L}{q\_j} = Q\_j
+\\]
+
+Often the frictional force is proportional to the velocity of the particle. e.g. \\(F\_{x} = -k\_xv\_x\\). Thus we may derive them from **Rayleigh's dissipation function**, \\(\mathcal{F}\\).
+
+\\[
+\mathcal{F} = \frac12 \sum\_i \left \left(k\_x v^2\_{ix} + k\_y v^2\_{iy} + k\_z v^2\_{iz}\right)
+\\]
+
+where the summation is over the particles of the system.
+
+Thus, \\(F\_{x\_i} = - \pdv{\mathcal{F}}{v\_{x\_i}}\\).
+
+Or symbolically,
+
+\\[
+\bm{F} = -\grad\_v\mathcal{F}
+\\]
+
+\\(2\mathcal{F}\\) is the also the rate of energy dissipation due to friction.
+
+The generalized force is given by,
+
+\\[
+Q\_j = -\pdv{\mathcal{F}}{\dot{q}\_j}
+\\]
+
+
 ## Central forces {#central-forces}
 
 Only depends of radius from source. Motion takes place in a plane.
