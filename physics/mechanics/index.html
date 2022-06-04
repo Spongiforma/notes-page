@@ -18,12 +18,15 @@
 :root {--custom-font-color: #bcb7ae;--custom-background-color: #1a1c1d;}
 </style>
 <meta property="og:title" content="Mechanics" />
-<meta property="og:description" content="Central forces Only depends of radius from source. Motion takes place in a plane.
-Effective potential Since L is conserved, express w as L/mr^2
-\[ V_{eff} = \frac{L^2}{2mr^2} &#43; V( r) \]
-the first term on RHS is often called the L barrier. This does not hold if v(r) goes to -infty faster than -1/r^2
-\[ F_{eff} = \frac{L^2}{mr^3} - V&#39;( r) \]
-We may use it to find r(t) and theta(t) in terms of t:" />
+<meta property="og:description" content="Analytical mechanics EL equations L = T - V
+\[ \dv{t}\left(\pdv{L}{\dot x}\right) = \pdv{L}{x} \]
+ Generalised momentum  \[ \pdv{L}{\dot q} = p \]
+ Generalised force  \[ \pdv{L}{q} = \dot{p} \]
+Cyclic coordinate When the Lagrangian does not depend on a coordinate qk:
+\[ \pdv{L}{\dot q_k} = C \]
+This is also generalised momentum.
+q_k is thus a cyclic coordinate.
+Energy conservation \[ \pdv{E}{t} = -\pdv{L}{t} \]" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/physics/mechanics/" /><meta property="og:image" content="/images/og-image.png"/><meta property="article:section" content="Physics" />
 
@@ -33,21 +36,27 @@ We may use it to find r(t) and theta(t) in terms of t:" />
 <meta name="twitter:image" content="/images/og-image.png"/>
 
 <meta name="twitter:title" content="Mechanics"/>
-<meta name="twitter:description" content="Central forces Only depends of radius from source. Motion takes place in a plane.
-Effective potential Since L is conserved, express w as L/mr^2
-\[ V_{eff} = \frac{L^2}{2mr^2} &#43; V( r) \]
-the first term on RHS is often called the L barrier. This does not hold if v(r) goes to -infty faster than -1/r^2
-\[ F_{eff} = \frac{L^2}{mr^3} - V&#39;( r) \]
-We may use it to find r(t) and theta(t) in terms of t:"/>
+<meta name="twitter:description" content="Analytical mechanics EL equations L = T - V
+\[ \dv{t}\left(\pdv{L}{\dot x}\right) = \pdv{L}{x} \]
+ Generalised momentum  \[ \pdv{L}{\dot q} = p \]
+ Generalised force  \[ \pdv{L}{q} = \dot{p} \]
+Cyclic coordinate When the Lagrangian does not depend on a coordinate qk:
+\[ \pdv{L}{\dot q_k} = C \]
+This is also generalised momentum.
+q_k is thus a cyclic coordinate.
+Energy conservation \[ \pdv{E}{t} = -\pdv{L}{t} \]"/>
 <meta itemprop="name" content="Mechanics">
-<meta itemprop="description" content="Central forces Only depends of radius from source. Motion takes place in a plane.
-Effective potential Since L is conserved, express w as L/mr^2
-\[ V_{eff} = \frac{L^2}{2mr^2} &#43; V( r) \]
-the first term on RHS is often called the L barrier. This does not hold if v(r) goes to -infty faster than -1/r^2
-\[ F_{eff} = \frac{L^2}{mr^3} - V&#39;( r) \]
-We may use it to find r(t) and theta(t) in terms of t:">
+<meta itemprop="description" content="Analytical mechanics EL equations L = T - V
+\[ \dv{t}\left(\pdv{L}{\dot x}\right) = \pdv{L}{x} \]
+ Generalised momentum  \[ \pdv{L}{\dot q} = p \]
+ Generalised force  \[ \pdv{L}{q} = \dot{p} \]
+Cyclic coordinate When the Lagrangian does not depend on a coordinate qk:
+\[ \pdv{L}{\dot q_k} = C \]
+This is also generalised momentum.
+q_k is thus a cyclic coordinate.
+Energy conservation \[ \pdv{E}{t} = -\pdv{L}{t} \]">
 
-<meta itemprop="wordCount" content="1204"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="1590"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -91,6 +100,88 @@ We may use it to find r(t) and theta(t) in terms of t:">
 </div>
 <div class="content-container">
 <main>
+<h2 id="analytical-mechanics">Analytical mechanics</h2>
+<h3 id="el-equations">EL equations</h3>
+<p>L = T - V</p>
+<p>\[
+\dv{t}\left(\pdv{L}{\dot x}\right) = \pdv{L}{x}
+\]</p>
+<ul>
+<li>Generalised momentum</li>
+</ul>
+<p>\[
+\pdv{L}{\dot q} = p
+\]</p>
+<ul>
+<li>Generalised force</li>
+</ul>
+<p>\[
+\pdv{L}{q} = \dot{p}
+\]</p>
+<h4 id="cyclic-coordinate">Cyclic coordinate</h4>
+<p>When the Lagrangian does not depend on a coordinate qk:</p>
+<p>\[
+\pdv{L}{\dot q_k} = C
+\]</p>
+<p>This is also generalised momentum.</p>
+<p>q_k is thus a cyclic coordinate.</p>
+<h4 id="energy-conservation">Energy conservation</h4>
+<p>\[
+\pdv{E}{t} = -\pdv{L}{t}
+\]</p>
+<p>\[
+E = \left(\sum_{i=1}^N \pdv{L}{\dot q_i}\dot{q_i}\right) - L
+\]</p>
+<p>If L has no time dependence, then E is conserved.</p>
+<p>E is indeed total energy when the new coordinate q is not related to the old coordinate x with a time dependence \(x = x(q,t)\) or qdot dependence \(x = x(q,\dot{q})\).</p>
+<h4 id="noether-s-theorem">Noether&rsquo;s theorem</h4>
+<p>For each symmetry of the Lagrangian, there is a conserved quantity.</p>
+<p>Let the Lagrangian be invariant to first order in the small number \(\epsilon\).</p>
+<p>\[
+q_i \to q_i + \epsilon K_i(q)
+\]</p>
+<p>each K_i(q) may be a function of all the q_i and need not be constant.</p>
+<p>The quantity:</p>
+<p>\[
+P(q,\dot{q}) = \sum_i \pdv{L}{\dot q_i}K_i(q)
+\]</p>
+<p>does not change with time and has the generic name of consered momentum.</p>
+<p>Example:</p>
+<p>For \(L = (m/2)(5\dot{x}^2 - 2\dot{x}\dot{y} + 2\dot{y}^2) + C(2x-y)\), K_x = 1 and K_y = 2:</p>
+<p>\[
+P = \pdv{L}{\dot{x}}K_x + \pdv{L}{\dot y}K_y = m(3\dot{x} + 3\dot{y})
+\]</p>
+<h3 id="constraints">Constraints</h3>
+<p>When the constraint has the form,</p>
+<p>\[
+f(\bm{r_1},\bm{r_2},\ldots,t) = 0
+\]</p>
+<p>then it is said to be <strong>holonomic</strong>. Otherwise they are nonholonomic.</p>
+<p>Equations of constraints which explicitly contain time as a variable are called <strong>rheonomous</strong> while those which don&rsquo;t are called <strong>scleronomous</strong>.</p>
+<h3 id="velocity-dependent-potentials">Velocity-dependent potentials</h3>
+<p>\[
+Q_j = -\pdv{U}{q_j} + \dv{}{t} \pdv{U}{\dot{q}_j}
+\]</p>
+<h3 id="dissipation-forces">Dissipation forces</h3>
+<p>If not all the forces can be derivable from a potential, then EL equations can be written in the form,</p>
+<p>\[
+\dv{}{t} \pdv{L}{\dot{q}_j} - \pdv{L}{q_j} = Q_j
+\]</p>
+<p>Often the frictional force is proportional to the velocity of the particle. e.g. \(F_{x} = -k_xv_x\). Thus we may derive them from <strong>Rayleigh&rsquo;s dissipation function</strong>, \(\mathcal{F}\).</p>
+<p>\[
+\mathcal{F} = \frac12 \sum_i \left \left(k_x v^2_{ix} + k_y v^2_{iy} + k_z v^2_{iz}\right)
+\]</p>
+<p>where the summation is over the particles of the system.</p>
+<p>Thus, \(F_{x_i} = - \pdv{\mathcal{F}}{v_{x_i}}\).</p>
+<p>Or symbolically,</p>
+<p>\[
+\bm{F} = -\grad_v\mathcal{F}
+\]</p>
+<p>\(2\mathcal{F}\) is the also the rate of energy dissipation due to friction.</p>
+<p>The generalized force is given by,</p>
+<p>\[
+Q_j = -\pdv{\mathcal{F}}{\dot{q}_j}
+\]</p>
 <h2 id="central-forces">Central forces</h2>
 <p>Only depends of radius from source. Motion takes place in a plane.</p>
 <h3 id="effective-potential">Effective potential</h3>
@@ -451,6 +542,7 @@ u = \frac{v_1 + v_2}{1+v_1v_2/c^2}
 <li class=""><a href="../../physics/oscillations/">Oscillations</a></li>
 <li class=""><a href="../../physics/quantum_physics/">Quantum mechanics</a></li>
 <li class=""><a href="../../physics/rotation/">Rotation</a></li>
+<li class=""><a href="../../physics/statmech/">Thermal Physics</a></li>
 <li class=""><a href="../../physics/idealgas/">Thermodynamics</a></li>
 <li class=""><a href="../../physics/wavves/">Waves</a></li>
 </ul>
@@ -480,6 +572,20 @@ u = \frac{v_1 + v_2}{1+v_1v_2/c^2}
 <nav class="outline">
 <nav id="TableOfContents">
   <ul>
+    <li><a href="#analytical-mechanics">Analytical mechanics</a>
+      <ul>
+        <li><a href="#el-equations">EL equations</a>
+          <ul>
+            <li><a href="#cyclic-coordinate">Cyclic coordinate</a></li>
+            <li><a href="#energy-conservation">Energy conservation</a></li>
+            <li><a href="#noether-s-theorem">Noether&rsquo;s theorem</a></li>
+          </ul>
+        </li>
+        <li><a href="#constraints">Constraints</a></li>
+        <li><a href="#velocity-dependent-potentials">Velocity-dependent potentials</a></li>
+        <li><a href="#dissipation-forces">Dissipation forces</a></li>
+      </ul>
+    </li>
     <li><a href="#central-forces">Central forces</a>
       <ul>
         <li><a href="#effective-potential">Effective potential</a></li>

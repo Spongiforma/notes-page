@@ -38,7 +38,7 @@ A submonoid of a set M, contains 1 and N is closed under the product in M."/>
 A monad without an associative p is sometimes called a monad. If there is no requirement on 1, then its a semigroup (M,p).
 A submonoid of a set M, contains 1 and N is closed under the product in M.">
 
-<meta itemprop="wordCount" content="1027"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="1843"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -183,6 +183,166 @@ Q_8 = \{1,-1,i,-i,j,-j,k,-k\}
 <p>Let G be a group of transformations of a set S. Then G defines an equivalence relation on S of \(x \sim_G y\) if \(y = \alpha(x)\) for some \(\alpha \in G\). The G-orbit of \(x \in S\) is the set \(Gx = \{\alpha(x) \vert \alpha \in G\}\). When there is just one orbit, that is, \(S = Gx\) for some x, G is a <strong>transitive</strong> group of transformations of the set S. e.g. \(S_n\) is transitive on \(\{1,2,\ldots,n\}\).</p>
 <h3 id="congruences">Congruences</h3>
 <p>A congruence is an equivalence relation which can be multiplied.</p>
+<h3 id="subgroups">Subgroups</h3>
+<h4 id="some-subgroups">Some subgroups</h4>
+<p>Let A be any nonempty subset of G.</p>
+<!--list-separator-->
+<ul>
+<li>
+<p>Centralizers</p>
+<p>\(g a g^{-1}\) is called the conjugate of a by g.</p>
+<p>\[
+C_G(A) = \{ g \in G \vert gag^{-1}=a \forall a\in A\}
+\]</p>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>Center</p>
+<p>\[
+Z(G) = \{ g \in G \vert gx = xg \forall x \in G\}
+\]</p>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>Normalizer</p>
+<p>Define \(gAg^{-1} = \{ gag^{-1} \vert a \in A\}\) as the conjugate of A by g.</p>
+<p>\[
+N_G(A) = \{g \in G \vert gAg^{-1} = A\}
+\]</p>
+<p>Each g in the normalizer normalizes A.</p>
+<p>A subgroup of a group G is called normal if every element of G normalizes the group.</p>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>Stabilizer</p>
+<p>\[
+G_s = \{g \in G | g \cdot s = s\}
+\]</p>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>Kernel</p>
+<p>Kernel of action of G on S</p>
+<p>\[
+\ker = \{ g\in G | g\cdot s = s \forall s \in S\}
+\]</p>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>Cosets</p>
+<p>For \(N \leq G\) and \(g \in G\)</p>
+<p>\[
+gN = \{gn | n \in N\}
+\]</p>
+<p>is a left coset. A right coset is defined similarly. Any element of a coset is a representative for the coset.</p>
+</li>
+</ul>
+<h3 id="quotient-groups">Quotient groups</h3>
+<p>Let \(\phi : G\to H\) be a homomorphism with kernel K. The <strong>quotient group</strong> or <strong>factor group</strong>, \(G/K\) is the group whose elements are the fibers of \(\phi\).</p>
+<h4 id="cosets">Cosets</h4>
+<p>Fibers of a homomorphism are the left cosets of the kernel. (Also the right).</p>
+<p><strong>Theorem</strong></p>
+<p>Let N be any subgroup of the gorup G. The set of left cosets of N in G form a partition of G. Furthermore, for all \(u,v \in G\), \(uN = vN\) iff \(v^{-1}u \in N\). In particular, \(uN = vN\) iff u,v are representatives of the same coset.</p>
+<p><strong>Theorem</strong></p>
+<p>Let G be a group and N be a subgroup of G.</p>
+<p>The operation on the set of left cosets of N in G described by \(uN \cdot vN = (uv) N\) is well defined (the group action can be any arbitrary representative) iff \(gng^{-1} \in N\) for all \(g \in G, n\in N\)</p>
+<p>If the above operation is well defined , it makes the set of left cosets of N into a group.</p>
+<p><strong>Theorem</strong></p>
+<p>Let N be a subgroup of group G.</p>
+<p>TFAE</p>
+<ol>
+<li>N is a normal subgroup of G (note this is not transitive)</li>
+<li>\(N_G(N) = G\)</li>
+<li>\(gN = Ng \forall g\in G\)</li>
+<li>The left cosets are made into a group</li>
+<li>\(gNg^{-1} \subseteq N \forall g \in G\)</li>
+<li>N is the kernel of some homomorphism</li>
+</ol>
+<p><strong>Theorem</strong></p>
+<p>If H and K are subgroups of a group, HK is a subgroup iff HK = KH.</p>
+<p>If H and K are subgroups and \(H \leq N_G(K)\), then HK is a subgroup of G.</p>
+<!--list-separator-->
+<ul>
+<li>
+<p>Lagrange&rsquo;s theorem</p>
+<p>If G is a finite group, \(H \leq G\), then \(|H|\) divides \(|G|\).</p>
+ <!--list-separator-->
+<ul>
+<li>
+<p>Converses</p>
+<p>The converse, the group has a subgroup of order \(n\) for each divisor of |G| is true for finite abelian groups.</p>
+<p><strong>Theorem (Cauchy)</strong></p>
+<p>If G is a finite group and p is a prime dividing |G|, then G has an element of order p.</p>
+<p><strong>Theorem (Sylow)</strong></p>
+<p>If G is a finite group of order \(p^\alpha m\), where p is prime and p does not divide m, then G has a subgroup of order \(p^\alpha\)</p>
+</li>
+</ul>
+ <!--list-separator-->
+<ul>
+<li>
+<p>Corollaries</p>
+<ol>
+<li>If G is a finite group and \(x\in G\), then the order of x divides the order of G.</li>
+<li>If G is a group of finite order, then G is cyclic.</li>
+<li>\(|HK| = \frac{|H||K|}{|H\cap K|}\)</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="isomorphism-theorems">Isomorphism theorems</h4>
+<ol>
+<li>
+<p>If \(\phi : G\to H\) is a homomorphism of groups, then \(\ker \phi \unlhd G\) and \(G / \ker \phi \cong \phi(G)\).</p>
+<ul>
+<li>
+<p>A homomorphism is injective iff its kernel is 1.</p>
+</li>
+<li>
+<p>\(|G : \ker \phi| = |\phi(G)|\) This is equivalently the rank-nullity theorem.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Let G be a group, and A,B be subgroups such that \(A \leq N_G(B)\). Then AB is a subgroup of G, \(B \unlhd AB\), \(A \cap B \unlhd A\) and \(AB/B \cong A/A\cap B\).</p>
+</li>
+<li>
+<p>Let G be a group and let H and K be normal subgroups of G with \(H \leq K\). Then \(K/H \unlhd G/H\) and \((G/H)/(K/H) \cong G/K\)</p>
+</li>
+<li>
+<p>Let G be a group and N be a normal subgroup of G. Then there is a bijection from the set of subgroups A of G which contain N onto the set of subgroups \(\bar{A} = A/N\) of \(G/N\). In particular, every subgroup of \(\bar{G}\) is of the form A/N for some subgroup A of G containing N (namely, its preimage in G under the natural projection homomorphism form G to G/N). This bijection has the following properties.</p>
+<p>For all A,B subgroups of G, with N a subgroup of A and B,</p>
+<ul>
+<li>
+<p>\(A \leq B\) iff \(\bar{A} \leq \bar{B}\)</p>
+</li>
+<li>
+<p>if \(A \leq B\), then \(|B : A| = | \bar{B} : \bar{A}|\)</p>
+</li>
+<li>
+<p>\(\overline{\langle A,B \rangle} =  \langle \bar{A},\bar{B} \rangle}\)</p>
+</li>
+<li>
+<p>\(\overline{A\cap B} = \bar{A} \cap \bar{B}\)</p>
+</li>
+<li>
+<p>\(A \unlhd G\) iff \(\bar{A} \unlhd \bar{G}\)</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="group-actions">Group actions</h3>
+<p>An action is faithful if its kernel is the identity.</p>
 <div class="edit-meta">
 
 <br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Math/abstractalgebra.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../math/" title="Maths"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Maths</a>
@@ -234,6 +394,7 @@ Q_8 = \{1,-1,i,-i,j,-j,k,-k\}
 <li class=""><a href="../../physics/oscillations/">Oscillations</a></li>
 <li class=""><a href="../../physics/quantum_physics/">Quantum mechanics</a></li>
 <li class=""><a href="../../physics/rotation/">Rotation</a></li>
+<li class=""><a href="../../physics/statmech/">Thermal Physics</a></li>
 <li class=""><a href="../../physics/idealgas/">Thermodynamics</a></li>
 <li class=""><a href="../../physics/wavves/">Waves</a></li>
 </ul>
@@ -285,6 +446,18 @@ Q_8 = \{1,-1,i,-i,j,-j,k,-k\}
         <li><a href="#group-actions">Group actions</a></li>
         <li><a href="#orbits-and-cosets">Orbits &amp; cosets</a></li>
         <li><a href="#congruences">Congruences</a></li>
+        <li><a href="#subgroups">Subgroups</a>
+          <ul>
+            <li><a href="#some-subgroups">Some subgroups</a></li>
+          </ul>
+        </li>
+        <li><a href="#quotient-groups">Quotient groups</a>
+          <ul>
+            <li><a href="#cosets">Cosets</a></li>
+            <li><a href="#isomorphism-theorems">Isomorphism theorems</a></li>
+          </ul>
+        </li>
+        <li><a href="#group-actions">Group actions</a></li>
       </ul>
     </li>
   </ul>

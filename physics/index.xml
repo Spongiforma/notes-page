@@ -101,12 +101,15 @@ Impulse When a bat collides with a ball, the ball experiences a \(\overrightarro
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/physics/mechanics/</guid>
-      <description>Central forces Only depends of radius from source. Motion takes place in a plane.
-Effective potential Since L is conserved, express w as L/mr^2
-\[ V_{eff} = \frac{L^2}{2mr^2} + V( r) \]
-the first term on RHS is often called the L barrier. This does not hold if v(r) goes to -infty faster than -1/r^2
-\[ F_{eff} = \frac{L^2}{mr^3} - V&#39;( r) \]
-We may use it to find r(t) and theta(t) in terms of t:</description>
+      <description>Analytical mechanics EL equations L = T - V
+\[ \dv{t}\left(\pdv{L}{\dot x}\right) = \pdv{L}{x} \]
+ Generalised momentum  \[ \pdv{L}{\dot q} = p \]
+ Generalised force  \[ \pdv{L}{q} = \dot{p} \]
+Cyclic coordinate When the Lagrangian does not depend on a coordinate qk:
+\[ \pdv{L}{\dot q_k} = C \]
+This is also generalised momentum.
+q_k is thus a cyclic coordinate.
+Energy conservation \[ \pdv{E}{t} = -\pdv{L}{t} \]</description>
     </item>
     
     <item>
@@ -162,6 +165,25 @@ RI through central axis of an annular cylinder \[ I = \frac{1}{2}M(R_1^2+R_2^2) 
 Solid cylinder about central axis \[ I = \frac{1}{2}MR^2 \]
 Solid cylinder about central diameter \[ I = \frac{1}{2}MR^2 + \frac{1}{12}ML^2 \]
 Thin rod about central diameter \[ I = \frac{1}{12}ML^2 \]</description>
+    </item>
+    
+    <item>
+      <title>Thermal Physics</title>
+      <link>/physics/statmech/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/physics/statmech/</guid>
+      <description>Definitions Bulk modulus / compressibility \[ B = \frac{1}{\kappa} = \frac{\Delta P}{ - \Delta V / V} \]
+Energy \[
+\]
+Entropy Ideal gas Surface area of n-dimensional hypersphere
+\[ A = \frac{2\pi^{n/2}}{(\frac{n}{2}-1)!} r^{n-1} \]
+N indistinguishable particles
+\[ \Omega_1 = V \cdot V_p \]
+\begin{align*} \Omega_N &amp;amp; = \frac{1}{N!} \frac{V^N}{h^{3N}} \times \frac{2\pi^{3N/2}}{(\frac{N}{2}-1)!} (\sqrt{2mU})^{N-1} \\
+&amp;amp; \approx \frac{1}{N!} \frac{V^N}{h^{3N}} \frac{\pi^{3N/2}}{(\frac{N}{2})!} (\sqrt{2mU})^{N} \end{align*}
+\[ \Omega_N = f(N) V^N U^{3N/2} \]
+Sackur-Tetrode equation \[ S = Nk \left[\ln\left(\frac{V}{N}\left(\frac{4\pi m U}{3 N h^2}\right)^{3/2} \right) + \frac{5}{2}\right] \]</description>
     </item>
     
     <item>

@@ -35,7 +35,7 @@
 <meta itemprop="description" content="Vector space Requirements for a set of entities to form a vector space
  Closure under commutative and associative addition Closure under multiplication of a scalar The existance of a null vector Multiplication by unity leaves any vector unchanged Each vector has a corresponding negative vector  Linear equations Row-echelon form  All zero rows are at the bottom of the matrix If two sucessive rows are non-zero, the second row starts with strictly more zeros than the first  Reduced row-echelon form  It&rsquo;s in row-echelon form The leading left most non-zero entry in each non-zero row is 1 All other elements of the column in which the leading entry 1 occurs are zeros  Row operations  Interchanging rows Multiplying row by non-zero scalar Adding a multiple of one row to another row  Preserves row-equivalence">
 
-<meta itemprop="wordCount" content="2128"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="1978"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -482,58 +482,6 @@ i.e.</p>
 \delta(f(x)) = \sum_i \frac{\delta(x_i-x)}{|\dv{f}{x_i}|}
 \]
 where x_i are the zeros of f(x)</p>
-<h3 id="operators">Operators</h3>
-<h4 id="differential-operator">Differential operator</h4>
-<p>\[
-D\ket{f} = \ket{\dv{f}{x}}
-\]</p>
-<p>implies</p>
-<p>In the |x&gt; basis,
-\[
-\bra{x}D\ket{x'} = D_{x,x'}=\delta'(x-x')=\delta(x-x')\dv{x'}
-\]</p>
-<p>where it is integrated over the second index (x') and pulls out the derivative of f at the first index (x).</p>
-<p>We can turn it hermitian by turning it into the form:</p>
-<p>\[
-K = -iD
-\]</p>
-<p>but in infinite dimensions, K^t = K is not sufficient to be hermitian. It is only hermitian in the space of functions that obey:</p>
-<p>\[
--ig^*(x)f(x) | \given_a^b = 0
-\]</p>
-<p>so that &lt;g|K|f&gt; = &lt;f|K|g&gt;*.</p>
-<!--list-separator-->
-<ul>
-<li>
-<p>eigeneverything</p>
-<p>X-basis</p>
-<p>\[
-K\ket{k} = k\ket{k}
-\]</p>
-<p>\[
--i\dv{x}\psi_k(x) = k\psi_k(x)
-\]</p>
-<p>where \(\psi_k(x) = \braket{x}{k}\).</p>
-<p>the solution is:</p>
-<p>\[
-\psi_k(x) = Ae^{ikx}
-\]</p>
-<p>where we choose \(A = (1/2\pi)^{-1/2}\)</p>
-<p>and &lt;k|k&gt;</p>
-</li>
-</ul>
-<h4 id="x-basis">X basis</h4>
-<p>X|x&gt; = x|x&gt;</p>
-<p>\[
-\bra{x'}X\ket{x} = x\delta(x'-x)
-\]</p>
-<p>Action on functions:</p>
-<p>X|f&gt; = |F&gt;</p>
-<p>F(x) = xf(x)</p>
-<p>\[
-\bra{k}X\ket{k'} = i\delta'(k-k')
-\]</p>
-<p>[X,K] = iI</p>
 <div class="edit-meta">
 
 <br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Math/linear_algebra.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../math/integration/" title="Integration"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Integration</a>
@@ -585,6 +533,7 @@ K\ket{k} = k\ket{k}
 <li class=""><a href="../../physics/oscillations/">Oscillations</a></li>
 <li class=""><a href="../../physics/quantum_physics/">Quantum mechanics</a></li>
 <li class=""><a href="../../physics/rotation/">Rotation</a></li>
+<li class=""><a href="../../physics/statmech/">Thermal Physics</a></li>
 <li class=""><a href="../../physics/idealgas/">Thermodynamics</a></li>
 <li class=""><a href="../../physics/wavves/">Waves</a></li>
 </ul>
@@ -696,12 +645,6 @@ K\ket{k} = k\ket{k}
     <li><a href="#infinite-dimensions">Infinite dimensions</a>
       <ul>
         <li><a href="#dirac-delta">Dirac delta</a></li>
-        <li><a href="#operators">Operators</a>
-          <ul>
-            <li><a href="#differential-operator">Differential operator</a></li>
-            <li><a href="#x-basis">X basis</a></li>
-          </ul>
-        </li>
       </ul>
     </li>
   </ul>

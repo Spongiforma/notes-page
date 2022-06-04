@@ -68,7 +68,7 @@ Potential energy For a configuration,
 \begin{align*} W &amp; = \frac{1}{8\pi\epsilon_0}\sum_{i=1}^n\sum_{j\neq i}^n \frac{q_iq_j}{r_{ij}} \\
 &amp; = \frac12 \sum_{i=1}^n q_i V(\bf r_i) \\">
 
-<meta itemprop="wordCount" content="1149"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="1753"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -174,9 +174,13 @@ V_{max} = \min_i(V_{bi})
 <p>In a volume surrounded by conductors and containing a specifed charge density, the electric field is uniquely determined if the total charge on each conductor is given.</p>
 <h3 id="method-of-images">Method of images</h3>
 <p>Suppose a point charge q is held a distance d above an infinite grounded conducting plane. What is the potential (which is affected by the accumulation of charge on the plane).</p>
-<p>Solution: Pretend there is a charge at -z. Many quantities end up being the same though, Energy is not the same. Note you cannot put image charges where yuo are calculating V as it would change charge density.</p>
+<p>Solution: Pretend there is a charge at -z. Many quantities end up being the same though energy isn&rsquo;t. Note you cannot put image charges where yuo are calculating V as it would change charge density.</p>
+<h4 id="circle-of-apollonius">Circle of apollonius</h4>
+<figure><img src="pics/apollocircle.png"/>
+</figure>
+
 <h3 id="seperation-of-variables">Seperation of variables</h3>
-<p>set boundary conditions and you will get hyperbolic (suited for boundary conditions at infinity) and trig functions. then find fourier coeffs</p>
+<p>Set boundary conditions and you will get hyperbolic (suited for boundary conditions at infinity) and trig functions. then find fourier coeffs</p>
 <h4 id="spherical-coordinates">Spherical coordinates</h4>
 <p>\[
 V(r,\theta) = \sum^\infty_{l=0}\left(A_lr^l + \frac{B_l}{r^{l+1}}\right) P_l(\cos\theta)
@@ -185,11 +189,47 @@ V(r,\theta) = \sum^\infty_{l=0}\left(A_lr^l + \frac{B_l}{r^{l+1}}\right) P_l(\co
 <p>\[
 P_l(x) = \frac{1}{2^l l!} \left(\dv{x}\right)^l (x^2 - 1)^l
 \]</p>
+<p><del>&mdash;</del>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-+</p>
+<table>
+<thead>
+<tr>
+<th>l</th>
+<th>Polynomial</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>x</td>
+</tr>
+<tr>
+<td>2</td>
+<td>(3x^2 - 1)/2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>(5x^3-3x)/2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>(35x^4-30x^2+3)/8</td>
+</tr>
+<tr>
+<td>5</td>
+<td>(63x^5 - 70x^3 + 15x)/8</td>
+</tr>
+</tbody>
+</table>
 <h3 id="multipole-expansion">Multipole expansion</h3>
 <p>\[
-V(\bm{r}) = \frac{1}{4\pi\epsilon_0}\sum_{n=0}^\infty \frac{1}{r^{n+1}}\int(r')^n P_n(cos\alpha)\rho(\bm{r}')\dd{\tau'}
+V(\bm{r}) = \frac{1}{4\pi\epsilon_0}\sum_{n=0}^\infty \frac{1}{r^{n+1}}\int(r')^n P_n(\cos\alpha)\rho(\bm{r}')\dd{\tau'}
 \]</p>
 <p>where \(\alpha\) is the angle between r and r'</p>
+<p>The first non-zero dipole is independent of translation of coordinates.</p>
 <h4 id="dipole">Dipole</h4>
 <p>Dipole moment:</p>
 <p>\[
@@ -214,6 +254,9 @@ V_{dip}( r) = \frac{1}{4\pi\epsilon_0}\frac{\bm{p}\cdot\hat{\bm{r}}}{r^2}
 <p>If the field is nonuniform, such that the force on the positive part does not balance the force on the negative part, then</p>
 <p>\[
 \bm{F} = (\bm{p} \cdot \nabla)\bm{E}
+\]</p>
+<p>\[
+U = - \bm{p} \cdot \bm{E}
 \]</p>
 <h3 id="polarisation">Polarisation</h3>
 <p>When an object gets polarised, we get a bunch of little dipoles pointing in the direction of the field, so we can call this:</p>
@@ -261,8 +304,8 @@ Thus, D is not determined exculsively by the free charge.</p>
 <h4 id="perpendicular-component">Perpendicular component</h4>
 <p>D above - D below = \(\sigma_f\)</p>
 <h4 id="parallel-component">Parallel component</h4>
-<p>D above - D below = P above - P below ()</p>
-<h3 id="linear-dielectrics--starting-on-the-how">Linear dielectrics (starting on the how)</h3>
+<p>D above - D below = P above - P below</p>
+<h3 id="linear-dielectrics">Linear dielectrics</h3>
 <p>If the E field is not too strong, the polarisation is proportional to the field. They will be called <strong>Linear dielectrics</strong>.</p>
 <p>\[
 \bm{P} = \epsilon_0 \chi_e \bm{E}
@@ -274,6 +317,14 @@ Note: E is the total field, so in order to calculate P, E must be found, and in 
 \bm{D} = \epsilon_0(1 + \chi_e)\bm{E} = \epsilon \bm{E}
 \]</p>
 <p>where \(\epsilon\) is the permittivity of the material. The relative permittivity, or dielectric constant is given by \(\epsilon_r\) or \(\kappa\).</p>
+<p>It is also possible to derive an expression for bound charge from \(D\).</p>
+<p>\[
+\rho_b = -\div P = - \frac{\chi_e}{1 + \chi_e} \rho_f
+\]</p>
+<h4 id="energy">Energy</h4>
+<p>\[
+W = \frac{\epsilon_0}{2} \int \epsilon_r E^2\dd{\tau} = \frac12 \int \bm{D}\cdot\bm{E} \dd{\tau}
+\]</p>
 <h2 id="magnetostatics">Magnetostatics</h2>
 <p>Lorentz' force law</p>
 <p>\[
@@ -348,6 +399,115 @@ B(z) = \frac{\mu_0 I}{2} \frac{R^2}{(R^2 + z^2)^{3/2}}
 <p>\[
 \div \bm{B} = 0
 \]</p>
+<h3 id="vector-potential">Vector potential</h3>
+<p>\[
+\bm{B} = \curl \bm{A}
+\]</p>
+<p>We can limit forms of the vector potential by making it divergenceless.</p>
+<p>Thus, ampere&rsquo;s law becomes</p>
+<p>\[
+\laplacian \bm{A} =-\mu_0 \bm{J}
+\]</p>
+<p>which is Poisson&rsquo;s equations in three coordinates.</p>
+<p>The solution is:</p>
+<p>\[
+\bm{A}(\bm{r}) = \int \frac{\bm{J}(\bm{r}')}{\mathpcz{|\bm{r - r'}|}} \dd{\tau'}
+\]</p>
+<h2 id="electrodynamics">Electrodynamics</h2>
+<p>Ohm&rsquo;s law</p>
+<p>\[
+\bm{J} = \sigma \bm{f}
+\]</p>
+<p>where \(\bm{f}\) is the force per unit charge. since this is equal to the lorentz force, and the velocity of the charge is usually small,</p>
+<p>\[
+\bm{J} = \sigma \bm{E}
+\]</p>
+<p>Faraday&rsquo;s law</p>
+<p>\[
+\curl \bm{E} = - \pdv{B}{t}
+\]</p>
+<p>Parallels between faraday&rsquo;s law and ampere&rsquo;s law can be used to solve problems with analogy, in finding electric fields induced by changing magnetic fields.</p>
+<p>For instance, biot-savart law for electric fields:</p>
+<p>\[
+\bm{E} = -\frac{1}{4\pi} \pdv{}{t} \int \frac{\bm{B} \times \hat{w}}{w^2} \dd{\tau'}
+\]</p>
+<h3 id="inductance">Inductance</h3>
+<p>Since flux is proportional to current, we can call this proportionality constant <strong>inductance.</strong></p>
+<h4 id="neumann-s-formula-for-mutual-inductance">Neumann&rsquo;s formula for mutual inductance</h4>
+<p>\[
+M = \frac{\mu_0}{4\pi}\oint \oint \frac{\dd{\bm{I_1}}\cdot \bm{I_2}}{|\bm{r - r'}|}
+\]</p>
+<h3 id="energy-in-magnetic-fields">Energy in magnetic fields</h3>
+<p>\[
+W = \frac12 L I^2 = \frac12 \int_V (\bm{A} \cdot \bm{J})\dd{\tau} = \frac{1}{2\mu_0}\int B^2 \dd{\tau}
+\]</p>
+<p>The second term is sometimes a better way to find self-inductance.</p>
+<h3 id="maxwell-s-equations">Maxwell&rsquo;s equations</h3>
+<p>A changing electric field also produces a changing magnetic field.</p>
+<p>\[
+\curl \bm{B} = \mu_0 \bm{J} + \mu_0 \epsilon_0 \pdv{\bm{E}}{t}
+\]</p>
+<p>\(\epsilon_0 \pdv{\bm{E}}{t}\) is often called <strong>displacement current</strong>.</p>
+<h2 id="conservation-laws">Conservation laws</h2>
+<p>Recall</p>
+<p>\[
+\pdv{\rho}{t} = - \div \bm{J}
+\]</p>
+<p>\[
+u = \frac12 (\epsilon_0 E^2 + \frac{1}{\mu_0} B^2)
+\]</p>
+<h3 id="poynting-s-theorem">Poynting&rsquo;s theorem</h3>
+<p>Based on lorentz' force, the work done on a charge \(q\) is:</p>
+<p>\[
+\bm{F\cdot }\dd{\bm{l}} = q\bm{E} \cdot \bm{v}\dd{t}
+\]</p>
+<p>The rate at which work is done on all charges in a volume by the electromagnetic forces is thus:</p>
+<p>\[
+\dv{W}{t} = \int_V \bm{E}\cdot \bm{J} \dd{\tau}
+\]</p>
+<p>Using Maxwell&rsquo;s equations, this can be written in terms of just the fields as such:</p>
+<p>\[
+\dv{W}{t} = - \dv{}{t} \int_V u \dd{\tau} - \oint_S \bm{S} \cdot \dd{\bm{a}}
+\]</p>
+<p>where \(\bm{S}\) is the poynting vector (energy per unit time, per unit area or energy flux density ) given by</p>
+<p>\[
+\bm{S} \equiv \frac{1}{\mu_0} \bm{E}\times\bm{B}
+\]</p>
+<p>When no work is done on the charges, we get the &lsquo;continuity equation&rsquo; for energy</p>
+<p>\[
+\pdv{u}{t} = - \div \bm{S}
+\]</p>
+<h3 id="maxwell-s-stress-tensor">Maxwell&rsquo;s stress tensor</h3>
+<p>The net force per unit volume is</p>
+<p>\[
+\bm{f} = \rho (\bm{E} + \bm{v}\times\bm{B})
+\]</p>
+<p>Expressing it in terms of the fields using maxwell&rsquo;s equations,</p>
+<p>\begin{align*}
+\bm{f} =  &amp; \epsilon_0[(\div \bm{E})\bm{E} + (\bm{E} \cdot \grad)E] \\<br>
+&amp; + \frac{1}{\mu_0}[(\div \bm{B})\bm{B} + (\bm{B} \cdot \grad)B] \\<br>
+&amp; - \grad u - \epsilon_0\mu_0\pdv{S}{t}
+\end{align*}</p>
+<p>We may condense the first three terms by introducing maxwell&rsquo;s stress tensor</p>
+<p>\[
+T_{ij} = \epsilon_0(E_i E_j - \frac12 \delta_{ij} E^2) + \frac{1}{\mu_0} (B_i B_j - \frac12 \delta_{ij} B^2)
+\]</p>
+<p>Thus,</p>
+<p>\[
+\bm{f} = \div T - \epsilon_0\mu_0 \pdv{\bm{S}}{t}
+\]</p>
+<p>\[
+\bm{F} = \dv{\bm{p}}{t} = - \epsilon_0\mu_0 \pdv{}{t}\int_V \bm{S} \dd{\tau} + \oint_S T \cdot \dd{\bm{a}}
+\]</p>
+<p>The momentum stored in the fields is thus</p>
+<p>\[
+\bm{p} = \frac{1}{c^2} \int_V \bm{S} \dd{\tau}
+\]</p>
+<p>while the second term is the momentum per unit time flowing in through the surface.</p>
+<p>When mechanical momentum is not changing,</p>
+<p>\[
+\pdv{\bm{g}}{t} = \div T
+\]</p>
 <div class="edit-meta">
 
 <br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Physics/electrodynamics.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../physics/em/" title="E&amp;M"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - E&amp;M</a>
@@ -399,6 +559,7 @@ B(z) = \frac{\mu_0 I}{2} \frac{R^2}{(R^2 + z^2)^{3/2}}
 <li class=""><a href="../../physics/oscillations/">Oscillations</a></li>
 <li class=""><a href="../../physics/quantum_physics/">Quantum mechanics</a></li>
 <li class=""><a href="../../physics/rotation/">Rotation</a></li>
+<li class=""><a href="../../physics/statmech/">Thermal Physics</a></li>
 <li class=""><a href="../../physics/idealgas/">Thermodynamics</a></li>
 <li class=""><a href="../../physics/wavves/">Waves</a></li>
 </ul>
@@ -447,7 +608,11 @@ B(z) = \frac{\mu_0 I}{2} \frac{R^2}{(R^2 + z^2)^{3/2}}
             <li><a href="#2nd-uniqueness-theorem">2nd uniqueness theorem</a></li>
           </ul>
         </li>
-        <li><a href="#method-of-images">Method of images</a></li>
+        <li><a href="#method-of-images">Method of images</a>
+          <ul>
+            <li><a href="#circle-of-apollonius">Circle of apollonius</a></li>
+          </ul>
+        </li>
         <li><a href="#seperation-of-variables">Seperation of variables</a>
           <ul>
             <li><a href="#spherical-coordinates">Spherical coordinates</a></li>
@@ -473,7 +638,11 @@ B(z) = \frac{\mu_0 I}{2} \frac{R^2}{(R^2 + z^2)^{3/2}}
             <li><a href="#parallel-component">Parallel component</a></li>
           </ul>
         </li>
-        <li><a href="#linear-dielectrics--starting-on-the-how">Linear dielectrics (starting on the how)</a></li>
+        <li><a href="#linear-dielectrics">Linear dielectrics</a>
+          <ul>
+            <li><a href="#energy">Energy</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
     <li><a href="#magnetostatics">Magnetostatics</a>
@@ -485,6 +654,24 @@ B(z) = \frac{\mu_0 I}{2} \frac{R^2}{(R^2 + z^2)^{3/2}}
             <li><a href="#curl-and-div-of-b">Curl and div of B</a></li>
           </ul>
         </li>
+        <li><a href="#vector-potential">Vector potential</a></li>
+      </ul>
+    </li>
+    <li><a href="#electrodynamics">Electrodynamics</a>
+      <ul>
+        <li><a href="#inductance">Inductance</a>
+          <ul>
+            <li><a href="#neumann-s-formula-for-mutual-inductance">Neumann&rsquo;s formula for mutual inductance</a></li>
+          </ul>
+        </li>
+        <li><a href="#energy-in-magnetic-fields">Energy in magnetic fields</a></li>
+        <li><a href="#maxwell-s-equations">Maxwell&rsquo;s equations</a></li>
+      </ul>
+    </li>
+    <li><a href="#conservation-laws">Conservation laws</a>
+      <ul>
+        <li><a href="#poynting-s-theorem">Poynting&rsquo;s theorem</a></li>
+        <li><a href="#maxwell-s-stress-tensor">Maxwell&rsquo;s stress tensor</a></li>
       </ul>
     </li>
   </ul>

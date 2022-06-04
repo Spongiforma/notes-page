@@ -3,11 +3,11 @@
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>DC circuit tricks - Notes</title>
+<title>Thermal Physics - Notes</title>
 <meta name="description" content="">
 <meta name="generator" content="Hugo 0.85.0" />
 <link href="//index.xml" rel="alternate" type="application/rss+xml">
-<link rel="canonical" href="../../physics/funnycircuits/">
+<link rel="canonical" href="../../physics/statmech/">
 <link rel="stylesheet" href="../../css/theme.min.css">
 <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 <link rel="stylesheet" href="../../css/chroma.min.css">
@@ -17,25 +17,52 @@
 <script src="../../js/bundle.js"></script><style>
 :root {--custom-font-color: #bcb7ae;--custom-background-color: #1a1c1d;}
 </style>
-<meta property="og:title" content="DC circuit tricks" />
-<meta property="og:description" content="KCL, KVL
-Mesh Current Analysis/Maxwell&rsquo;s Circulating Currents " />
+<meta property="og:title" content="Thermal Physics" />
+<meta property="og:description" content="Definitions Bulk modulus / compressibility \[ B = \frac{1}{\kappa} = \frac{\Delta P}{ - \Delta V / V} \]
+Energy \[
+\]
+Entropy Ideal gas Surface area of n-dimensional hypersphere
+\[ A = \frac{2\pi^{n/2}}{(\frac{n}{2}-1)!} r^{n-1} \]
+N indistinguishable particles
+\[ \Omega_1 = V \cdot V_p \]
+\begin{align*} \Omega_N &amp; = \frac{1}{N!} \frac{V^N}{h^{3N}} \times \frac{2\pi^{3N/2}}{(\frac{N}{2}-1)!} (\sqrt{2mU})^{N-1} \\
+&amp; \approx \frac{1}{N!} \frac{V^N}{h^{3N}} \frac{\pi^{3N/2}}{(\frac{N}{2})!} (\sqrt{2mU})^{N} \end{align*}
+\[ \Omega_N = f(N) V^N U^{3N/2} \]
+Sackur-Tetrode equation \[ S = Nk \left[\ln\left(\frac{V}{N}\left(\frac{4\pi m U}{3 N h^2}\right)^{3/2} \right) &#43; \frac{5}{2}\right] \]" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/physics/funnycircuits/" /><meta property="og:image" content="/images/og-image.png"/><meta property="article:section" content="Physics" />
+<meta property="og:url" content="/physics/statmech/" /><meta property="og:image" content="/images/og-image.png"/><meta property="article:section" content="Physics" />
 
 <meta property="og:site_name" content="Hugo Techdoc Theme" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/images/og-image.png"/>
 
-<meta name="twitter:title" content="DC circuit tricks"/>
-<meta name="twitter:description" content="KCL, KVL
-Mesh Current Analysis/Maxwell&rsquo;s Circulating Currents "/>
-<meta itemprop="name" content="DC circuit tricks">
-<meta itemprop="description" content="KCL, KVL
-Mesh Current Analysis/Maxwell&rsquo;s Circulating Currents ">
+<meta name="twitter:title" content="Thermal Physics"/>
+<meta name="twitter:description" content="Definitions Bulk modulus / compressibility \[ B = \frac{1}{\kappa} = \frac{\Delta P}{ - \Delta V / V} \]
+Energy \[
+\]
+Entropy Ideal gas Surface area of n-dimensional hypersphere
+\[ A = \frac{2\pi^{n/2}}{(\frac{n}{2}-1)!} r^{n-1} \]
+N indistinguishable particles
+\[ \Omega_1 = V \cdot V_p \]
+\begin{align*} \Omega_N &amp; = \frac{1}{N!} \frac{V^N}{h^{3N}} \times \frac{2\pi^{3N/2}}{(\frac{N}{2}-1)!} (\sqrt{2mU})^{N-1} \\
+&amp; \approx \frac{1}{N!} \frac{V^N}{h^{3N}} \frac{\pi^{3N/2}}{(\frac{N}{2})!} (\sqrt{2mU})^{N} \end{align*}
+\[ \Omega_N = f(N) V^N U^{3N/2} \]
+Sackur-Tetrode equation \[ S = Nk \left[\ln\left(\frac{V}{N}\left(\frac{4\pi m U}{3 N h^2}\right)^{3/2} \right) &#43; \frac{5}{2}\right] \]"/>
+<meta itemprop="name" content="Thermal Physics">
+<meta itemprop="description" content="Definitions Bulk modulus / compressibility \[ B = \frac{1}{\kappa} = \frac{\Delta P}{ - \Delta V / V} \]
+Energy \[
+\]
+Entropy Ideal gas Surface area of n-dimensional hypersphere
+\[ A = \frac{2\pi^{n/2}}{(\frac{n}{2}-1)!} r^{n-1} \]
+N indistinguishable particles
+\[ \Omega_1 = V \cdot V_p \]
+\begin{align*} \Omega_N &amp; = \frac{1}{N!} \frac{V^N}{h^{3N}} \times \frac{2\pi^{3N/2}}{(\frac{N}{2}-1)!} (\sqrt{2mU})^{N-1} \\
+&amp; \approx \frac{1}{N!} \frac{V^N}{h^{3N}} \frac{\pi^{3N/2}}{(\frac{N}{2})!} (\sqrt{2mU})^{N} \end{align*}
+\[ \Omega_N = f(N) V^N U^{3N/2} \]
+Sackur-Tetrode equation \[ S = Nk \left[\ln\left(\frac{V}{N}\left(\frac{4\pi m U}{3 N h^2}\right)^{3/2} \right) &#43; \frac{5}{2}\right] \]">
 
-<meta itemprop="wordCount" content="7"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="84"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -79,12 +106,39 @@ Mesh Current Analysis/Maxwell&rsquo;s Circulating Currents ">
 </div>
 <div class="content-container">
 <main>
-<p>KCL, KVL</p>
-<h2 id="mesh-current-analysis-maxwell-s-circulating-currents">Mesh Current Analysis/Maxwell&rsquo;s Circulating Currents</h2>
+<h2 id="definitions">Definitions</h2>
+<h3 id="bulk-modulus-compressibility">Bulk modulus / compressibility</h3>
+<p>\[
+B = \frac{1}{\kappa} = \frac{\Delta P}{ - \Delta V / V}
+\]</p>
+<h2 id="energy">Energy</h2>
+<p>\[</p>
+<p>\]</p>
+<h2 id="entropy">Entropy</h2>
+<h3 id="ideal-gas">Ideal gas</h3>
+<p><strong>Surface area of n-dimensional hypersphere</strong></p>
+<p>\[
+A = \frac{2\pi^{n/2}}{(\frac{n}{2}-1)!} r^{n-1}
+\]</p>
+<p><strong>N indistinguishable particles</strong></p>
+<p>\[
+\Omega_1 = V \cdot V_p
+\]</p>
+<p>\begin{align*}
+\Omega_N &amp; = \frac{1}{N!} \frac{V^N}{h^{3N}} \times \frac{2\pi^{3N/2}}{(\frac{N}{2}-1)!} (\sqrt{2mU})^{N-1} \\<br>
+&amp; \approx \frac{1}{N!} \frac{V^N}{h^{3N}}  \frac{\pi^{3N/2}}{(\frac{N}{2})!} (\sqrt{2mU})^{N}
+\end{align*}</p>
+<p>\[
+\Omega_N = f(N) V^N U^{3N/2}
+\]</p>
+<h4 id="sackur-tetrode-equation">Sackur-Tetrode equation</h4>
+<p>\[
+S = Nk \left[\ln\left(\frac{V}{N}\left(\frac{4\pi m U}{3 N h^2}\right)^{3/2} \right) + \frac{5}{2}\right]
+\]</p>
 <div class="edit-meta">
 
-<br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Physics/funnycircuits.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../physics/circuits/" title="Circuits"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Circuits</a>
-<a class="nav nav-next" href="../../physics/em/" title="E&amp;M">Next - E&amp;M <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+<br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Physics/statmech.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../physics/rotation/" title="Rotation"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Rotation</a>
+<a class="nav nav-next" href="../../physics/idealgas/" title="Thermodynamics">Next - Thermodynamics <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
 </nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
 </footer>
 </main>
@@ -122,7 +176,7 @@ Mesh Current Analysis/Maxwell&rsquo;s Circulating Currents ">
   
 <ul class="sub-menu">
 <li class=""><a href="../../physics/circuits/">Circuits</a></li>
-<li class="active"><a href="../../physics/funnycircuits/">DC circuit tricks</a></li>
+<li class=""><a href="../../physics/funnycircuits/">DC circuit tricks</a></li>
 <li class=""><a href="../../physics/em/">E&amp;M</a></li>
 <li class=""><a href="../../physics/electrodynamics/">Electrodynamics</a></li>
 <li class=""><a href="../../physics/fluids/">Fluid Dynamics</a></li>
@@ -132,7 +186,7 @@ Mesh Current Analysis/Maxwell&rsquo;s Circulating Currents ">
 <li class=""><a href="../../physics/oscillations/">Oscillations</a></li>
 <li class=""><a href="../../physics/quantum_physics/">Quantum mechanics</a></li>
 <li class=""><a href="../../physics/rotation/">Rotation</a></li>
-<li class=""><a href="../../physics/statmech/">Thermal Physics</a></li>
+<li class="active"><a href="../../physics/statmech/">Thermal Physics</a></li>
 <li class=""><a href="../../physics/idealgas/">Thermodynamics</a></li>
 <li class=""><a href="../../physics/wavves/">Waves</a></li>
 </ul>
@@ -162,7 +216,21 @@ Mesh Current Analysis/Maxwell&rsquo;s Circulating Currents ">
 <nav class="outline">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#mesh-current-analysis-maxwell-s-circulating-currents">Mesh Current Analysis/Maxwell&rsquo;s Circulating Currents</a></li>
+    <li><a href="#definitions">Definitions</a>
+      <ul>
+        <li><a href="#bulk-modulus-compressibility">Bulk modulus / compressibility</a></li>
+      </ul>
+    </li>
+    <li><a href="#energy">Energy</a></li>
+    <li><a href="#entropy">Entropy</a>
+      <ul>
+        <li><a href="#ideal-gas">Ideal gas</a>
+          <ul>
+            <li><a href="#sackur-tetrode-equation">Sackur-Tetrode equation</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </nav>
