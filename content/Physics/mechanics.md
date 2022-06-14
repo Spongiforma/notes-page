@@ -197,6 +197,19 @@ r = \frac{h^2 / \mu}{1+e\cos\theta}
 where the eccentricity \\(e = \sqrt{1 + \frac{2EL^2}{m\alpha^2}} = \sqrt{1+\frac{2\epsilon h^2}{\mu^2}}\\) , and \\(\alpha = GMm\\), \\(\mu = GM\\).
 
 
+#### Kepler's equation {#kepler-s-equation}
+
+\\[
+r = a(1-e\cos\psi)
+\\]
+
+**Kepler's equation**
+
+\\[
+\omega t =\psi - e \sin\psi
+\\]
+
+
 #### Eccentricity and orbits {#eccentricity-and-orbits}
 
 <!--list-separator-->
