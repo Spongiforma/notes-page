@@ -304,16 +304,23 @@ If H and K are subgroups and \\(H \leq N\_G(K)\\), then HK is a subgroup of G.
 
 #### Isomorphism theorems {#isomorphism-theorems}
 
+These follow from the canonical decomposition of group homomorphisms into a projection, isomorphism and inclusion map.
+
 1.  If \\(\phi : G\to H\\) is a homomorphism of groups, then \\(\ker \phi \unlhd G\\) and \\(G / \ker \phi \cong \phi(G)\\).
-    -   A homomorphism is injective iff its kernel is 1.
 
-    -   \\(|G : \ker \phi| = |\phi(G)|\\) This is equivalently the rank-nullity theorem.
+mote.php/dav/files/delargement
 
-2.  Let G be a group, and A,B be subgroups such that \\(A \leq N\_G(B)\\). Then AB is a subgroup of G, \\(B \unlhd AB\\), \\(A \cap B \unlhd A\\) and \\(AB/B \cong A/A\cap B\\).
+-   A homomorphism is injective iff its kernel is 1.
 
-3.  Let G be a group and let H and K be normal subgroups of G with \\(H \leq K\\). Then \\(K/H \unlhd G/H\\) and \\((G/H)/(K/H) \cong G/K\\)
+-   \\(|G : \ker \phi| = |\phi(G)|\\) This is equivalently the rank-nullity theorem.
 
-4.  Let G be a group and N be a normal subgroup of G. Then there is a bijection from the set of subgroups A of G which contain N onto the set of subgroups \\(\bar{A} = A/N\\) of \\(G/N\\). In particular, every subgroup of \\(\bar{G}\\) is of the form A/N for some subgroup A of G containing N (namely, its preimage in G under the natural projection homomorphism form G to G/N). This bijection has the following properties.
+<!--listend-->
+
+1.  Let G be a group, and A,B be subgroups such that \\(A \leq N\_G(B)\\). Then AB is a subgroup of G, \\(B \unlhd AB\\), \\(A \cap B \unlhd A\\) and \\(AB/B \cong A/A\cap B\\).
+
+2.  Let G be a group and let H and K be normal subgroups of G with \\(H \leq K\\). Then \\(K/H \unlhd G/H\\) and \\((G/H)/(K/H) \cong G/K\\)
+
+3.  Let G be a group and N be a normal subgroup of G. Then there is a bijection from the set of subgroups A of G which contain N onto the set of subgroups \\(\bar{A} = A/N\\) of \\(G/N\\). In particular, every subgroup of \\(\bar{G}\\) is of the form A/N for some subgroup A of G containing N (namely, its preimage in G under the natural projection homomorphism form G to G/N). This bijection has the following properties.
 
     For all A,B subgroups of G, with N a subgroup of A and B,
 
@@ -331,3 +338,22 @@ If H and K are subgroups and \\(H \leq N\_G(K)\\), then HK is a subgroup of G.
 ### Group actions {#group-actions}
 
 An action is faithful if its kernel is the identity.
+
+**Theorem**
+
+Let G be a group, H a subgroup of G and let G act by left multiplication on the set A of left cosets of H in G. Let \\(\pi\_H\\) be the associated permutation representation afforded by this action.
+
+1.  G acts transitively on A
+2.  The stabilizer in G of the point 1H is the subgroup H
+3.  The kernel of the action is \\(\ker \pi\_H = \cap\_{x\in G}xHx^{-1}\\) and \\(\ker \pi\_H\\) is the largest normal subgroup of G contained in H.
+
+**Corollary (Cayley's Theorem)**
+
+Every group is isomorphic to a subgroup of some symmetric group. IF G is a group of order n, then G is isomorphic to a subgropu of \\(S\_n\\).
+
+**Corollary**
+
+If G is a finite group of order n and p is the smallest prime dividing \\(|G|\\), then any subgroup of index p is normal.
+
+
+## Rings {#rings}

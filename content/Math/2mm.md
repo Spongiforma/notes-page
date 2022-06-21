@@ -703,6 +703,9 @@ If we wish to solve an nth-order linear ODE and we already know one part of the 
 If the whole complementary solution of a linear ODE is known, then assume a particular integral of the same form with constants replaced by functions of x, and impose a system of LI equations for the unknowns including the ODE itself.
 
 
+#### Green's functions {#green-s-functions}
+
+
 #### Canonical form for second order equations {#canonical-form-for-second-order-equations}
 
 For nth-order linear ODEs with variable coefficients to those of order 2, rearrange the equation till the coefficient of the second derivative is unity.
@@ -809,3 +812,62 @@ Who cares
 \\[
 \mathcal{L} y(x) = f(x)
 \\]
+
+
+### Sturm-Liouville equations {#sturm-liouville-equations}
+
+\\[
+p(x) \dv[2]{y}{x} + r(x) \dv{y}{x} + q(x) y + \lambda \rho(x) y = 0
+\\]
+
+where \\(r(x) = \dv{p(x)}{x}\\), and the weightfunction \\(\rho\\) must be finite and not change sign in the natural interval.
+
+SL equations can be written in the forms,
+
+\\[
+\mathcal{L}y=\lambda\rho(x)y
+\\]
+
+\\[
+(py')' + qy + \lambda\rho y=0
+\\]
+
+The SL operator is thus,
+
+\\[
+\mathcal{L}\equiv -\left[\dv{}{x}\left(p(x)\dv{}{x}\right)+q(x)\right]
+\\]
+
+The operator is self-adjoint and hermitian given that any two eigenfunctions \\(y\_i,y\_j\\) satisfy,
+
+\\[
+[y\_i^\* p y\_j']\_{x=a}^{x=b} = 0
+\\]
+
+Even when \\(p'\neq r\\), a 2nd-order DE can be converted into SL-form by multiplying through by,
+
+\\[
+F(x) = \exp\left\\{\int^x \frac{r(u)-p'(u)}{p(u)}\right\\}
+\\]
+
+To solve equations of the form,
+
+\\[
+\mathcal{L} y(x) = f(x)
+\\]
+
+we may expand out y in terms of eigenfunctions and eventually get,
+
+\\[
+y(x) = \int\_a^b \left\\{ \sum\_{n=0}^\infty \frac{1}{\lambda\_n}\hat{y}\_n(x)\hat{y}^\*\_n(z)\right\\} f(z)\dd{z}
+\\]
+
+Where the quantity in braces is **Green's function**, \\(G(x,z)\\).
+
+In general to solve a DE \\(\mathcal{L}y = f(x)\\),
+
+1.  Find the solution to \\(\mathcal{L}y = \lambda y\\) to find the eigenfunctions.
+2.  Sub in boundary conditions
+3.  Normalize the eigenfunctions
+4.  Find the Green's function
+5.  Integrate with f and get solution
