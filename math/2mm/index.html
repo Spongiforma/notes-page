@@ -44,7 +44,7 @@ Dirichlet conditions The conditions a function must fulfil in order that it may 
   It must be single-valued and continuous, except at a finite number of finite discontinuties
   It must have only have a finite number of maxima and minima within one period">
 
-<meta itemprop="wordCount" content="2775"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="2964"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -553,6 +553,7 @@ a_n(x)\dv[n]{y}{x} + \ldots + a_1(x)\dv{y}{x}  + a_0(x)y = f(x)
 <p>If we wish to solve an nth-order linear ODE and we already know one part of the complementary solution \(u(x)\), we can make the substitution \(y = uv\) to transform the ODE into one of order \(n-1\) in \(dv/dx\). The simpler equation may be soluble. The solution will contain both the full complementary function.</p>
 <h4 id="variation-of-parameters">Variation of parameters</h4>
 <p>If the whole complementary solution of a linear ODE is known, then assume a particular integral of the same form with constants replaced by functions of x, and impose a system of LI equations for the unknowns including the ODE itself.</p>
+<h4 id="green-s-functions">Green&rsquo;s functions</h4>
 <h4 id="canonical-form-for-second-order-equations">Canonical form for second order equations</h4>
 <p>For nth-order linear ODEs with variable coefficients to those of order 2, rearrange the equation till the coefficient of the second derivative is unity.</p>
 <p>\[
@@ -614,6 +615,47 @@ y_2(z) = y_1(z) \int^z \frac{1}{y_1^2(u)} \exp\left\{ -\int^u p(v)\dd{v} \right\
 <p>\[
 \mathcal{L} y(x) = f(x)
 \]</p>
+<h3 id="sturm-liouville-equations">Sturm-Liouville equations</h3>
+<p>\[
+p(x) \dv[2]{y}{x} + r(x) \dv{y}{x} + q(x) y + \lambda \rho(x) y = 0
+\]</p>
+<p>where \(r(x) = \dv{p(x)}{x}\), and the weightfunction \(\rho\) must be finite and not change sign in the natural interval.</p>
+<p>SL equations can be written in the forms,</p>
+<p>\[
+\mathcal{L}y=\lambda\rho(x)y
+\]</p>
+<p>\[
+(py')' + qy + \lambda\rho y=0
+\]</p>
+<p>The SL operator is thus,</p>
+<p>\[
+\mathcal{L}\equiv -\left[\dv{}{x}\left(p(x)\dv{}{x}\right)+q(x)\right]
+\]</p>
+<p>The operator is self-adjoint and hermitian given that any two eigenfunctions \(y_i,y_j\) satisfy,</p>
+<p>\[
+[y_i^* p y_j']_{x=a}^{x=b} = 0
+\]</p>
+<p>Even when \(p'\neq r\), a 2nd-order DE can be converted into SL-form by multiplying through by,</p>
+<p>\[
+F(x) = \exp\left\{\int^x \frac{r(u)-p'(u)}{p(u)}\right\}
+\]</p>
+<p>To solve equations of the form,</p>
+<p>\[
+\mathcal{L} y(x) = f(x)
+\]</p>
+<p>we may expand out y in terms of eigenfunctions and eventually get,</p>
+<p>\[
+y(x) = \int_a^b \left\{ \sum_{n=0}^\infty \frac{1}{\lambda_n}\hat{y}_n(x)\hat{y}^*_n(z)\right\} f(z)\dd{z}
+\]</p>
+<p>Where the quantity in braces is <strong>Green&rsquo;s function</strong>, \(G(x,z)\).</p>
+<p>In general to solve a DE \(\mathcal{L}y = f(x)\),</p>
+<ol>
+<li>Find the solution to \(\mathcal{L}y = \lambda y\) to find the eigenfunctions.</li>
+<li>Sub in boundary conditions</li>
+<li>Normalize the eigenfunctions</li>
+<li>Find the Green&rsquo;s function</li>
+<li>Integrate with f and get solution</li>
+</ol>
 <div class="edit-meta">
 
 <br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Math/2mm.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../math/mathematicalmethods/" title="Mathematical methods pt. 1"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Mathematical methods pt. 1</a>
@@ -756,6 +798,7 @@ y_2(z) = y_1(z) \int^z \frac{1}{y_1^2(u)} \exp\left\{ -\int^u p(v)\dd{v} \right\
             <li><a href="#exact-equations">Exact equations</a></li>
             <li><a href="#partially-known-complementary-function">Partially known complementary function</a></li>
             <li><a href="#variation-of-parameters">Variation of parameters</a></li>
+            <li><a href="#green-s-functions">Green&rsquo;s functions</a></li>
             <li><a href="#canonical-form-for-second-order-equations">Canonical form for second order equations</a></li>
           </ul>
         </li>
@@ -778,7 +821,11 @@ y_2(z) = y_1(z) \int^z \frac{1}{y_1^2(u)} \exp\left\{ -\int^u p(v)\dd{v} \right\
         </li>
       </ul>
     </li>
-    <li><a href="#eigenfunction-methods-for-differential-equations">Eigenfunction methods for differential equations</a></li>
+    <li><a href="#eigenfunction-methods-for-differential-equations">Eigenfunction methods for differential equations</a>
+      <ul>
+        <li><a href="#sturm-liouville-equations">Sturm-Liouville equations</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </nav>

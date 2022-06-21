@@ -38,7 +38,7 @@ A submonoid of a set M, contains 1 and N is closed under the product in M."/>
 A monad without an associative p is sometimes called a monad. If there is no requirement on 1, then its a semigroup (M,p).
 A submonoid of a set M, contains 1 and N is closed under the product in M.">
 
-<meta itemprop="wordCount" content="1843"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="1999"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -301,9 +301,11 @@ gN = \{gn | n \in N\}
 </li>
 </ul>
 <h4 id="isomorphism-theorems">Isomorphism theorems</h4>
+<p>These follow from the canonical decomposition of group homomorphisms into a projection, isomorphism and inclusion map.</p>
 <ol>
-<li>
-<p>If \(\phi : G\to H\) is a homomorphism of groups, then \(\ker \phi \unlhd G\) and \(G / \ker \phi \cong \phi(G)\).</p>
+<li>If \(\phi : G\to H\) is a homomorphism of groups, then \(\ker \phi \unlhd G\) and \(G / \ker \phi \cong \phi(G)\).</li>
+</ol>
+<p>mote.php/dav/files/delargement</p>
 <ul>
 <li>
 <p>A homomorphism is injective iff its kernel is 1.</p>
@@ -312,7 +314,8 @@ gN = \{gn | n \in N\}
 <p>\(|G : \ker \phi| = |\phi(G)|\) This is equivalently the rank-nullity theorem.</p>
 </li>
 </ul>
-</li>
+<!--listend-->
+<ol>
 <li>
 <p>Let G be a group, and A,B be subgroups such that \(A \leq N_G(B)\). Then AB is a subgroup of G, \(B \unlhd AB\), \(A \cap B \unlhd A\) and \(AB/B \cong A/A\cap B\).</p>
 </li>
@@ -343,6 +346,18 @@ gN = \{gn | n \in N\}
 </ol>
 <h3 id="group-actions">Group actions</h3>
 <p>An action is faithful if its kernel is the identity.</p>
+<p><strong>Theorem</strong></p>
+<p>Let G be a group, H a subgroup of G and let G act by left multiplication on the set A of left cosets of H in G. Let \(\pi_H\) be the associated permutation representation afforded by this action.</p>
+<ol>
+<li>G acts transitively on A</li>
+<li>The stabilizer in G of the point 1H is the subgroup H</li>
+<li>The kernel of the action is \(\ker \pi_H = \cap_{x\in G}xHx^{-1}\) and \(\ker \pi_H\) is the largest normal subgroup of G contained in H.</li>
+</ol>
+<p><strong>Corollary (Cayley&rsquo;s Theorem)</strong></p>
+<p>Every group is isomorphic to a subgroup of some symmetric group. IF G is a group of order n, then G is isomorphic to a subgropu of \(S_n\).</p>
+<p><strong>Corollary</strong></p>
+<p>If G is a finite group of order n and p is the smallest prime dividing \(|G|\), then any subgroup of index p is normal.</p>
+<h2 id="rings">Rings</h2>
 <div class="edit-meta">
 
 <br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Math/abstractalgebra.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../math/" title="Maths"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Maths</a>
@@ -451,6 +466,7 @@ gN = \{gn | n \in N\}
         <li><a href="#group-actions">Group actions</a></li>
       </ul>
     </li>
+    <li><a href="#rings">Rings</a></li>
   </ul>
 </nav>
 </nav>
