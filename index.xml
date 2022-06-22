@@ -33,9 +33,9 @@ It makes use of a variety of open source projects including:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/math/abstractalgebra/</guid>
-      <description>Monoids A monoid is a triple (M,p,1), in which M is a non-vacuous set, p is an associative binary composition in M, and 1 is an element of M such that p(1,a) = a = p(a,1) for all \(a \in M\).
-A monad without an associative p is sometimes called a monad. If there is no requirement on 1, then its a semigroup (M,p).
-A submonoid of a set M, contains 1 and N is closed under the product in M.</description>
+      <description>From readings of Aluffi&amp;rsquo;s &amp;ldquo;Algebra: Chapter 0&amp;rdquo; and Dummit &amp;amp; Foote.
+Monoids A monoid is a triple (M,p,1), in which M is a non-vacuous set, p is an associative binary composition in M, and 1 is an element of M such that p(1,a) = a = p(a,1) for all \(a \in M\).
+A monoid without an associative p is sometimes called a monad. If there is no requirement on 1, then its a semigroup (M,p).</description>
     </item>
     
     <item>
@@ -238,6 +238,16 @@ Cyclic coordinate When the Lagrangian does not depend on a coordinate qk:
 This is also generalised momentum.
 q_k is thus a cyclic coordinate.
 Energy conservation \[ \pdv{E}{t} = -\pdv{L}{t} \]</description>
+    </item>
+    
+    <item>
+      <title>ODEs</title>
+      <link>/math/ode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/math/ode/</guid>
+      <description>*
+Theorems </description>
     </item>
     
     <item>
