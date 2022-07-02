@@ -3,11 +3,11 @@
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>Thermal Physics - Notes</title>
+<title>Differential Geometry - Notes</title>
 <meta name="description" content="">
 <meta name="generator" content="Hugo 0.85.0" />
 <link href="//index.xml" rel="alternate" type="application/rss+xml">
-<link rel="canonical" href="../../physics/statmech/">
+<link rel="canonical" href="../../math/diffgeom/">
 <link rel="stylesheet" href="../../css/theme.min.css">
 <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 <link rel="stylesheet" href="../../css/chroma.min.css">
@@ -17,52 +17,28 @@
 <script src="../../js/bundle.js"></script><style>
 :root {--custom-font-color: #bcb7ae;--custom-background-color: #1a1c1d;}
 </style>
-<meta property="og:title" content="Thermal Physics" />
-<meta property="og:description" content="Definitions Bulk modulus / compressibility \[ B = \frac{1}{\kappa} = \frac{\Delta P}{ - \Delta V / V} \]
-Energy \[
-\]
-Entropy Ideal gas Surface area of n-dimensional hypersphere
-\[ A = \frac{2\pi^{n/2}}{(\frac{n}{2}-1)!} r^{n-1} \]
-N indistinguishable particles
-\[ \Omega_1 = V \cdot V_p \]
-\begin{align*} \Omega_N &amp; = \frac{1}{N!} \frac{V^N}{h^{3N}} \times \frac{2\pi^{3N/2}}{(\frac{N}{2}-1)!} (\sqrt{2mU})^{N-1} \\
-&amp; \approx \frac{1}{N!} \frac{V^N}{h^{3N}} \frac{\pi^{3N/2}}{(\frac{N}{2})!} (\sqrt{2mU})^{N} \end{align*}
-\[ \Omega_N = f(N) V^N U^{3N/2} \]
-Sackur-Tetrode equation \[ S = Nk \left[\ln\left(\frac{V}{N}\left(\frac{4\pi m U}{3 N h^2}\right)^{3/2} \right) &#43; \frac{5}{2}\right] \]" />
+<meta property="og:title" content="Differential Geometry" />
+<meta property="og:description" content="Smooth manifolds A topological manifold is hausdorff, second-countable and locally euclidean.
+Smooth maps Definition
+\(f : M\to\mathbb{R}^K\) is a smooth function if for every \(p \in M\), there exist a smooth chart \((U,\varphi)\) for M whose domain contains p and such that the composite function \(f \circ \phi^{-1}\) is smooth on the open subset \(\hat{U} = \phi(U) \subseteq \mathbb{R}^n\)." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/physics/statmech/" /><meta property="og:image" content="/images/og-image.png"/><meta property="article:section" content="Physics" />
+<meta property="og:url" content="/math/diffgeom/" /><meta property="og:image" content="/images/og-image.png"/><meta property="article:section" content="Math" />
 
 <meta property="og:site_name" content="Hugo Techdoc Theme" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/images/og-image.png"/>
 
-<meta name="twitter:title" content="Thermal Physics"/>
-<meta name="twitter:description" content="Definitions Bulk modulus / compressibility \[ B = \frac{1}{\kappa} = \frac{\Delta P}{ - \Delta V / V} \]
-Energy \[
-\]
-Entropy Ideal gas Surface area of n-dimensional hypersphere
-\[ A = \frac{2\pi^{n/2}}{(\frac{n}{2}-1)!} r^{n-1} \]
-N indistinguishable particles
-\[ \Omega_1 = V \cdot V_p \]
-\begin{align*} \Omega_N &amp; = \frac{1}{N!} \frac{V^N}{h^{3N}} \times \frac{2\pi^{3N/2}}{(\frac{N}{2}-1)!} (\sqrt{2mU})^{N-1} \\
-&amp; \approx \frac{1}{N!} \frac{V^N}{h^{3N}} \frac{\pi^{3N/2}}{(\frac{N}{2})!} (\sqrt{2mU})^{N} \end{align*}
-\[ \Omega_N = f(N) V^N U^{3N/2} \]
-Sackur-Tetrode equation \[ S = Nk \left[\ln\left(\frac{V}{N}\left(\frac{4\pi m U}{3 N h^2}\right)^{3/2} \right) &#43; \frac{5}{2}\right] \]"/>
-<meta itemprop="name" content="Thermal Physics">
-<meta itemprop="description" content="Definitions Bulk modulus / compressibility \[ B = \frac{1}{\kappa} = \frac{\Delta P}{ - \Delta V / V} \]
-Energy \[
-\]
-Entropy Ideal gas Surface area of n-dimensional hypersphere
-\[ A = \frac{2\pi^{n/2}}{(\frac{n}{2}-1)!} r^{n-1} \]
-N indistinguishable particles
-\[ \Omega_1 = V \cdot V_p \]
-\begin{align*} \Omega_N &amp; = \frac{1}{N!} \frac{V^N}{h^{3N}} \times \frac{2\pi^{3N/2}}{(\frac{N}{2}-1)!} (\sqrt{2mU})^{N-1} \\
-&amp; \approx \frac{1}{N!} \frac{V^N}{h^{3N}} \frac{\pi^{3N/2}}{(\frac{N}{2})!} (\sqrt{2mU})^{N} \end{align*}
-\[ \Omega_N = f(N) V^N U^{3N/2} \]
-Sackur-Tetrode equation \[ S = Nk \left[\ln\left(\frac{V}{N}\left(\frac{4\pi m U}{3 N h^2}\right)^{3/2} \right) &#43; \frac{5}{2}\right] \]">
+<meta name="twitter:title" content="Differential Geometry"/>
+<meta name="twitter:description" content="Smooth manifolds A topological manifold is hausdorff, second-countable and locally euclidean.
+Smooth maps Definition
+\(f : M\to\mathbb{R}^K\) is a smooth function if for every \(p \in M\), there exist a smooth chart \((U,\varphi)\) for M whose domain contains p and such that the composite function \(f \circ \phi^{-1}\) is smooth on the open subset \(\hat{U} = \phi(U) \subseteq \mathbb{R}^n\)."/>
+<meta itemprop="name" content="Differential Geometry">
+<meta itemprop="description" content="Smooth manifolds A topological manifold is hausdorff, second-countable and locally euclidean.
+Smooth maps Definition
+\(f : M\to\mathbb{R}^K\) is a smooth function if for every \(p \in M\), there exist a smooth chart \((U,\varphi)\) for M whose domain contains p and such that the composite function \(f \circ \phi^{-1}\) is smooth on the open subset \(\hat{U} = \phi(U) \subseteq \mathbb{R}^n\).">
 
-<meta itemprop="wordCount" content="84"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="59"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -106,39 +82,15 @@ Sackur-Tetrode equation \[ S = Nk \left[\ln\left(\frac{V}{N}\left(\frac{4\pi m U
 </div>
 <div class="content-container">
 <main>
-<h2 id="definitions">Definitions</h2>
-<h3 id="bulk-modulus-compressibility">Bulk modulus / compressibility</h3>
-<p>\[
-B = \frac{1}{\kappa} = \frac{\Delta P}{ - \Delta V / V}
-\]</p>
-<h2 id="energy">Energy</h2>
-<p>\[</p>
-<p>\]</p>
-<h2 id="entropy">Entropy</h2>
-<h3 id="ideal-gas">Ideal gas</h3>
-<p><strong>Surface area of n-dimensional hypersphere</strong></p>
-<p>\[
-A = \frac{2\pi^{n/2}}{(\frac{n}{2}-1)!} r^{n-1}
-\]</p>
-<p><strong>N indistinguishable particles</strong></p>
-<p>\[
-\Omega_1 = V \cdot V_p
-\]</p>
-<p>\begin{align*}
-\Omega_N &amp; = \frac{1}{N!} \frac{V^N}{h^{3N}} \times \frac{2\pi^{3N/2}}{(\frac{N}{2}-1)!} (\sqrt{2mU})^{N-1} \\<br>
-&amp; \approx \frac{1}{N!} \frac{V^N}{h^{3N}}  \frac{\pi^{3N/2}}{(\frac{N}{2})!} (\sqrt{2mU})^{N}
-\end{align*}</p>
-<p>\[
-\Omega_N = f(N) V^N U^{3N/2}
-\]</p>
-<h4 id="sackur-tetrode-equation">Sackur-Tetrode equation</h4>
-<p>\[
-S = Nk \left[\ln\left(\frac{V}{N}\left(\frac{4\pi m U}{3 N h^2}\right)^{3/2} \right) + \frac{5}{2}\right]
-\]</p>
+<h2 id="smooth-manifolds">Smooth manifolds</h2>
+<p>A topological manifold is hausdorff, second-countable and locally euclidean.</p>
+<h2 id="smooth-maps">Smooth maps</h2>
+<p><strong>Definition</strong></p>
+<p>\(f : M\to\mathbb{R}^K\) is a <strong>smooth function</strong> if for every \(p \in M\), there exist a smooth chart \((U,\varphi)\) for M whose domain contains p and such that the composite function \(f \circ \phi^{-1}\) is smooth on the open subset \(\hat{U} = \phi(U) \subseteq \mathbb{R}^n\).</p>
 <div class="edit-meta">
 
-<br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Physics/statmech.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../physics/rotation/" title="Rotation"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Rotation</a>
-<a class="nav nav-next" href="../../physics/idealgas/" title="Thermodynamics">Next - Thermodynamics <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+<br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Math/diffgeom.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../math/analysis/" title="Analysis"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Analysis</a>
+<a class="nav nav-next" href="../../math/functionalanalysis/" title="Functional Analysis">Next - Functional Analysis <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
 </nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
 </footer>
 </main>
@@ -148,12 +100,12 @@ S = Nk \left[\ln\left(\frac{V}{N}\left(\frac{4\pi m U}{3 N h^2}\right)^{3/2} \ri
 <ul>
 <li class=""><a href="../../">Home</a></li>
 
-<li class=" has-sub-menu"><a href="../../math/">Maths<span class="mark closed">+</span></a>
+<li class="parent has-sub-menu"><a href="../../math/">Maths<span class="mark opened">-</span></a>
   
 <ul class="sub-menu">
 <li class=""><a href="../../math/abstractalgebra/">Algebra</a></li>
 <li class=""><a href="../../math/analysis/">Analysis</a></li>
-<li class=""><a href="../../math/diffgeom/">Differential Geometry</a></li>
+<li class="active"><a href="../../math/diffgeom/">Differential Geometry</a></li>
 <li class=""><a href="../../math/functionalanalysis/">Functional Analysis</a></li>
 <li class=""><a href="../../math/integration/">Integration</a></li>
 <li class=""><a href="../../math/linear_algebra/">Linear Algebra</a></li>
@@ -167,7 +119,7 @@ S = Nk \left[\ln\left(\frac{V}{N}\left(\frac{4\pi m U}{3 N h^2}\right)^{3/2} \ri
   
 </li>
 
-<li class="parent has-sub-menu"><a href="../../physics/">Physics<span class="mark opened">-</span></a>
+<li class=" has-sub-menu"><a href="../../physics/">Physics<span class="mark closed">+</span></a>
   
 <ul class="sub-menu">
 <li class=""><a href="../../physics/circuits/">Circuits</a></li>
@@ -181,7 +133,7 @@ S = Nk \left[\ln\left(\frac{V}{N}\left(\frac{4\pi m U}{3 N h^2}\right)^{3/2} \ri
 <li class=""><a href="../../physics/oscillations/">Oscillations</a></li>
 <li class=""><a href="../../physics/quantum_physics/">Quantum mechanics</a></li>
 <li class=""><a href="../../physics/rotation/">Rotation</a></li>
-<li class="active"><a href="../../physics/statmech/">Thermal Physics</a></li>
+<li class=""><a href="../../physics/statmech/">Thermal Physics</a></li>
 <li class=""><a href="../../physics/idealgas/">Thermodynamics</a></li>
 <li class=""><a href="../../physics/wavves/">Waves</a></li>
 </ul>
@@ -209,21 +161,8 @@ S = Nk \left[\ln\left(\frac{V}{N}\left(\frac{4\pi m U}{3 N h^2}\right)^{3/2} \ri
 <nav class="outline">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#definitions">Definitions</a>
-      <ul>
-        <li><a href="#bulk-modulus-compressibility">Bulk modulus / compressibility</a></li>
-      </ul>
-    </li>
-    <li><a href="#energy">Energy</a></li>
-    <li><a href="#entropy">Entropy</a>
-      <ul>
-        <li><a href="#ideal-gas">Ideal gas</a>
-          <ul>
-            <li><a href="#sackur-tetrode-equation">Sackur-Tetrode equation</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
+    <li><a href="#smooth-manifolds">Smooth manifolds</a></li>
+    <li><a href="#smooth-maps">Smooth maps</a></li>
   </ul>
 </nav>
 </nav>

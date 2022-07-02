@@ -12,7 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/math/abstractalgebra/</guid>
-      <description>From readings of Aluffi&amp;rsquo;s &amp;ldquo;Algebra: Chapter 0&amp;rdquo; and Dummit &amp;amp; Foote.
+      <description>Notes from readings of Aluffi&amp;rsquo;s Algebra: Chapter 0.
 Monoids A monoid is a triple (M,p,1), in which M is a non-vacuous set, p is an associative binary composition in M, and 1 is an element of M such that p(1,a) = a = p(a,1) for all \(a \in M\).
 A monoid without an associative p is sometimes called a monad. If there is no requirement on 1, then its a semigroup (M,p).</description>
     </item>
@@ -28,6 +28,17 @@ There exists an ordered field R which has the least-upper-bound property. R cont
 Theorem If \(x \in R\), \(y \in R\), and \(x &amp;gt; 0\), then there&amp;rsquo;s a positive integer \(n\) such that \(nx &amp;gt; y\). If \(x &amp;lt; y\), then there exists a \(p \in Q\) such that \(x &amp;lt; p &amp;lt; y\)
 Theorem
 For every positive real x and every positive integer n, there is only one positive real y such that \(y^n = x\)</description>
+    </item>
+    
+    <item>
+      <title>Differential Geometry</title>
+      <link>/math/diffgeom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/math/diffgeom/</guid>
+      <description>Smooth manifolds A topological manifold is hausdorff, second-countable and locally euclidean.
+Smooth maps Definition
+\(f : M\to\mathbb{R}^K\) is a smooth function if for every \(p \in M\), there exist a smooth chart \((U,\varphi)\) for M whose domain contains p and such that the composite function \(f \circ \phi^{-1}\) is smooth on the open subset \(\hat{U} = \phi(U) \subseteq \mathbb{R}^n\).</description>
     </item>
     
     <item>

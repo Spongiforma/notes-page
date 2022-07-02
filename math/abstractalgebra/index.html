@@ -18,7 +18,7 @@
 :root {--custom-font-color: #bcb7ae;--custom-background-color: #1a1c1d;}
 </style>
 <meta property="og:title" content="Algebra" />
-<meta property="og:description" content="From readings of Aluffi&rsquo;s &ldquo;Algebra: Chapter 0&rdquo; and Dummit &amp; Foote.
+<meta property="og:description" content="Notes from readings of Aluffi&rsquo;s Algebra: Chapter 0.
 Monoids A monoid is a triple (M,p,1), in which M is a non-vacuous set, p is an associative binary composition in M, and 1 is an element of M such that p(1,a) = a = p(a,1) for all \(a \in M\).
 A monoid without an associative p is sometimes called a monad. If there is no requirement on 1, then its a semigroup (M,p)." />
 <meta property="og:type" content="article" />
@@ -30,15 +30,15 @@ A monoid without an associative p is sometimes called a monad. If there is no re
 <meta name="twitter:image" content="/images/og-image.png"/>
 
 <meta name="twitter:title" content="Algebra"/>
-<meta name="twitter:description" content="From readings of Aluffi&rsquo;s &ldquo;Algebra: Chapter 0&rdquo; and Dummit &amp; Foote.
+<meta name="twitter:description" content="Notes from readings of Aluffi&rsquo;s Algebra: Chapter 0.
 Monoids A monoid is a triple (M,p,1), in which M is a non-vacuous set, p is an associative binary composition in M, and 1 is an element of M such that p(1,a) = a = p(a,1) for all \(a \in M\).
 A monoid without an associative p is sometimes called a monad. If there is no requirement on 1, then its a semigroup (M,p)."/>
 <meta itemprop="name" content="Algebra">
-<meta itemprop="description" content="From readings of Aluffi&rsquo;s &ldquo;Algebra: Chapter 0&rdquo; and Dummit &amp; Foote.
+<meta itemprop="description" content="Notes from readings of Aluffi&rsquo;s Algebra: Chapter 0.
 Monoids A monoid is a triple (M,p,1), in which M is a non-vacuous set, p is an associative binary composition in M, and 1 is an element of M such that p(1,a) = a = p(a,1) for all \(a \in M\).
 A monoid without an associative p is sometimes called a monad. If there is no requirement on 1, then its a semigroup (M,p).">
 
-<meta itemprop="wordCount" content="5017"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="5941"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -82,7 +82,7 @@ A monoid without an associative p is sometimes called a monad. If there is no re
 </div>
 <div class="content-container">
 <main>
-<p>From readings of Aluffi&rsquo;s &ldquo;Algebra: Chapter 0&rdquo; and Dummit &amp; Foote.</p>
+<p>Notes from readings of Aluffi&rsquo;s Algebra: Chapter 0.</p>
 <h2 id="monoids">Monoids</h2>
 <p>A <strong>monoid</strong> is a triple (M,p,1), in which M is a non-vacuous set, p is an associative binary composition in M, and 1 is an element of M such that p(1,a) = a = p(a,1) for all \(a \in M\).</p>
 <p>A monoid without an associative p is sometimes called a <strong>monad</strong>. If there is no requirement on 1, then its a <strong>semigroup</strong> (M,p).</p>
@@ -443,6 +443,12 @@ a b \in I \implies (a\in I \text{ or } b \in I)
 I \subseteq J \implies (I = J \text{ or } J = R)
 \]</p>
 <p>This follows from a commutative ring being a field iff its ideals are (0) and (1).</p>
+<p><strong>Properties:</strong></p>
+<ul>
+<li>By Zorn&rsquo;s lemma (this is not required in Noetherian rings), every nonzero ring has a maximal ideal.</li>
+<li>A ring with exactly one maximal ideal m is a <strong>local ring</strong> (such as fields). The field A/m is called the <strong>residue field</strong> of A. If A is a ring and there is a proper ideal such that every \(x \in A - m\) is a unit in A, then A is a local ring and m its maxmimal ideal. If every element of 1+m  is a unit in A, then A is a local ring.</li>
+<li>A ring with finitely many maximal ideals is called <strong>semi-local.</strong></li>
+</ul>
 <p>Prime and maximal are equivalent under these cases:</p>
 <ul>
 <li>I is an ideal of a commutative ring and R/I is finite. This follows from the earlier proposition on equivalence between fields and integral domains for finite rings.</li>
@@ -660,6 +666,84 @@ F :=k[t] / (f(t))
 <p>\[
 \mathbb{Z}[i] := \frac{Z[x]}{(x^2 + 1)}
 \]</p>
+<h2 id="linear-algebra">Linear algebra</h2>
+<h3 id="bases">Bases</h3>
+<p><strong>Definition</strong></p>
+<p>An indexed set is a basis if it generates an R-module and is linearly independent</p>
+<p>While bases are necessarily maximal linearly independent subsets and minimal generated subsets, modules over a field allow the converse to hold.</p>
+<p>In fact, over fields a subset B of a vector space is a basis iff it is a maxmial linearly independent subset iff it is a minimal generating set.</p>
+<h2 id="fields">Fields</h2>
+<p>When studying fields we may focus on field extensions. In fact every field extends Z as Z is initial in Fld.</p>
+<p>One invariant of fields is its characteristic.</p>
+<p><strong>Definition</strong></p>
+<p>The <strong>characteristic</strong> of a field k is the nonnegative generator of the kernel (an ideal) of the unique ring homomorphism from Z to k.</p>
+<h3 id="field-extensions">Field extensions</h3>
+<p><strong>Definition</strong></p>
+<p>A field extension \(k \subseteq F\) is finite, of degree n, if F has finite dimension n as a vector space over k. The extension is infinite otherwise. The degree of a finite extension is denoted by [F:k].</p>
+<p>A particular type of field extensions are simple extensions</p>
+<p><strong>Definition</strong></p>
+<p>Let \(k\subseteq F\) is a field extension, and let \(\alpha \in F\). The smallest subfield of F containing both \(k\) and \(\alpha\) is denoted \(k(\alpha)\). A field extension is <strong>simple</strong> if there exists an element \(\alpha \in F\) such that \(F =k(\alpha)\).</p>
+<p><strong>Theorem</strong></p>
+<p>Let \(k \subseteq k(\alpha)\) be a simple extension. Consider the evaluation map, \(\epsilon : k[t] \to k(\alpha)\), defined by \(f(t) \mapsto f(\alpha)\).</p>
+<ul>
+<li>\(\epsilon\) is injective iff \(k \subseteq k(\alpha)\) is an infinite extension. In this case, \(k(\alpha)\) is isomorphic to the field of rational functions \(k(t)\).</li>
+<li>\(\epsilon\) is not injective iff \(k \subseteq k(\alpha)\) is finite. In this case there exists a unique monic irreducible nonconstant polynomial \(p(t) \in k[t]\) of degree \(n = [k(\alpha) : k]\) such that:</li>
+</ul>
+<p>\[
+k(\alpha) \cong \frac{k[t]}{(p(t))}
+\]</p>
+<p>Via this isomorphism, \(\alpha\) corresponds to the coset of \(t\). The polynomial \(p(t)\) is the monic polynomial of smallest degree in \(k[t]\) such that \(p(\alpha) = 0\) in \(k(\alpha)\).</p>
+<p><strong>Definition</strong></p>
+<p>The group of automorphisms of the extension denoted \(Aut_k(F)\) is the group of field automorphisms \(j : F \to F\) such that \(j|_k = id_k\).</p>
+<p>In particular, let \(k\subseteq F = k(\alpha)\) be a simple finite extension, and \(p(x)\) be the minimal polynomial of \(\alpha\) over \(k\). Then \(|Aut_k(F)|\) equals the number of distinct roots of \(p(x)\) in F.</p>
+<p>\[
+\vert Aut_k(F) | \leq [F:k]
+\]</p>
+<p>with equality iff \(p(x)\) factors over \(F\) as a product of distinct linear polynomials.</p>
+<h4 id="algebraic-extensions">Algebraic extensions</h4>
+<p><strong>Definition</strong></p>
+<p>Let \(k\subseteq F\) be a field extension, and \(\alpha \in F\). Then \(\alpha\) is <strong>algebraic</strong> over k, of degree n, if \(n = [k(\alpha):k]\) is finite; it is transcendental over k otherwise.</p>
+<p>An extension is algebraic if ever \(\alpha \in F\) over k.</p>
+<p>By the earlier characterisation, an element is algebraic iff there exists a nonzero polynomial \(f(x) \in k[x]\) such that \(f(\alpha)=0\).</p>
+<p>Finite extensions are necessarily algebraic.</p>
+<p><strong>Definition</strong></p>
+<p>A field extension is <strong>finitely generated</strong> if there exist \(\alpha_1,\ldots,\alpha_n \in F\) such that,</p>
+<p>\[
+F = k(\alpha_1)(\alpha_2)\ldots(\alpha_n)
+\].</p>
+<p><strong>Properties:</strong></p>
+<p>Let \(k \subseteq F = k(\alpha_1,\ldots,\alpha_n)\) be a finitely generated field extension. TFAE,</p>
+<ol>
+<li>\(k\subseteq F\) is a finite extension</li>
+<li>\(k\subseteq F\) is an algebraic extension</li>
+<li>Each \(\alpha_i\) is algebraic over k.</li>
+</ol>
+<p>If the conditions are satisfied, then the degree of the extension is less than or equal to the product of the individual degrees of \(\alpha_i\) over k. In fact this shows that addition, products, and quotients of algebraic roots are also algebraic.</p>
+<p>The set of algebraic elements of any extension also forms a field. Composition of algebraic extensions are algebraic.</p>
+<h3 id="algebraic-closure">Algebraic closure</h3>
+<p>Recall a field is algebraically closed if all irreducible polynomials in F[x] have degree 1.</p>
+<p>Every field admits an algebraic closure unique up to isomorphism.</p>
+<p><strong>Theorem (Nullstellensatz)</strong></p>
+<p>Let \(k \subseteq F\) be a field extension, and that F is a finite-type k-algebra. Then \(k \subseteq F\) is a finite (thus algebraic) extension.</p>
+<h3 id="other-types-of-field-extensions">Other types of field extensions</h3>
+<p><strong>Definition</strong></p>
+<p>Let k be a field, and f(x) in k a polynomial of degree d. The <strong>splitting field</strong> for f(x) over k is an extension F of k such that</p>
+<p>\[
+f(x) = c\prod_{i=1}^d (x-\alpha_i)
+\]</p>
+<p>splits in \(F[x]\), and further \(F = k(\alpha_1,\ldots,\alpha_d)\) is generated over k by the roots of f(x) in F.</p>
+<p><strong>Theorem</strong></p>
+<p>The splitting field F for f over k is unique up to isomorphism and \([F:k] \leq (\deg f)!\).</p>
+<p><strong>Definition</strong></p>
+<p>A field extension is <strong>normal</strong> if for every irreducible polynomial f(x) over k, f(x) has a root in F iff f(x) as a product of linear factors over F.</p>
+<p><strong>Theorem</strong></p>
+<p>A field extension is finite and normal iff F is the splitting field of some polynomial over k.</p>
+<h3 id="some--galois-theory">(Some) Galois theory</h3>
+<p><strong>Definition</strong></p>
+<p>Let \(k\subset F\) be a field extension, and \(G \subseteq Aut_k(F)\) be a group of automorphisms of the extension. The fixed field is the intermediate field,</p>
+<p>\[
+F^G := \{ \alpha \in F | \forall g \in G, g\alpha = \alpha \}
+\]</p>
 <div class="edit-meta">
 
 <br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Math/abstractalgebra.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../math/" title="Maths"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Maths</a>
@@ -678,6 +762,7 @@ F :=k[t] / (f(t))
 <ul class="sub-menu">
 <li class="active"><a href="../../math/abstractalgebra/">Algebra</a></li>
 <li class=""><a href="../../math/analysis/">Analysis</a></li>
+<li class=""><a href="../../math/diffgeom/">Differential Geometry</a></li>
 <li class=""><a href="../../math/functionalanalysis/">Functional Analysis</a></li>
 <li class=""><a href="../../math/integration/">Integration</a></li>
 <li class=""><a href="../../math/linear_algebra/">Linear Algebra</a></li>
@@ -809,6 +894,23 @@ F :=k[t] / (f(t))
         </li>
         <li><a href="#chinese-remainder-theorem">Chinese remainder theorem</a></li>
         <li><a href="#gaussian-integers">Gaussian integers</a></li>
+      </ul>
+    </li>
+    <li><a href="#linear-algebra">Linear algebra</a>
+      <ul>
+        <li><a href="#bases">Bases</a></li>
+      </ul>
+    </li>
+    <li><a href="#fields">Fields</a>
+      <ul>
+        <li><a href="#field-extensions">Field extensions</a>
+          <ul>
+            <li><a href="#algebraic-extensions">Algebraic extensions</a></li>
+          </ul>
+        </li>
+        <li><a href="#algebraic-closure">Algebraic closure</a></li>
+        <li><a href="#other-types-of-field-extensions">Other types of field extensions</a></li>
+        <li><a href="#some--galois-theory">(Some) Galois theory</a></li>
       </ul>
     </li>
   </ul>
