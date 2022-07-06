@@ -1,5 +1,4 @@
 +++
-title = "Topology"
 author = ["root"]
 draft = false
 +++

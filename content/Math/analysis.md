@@ -39,14 +39,18 @@ A sequence converges if it fulfills epsilon-delta, i.e. for every \\(\epsilon > 
 
 If a subsequence of a sequence converges, its limit is called a subsequential limit of the sequence. A sequence only converges iff every subsequence of \\(\left{p\_n\right}\\) converges to p.
 
-**Theorem**
+<div class="theorem">
 
-1.  If \\(\\{p\_n\\}\\) is sequence in a compact space X, the nsome subsequence of \\(\\{p\_n\\}\\) converges to a point of X.
+1.  If \\(\\{p\_n\\}\\) is a sequence in a compact space X, the nsome subsequence of \\(\\{p\_n\\}\\) converges to a point of X.
 2.  Every bounded sequence in \\(R^k\\) contains a convergent subsequence.
 
-**Theorem**
+</div>
+
+<div class="theorem">
 
 The subsequential limits of a sequence \\(\\{p\_n\\}\\) in a metric space X form a closed subset of X.
+
+</div>
 
 
 ### Cauchy sequences {#cauchy-sequences}
