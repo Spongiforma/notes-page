@@ -7,6 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="/math/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title></title>
+      <link>/math/topology/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/math/topology/</guid>
+      <description>Set theory Inverse functions If f : A -&amp;gt; B,
+\[ f^{-1}(B_0) = \{a \vert f(a) \in B_0\} \]
+Relations Equivalence relations If there is a equivalence relation C on A it has the following properties,
+ Reflexivity: xCx for every x in A. Symmetry: if xCy, then yCx. Transitivity: if xCy and yCz, then xCz.  A equivalence class determined by x is given by:
+\[ E = \{y \vert y \sim x\} \]</description>
+    </item>
+    
+    <item>
       <title>Algebra</title>
       <link>/math/abstractalgebra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -131,19 +144,6 @@ Theorems </description>
 As components change inversely with the basis vectors. Thus a linear operator \(\mathcal{A}\) represented by \(A\) in a given coordinate system is represented by \(A&#39; = S^{-1}AS\) in a new coordinate system.
 For rigid body rotations, the transformation matrix \(L\) is orthogonal (since it must preserve inner products).
 The transformation matrix is given by \(L_{ij} = \bm{e}_i&#39;\cdot\bm{e}_j = \partial{x_j}/\partial{x_i&#39;}\).</description>
-    </item>
-    
-    <item>
-      <title>Topology</title>
-      <link>/math/topology/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/math/topology/</guid>
-      <description>Set theory Inverse functions If f : A -&amp;gt; B,
-\[ f^{-1}(B_0) = \{a \vert f(a) \in B_0\} \]
-Relations Equivalence relations If there is a equivalence relation C on A it has the following properties,
- Reflexivity: xCx for every x in A. Symmetry: if xCy, then yCx. Transitivity: if xCy and yCz, then xCz.  A equivalence class determined by x is given by:
-\[ E = \{y \vert y \sim x\} \]</description>
     </item>
     
   </channel>

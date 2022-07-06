@@ -28,6 +28,30 @@ It makes use of a variety of open source projects including:
     </item>
     
     <item>
+      <title></title>
+      <link>/math/topology/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/math/topology/</guid>
+      <description>Set theory Inverse functions If f : A -&amp;gt; B,
+\[ f^{-1}(B_0) = \{a \vert f(a) \in B_0\} \]
+Relations Equivalence relations If there is a equivalence relation C on A it has the following properties,
+ Reflexivity: xCx for every x in A. Symmetry: if xCy, then yCx. Transitivity: if xCy and yCz, then xCz.  A equivalence class determined by x is given by:
+\[ E = \{y \vert y \sim x\} \]</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/diffforms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/diffforms/</guid>
+      <description>Algebra Lemma
+Let \(\alpha\) be a covariant k-tensor on a finite dimensional vector space V. TFAE:
+ \(\alpha\) is alternating \(\alpha(v_1,\ldots,v_k)=0\) whenever the k-tuple \(\alpha\) gives zero whenever two of its arguments are equal  </description>
+    </item>
+    
+    <item>
       <title>Algebra</title>
       <link>/math/abstractalgebra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -364,19 +388,6 @@ First law of thermodynamics
 \[ dE_{int} = dQ-dW \]
 where W is the work done by the system
 Special cases Adiabatic process \[ \Delta E_{int} = -W \]</description>
-    </item>
-    
-    <item>
-      <title>Topology</title>
-      <link>/math/topology/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/math/topology/</guid>
-      <description>Set theory Inverse functions If f : A -&amp;gt; B,
-\[ f^{-1}(B_0) = \{a \vert f(a) \in B_0\} \]
-Relations Equivalence relations If there is a equivalence relation C on A it has the following properties,
- Reflexivity: xCx for every x in A. Symmetry: if xCy, then yCx. Transitivity: if xCy and yCz, then xCz.  A equivalence class determined by x is given by:
-\[ E = \{y \vert y \sim x\} \]</description>
     </item>
     
     <item>

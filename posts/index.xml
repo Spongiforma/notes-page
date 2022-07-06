@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Notes</title>
+    <link>/posts/</link>
+    <description>Recent content in Posts on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>/posts/diffforms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/diffforms/</guid>
+      <description>Algebra Lemma
+Let \(\alpha\) be a covariant k-tensor on a finite dimensional vector space V. TFAE:
+ \(\alpha\) is alternating \(\alpha(v_1,\ldots,v_k)=0\) whenever the k-tuple \(\alpha\) gives zero whenever two of its arguments are equal  </description>
+    </item>
+    
+  </channel>
+</rss>
