@@ -103,17 +103,6 @@ Mesh Current Analysis/Maxwell&amp;rsquo;s Circulating Currents </description>
     </item>
     
     <item>
-      <title>Differential Geometry</title>
-      <link>/math/diffgeom/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/math/diffgeom/</guid>
-      <description>Smooth manifolds A topological manifold is hausdorff, second-countable and locally euclidean.
-Smooth maps Definition
-\(f : M\to\mathbb{R}^K\) is a smooth function if for every \(p \in M\), there exist a smooth chart \((U,\varphi)\) for M whose domain contains p and such that the composite function \(f \circ \phi^{-1}\) is smooth on the open subset \(\hat{U} = \phi(U) \subseteq \mathbb{R}^n\).</description>
-    </item>
-    
-    <item>
       <title>E&amp;M</title>
       <link>/physics/em/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -281,8 +270,11 @@ Energy conservation \[ \pdv{E}{t} = -\pdv{L}{t} \]</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/math/ode/</guid>
-      <description>*
-Theorems </description>
+      <description>Theorems Rectification A rectification of a direction field is a diffeomorphism mapping it into a field of parallel directions.
+Theorem
+Every smooth direction field is rectifiable in a neighbourhood of each point. If the field is of class \(C^r\), then the rectifying diffeomorphism can be taken from the class \(C^r\).
+Equivalently,
+ All smooth direction fields in domains of the same dimension are locally diffeomorphic. The differential equation \(\dot{x} = v(t,x)\) with smooth RHS is locally equivalent to \(\dv{y}{\tau} = 0\).</description>
     </item>
     
     <item>
@@ -338,6 +330,18 @@ RI through central axis of an annular cylinder \[ I = \frac{1}{2}M(R_1^2+R_2^2) 
 Solid cylinder about central axis \[ I = \frac{1}{2}MR^2 \]
 Solid cylinder about central diameter \[ I = \frac{1}{2}MR^2 + \frac{1}{12}ML^2 \]
 Thin rod about central diameter \[ I = \frac{1}{12}ML^2 \]</description>
+    </item>
+    
+    <item>
+      <title>Smooth manifolds</title>
+      <link>/math/diffgeom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/math/diffgeom/</guid>
+      <description>Adapted from Lee&amp;rsquo;s ISM.
+Smooth manifolds A topological manifold is hausdorff, second-countable and locally euclidean.
+Smooth maps \(f : M\to\mathbb{R}^K\) is a smooth function if for every \(p \in M\), there exist a smooth chart \((U,\varphi)\) for M whose domain contains p and such that the composite function \(f \circ \phi^{-1}\) is smooth on the open subset \(\hat{U} = \phi(U) \subseteq \mathbb{R}^n\).
+ Cotangent bundle The cotangent bundle is the dual space to the tangent bundle.</description>
     </item>
     
     <item>

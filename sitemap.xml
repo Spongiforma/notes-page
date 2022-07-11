@@ -25,8 +25,6 @@
   </url><url>
     <loc>/physics/funnycircuits/</loc>
   </url><url>
-    <loc>/math/diffgeom/</loc>
-  </url><url>
     <loc>/physics/em/</loc>
   </url><url>
     <loc>/physics/electrodynamics/</loc>
@@ -68,6 +66,8 @@
     <loc>/physics/quantum_physics/</loc>
   </url><url>
     <loc>/physics/rotation/</loc>
+  </url><url>
+    <loc>/math/diffgeom/</loc>
   </url><url>
     <loc>/tags/</loc>
   </url><url>

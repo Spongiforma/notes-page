@@ -18,8 +18,11 @@
 :root {--custom-font-color: #bcb7ae;--custom-background-color: #1a1c1d;}
 </style>
 <meta property="og:title" content="ODEs" />
-<meta property="og:description" content="*
-Theorems " />
+<meta property="og:description" content="Theorems Rectification A rectification of a direction field is a diffeomorphism mapping it into a field of parallel directions.
+Theorem
+Every smooth direction field is rectifiable in a neighbourhood of each point. If the field is of class \(C^r\), then the rectifying diffeomorphism can be taken from the class \(C^r\).
+Equivalently,
+ All smooth direction fields in domains of the same dimension are locally diffeomorphic. The differential equation \(\dot{x} = v(t,x)\) with smooth RHS is locally equivalent to \(\dv{y}{\tau} = 0\)." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/math/ode/" /><meta property="og:image" content="/images/og-image.png"/><meta property="article:section" content="Math" />
 
@@ -29,13 +32,19 @@ Theorems " />
 <meta name="twitter:image" content="/images/og-image.png"/>
 
 <meta name="twitter:title" content="ODEs"/>
-<meta name="twitter:description" content="*
-Theorems "/>
+<meta name="twitter:description" content="Theorems Rectification A rectification of a direction field is a diffeomorphism mapping it into a field of parallel directions.
+Theorem
+Every smooth direction field is rectifiable in a neighbourhood of each point. If the field is of class \(C^r\), then the rectifying diffeomorphism can be taken from the class \(C^r\).
+Equivalently,
+ All smooth direction fields in domains of the same dimension are locally diffeomorphic. The differential equation \(\dot{x} = v(t,x)\) with smooth RHS is locally equivalent to \(\dv{y}{\tau} = 0\)."/>
 <meta itemprop="name" content="ODEs">
-<meta itemprop="description" content="*
-Theorems ">
+<meta itemprop="description" content="Theorems Rectification A rectification of a direction field is a diffeomorphism mapping it into a field of parallel directions.
+Theorem
+Every smooth direction field is rectifiable in a neighbourhood of each point. If the field is of class \(C^r\), then the rectifying diffeomorphism can be taken from the class \(C^r\).
+Equivalently,
+ All smooth direction fields in domains of the same dimension are locally diffeomorphic. The differential equation \(\dot{x} = v(t,x)\) with smooth RHS is locally equivalent to \(\dv{y}{\tau} = 0\).">
 
-<meta itemprop="wordCount" content="2"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="348"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -79,12 +88,40 @@ Theorems ">
 </div>
 <div class="content-container">
 <main>
-<p>*</p>
 <h2 id="theorems">Theorems</h2>
+<h3 id="rectification">Rectification</h3>
+<p>A rectification of a direction field is a diffeomorphism mapping it into a field of parallel directions.</p>
+<p><strong>Theorem</strong></p>
+<p>Every smooth direction field is rectifiable in a neighbourhood of each point. If the field is of class \(C^r\), then the rectifying diffeomorphism can be taken from the class \(C^r\).</p>
+<p>Equivalently,</p>
+<ul>
+<li>All smooth direction fields in domains of the same dimension are locally diffeomorphic.</li>
+<li>The differential equation \(\dot{x} = v(t,x)\) with smooth RHS is locally equivalent to \(\dv{y}{\tau} = 0\).</li>
+</ul>
+<p>Existence and uniquness theorems follow from the rectification theorem.</p>
+<h3 id="initial-conditions">Initial conditions</h3>
+<p>The solution of an equation with smooth RHS depends smoothly on the initial conditions. This allows us to investigate the effect of perturbations on solutions.</p>
+<h3 id="transformation-over-the-time-interval">Transformation over the time interval</h3>
+<p><strong>Definition</strong></p>
+<p>Transformation over the time interval from \(t_0\) to \(t\) is the mapping of a domain of the phase space into the phase space that assigns to the initial condition at the instant to the value of the solution with this initial condition at the instant t.</p>
+<p><strong>Theorem</strong></p>
+<p>The transformations over the time interval from \(t_0\) to \(t\) for an equation with smooth RHS</p>
+<ol>
+<li>are defined in a neighbourhood of each phase point \(x_0\) for t sufficiently close to \(t_0\);</li>
+<li>are local diffeomorphisms and depend smoothly on \(t_0\) and \(t\)</li>
+<li>satisfy the identity \(g^t_t_0 x = g^t_s g^s_{t_0} x\) for x and t sufficiently close to \(t_0\).</li>
+<li>are such that for fixed \(\xi\) the function \(\phi(t) = g^t_{t_0} \xi\) is a solution of the DE, satisfying the intiial condition, \(\phi(t_0) = \xi\).</li>
+</ol>
+<h3 id="extension-theorems">Extension theorems</h3>
+<p>Consider \(\dot{x} = v(t,x)\) defined by a smooth direction field in a domain \(U\) of the extended phase space. Let \(\Gamma\) be a subset of the domain U.</p>
+<p><strong>Definition</strong></p>
+<p>A solution with the initial condition \(\phi(t_0) = x_0\) can be extended forward to \(\Gamma\) if there exists a solution with the same initial condition whose graph intersects \(\Gamma\) in a point where \(t \geq t_0\).</p>
+<p><strong>Corollary</strong></p>
+<p>A solution with initial condition in a compact set in the extended phase space can be extended forward and backward to the boundary of the compact set.</p>
 <div class="edit-meta">
 
 <br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Math/ode.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../math/3mm/" title="Mathematical methods pt. 3"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Mathematical methods pt. 3</a>
-<a class="nav nav-next" href="../../math/tensors/" title="Tensors">Next - Tensors <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+<a class="nav nav-next" href="../../math/diffgeom/" title="Smooth manifolds">Next - Smooth manifolds <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
 </nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
 </footer>
 </main>
@@ -100,7 +137,6 @@ Theorems ">
 <li class=""><a href="../../math/topology/"></a></li>
 <li class=""><a href="../../math/abstractalgebra/">Algebra</a></li>
 <li class=""><a href="../../math/analysis/">Analysis</a></li>
-<li class=""><a href="../../math/diffgeom/">Differential Geometry</a></li>
 <li class=""><a href="../../math/functionalanalysis/">Functional Analysis</a></li>
 <li class=""><a href="../../math/integration/">Integration</a></li>
 <li class=""><a href="../../math/linear_algebra/">Linear Algebra</a></li>
@@ -108,6 +144,7 @@ Theorems ">
 <li class=""><a href="../../math/2mm/">Mathematical methods pt. 2</a></li>
 <li class=""><a href="../../math/3mm/">Mathematical methods pt. 3</a></li>
 <li class="active"><a href="../../math/ode/">ODEs</a></li>
+<li class=""><a href="../../math/diffgeom/">Smooth manifolds</a></li>
 <li class=""><a href="../../math/tensors/">Tensors</a></li>
 </ul>
   
@@ -157,7 +194,14 @@ Theorems ">
 <nav class="outline">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#theorems">Theorems</a></li>
+    <li><a href="#theorems">Theorems</a>
+      <ul>
+        <li><a href="#rectification">Rectification</a></li>
+        <li><a href="#initial-conditions">Initial conditions</a></li>
+        <li><a href="#transformation-over-the-time-interval">Transformation over the time interval</a></li>
+        <li><a href="#extension-theorems">Extension theorems</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </nav>
