@@ -310,11 +310,10 @@ If you are given initial position and velocity, \(x_0\) and \(v_0\), then \(x(t)
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/physics/quantum_physics/</guid>
-      <description>this is in gaussian units
+      <description>this is in gaussian units. Adapted from Shankar and Shroeder.
 Postulates  Associated to any isolated physical system is a hilbert space which is completely described by its state vector. The evolution of a closed quantum system is described by a unitary transformation. i.e. the shrodinger equation  Hamiltonian formalism EL equations L = T - V
 \[ \dv{t}\left(\pdv{L}{\dot x}\right) = \pdv{L}{x} \]
- Generalised momentum  \[ \pdv{L}{\dot q} = p \]
- Generalised force  \[ \pdv{L}{q} = \dot{p} \]</description>
+ Generalised momentum  \[ \pdv{L}{\dot q} = p \]</description>
     </item>
     
     <item>
@@ -365,9 +364,7 @@ The transformation matrix is given by \(L_{ij} = \bm{e}_i&#39;\cdot\bm{e}_j = \p
       
       <guid>/physics/statmech/</guid>
       <description>Definitions Bulk modulus / compressibility \[ B = \frac{1}{\kappa} = \frac{\Delta P}{ - \Delta V / V} \]
-Energy \[
-\]
-Entropy Ideal gas Surface area of n-dimensional hypersphere
+Energy Entropy Ideal gas Surface area of n-dimensional hypersphere
 \[ A = \frac{2\pi^{n/2}}{(\frac{n}{2}-1)!} r^{n-1} \]
 N indistinguishable particles
 \[ \Omega_1 = V \cdot V_p \]

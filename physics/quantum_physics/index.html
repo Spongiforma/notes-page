@@ -18,11 +18,10 @@
 :root {--custom-font-color: #bcb7ae;--custom-background-color: #1a1c1d;}
 </style>
 <meta property="og:title" content="Quantum mechanics" />
-<meta property="og:description" content="this is in gaussian units
+<meta property="og:description" content="this is in gaussian units. Adapted from Shankar and Shroeder.
 Postulates  Associated to any isolated physical system is a hilbert space which is completely described by its state vector. The evolution of a closed quantum system is described by a unitary transformation. i.e. the shrodinger equation  Hamiltonian formalism EL equations L = T - V
 \[ \dv{t}\left(\pdv{L}{\dot x}\right) = \pdv{L}{x} \]
- Generalised momentum  \[ \pdv{L}{\dot q} = p \]
- Generalised force  \[ \pdv{L}{q} = \dot{p} \]" />
+ Generalised momentum  \[ \pdv{L}{\dot q} = p \]" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/physics/quantum_physics/" /><meta property="og:image" content="/images/og-image.png"/><meta property="article:section" content="Physics" />
 
@@ -32,19 +31,17 @@ Postulates  Associated to any isolated physical system is a hilbert space which 
 <meta name="twitter:image" content="/images/og-image.png"/>
 
 <meta name="twitter:title" content="Quantum mechanics"/>
-<meta name="twitter:description" content="this is in gaussian units
+<meta name="twitter:description" content="this is in gaussian units. Adapted from Shankar and Shroeder.
 Postulates  Associated to any isolated physical system is a hilbert space which is completely described by its state vector. The evolution of a closed quantum system is described by a unitary transformation. i.e. the shrodinger equation  Hamiltonian formalism EL equations L = T - V
 \[ \dv{t}\left(\pdv{L}{\dot x}\right) = \pdv{L}{x} \]
- Generalised momentum  \[ \pdv{L}{\dot q} = p \]
- Generalised force  \[ \pdv{L}{q} = \dot{p} \]"/>
+ Generalised momentum  \[ \pdv{L}{\dot q} = p \]"/>
 <meta itemprop="name" content="Quantum mechanics">
-<meta itemprop="description" content="this is in gaussian units
+<meta itemprop="description" content="this is in gaussian units. Adapted from Shankar and Shroeder.
 Postulates  Associated to any isolated physical system is a hilbert space which is completely described by its state vector. The evolution of a closed quantum system is described by a unitary transformation. i.e. the shrodinger equation  Hamiltonian formalism EL equations L = T - V
 \[ \dv{t}\left(\pdv{L}{\dot x}\right) = \pdv{L}{x} \]
- Generalised momentum  \[ \pdv{L}{\dot q} = p \]
- Generalised force  \[ \pdv{L}{q} = \dot{p} \]">
+ Generalised momentum  \[ \pdv{L}{\dot q} = p \]">
 
-<meta itemprop="wordCount" content="1557"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="2586"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -88,7 +85,7 @@ Postulates  Associated to any isolated physical system is a hilbert space which 
 </div>
 <div class="content-container">
 <main>
-<p>this is in gaussian units</p>
+<p>this is in gaussian units. Adapted from Shankar and Shroeder.</p>
 <h2 id="postulates">Postulates</h2>
 <ol>
 <li>Associated to any isolated physical system is a hilbert space which is completely described by its state vector.</li>
@@ -453,6 +450,120 @@ Since we presumed there is only one such state, this shows that \(\Lambda\ket{\o
 <p>\[
 \hat{J}_z\ket{\lambda,m} = m \hbar \ket{\lambda,m}
 \]</p>
+<h2 id="quantum-statistics">Quantum statistics</h2>
+<h3 id="boltzmann-statistics-for-ideal-gases">Boltzmann statistics for ideal gases</h3>
+<p>The partition function of a composite system of \(N\) noninteracting indistinguishable gas molecules is of the form,</p>
+<p>\[
+Z = \frac{1}{N!}Z_1^N,
+\]</p>
+<p>where \(Z_1\) is the partition function for a single individual particle, and the factorial prefactor expresses the number of ways of interchanging N particles with each other.</p>
+<p>For a single molecule, we may decompose the energy of a molecule in terms of its translational kinetic energy \(E_{tr}\), and its internal energy \(E_{int}\) (rotational, vibrational etc.) for a particular state. Thus \(Z_1 = Z_{tr}Z_{int}\).</p>
+<h4 id="particle-in-a-box">Particle in a box</h4>
+<p>In a one dimensional box of length \(L\), the standing-wave patterns are limited to wavelengths of \(\lambda_n = \frac{2L}{n}\) for positive integer \(n\). The corresponding momentum is \(p_n =\frac{hn}{2L}\) and the corresponding energy is \(E_n = \frac{h^2n^2}{8mL^2}\). Computing the translational partition function</p>
+<p>\[
+Z_{1d} = \sum_n e^{-E_n/kT} \approx \sqrt{\frac{2\pi m k T}{h^2}} L \equiv L/l_Q
+\]</p>
+<p>where \(l_Q\) is the <strong>quantum length</strong>. It is the de Broglie wavelength of a particle of mass m whose kinetic energy is \(kT\), aside from the \(\pi\).</p>
+<p>In three dimensions, we have three times the momentum components so instead \(Z_{tr} = V/v_Q\), where \(v_Q = l_Q^3\). Thus</p>
+<p>\[
+Z = \frac{1}{N!}\left(\frac{VZ_{int}}{v_Q}\right)^N.
+\]</p>
+<!--list-separator-->
+<ul>
+<li>
+<p>Thermal properties</p>
+<p>From the helmholtz free energy, we get the thermal properties</p>
+<p>\[
+\mu = -kT \ln(\frac{VZ_{int}}{Nv_Q})
+\]</p>
+</li>
+</ul>
+<h3 id="gibbs-factor">Gibbs factor</h3>
+<div class="defn">
+<p>Recall that in Boltzmann statistics, the Boltzmann distribution is given by</p>
+<p>\[
+\mathcal{P}(s) = \frac{1}{\mathcal{Z}} e^{-E(s)/kT}
+\]</p>
+<p>But when we choose not to neglect the chemical potential, the exponential factor becomes \(e^{-[E(s)-\mu N(s)]/kT}\), which we call the <strong>Gibbs factor</strong>. The new partition function is called the <strong>grand partition function</strong> or the <strong>Gibbs sum</strong></p>
+</div>
+<h3 id="bosons-and-fermions">Bosons and fermions</h3>
+<p>However, when considering finite quantum states with the issue of particle overlap, then the earlier partition function for composite systems may not apply.</p>
+<p>A system of \(N\) indistinguishable particles which has no restriction on the number of particles that can occupy a single quantum state is said to obey <strong>Bose-Einstein statistics</strong>. i.e. bosons. If there is a restriction of at most particle occupying a single quantum state, the system is said to obey <strong>Fermi-dirac statistics.</strong> i.e. fermions (Think Pauli exclusion principle).</p>
+<p>For reference, Maxwell-Boltzmann statistics concerns distinguishable without restrictions.</p>
+<p>However, when the available single-particle states is much greater than the number of particles, i.e. \(Z_1 \gg N\), then the chance of two particles occupying the same state is negligible. Thus the regualr partition function applies, i.e \(V/N \gg v_Q\). In other words, the distance between particles must be much greater than the de Broglie wavelength. Quantum gases violate this condition. Some examples of systems which also violate the condition include very dense neutron stars, very cold liquid helium or very light particles like electrons in a metal or photons in a hot oven.</p>
+<h3 id="distribution-functions">Distribution functions</h3>
+<p>Consider a single-particle-state (as opposed to a particle itself) system. The probabilty of a state being occupied by \(n\) particles is \(\mathcal{P}(n) = \frac{1}{\mathcal{Z}}e^{-n(\epsilon-\mu)/kT}\), where \(\epsilon\) is the energy of the state when occupied by a single particle.</p>
+<p>For fermions, the average number of particles in the state is given by the formula</p>
+<p>\[
+\bar{n}_{FD} =\frac{1}{e^{(\epsilon-\mu)/kT}+1}
+\],</p>
+<p>which is called the <strong>Fermi-Dirac distribution</strong>.</p>
+<figure><img src="./fermidirac.png"/>
+</figure>
+
+<p>Similarly for bosons, the <strong>Bose-Einstein distribution</strong> is given by</p>
+<p>\[
+\bar{n}_{BE} = \frac{1}{e^{(\epsilon-\mu)/kT}-1}
+\].</p>
+<p>For reference, the average occupancy for Boltzmann statistics is given by</p>
+<p>\[
+\bar{n}_{Boltzmann} = e^{-(\epsilon-\mu)/kT}
+\]</p>
+<figure><img src="./fdbebb.png"/>
+</figure>
+
+<h3 id="degenerate-fermi-gases">Degenerate Fermi gases</h3>
+<p>Consider a &ldquo;gas&rdquo; of fermions at a very low temperature such that the condition for Boltzmann statistics to apply is badly violated. At \(T=0\), all single-particle states with energy less than \(\mu(T=0)\) are occupied while all other states are unoccupied. We call \(\mu(T=0)\) the <strong>Fermi energy</strong>, denoted \(\epsilon_F\). The fermi-dirac distribution thus becomes a step function.</p>
+<p>When the temperature is low enough that this is almost true, the gas is said to be <strong>degenerate</strong>.</p>
+<p>Considering the energy distribution in n-space as a eighth-sphere and the relation \(\epsilon_F = \frac{h^2 n^2_{max}}{8mL^2}\) from particle in a box, we get the equation for the Fermi energy as a function of \(N\) and \(V\).</p>
+<p>\[
+\epsilon_F = \frac{h^2}{8m}\left(\frac{3N}{\pi V}\right)^{2/3}
+\].</p>
+<p>Thus the total energy integrated over n-space is</p>
+<p>\[
+U = 3/5 N\epsilon_{F},
+\]</p>
+<p>and we may verify that the Boltzmann condition is equivalent to the condition \(kT \gg \epsilon_F\). The required temperature for equality is the Fermi temperature.</p>
+<p>The <strong>degeneracy pressure</strong> given by \(P = -(\partial U/\partial V)_{S,N}\) is given by</p>
+<p>\[
+P =\frac{2}{3}\frac{U}{V}
+\].</p>
+<p>When a degenerate electron gas is compressed, the wavelength of all the wavefunctions are reduced, and hence the energies of all the wavefunctions increase. This is what keeps matter from collapsing under the huge electrostatic forces that pull electrons and protons together.</p>
+<h3 id="ultraviolet-catastrophe">Ultraviolet catastrophe</h3>
+<p>In classical physics, we may consider EM radiation permeating a box, each standing wave behaving a harmonic oscillator with two degrees of freedom, thus with energy \(kT\). Since there are infinitely many such waves, there may seem to be an infinite amount of energy in the box.</p>
+<p>However, in QM, a harmonic oscillator may only have energy levels of integer multiples of \(hf\) (relative to ground state). This results in the Planck distribution,</p>
+<p>\[
+\bar{n}_{Pl} =\frac{1}{e^{hf/kT}-1}
+\]</p>
+<p>This freezes out the short-wavelength (high energy) modes, and allows for a finite energy.</p>
+<p>To find the total energy of all the photons in the box, we may derive Wien&rsquo;s law, by integrating over the Planck distribution with energy and a factor of two for the two independent polarisations of photons.</p>
+<p>This is given by,</p>
+<p>\[
+\frac{U}{V} = \frac{8\pi(kT)^4}{(hc)^3}\int_0^\infty \frac{x^3}{e^x-1}\dd{x} = \frac{8\pi^5(kT)^4}{15(hc)^3}
+\]</p>
+<p>under the change of variable \(x=\epsilon/kT\). The spectrum (energy density per unit photon energy) peaks at \(x=2.82\).</p>
+<h4 id="other-thermal-properties">Other thermal properties</h4>
+<p>The heat capacity is</p>
+<p>\[
+C_V = \left(\pdv{U}{T}\right)_V = 4aT^3
+\]</p>
+<p>The entropy is given by</p>
+<p>\[
+S(T) = \frac{32\pi^5}{45}V\left(\frac{kT}{hc}\right)^3 k
+\]</p>
+<h4 id="photons-escaping-through-a-hole--radiation">Photons escaping through a hole (Radiation)</h4>
+<p>Volume of some chunk of photons: \(R\dd{\theta} \times R\sin\theta\dd{\phi} \times c\dd{t}\).
+Energy in chunk: \(U/V c\dd{t} R^2\sin\theta\dd{\theta}\dd{\phi}\)
+Probability of escape for photon in chunk: \(\frac{A\cos\theta}{4\pi R^2}\)
+Total energy: \(\frac{A}{4} \frac{U}{V}c\dd{t}\)</p>
+<p>Thus we get intensity</p>
+<p>\[
+I = \frac{c}{4} \frac{U}{V} = \sigma T^4
+\],</p>
+<p>where the familiar <strong>Stefan-Boltzmann constant</strong> is given by</p>
+<p>\[
+\sigma =\frac{2\pi^5k^4}{15h^3c^2} = 5.67\times 10^{-8} Wm^{-2}K^{-4}
+\]</p>
 <div class="edit-meta">
 
 <br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Physics/quantum_physics.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../physics/oscillations/" title="Oscillations"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Oscillations</a>
@@ -584,6 +695,25 @@ Since we presumed there is only one such state, this shows that \(\Lambda\ket{\o
           </ul>
         </li>
         <li><a href="#eigenvalues-and-eigenstates-of-angular-momentum">Eigenvalues and eigenstates of angular momentum</a></li>
+      </ul>
+    </li>
+    <li><a href="#quantum-statistics">Quantum statistics</a>
+      <ul>
+        <li><a href="#boltzmann-statistics-for-ideal-gases">Boltzmann statistics for ideal gases</a>
+          <ul>
+            <li><a href="#particle-in-a-box">Particle in a box</a></li>
+          </ul>
+        </li>
+        <li><a href="#gibbs-factor">Gibbs factor</a></li>
+        <li><a href="#bosons-and-fermions">Bosons and fermions</a></li>
+        <li><a href="#distribution-functions">Distribution functions</a></li>
+        <li><a href="#degenerate-fermi-gases">Degenerate Fermi gases</a></li>
+        <li><a href="#ultraviolet-catastrophe">Ultraviolet catastrophe</a>
+          <ul>
+            <li><a href="#other-thermal-properties">Other thermal properties</a></li>
+            <li><a href="#photons-escaping-through-a-hole--radiation">Photons escaping through a hole (Radiation)</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
