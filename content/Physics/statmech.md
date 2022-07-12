@@ -16,10 +16,6 @@ B = \frac{1}{\kappa} = \frac{\Delta P}{ - \Delta V / V}
 
 ## Energy {#energy}
 
-\\[
-
-\\]
-
 
 ## Entropy {#entropy}
 
