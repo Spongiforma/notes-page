@@ -20,7 +20,7 @@
 <meta property="og:title" content="Measure theory" />
 <meta property="og:description" content="Borel algebra If A and B are any two sets, let \(A- B\) be the set of all elements in A that are not in B (This does not imply \(B\subset A\)).
 A family \(\mathcal{R}\) of sets is called a ring if \(A,B \in \mathcal{R}\) implies
-\[ A\cap B \in \mathcal{R} \],
+\[ A\cup B \in \mathcal{R} \],
 . \[ A-B \in \mathcal{R} \].
 Notice that the conditions imply \(A \cap B \in \mathcal{R}\) if its a ring." />
 <meta property="og:type" content="article" />
@@ -34,17 +34,17 @@ Notice that the conditions imply \(A \cap B \in \mathcal{R}\) if its a ring." />
 <meta name="twitter:title" content="Measure theory"/>
 <meta name="twitter:description" content="Borel algebra If A and B are any two sets, let \(A- B\) be the set of all elements in A that are not in B (This does not imply \(B\subset A\)).
 A family \(\mathcal{R}\) of sets is called a ring if \(A,B \in \mathcal{R}\) implies
-\[ A\cap B \in \mathcal{R} \],
+\[ A\cup B \in \mathcal{R} \],
 . \[ A-B \in \mathcal{R} \].
 Notice that the conditions imply \(A \cap B \in \mathcal{R}\) if its a ring."/>
 <meta itemprop="name" content="Measure theory">
 <meta itemprop="description" content="Borel algebra If A and B are any two sets, let \(A- B\) be the set of all elements in A that are not in B (This does not imply \(B\subset A\)).
 A family \(\mathcal{R}\) of sets is called a ring if \(A,B \in \mathcal{R}\) implies
-\[ A\cap B \in \mathcal{R} \],
+\[ A\cup B \in \mathcal{R} \],
 . \[ A-B \in \mathcal{R} \].
 Notice that the conditions imply \(A \cap B \in \mathcal{R}\) if its a ring.">
 
-<meta itemprop="wordCount" content="721"><meta itemprop="image" content="/images/og-image.png"/>
+<meta itemprop="wordCount" content="1503"><meta itemprop="image" content="/images/og-image.png"/>
 <meta itemprop="keywords" content="" /><script>
   MathJax = {
     tex: {
@@ -93,14 +93,14 @@ Notice that the conditions imply \(A \cap B \in \mathcal{R}\) if its a ring.">
 <div class="defn">
 <p>A family \(\mathcal{R}\) of sets is called a ring if \(A,B \in \mathcal{R}\) implies</p>
 <p>\[
-A\cap B \in \mathcal{R}
+A\cup B \in \mathcal{R}
 \],</p>
 <p>.
 \[
 A-B \in \mathcal{R}
 \].</p>
 <p>Notice that the conditions imply \(A \cap B \in \mathcal{R}\) if its a ring.</p>
-<p>A ring is called a $σ$-ring if</p>
+<p>A ring is called a \(\sigma\) ring if</p>
 <p>\[
 \cup_{n=1}^\infty  A_n \in \mathcal{R}
 \],</p>
@@ -136,8 +136,7 @@ A = \cup_{n=1}^\infty A_n,
 \phi(A_n) \to \phi(A)
 \]</p>
 </div>
-<p>A borel set is a set that can be obtained by a countable number of unions,intersectoins or complements starting from open sets. The collection of all Borel sets is a \(\sigma\) -ring.</p>
-<h2 id="lebesgue-measure">Lebesgue measure</h2>
+<h3 id="lebesgue-measure">Lebesgue measure</h3>
 <p>An <strong>elementary set</strong> is a union of a finite element of intervals. The family of all elementary subsets of \(\mathbb{R}^p\) is denoted \(\mathcal{E}\).</p>
 <p>The following properties may be verified,</p>
 <ol>
@@ -188,11 +187,11 @@ d(A,B) = \mu^*(S(A,B)).
 \]</p>
 <p>We write \(A_n \to A\) if \(\lim_{n\to\infty} d(A,A_n) = 0\).</p>
 <ol>
-<li>If there is a sequence of elementary sets converging to \(A\), we say its <strong>finitely $μ$-measurable</strong></li>
+<li>If there is a sequence of elementary sets converging to \(A\), we say its <strong>finitely \(\mu\) measurable</strong></li>
 </ol>
 <p>and write \(A \in \mathfrak{M}_F(\mu)\).</p>
 <ol>
-<li>If \(A\) is the union of a countable collection of finitely $μ$-measurable sets, then \(A\) is $μ$-measureable and write \(A \in \mathfrak{M}(\mu)\).</li>
+<li>If \(A\) is the union of a countable collection of finitely \(\mu\) measurable sets, then \(A\) is \(\mu\) measureable and write \(A \in \mathfrak{M}(\mu)\).</li>
 </ol>
 </div>
 <div class="prop">
@@ -208,11 +207,118 @@ d(A,B) = \mu^*(S(A,B)).
 \]</p>
 <p>if at least one of \(\mu^*(A),\mu^*(B)\) is finite.</p>
 </div>
-<p>The distance function is almost a true metric but different sets can have zero distance. Thus we may instead define equivalence in terms of vanishing distance. This equivalence relation makes \(\mathfrak{M}_F(\mu)\) to be the closure of \(\mathcal{E}\).j</p>
+<p>The distance function is almost a true metric but different sets can have zero distance. Thus we may instead define equivalence in terms of vanishing distance. This equivalence relation makes \(\mathfrak{M}_F(\mu)\) be the closure of \(\mathcal{E}\).j</p>
 <div class="prop">
 <p>\(\mathfrak{M}(\mu)\) is a $σ$-ring and \(\mu^*\) is countably additive on \(\mathfrak{M}(\mu)\).</p>
 </div>
 <p>The extended set function is called a measure, and the Lebesgue measure on \(\mathbb{R}^p\) is thus the special case \(\mu = m\).</p>
+<h3 id="borel-sets">Borel sets</h3>
+<p>A borel set is a set that can be obtained by a countable number of unions,intersectoins or complements starting from open sets. The collection of all Borel sets is a \(\sigma\) -ring, in fact the smallest one which contains all open sets. An element of a borel set is \(\mu\) measureable. Every \(\mu\) measurable set is the union of a Borel set and a set of measure zero.</p>
+<h2 id="measure-spaces">Measure spaces</h2>
+<div class="defn">
+<p>A set \(X\) is a <strong>measure space</strong> if there exists a \(\sigma\) ring \(\mathfrak{M}\) of subsets of \(X\) (the measurable sets) and a non-negative countably additive measure defined on \(\mathfrak{M}\). If, in adddition, \(X \in \mathfrak{M}\), then \(X\) is said to be a <strong>measurable space</strong>.</p>
+</div>
+<h3 id="measurable-functions">Measurable functions</h3>
+<div class="defn">
+<p>A function is <strong>measurable</strong> if the set \(\{x | f(x) &gt; a\}\) is measurable for every real \(a\). Equality can be included.</p>
+</div>
+<div class="prop">
+<p>Making more measurable functions.</p>
+<ol>
+<li>If \(f\) is measurable, then \(|f|\) is measurable.</li>
+<li>Let \(\{f_n\}\) be a sequence of measurable functions. For \(x \in X\), put</li>
+</ol>
+<p>\[
+g(x) = \sup f_n(x)
+\]</p>
+<p>\[
+h(x) = \lim_{n\to\infty}\sup f_n(x)
+\],
+Then \(g\) and \(h\) are measurable.</p>
+<p>This results in the following corollaries,</p>
+<ol>
+<li>If \(f\) and \(g\) are measurable, then \(\max(f,g)\) and \(\min(f,g)\) are measurable</li>
+<li>The limit of a convergent sequence of measurable functions is measurable.</li>
+</ol>
+</div>
+<p>Common binary operations are also preserve measurability.</p>
+<div class="thrm">
+<p>Let \(f\) and \(g\) be measurable real-valued functions defiend on \(X\), let \(F\) be real and continuous on \(\mathbb{R}^2\). Then \(F(f(x),g(x))\) is measurable.</p>
+</div>
+<p>Thus common operations of analysis can be applied to measurable functions to give measurable functions. An example where measurability doesn&rsquo;t carry over is \(h(x) = f(g(x))\), where \(f\) is measurable and \(g\) is continuous, but \(h\) is not necessarily measurable. Interestingly, we were able to define measurable functions without referencing any particular measure. Thus, the class of measurable functions on \(X\) depends on the \(\sigma\) ring \(\mathfrak{M}\).</p>
+<h3 id="simple-functions">Simple functions</h3>
+<div class="defn">
+<p>Let \(s\) be a real-valued function defined on \(X\). If the range of \(s\) is finite, then \(s\) is a <strong>simple function</strong>. Let \(E \subseteq X\) and put define \(K_E(x) = 1\)  when \(x\in E\) and zero otherwise as the <strong>characteristic function</strong> of \(E\). Denoting \(E_i = s^{-1}(\{c_i\})\) where \(c_i\) make up the range of \(s\), we can decompose any simple function into a linear combinations of characteristic functions,
+\[
+s = \sum_{i=1}^n c_i K_{E_i}.
+\]</p>
+<p>\(s\) is measurable iff \(E_i\) are measurable.</p>
+</div>
+<p>This allows us to approximate every function by simple functions.</p>
+<div class="thrm">
+<p>Let \(f\) be a real function on \(X\). There exists a sequence \(\{s_n\}\) of simple funcitons such that \(s_n(x) \to f(x)\) as \(n \to \infty\), for every \(x \in X\). If \(f\) is measurable, \(\{s_n\}\) may be chosen to be a sequence of measurable functions. If \(f\geq 0\), \(\{s_n\}\) may be chosen to be a monotonically increasing sequence.</p>
+</div>
+<p>\(s_n\) can be constructed as</p>
+<p>\[
+s_n = \sum_{i=1}^{n2^n}\frac{i-1}{2^n} K_{E_{ni}} + n K_{F_n}
+\]</p>
+<p>for non-negative \(f\). For general functions, the function can be split into the difference between its positive and negative components. The sequence converges uniformly to \(f\) if \(f\) is bounded.</p>
+<h2 id="lebesgue-integration">Lebesgue Integration</h2>
+<div class="defn">
+<p>Suppose \((x \in X, c_i &gt; 0)\)
+\[
+s(x) = \sum_{i=1}^n c_i K_{E_i}(x)
+\]
+is measurable and \(E \in \mathfrak{M}\). We define</p>
+<p>\[
+I_E(s) = \sum_{i=1}^n c_i \mu(E \cap E_i).
+\]
+If \(f\) is measurable and non-negative, we define</p>
+<p>\[
+\int_E f \dd{\mu} = \sup I_E(s),
+\]</p>
+<p>where the sup is taken over all measurable simple functions \(s\) such that \(0 \leq s \leq f\).</p>
+</div>
+<p>The integral may have the value \(+ \infty\). If the integral of each of the positive and negative components of a function is finite, then \(f\) is said to be <strong>integrable</strong>, or \(f \in \mathcal{L}(\mu)\). Integrability carries over to subsets.</p>
+<div class="thrm">
+<p>Suppose \(f\) is measurable and non-negative on \(X\). For \(A \in \mathfrak{M}\), define</p>
+<p>\[
+\phi(A) = \int_A f\dd{\mu}.
+\]</p>
+<p>Then \(\phi\) is countably additive on \(\mathfrak{M}\). The same conclusion holds for any \(f \in \mathcal{L}(\mu)\).</p>
+</div>
+<div class="thrm">
+<p>Suppose \(E\in\mathfrak{M}\). Let \(\{f_n\}\) be a sequence of measurable functions such that \(0 \leq f_1(x) \leq f_2(x) \leq \ldots\). Let \(f\) be defined by \(f_n(x) \to f(x)\) as \(n\to\infty\). Then</p>
+<p>\[
+\int_E f_n \dd{\mu} \to \int_E f\dd{\mu}
+\]</p>
+</div>
+<p>A corollary of the result is that the lebesgue integral and summation of a sequence of measurable functions commute.</p>
+<div class="thrm">
+<p>Suppose \(E \in \mathfrak{M}\). If \(\{f_n\}\) is a sequence of non-negative measurable functions and</p>
+<p>\[
+f(x) = \lim_{n\to\infty}\inf f_n(x),
+\]</p>
+<p>then</p>
+<p>\[
+\int_E f \dd{\mu} \leq \lim_{n\to\infty} \inf \int_E f_n \dd{\mu}
+\]</p>
+</div>
+<div class="thrm">
+<p>Suppose \(E \in \mathfrak{M}\). Let \(\{f_n\}\) be a sequence of measurable functions such that
+\[
+f_n(x) \to f(x)
+\]
+as \(n\to\infty\). If there exists a function \(g \in \mathcal{L}(\mu)\) such that</p>
+<p>\[
+\vert f_n(x) | \leq g(x)
+\]</p>
+<p>for all \(n\), then,</p>
+<p>\[
+\lim_{n\to\infty} \int_E f_n \dd{\mu} = \int_E f \dd{\mu}
+\]</p>
+</div>
+<p>In summary, the limits of measurable functions are always measurable, whereas the limits of Riemann-integrable functions may fail to be Riemann-integrable.</p>
 <div class="edit-meta">
 
 <br><a href="https://github.com/spongiforma/hugo-theme-techdoc/edit/master/content/Math/measuretheory.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="../../math/3mm/" title="Mathematical methods pt. 3"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Mathematical methods pt. 3</a>
@@ -290,12 +396,20 @@ d(A,B) = \mu^*(S(A,B)).
 <nav class="outline">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#borel-algebra">Borel algebra</a></li>
-    <li><a href="#lebesgue-measure">Lebesgue measure</a>
+    <li><a href="#borel-algebra">Borel algebra</a>
       <ul>
+        <li><a href="#lebesgue-measure">Lebesgue measure</a></li>
         <li><a href="#distances-between-sets">Distances between sets</a></li>
+        <li><a href="#borel-sets">Borel sets</a></li>
       </ul>
     </li>
+    <li><a href="#measure-spaces">Measure spaces</a>
+      <ul>
+        <li><a href="#measurable-functions">Measurable functions</a></li>
+        <li><a href="#simple-functions">Simple functions</a></li>
+      </ul>
+    </li>
+    <li><a href="#lebesgue-integration">Lebesgue Integration</a></li>
   </ul>
 </nav>
 </nav>

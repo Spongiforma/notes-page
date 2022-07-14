@@ -119,7 +119,7 @@ Dirichlet conditions The conditions a function must fulfil in order that it may 
       <guid>/math/measuretheory/</guid>
       <description>Borel algebra If A and B are any two sets, let \(A- B\) be the set of all elements in A that are not in B (This does not imply \(B\subset A\)).
 A family \(\mathcal{R}\) of sets is called a ring if \(A,B \in \mathcal{R}\) implies
-\[ A\cap B \in \mathcal{R} \],
+\[ A\cup B \in \mathcal{R} \],
 . \[ A-B \in \mathcal{R} \].
 Notice that the conditions imply \(A \cap B \in \mathcal{R}\) if its a ring.</description>
     </item>
