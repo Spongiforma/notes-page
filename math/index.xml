@@ -44,6 +44,16 @@ For every positive real x and every positive integer n, there is only one positi
     </item>
     
     <item>
+      <title>Analysis</title>
+      <link>/math/ergodicity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/math/ergodicity/</guid>
+      <description>Measure theory A measure-preserving transformation is a measurable transformation \(T\) such that \(m_1(T^{-1}(B_2)) = m_2(B_2)\) for all \(B_2 \in \mathcal{B}_2\).
+ Ergodic hypotheses  A measure-preserving system \((X,\mathcal{B},m ,T)\) is called ergodic if \(T^{-1}(B) =B\) implies that \(m(B) = 0\) or \(m(B) = 1\). \(T\) is an ergodic transformation iff every \(T\) invariant function is constant almost everywhere.  Birkhoff equality If \(T\) is a measure-preserving transformation on a probability space \((X,\mathcal{B},m)\), then for any \(f \in L^1(X)\), the time average of \(f\) converges almost everywhere to a function \(f^* \in L^1\).</description>
+    </item>
+    
+    <item>
       <title>Functional Analysis</title>
       <link>/math/functionalanalysis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
